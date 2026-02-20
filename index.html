@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fast Image Compressor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+font-family:Arial, sans-serif;
+background:#0f172a;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.container{
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+text-align:center;
+width:320px;
+box-shadow:0 0 20px rgba(0,0,0,.4);
+}
+
+h1{margin-bottom:10px}
+
+input{
+margin:15px 0;
+}
+
+button{
+padding:10px 20px;
+border:none;
+border-radius:8px;
+background:#22c55e;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#16a34a;
+}
+
+footer{
+margin-top:15px;
+font-size:12px;
+opacity:.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Fast Image Tool</h1>
+<p>Compress image instantly</p>
+
+<input type="file" id="upload" accept="image/*">
+
+<br>
+
+<button onclick="compress()">Compress</button>
+
+<br><br>
+
+<a id="download" style="display:none">
+<button>Download</button>
+</a>
+
+<footer>Free online image compressor</footer>
+
+</div>
+
+<script>
+function compress(){
+
+const file=document.getElementById("upload").files[0];
+if(!file){alert("Upload image first");return;}
+
+const reader=new FileReader();
+reader.readAsDataURL(file);
+
+reader.onload=function(e){
+
+const img=new Image();
+img.src=e.target.result;
+
+img.onload=function(){
+
+const canvas=document.createElement("canvas");
+const ctx=canvas.getContext("2d");
+
+canvas.width=img.width*0.6;
+canvas.height=img.height*0.6;
+
+ctx.drawImage(img,0,0,canvas.width,canvas.height);
+
+const compressed=canvas.toDataURL("image/jpeg",0.6);
+
+const link=document.getElementById("download");
+link.href=compressed;
+link.download="compressed.jpg";
+link.style.display="inline";
+
+};
+};
+}
+</script>
+
+</body>
+</html>
