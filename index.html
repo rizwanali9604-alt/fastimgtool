@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Fast Image Compressor – Reduce JPG PNG WEBP Size Online</title>
-<meta name="description" content="Compress images instantly. 100% private. No uploads. Supports JPG PNG WEBP.">
+<meta name="description" content="Compress images instantly. Private. No uploads. Supports JPG PNG WEBP.">
 
-<!-- Ads Script (ONLY ONCE) -->
+<!-- ADSENSE SCRIPT (LOAD ONLY ONCE) -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>
 
 <style>
@@ -19,30 +19,16 @@ min-height:100vh;
 display:flex;
 flex-direction:column;
 }
+.container{max-width:1100px;margin:auto;padding:20px;width:100%}
 
-.container{
-max-width:1100px;
-margin:auto;
-padding:20px;
-width:100%;
-}
-
-header{
-text-align:center;
-margin:30px 0;
-}
-
+header{text-align:center;margin:30px 0}
 h1{
 font-size:2.6rem;
 background:linear-gradient(135deg,#4da3ff,#003cff);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
-
-.sub{
-color:#94a3b8;
-margin-top:10px;
-}
+.sub{color:#94a3b8;margin-top:10px}
 
 .card{
 background:#0b1225;
@@ -61,21 +47,19 @@ border-radius:14px;
 cursor:pointer;
 transition:.2s;
 }
+.upload:hover{border-color:#3b82f6;background:#020617}
 
-.upload:hover{
-border-color:#3b82f6;
-background:#020617;
-}
+.controls{margin-top:20px;display:flex;gap:20px;flex-wrap:wrap}
 
-.controls{
-margin-top:20px;
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-}
+input[type=range]{width:100%}
 
-input[type=range]{
+select{
 width:100%;
+padding:8px;
+border-radius:8px;
+background:#020617;
+color:#e6edf7;
+border:1px solid #334155;
 }
 
 button{
@@ -93,18 +77,9 @@ display:block;
 margin-left:auto;
 margin-right:auto;
 }
+button:disabled{background:#475569;cursor:not-allowed}
 
-button:disabled{
-background:#475569;
-cursor:not-allowed;
-}
-
-.preview{
-display:none;
-margin-top:25px;
-text-align:center;
-}
-
+.preview{display:none;margin-top:25px;text-align:center}
 .preview img{
 max-width:100%;
 max-height:220px;
@@ -123,11 +98,7 @@ text-decoration:none;
 border:1px solid #334155;
 }
 
-.ad{
-margin:35px 0;
-display:flex;
-justify-content:center;
-}
+.ad{margin:35px 0;display:flex;justify-content:center}
 
 footer{
 margin-top:40px;
@@ -159,14 +130,11 @@ data-ad-client="ca-pub-8332278519903196"
 data-ad-slot="9490701260"
 data-ad-format="auto"
 data-full-width-responsive="true"></ins>
-<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
 </div>
 
 <div class="card">
 
-<div class="upload" id="upload">
-Click or Drop Image
-</div>
+<div class="upload" id="upload">Click or Drop Image</div>
 <input type="file" id="file" accept="image/*" hidden>
 
 <div class="controls">
@@ -177,7 +145,7 @@ Click or Drop Image
 
 <div style="flex:1">
 <label>Format</label>
-<select id="format" style="width:100%;padding:8px;border-radius:8px">
+<select id="format">
 <option value="image/jpeg">JPEG</option>
 <option value="image/png">PNG</option>
 <option value="image/webp">WEBP</option>
@@ -187,12 +155,7 @@ Click or Drop Image
 
 <button id="compress" disabled>Compress</button>
 
-<div class="preview" id="preview">
-<h3>Preview</h3>
-<img id="img">
-<br>
-<a id="download" class="download">Download</a>
-</div>
+<div class="preview" id="preview"></div>
 
 </div>
 
@@ -204,7 +167,6 @@ data-ad-client="ca-pub-8332278519903196"
 data-ad-slot="8664200172"
 data-ad-format="auto"
 data-full-width-responsive="true"></ins>
-<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
 </div>
 
 <footer>
@@ -214,38 +176,54 @@ data-full-width-responsive="true"></ins>
 </div>
 
 <script>
+window.addEventListener("load",()=>{
+(adsbygoogle=window.adsbygoogle||[]).push({});
+(adsbygoogle=window.adsbygoogle||[]).push({});
+});
+
 const upload=document.getElementById("upload");
 const fileInput=document.getElementById("file");
 const btn=document.getElementById("compress");
 const q=document.getElementById("quality");
 const qv=document.getElementById("qv");
 const preview=document.getElementById("preview");
-const img=document.getElementById("img");
-const download=document.getElementById("download");
 const format=document.getElementById("format");
 
-let file;
+let file=null;
+let url=null;
 
-q.oninput=()=>qv.textContent=q.value;
+q.addEventListener("input",()=>qv.textContent=q.value);
 
-upload.onclick=()=>fileInput.click();
+upload.addEventListener("click",()=>fileInput.click());
+upload.addEventListener("dragover",e=>e.preventDefault());
 
-upload.ondrop=e=>{
+upload.addEventListener("drop",e=>{
 e.preventDefault();
-file=e.dataTransfer.files[0];
+handleFile(e.dataTransfer.files[0]);
+});
+
+fileInput.addEventListener("change",e=>{
+handleFile(e.target.files[0]);
+});
+
+function handleFile(f){
+if(!f || !f.type.startsWith("image/")){
+alert("Please upload image file");
+return;
+}
+if(f.size>20*1024*1024){
+alert("Max file size 20MB");
+return;
+}
+file=f;
 btn.disabled=false;
-};
+}
 
-upload.ondragover=e=>e.preventDefault();
+btn.addEventListener("click",()=>{
+if(!file)return;
 
-fileInput.onchange=e=>{
-file=e.target.files[0];
-btn.disabled=false;
-};
-
-btn.onclick=()=>{
 const reader=new FileReader();
-reader.readAsDataURL(file);
+
 reader.onload=e=>{
 const image=new Image();
 image.src=e.target.result;
@@ -258,15 +236,34 @@ const ctx=canvas.getContext("2d");
 ctx.drawImage(image,0,0);
 
 canvas.toBlob(blob=>{
-const url=URL.createObjectURL(blob);
-img.src=url;
-download.href=url;
-download.download="compressed."+format.value.split("/")[1];
+
+if(url) URL.revokeObjectURL(url);
+url=URL.createObjectURL(blob);
+
+const before=(file.size/1024).toFixed(1)+" KB";
+const after=(blob.size/1024).toFixed(1)+" KB";
+
+preview.innerHTML=`
+<h3>Preview</h3>
+<img src="${url}">
+<p style="margin-top:10px;color:#94a3b8">
+Original: ${before} → Compressed: ${after}
+</p>
+<a href="${url}" download="compressed.${format.value.split('/')[1]}" class="download">
+Download Image
+</a>
+`;
+
 preview.style.display="block";
-},format.value,q.value/100);
+
+},format.value,
+format.value==="image/png"?undefined:q.value/100);
+
 };
 };
-};
+
+reader.readAsDataURL(file);
+});
 </script>
 
 </body>
