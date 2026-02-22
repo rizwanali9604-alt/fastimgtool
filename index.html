@@ -1,54 +1,175 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Fast Image Compressor</title>
+
+<!-- AdSense Verification -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196"
+crossorigin="anonymous"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Free Image Compressor – Compress Images Online Instantly</title>
+
+<meta name="description" content="Compress images instantly online for free. Reduce file size without losing quality. Fast, secure, and works in your browser.">
+
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://fastimgtool.com">
+<link rel="icon" href="/favicon.ico">
+
+<!-- OpenGraph -->
+<meta property="og:title" content="Free Image Compressor">
+<meta property="og:description" content="Compress images instantly online for free.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fastimgtool.com">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Image Compressor">
+<meta name="twitter:description" content="Compress images instantly online for free.">
+
+<style>
+body{
+font-family:Arial;
+text-align:center;
+padding:40px;
+background:#f9fafb;
+margin:0;
+}
+
+.container{
+max-width:600px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 4px 20px rgba(0,0,0,0.08);
+}
+
+h1{margin-top:0;}
+
+button{
+background:#1E3A8A;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#172e6e;
+}
+
+input, select{
+margin:10px 0;
+}
+
+.footer{
+margin-top:40px;
+font-size:14px;
+color:#555;
+}
+
+.ad{
+margin:25px 0;
+}
+</style>
+
 </head>
-<body style="text-align:center;font-family:Arial;padding:40px">
+<body>
+
+<div class="container">
 
 <h1>Free Image Compressor</h1>
 <p>Upload image and reduce file size instantly</p>
 
-<input type="file" id="upload" accept="image/*"><br><br>
+<!-- Top Ad -->
+<div class="ad">
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-8332278519903196"
+data-ad-slot="1234567890"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
+</div>
 
-<canvas id="canvas" style="display:none;"></canvas>
+<input type="file" id="upload" accept="image/*"><br>
+
+<label>Quality:</label><br>
+<input type="range" id="quality" min="0.1" max="1" step="0.1" value="0.7"><br>
+
+<label>Format:</label><br>
+<select id="format">
+<option value="image/jpeg">JPEG</option>
+<option value="image/webp">WEBP</option>
+<option value="image/png">PNG</option>
+</select><br><br>
 
 <button onclick="compress()">Compress Image</button>
 
 <br><br>
 
+<canvas id="canvas" style="display:none;"></canvas>
 <a id="download" style="display:none">Download Compressed Image</a>
 
+<!-- Bottom Ad -->
+<div class="ad">
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-8332278519903196"
+data-ad-slot="1234567890"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
+</div>
+
+</div>
+
+<div class="footer">
+<hr><br>
+<a href="#">About</a> |
+<a href="#">Privacy Policy</a> |
+<a href="#">Contact</a>
+</div>
+
 <script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+(adsbygoogle = window.adsbygoogle || []).push({});
+
 function compress(){
-  const file = document.getElementById("upload").files[0];
-  if(!file){ alert("Upload image first"); return; }
+const file = document.getElementById("upload").files[0];
+if(!file){ alert("Upload image first"); return; }
 
-  const reader = new FileReader();
+const quality = parseFloat(document.getElementById("quality").value);
+const format = document.getElementById("format").value;
 
-  reader.onload = function(e){
-    const img = new Image();
-    img.src = e.target.result;
+const reader = new FileReader();
 
-    img.onload = function(){
-      const canvas = document.getElementById("canvas");
-      const ctx = canvas.getContext("2d");
+reader.onload = function(e){
+const img = new Image();
+img.src = e.target.result;
 
-      canvas.width = img.width;
-      canvas.height = img.height;
+img.onload = function(){
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-      ctx.drawImage(img,0,0);
+canvas.width = img.width;
+canvas.height = img.height;
 
-      const compressed = canvas.toDataURL("image/jpeg",0.5);
+ctx.drawImage(img,0,0);
 
-      const link = document.getElementById("download");
-      link.href = compressed;
-      link.download = "compressed.jpg";
-      link.style.display="block";
-      link.innerText="Download Image";
-    }
-  };
+const compressed = canvas.toDataURL(format,quality);
 
-  reader.readAsDataURL(file);
+const link = document.getElementById("download");
+link.href = compressed;
+link.download = "compressed";
+link.style.display="block";
+link.innerText="Download Image";
+}
+};
+
+reader.readAsDataURL(file);
 }
 </script>
 
