@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Image Resizer Online Free - Resize JPG PNG WEBP</title>
+<meta name="description" content="Resize images online free. Change width and height instantly. Supports JPG, PNG, WEBP. No upload required. 100% browser-based.">
+
+<style>
+:root{
+--primary:#1E3A8A;
+--dark:#0f172a;
+--card:#111827;
+--text:#e5e7eb;
+--muted:#9ca3af;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system;}
+
+body{
+background:var(--dark);
+color:var(--text);
+display:flex;
+justify-content:center;
+padding:40px 20px;
+}
+
+.container{
+background:var(--card);
+padding:30px;
+border-radius:16px;
+max-width:600px;
+width:100%;
+box-shadow:0 10px 40px rgba(0,0,0,.4);
+}
+
+h1{
+text-align:center;
+margin-bottom:10px;
+font-size:1.8rem;
+color:white;
+}
+
+p.subtitle{
+text-align:center;
+color:var(--muted);
+margin-bottom:20px;
+}
+
+.upload-area{
+border:2px dashed #334155;
+padding:30px;
+border-radius:12px;
+text-align:center;
+cursor:pointer;
+transition:.2s;
+margin-bottom:20px;
+}
+
+.upload-area:hover{
+border-color:var(--primary);
+background:#0b1225;
+}
+
+input[type="file"]{
+display:none;
+}
+
+.field{
+margin-bottom:15px;
+}
+
+label{
+display:block;
+margin-bottom:6px;
+font-size:.85rem;
+color:var(--muted);
+}
+
+input[type="number"]{
+width:100%;
+padding:10px;
+border-radius:8px;
+border:1px solid #334155;
+background:#0b1225;
+color:white;
+}
+
+.controls{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.controls .field{
+flex:1;
+min-width:120px;
+}
+
+.checkbox{
+margin:10px 0;
+display:flex;
+align-items:center;
+gap:8px;
+font-size:.85rem;
+color:var(--muted);
+}
+
+button{
+width:100%;
+padding:14px;
+border-radius:10px;
+border:none;
+background:var(--primary);
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:.2s;
+margin-top:10px;
+}
+
+button:hover{
+opacity:.9;
+}
+
+button:disabled{
+background:#334155;
+cursor:not-allowed;
+}
+
+.preview{
+margin-top:20px;
+text-align:center;
+display:none;
+}
+
+.preview img{
+max-width:100%;
+border-radius:10px;
+margin-top:10px;
+box-shadow:0 6px 20px rgba(0,0,0,.4);
+}
+
+.note{
+margin-top:15px;
+font-size:.8rem;
+color:var(--muted);
+text-align:center;
+}
+
+canvas{display:none;}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Image Resizer</h1>
+<p class="subtitle">Resize JPG, PNG, WEBP instantly — no upload required</p>
+
+<div class="upload-area" id="uploadArea">
+Click or Drag Image Here
+<input type="file" id="fileInput" accept="image/*">
+</div>
+
+<div class="controls">
+<div class="field">
+<label>Width (px)</label>
+<input type="number" id="widthInput" min="1" max="8000">
+</div>
+
+<div class="field">
+<label>Height (px)</label>
+<input type="number" id="heightInput" min="1" max="8000">
+</div>
+</div>
+
+<div class="checkbox">
+<input type="checkbox" id="lockRatio" checked>
+<label for="lockRatio">Maintain aspect ratio</label>
+</div>
+
+<button id="resizeBtn" disabled>Resize & Download</button>
+
+<div class="preview" id="previewArea">
+<h3>Preview</h3>
+<img id="previewImage">
+</div>
+
+<p class="note">Max dimension: 8000px. Processing happens locally in your browser.</p>
+
+</div>
+
+<canvas id="canvas"></canvas>
+
+<script>
+const uploadArea = document.getElementById('uploadArea');
+const fileInput = document.getElementById('fileInput');
+const widthInput = document.getElementById('widthInput');
+const heightInput = document.getElementById('heightInput');
+const lockRatio = document.getElementById('lockRatio');
+const resizeBtn = document.getElementById('resizeBtn');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const previewArea = document.getElementById('previewArea');
+const previewImage = document.getElementById('previewImage');
+
+let originalFile = null;
+let originalWidth = 0;
+let originalHeight = 0;
+
+uploadArea.addEventListener('click',()=>fileInput.click());
+
+uploadArea.addEventListener('dragover',e=>{
+e.preventDefault();
+uploadArea.style.borderColor="#1E3A8A";
+});
+
+uploadArea.addEventListener('dragleave',()=>{
+uploadArea.style.borderColor="#334155";
+});
+
+uploadArea.addEventListener('drop',e=>{
+e.preventDefault();
+uploadArea.style.borderColor="#334155";
+handleFile(e.dataTransfer.files[0]);
+});
+
+fileInput.addEventListener('change',e=>{
+handleFile(e.target.files[0]);
+});
+
+function handleFile(file){
+if(!file || !file.type.startsWith("image/")){
+alert("Please upload a valid image file.");
+return;
+}
+
+originalFile=file;
+resizeBtn.disabled=false;
+
+const img=new Image();
+const url=URL.createObjectURL(file);
+
+img.onload=function(){
+originalWidth=img.width;
+originalHeight=img.height;
+
+widthInput.value=originalWidth;
+heightInput.value=originalHeight;
+
+URL.revokeObjectURL(url);
+};
+
+img.src=url;
+}
+
+widthInput.addEventListener('input',()=>{
+if(lockRatio.checked && originalWidth){
+heightInput.value=Math.round((widthInput.value/originalWidth)*originalHeight);
+}
+});
+
+heightInput.addEventListener('input',()=>{
+if(lockRatio.checked && originalHeight){
+widthInput.value=Math.round((heightInput.value/originalHeight)*originalWidth);
+}
+});
+
+resizeBtn.addEventListener('click',()=>{
+if(!originalFile)return;
+
+const width=parseInt(widthInput.value);
+const height=parseInt(heightInput.value);
+
+if(width<1||height<1||width>8000||height>8000){
+alert("Invalid dimensions.");
+return;
+}
+
+resizeBtn.disabled=true;
+resizeBtn.textContent="Processing...";
+
+const img=new Image();
+const url=URL.createObjectURL(originalFile);
+
+img.onload=function(){
+canvas.width=width;
+canvas.height=height;
+
+ctx.clearRect(0,0,width,height);
+ctx.drawImage(img,0,0,width,height);
+
+canvas.toBlob(blob=>{
+const outputUrl=URL.createObjectURL(blob);
+
+previewImage.src=outputUrl;
+previewArea.style.display="block";
+
+const link=document.createElement("a");
+link.href=outputUrl;
+link.download=`resized_${width}x${height}.${originalFile.type.split('/')[1]}`;
+link.click();
+
+URL.revokeObjectURL(outputUrl);
+URL.revokeObjectURL(url);
+
+resizeBtn.disabled=false;
+resizeBtn.textContent="Resize & Download";
+
+}, originalFile.type, 0.92);
+};
+
+img.src=url;
+});
+</script>
+
+</body>
+</html>
