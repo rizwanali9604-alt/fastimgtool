@@ -25,30 +25,20 @@
 --border:#1e293b;
 --text:#e6edf7;
 --muted:#94a3b8;
---accent:#4da3ff;
---accent2:#003cff;
+--accent:#2563eb;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system}
 
-body{
-background:var(--bg);
-color:var(--text);
-min-height:100vh;
-}
-
-.container{
-max-width:1100px;
-margin:auto;
-padding:20px;
-}
+body{background:var(--bg);color:var(--text);min-height:100vh;}
+.container{max-width:1100px;margin:auto;padding:20px;}
 
 header{text-align:center;margin:40px 0 20px}
 header a{text-decoration:none}
 
 h1{
-font-size:2.4rem;
-background:linear-gradient(135deg,var(--accent),var(--accent2));
+font-size:2.6rem;
+background:linear-gradient(135deg,#4da3ff,#003cff);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
@@ -56,64 +46,62 @@ background:linear-gradient(135deg,var(--accent),var(--accent2));
 .sub{color:var(--muted);margin-top:8px}
 
 .card{
-background:var(--card);
-border:1px solid var(--border);
+background:#0b1225;
+border:1px solid #1e293b;
 border-radius:18px;
-padding:35px;
-box-shadow:0 0 40px rgba(0,60,255,.12);
-margin-top:30px;
+padding:40px;
+box-shadow:0 0 40px rgba(0,60,255,.18);
+margin-top:25px;
+max-width:900px;
+margin-left:auto;
+margin-right:auto;
 }
 
 .upload{
 border:2px dashed #334155;
-padding:35px;
-border-radius:14px;
+padding:45px;
 text-align:center;
+border-radius:14px;
 cursor:pointer;
 transition:.2s;
+margin-top:10px;
 }
-.upload:hover{border-color:#3b82f6;background:#020617}
+.upload:hover{border-color:#3b82f6;background:#020617;}
 
-.controls{display:flex;gap:15px;margin-top:20px;flex-wrap:wrap}
+.controls{display:flex;gap:15px;margin-top:20px;flex-wrap:wrap;}
 .controls div{flex:1;min-width:140px}
 
 input{
 width:100%;
-padding:12px;
-border-radius:8px;
+padding:14px;
+border-radius:10px;
 border:1px solid #334155;
 background:#020617;
 color:white;
 }
 
 button{
-margin-top:20px;
+margin-top:25px;
 width:100%;
-padding:14px;
+padding:16px;
 border:none;
-border-radius:10px;
-font-weight:bold;
-background:linear-gradient(135deg,var(--accent),var(--accent2));
+border-radius:40px;
+font-weight:600;
+font-size:16px;
+background:#2563eb;
 cursor:pointer;
+max-width:260px;
+margin-left:auto;
+margin-right:auto;
+display:block;
 }
-
+button:hover{background:#1d4ed8}
 button:disabled{background:#475569}
 
-.preview{
-display:none;
-margin-top:25px;
-text-align:center;
-}
+.preview{display:none;margin-top:25px;text-align:center;}
+.preview img{max-width:100%;max-height:260px;border-radius:12px;margin-top:10px;}
 
-.preview img{
-max-width:100%;
-max-height:260px;
-border-radius:12px;
-margin-top:10px;
-}
-
-.note{font-size:.85rem;color:#9ca3af;margin-top:10px}
-
+.note{font-size:.85rem;color:#9ca3af;margin-top:10px;text-align:center}
 .ad{margin:40px 0;display:flex;justify-content:center;min-height:90px}
 
 footer{
@@ -146,7 +134,7 @@ data-full-width-responsive="true"></ins>
 </div>
 
 <div class="card">
-<h2>📏 Image Resizer</h2>
+<h2 style="text-align:center;margin-bottom:10px;">📏 Image Resizer</h2>
 
 <div class="upload" id="drop">Click or Drag Image Here</div>
 <input type="file" id="upload" accept="image/*" hidden>
@@ -162,9 +150,9 @@ data-full-width-responsive="true"></ins>
 </div>
 </div>
 
-<label style="margin-top:10px">
-<input type="checkbox" id="ratio" checked> Maintain aspect ratio
-</label>
+<div style="margin-top:10px;text-align:center">
+<label><input type="checkbox" id="ratio" checked> Maintain aspect ratio</label>
+</div>
 
 <button id="resizeBtn" disabled>Resize & Download</button>
 <div class="note">Private processing. No image leaves your device.</div>
@@ -184,6 +172,16 @@ data-ad-format="auto"
 data-full-width-responsive="true"></ins>
 </div>
 
+<!-- NAVIGATION -->
+<div style="margin-top:60px;text-align:center">
+<h2>Our Free Tools</h2>
+<p style="color:#94a3b8;margin-top:10px;">Fast, free and browser-based tools</p>
+<div style="margin-top:20px;">
+<a href="/" style="margin:10px;display:inline-block;color:#60a5fa;">Image Compressor</a>
+<a href="/image-resizer.html" style="margin:10px;display:inline-block;color:#60a5fa;">Image Resizer</a>
+</div>
+</div>
+
 <footer>
 © 2026 ToolForge —
 <a href="/about.html">About</a>
@@ -196,7 +194,6 @@ data-full-width-responsive="true"></ins>
 <canvas id="canvas" style="display:none;"></canvas>
 
 <script>
-// ads
 window.addEventListener("load",()=>{
 document.querySelectorAll(".adsbygoogle").forEach(()=>{
 (adsbygoogle = window.adsbygoogle || []).push({});
