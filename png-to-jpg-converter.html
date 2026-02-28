@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Batch PNG to JPG Converter | ToolForge</title>
+<meta name="description" content="Convert multiple PNG images to JPG instantly. Free batch PNG to JPG converter. Private browser-based tool.">
+
+<link rel="canonical" href="https://fastimgtool.com/png-to-jpg-converter.html">
+<meta name="robots" content="index, follow">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>
+
+<style>
+:root{
+--bg:#050b18;
+--card:#0b1225;
+--border:#1e293b;
+--text:#e6edf7;
+--muted:#94a3b8;
+--accent:#4da3ff;
+--accent2:#003cff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system}
+
+body{
+background:var(--bg);
+color:var(--text);
+min-height:100vh;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:20px;
+}
+
+header{
+text-align:center;
+margin:40px 0 20px;
+}
+
+header a{text-decoration:none}
+
+h1{
+font-size:2.4rem;
+background:linear-gradient(135deg,var(--accent),var(--accent2));
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.sub{color:var(--muted);margin-top:8px;}
+
+.card{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:18px;
+padding:40px;
+margin-top:30px;
+text-align:center;
+}
+
+.upload{
+border:2px dashed #334155;
+padding:40px;
+border-radius:14px;
+cursor:pointer;
+transition:.2s;
+outline:none;
+}
+
+.upload.dragover{
+border-color:var(--accent);
+background:#020617;
+}
+
+button{
+background:linear-gradient(135deg,var(--accent),var(--accent2));
+border:none;
+padding:14px 30px;
+border-radius:40px;
+color:white;
+font-weight:600;
+margin-top:25px;
+cursor:pointer;
+}
+
+button:disabled{
+background:#475569;
+cursor:not-allowed;
+}
+
+.preview{margin-top:15px;color:var(--muted);}
+.progress{margin-top:15px;color:var(--accent);min-height:1.5em;}
+
+.ad{margin:40px 0;display:flex;justify-content:center;}
+
+.nav{margin-top:60px;text-align:center;}
+
+.nav a{
+color:#60a5fa;
+margin:10px;
+display:inline-block;
+text-decoration:none;
+}
+
+footer{
+margin-top:60px;
+padding:30px 0;
+text-align:center;
+color:#64748b;
+border-top:1px solid var(--border);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+<a href="/"><h1>⚡ ToolForge</h1></a>
+<div class="sub">Fast • Private • Browser-Based Tools</div>
+</header>
+
+<div class="ad">
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-8332278519903196"
+data-ad-slot="9490701260"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
+</div>
+
+<div class="card">
+
+<h2>Batch PNG → JPG Converter</h2>
+
+<div class="upload" id="uploadArea" tabindex="0">
+Click or Drag PNG Images Here
+<input type="file" id="fileInput" accept="image/png" multiple hidden>
+</div>
+
+<button id="convertBtn" disabled>Convert & Download ZIP</button>
+
+<div class="preview" id="fileCount"></div>
+<div class="progress" id="progress"></div>
+
+</div>
+
+<div class="ad">
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-8332278519903196"
+data-ad-slot="8664200172"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
+</div>
+
+<div class="nav">
+
+<h2>Explore More</h2>
+
+<a href="/">Image Compressor</a>
+<a href="/image-resizer.html">Image Resizer</a>
+<a href="/convert-jpg-to-png-online-free.html">JPG to PNG Converter</a>
+<a href="/png-to-jpg-converter.html">PNG to JPG Converter</a>
+
+<br><br>
+
+<a href="/compress-image-online-free.html">Guide: How to Compress Images</a>
+<a href="/resize-image-online-free.html">Guide: How to Resize Images</a>
+
+</div>
+
+<footer>
+© 2026 ToolForge —
+<a href="/about.html">About</a>
+<a href="/privacy.html">Privacy</a>
+<a href="/contact.html">Contact</a>
+</footer>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+<script>
+
+window.addEventListener("load",()=>{
+document.querySelectorAll(".adsbygoogle").forEach(()=>{
+(adsbygoogle=window.adsbygoogle||[]).push({});
+});
+});
+
+if(typeof JSZip==="undefined"){
+alert("Conversion library failed to load. Please refresh.");
+}
+
+const uploadArea=document.getElementById("uploadArea");
+const fileInput=document.getElementById("fileInput");
+const convertBtn=document.getElementById("convertBtn");
+const fileCount=document.getElementById("fileCount");
+const progress=document.getElementById("progress");
+
+let files=[];
+
+const MAX_FILES=50;
+const MAX_DIMENSION=8000;
+const CONCURRENT_LIMIT=3;
+
+uploadArea.onclick=()=>fileInput.click();
+
+uploadArea.ondragover=e=>{
+e.preventDefault();
+uploadArea.classList.add("dragover");
+};
+
+uploadArea.ondragleave=()=>{
+uploadArea.classList.remove("dragover");
+};
+
+uploadArea.ondrop=e=>{
+e.preventDefault();
+uploadArea.classList.remove("dragover");
+handleFiles(e.dataTransfer.files);
+};
+
+fileInput.onchange=e=>handleFiles(e.target.files);
+
+function handleFiles(selected){
+
+let png=[...selected].filter(f=>f.type==="image/png");
+
+if(png.length===0){
+alert("Please upload PNG images.");
+return;
+}
+
+if(png.length>MAX_FILES){
+alert("Maximum "+MAX_FILES+" images allowed.");
+return;
+}
+
+files=png;
+
+convertBtn.disabled=false;
+
+fileCount.innerText=files.length+" PNG file(s) ready";
+
+progress.innerText="";
+}
+
+convertBtn.onclick=async()=>{
+
+convertBtn.disabled=true;
+convertBtn.innerText="Processing...";
+
+let zip=new JSZip();
+
+let index=0;
+let done=0;
+
+async function worker(){
+
+while(index<files.length){
+
+let file=files[index++];
+
+try{
+let blob=await convert(file);
+
+zip.file(file.name.replace(/\.png$/i,".jpg"),blob);
+
+}catch(e){
+console.warn(e);
+}
+
+done++;
+
+let percent=Math.round(done/files.length*100);
+
+progress.innerText=`Converting ${done}/${files.length} (${percent}%)`;
+
+}
+}
+
+let workers=[];
+
+for(let i=0;i<CONCURRENT_LIMIT;i++){
+workers.push(worker());
+}
+
+await Promise.all(workers);
+
+progress.innerText="Creating ZIP...";
+
+let content=await zip.generateAsync({type:"blob"});
+
+let link=document.createElement("a");
+link.href=URL.createObjectURL(content);
+link.download="converted-"+Date.now()+".zip";
+link.click();
+
+URL.revokeObjectURL(link.href);
+
+convertBtn.disabled=false;
+convertBtn.innerText="Convert & Download ZIP";
+
+progress.innerText="✅ Finished!";
+};
+
+function convert(file){
+
+return new Promise((resolve,reject)=>{
+
+const url=URL.createObjectURL(file);
+const img=new Image();
+
+img.onload=()=>{
+
+URL.revokeObjectURL(url);
+
+let w=img.width;
+let h=img.height;
+
+if(w>MAX_DIMENSION||h>MAX_DIMENSION){
+
+const ratio=Math.min(MAX_DIMENSION/w,MAX_DIMENSION/h);
+
+w=Math.round(w*ratio);
+h=Math.round(h*ratio);
+
+}
+
+const canvas=document.createElement("canvas");
+canvas.width=w;
+canvas.height=h;
+
+const ctx=canvas.getContext("2d",{alpha:false});
+
+ctx.drawImage(img,0,0,w,h);
+
+canvas.toBlob(blob=>{
+if(!blob)reject();
+else resolve(blob);
+},"image/jpeg",0.92);
+
+};
+
+img.onerror=()=>reject();
+
+img.src=url;
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
