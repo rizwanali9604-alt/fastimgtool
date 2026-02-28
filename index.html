@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="canonical" href="https://fastimgtool.com/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -168,36 +169,11 @@ data-ad-slot="8664200172"
 data-ad-format="auto"
 data-full-width-responsive="true"></ins>
 </div>
-<div style="margin-top:60px;text-align:center">
-
-
-<h2>Our Free Tools</h2>
-<p style="color:#94a3b8;margin-top:10px;">Fast, free and browser-based tools</p>
-
-<div style="margin-top:20px;">
-
-<a href="/" style="margin:10px;display:inline-block;color:#60a5fa;">
-Image Compressor
-</a>
-
-<a href="/image-resizer.html" style="margin:10px;display:inline-block;color:#60a5fa;">
-Image Resizer
-</a>
-
-<a href="/convert-jpg-to-png-online-free.html" style="margin:10px;display:inline-block;color:#60a5fa;">
-JPG to PNG Converter
-</a>
-
-<a href="/png-to-jpg-converter.html" style="margin:10px;display:inline-block;color:#60a5fa;">
-PNG to JPG Converter
-</a>
-  
-<a href="/webp-to-jpg-converter.html" style="margin:10px;display:inline-block;color:#60a5fa;">
-WEBP to JPG Converter
-</a>
-  
+<div id="toolNav" style="margin-top:60px;text-align:center">
+Loading tools...
 </div>
-</div>
+
+
 <!-- LEARN & GUIDES -->
 <div style="margin-top:60px;text-align:center">
 
@@ -224,18 +200,20 @@ How to Convert JPG to PNG
 </div>
 
 </div>
+<footer>
 © 2026 ToolForge —
-<a href="about.html">About</a> •
-<a href="privacy.html">Privacy Policy</a> •
-<a href="contact.html">Contact</a>
+<a href="/about.html">About</a> •
+<a href="/privacy.html">Privacy Policy</a> •
+<a href="/contact.html">Contact</a>
 </footer>
 
 </div>
 
 <script>
-window.addEventListener("load",()=>{
-(adsbygoogle=window.adsbygoogle||[]).push({});
-(adsbygoogle=window.adsbygoogle||[]).push({});
+window.addEventListener("load", () => {
+  document.querySelectorAll(".adsbygoogle").forEach(() => {
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  });
 });
 
 const upload=document.getElementById("upload");
@@ -295,7 +273,13 @@ ctx.drawImage(image,0,0);
 canvas.toBlob(blob=>{
 
 if(url) URL.revokeObjectURL(url);
-url=URL.createObjectURL(blob);
+
+const newUrl = URL.createObjectURL(blob);
+url = newUrl;
+
+setTimeout(() => {
+ URL.revokeObjectURL(newUrl);
+}, 10000);
 
 const before=(file.size/1024).toFixed(1)+" KB";
 const after=(blob.size/1024).toFixed(1)+" KB";
@@ -323,8 +307,41 @@ reader.readAsDataURL(file);
 });
 </script>
 
+<script>
+async function loadNav() {
+
+const nav = document.getElementById("toolNav");
+if(!nav) return;
+
+try {
+
+const response = await fetch("/nav-tools.html", { cache: "no-store" });
+
+if(!response.ok) throw new Error("Nav load failed");
+
+const html = await response.text();
+
+nav.innerHTML = html;
+
+} catch(err) {
+
+console.warn("Navigation failed to load");
+
+nav.innerHTML = `
+<h2>Explore Tools</h2>
+<a href="/">Image Compressor</a>
+<a href="/image-resizer.html">Image Resizer</a>
+`;
+
+}
+
+}
+
+document.addEventListener("DOMContentLoaded", loadNav);
+</script>
 </body>
 </html>
+
 
 
 
