@@ -1,39 +1,52 @@
 async function loadTools() {
 
-  const container = document.getElementById("toolNav");
-  if(!container) return;
+const container = document.getElementById("toolNav");
+if(!container) return;
 
-  try {
+try {
 
-    const response = await fetch("/data/tools.json");
-    const tools = await response.json();
+const response = await fetch("/data/tools.json", { cache: "no-store" });
 
-    let html = `
-      <h2>Explore Tools</h2>
-      <div style="margin-top:20px">
-    `;
+if(!response.ok) throw new Error("Failed");
 
-    tools.forEach(tool => {
-      html += `
-        <a href="/${tool.file}" 
-        style="margin:10px;display:inline-block;color:#60a5fa;">
-        ${tool.title}
-        </a>
-      `;
-    });
+const tools = await response.json();
 
-    html += "</div>";
+let html = `
+<h2>Explore Tools</h2>
+<div style="margin-top:20px;">
+`;
 
-    container.innerHTML = html;
+tools.forEach(tool => {
 
-  } catch(e) {
+html += `
+<a href="/${tool.file}" 
+style="margin:10px;display:inline-block;color:#60a5fa;">
+${tool.title}
+</a>
+`;
 
-    container.innerHTML = `
-      <a href="/">Image Compressor</a>
-      <a href="/image-resizer.html">Image Resizer</a>
-    `;
+});
 
-  }
+html += `</div>`;
+
+container.innerHTML = html;
+
+} catch(e) {
+
+console.warn("Tools failed to load");
+
+container.innerHTML = `
+<h2>Explore Tools</h2>
+
+<a href="/">Image Compressor</a>
+<a href="/image-resizer.html">Image Resizer</a>
+<a href="/convert-jpg-to-png-online-free.html">JPG to PNG</a>
+<a href="/png-to-jpg-converter.html">PNG to JPG</a>
+<a href="/webp-to-jpg-converter.html">WEBP to JPG</a>
+`;
+
+}
+
 }
 
 document.addEventListener("DOMContentLoaded", loadTools);
