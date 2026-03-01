@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "slug": "image-compressor",
+    "title": "Fast Image Compressor",
+    "description": "Compress JPG PNG WEBP images instantly. Free online image compressor.",
+    "file": "index.html"
+  },
+  {
+    "slug": "image-resizer",
+    "title": "Image Resizer Online",
+    "description": "Resize JPG PNG WEBP images instantly with this free browser-based tool.",
+    "file": "image-resizer.html"
+  },
+  {
+    "slug": "jpg-to-png",
+    "title": "Convert JPG to PNG",
+    "description": "Convert JPG images to PNG instantly. Private browser-based conversion.",
+    "file": "convert-jpg-to-png-online-free.html"
+  },
+  {
+    "slug": "png-to-jpg",
+    "title": "PNG to JPG Converter",
+    "description": "Convert PNG images to JPG instantly online.",
+    "file": "png-to-jpg-converter.html"
+  },
+  {
+    "slug": "webp-to-jpg",
+    "title": "WEBP to JPG Converter",
+    "description": "Convert WEBP images to JPG instantly online.",
+    "file": "webp-to-jpg-converter.html"
+  }
+]
