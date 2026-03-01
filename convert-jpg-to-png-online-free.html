@@ -215,27 +215,9 @@ Tools and helpful guides
 </p>
 
 <!-- TOOLS -->
-
-<a href="/" style="margin:10px;display:inline-block;color:#60a5fa;">
-Image Compressor
-</a>
-
-<a href="/image-resizer.html" style="margin:10px;display:inline-block;color:#60a5fa;">
-Image Resizer
-</a>
-
-<a href="/convert-jpg-to-png-online-free.html" style="margin:10px;display:inline-block;color:#60a5fa;">
-JPG to PNG Converter
-</a>
-
-<a href="/png-to-jpg-converter.html" style="margin:10px;display:inline-block;color:#60a5fa;">
-PNG to JPG Converter
-</a>
-
-<a href="/webp-to-jpg-converter.html" style="margin:10px;display:inline-block;color:#60a5fa;">
-WEBP to JPG Converter
-</a>
-<br><br>
+<div id="toolNav" style="margin-top:60px;text-align:center">
+Loading tools...
+</div>
 
 <!-- GUIDES -->
 <a href="/compress-image-online-free.html">
@@ -373,5 +355,37 @@ convertBtn.textContent="Convert & Download PNG";
 }
 </script>
 
+<script>
+async function loadNav() {
+
+const nav = document.getElementById("toolNav");
+if(!nav) return;
+
+try {
+
+const response = await fetch("/nav-tools.html", { cache: "no-store" });
+
+if(!response.ok) throw new Error("Nav load failed");
+
+const html = await response.text();
+
+nav.innerHTML = html;
+
+} catch(err) {
+
+console.warn("Navigation failed to load");
+
+nav.innerHTML = `
+<h2>Explore Tools</h2>
+<a href="/">Image Compressor</a>
+<a href="/image-resizer.html">Image Resizer</a>
+`;
+
+}
+
+}
+
+document.addEventListener("DOMContentLoaded", loadNav);
+</script>
 </body>
 </html>
