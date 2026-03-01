@@ -158,22 +158,34 @@ data-ad-slot="8664200172"
 data-ad-format="auto"
 data-full-width-responsive="true"></ins>
 </div>
+<!-- TOOLS NAVIGATION -->
+<div id="toolNav" style="margin-top:60px;text-align:center">
+Loading tools...
+</div>
 
-<div class="nav">
+<!-- GUIDES -->
+<div style="margin-top:60px;text-align:center">
 
-<h2>Explore More</h2>
+<h2>Guides & Resources</h2>
 
-<a href="/">Image Compressor</a>
-<a href="/image-resizer.html">Image Resizer</a>
-<a href="/convert-jpg-to-png-online-free.html">JPG to PNG Converter</a>
-<a href="/png-to-jpg-converter.html">PNG to JPG Converter</a>
-<a href="/webp-to-jpg-converter.html">WEBP to JPG Converter</a>
-<br><br>
+<p style="color:#94a3b8;margin-top:10px;">
+Learn how to optimize and manage images
+</p>
 
-<a href="/compress-image-online-free.html">Guide: How to Compress Images</a>
-<a href="/resize-image-online-free.html">Guide: How to Resize Images</a>
+<div style="margin-top:20px;">
+
+<a href="/compress-image-online-free.html" style="margin:10px;display:inline-block;color:#60a5fa;">
+How to Compress Images
+</a>
+
+<a href="/resize-image-online-free.html" style="margin:10px;display:inline-block;color:#60a5fa;">
+How to Resize Images
+</a>
 
 </div>
+
+</div>
+
 
 <footer>
 © 2026 ToolForge —
@@ -359,5 +371,37 @@ img.src=url;
 
 </script>
 
+<script>
+async function loadNav() {
+
+const nav = document.getElementById("toolNav");
+if(!nav) return;
+
+try {
+
+const response = await fetch("/nav-tools.html", { cache: "no-store" });
+
+if(!response.ok) throw new Error("Nav load failed");
+
+const html = await response.text();
+
+nav.innerHTML = html;
+
+} catch(err) {
+
+console.warn("Navigation failed to load");
+
+nav.innerHTML = `
+<h2>Explore Tools</h2>
+<a href="/">Image Compressor</a>
+<a href="/image-resizer.html">Image Resizer</a>
+`;
+
+}
+
+}
+
+document.addEventListener("DOMContentLoaded", loadNav);
+</script>
 </body>
 </html>
