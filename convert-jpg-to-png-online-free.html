@@ -360,37 +360,7 @@ convertBtn.textContent="Convert & Download PNG";
 }
 </script>
 
-<script>
-async function loadNav() {
 
-const nav = document.getElementById("toolNav");
-if(!nav) return;
-
-try {
-
-const response = await fetch("/nav-tools.html", { cache: "no-store" });
-
-if(!response.ok) throw new Error("Nav load failed");
-
-const html = await response.text();
-
-nav.innerHTML = html;
-
-} catch(err) {
-
-console.warn("Navigation failed to load");
-
-nav.innerHTML = `
-<h2>Explore Tools</h2>
-<a href="/">Image Compressor</a>
-<a href="/image-resizer.html">Image Resizer</a>
-`;
-
-}
-
-}
-
-document.addEventListener("DOMContentLoaded", loadNav);
-</script>
+<script src="/assets/js/nav.js"></script>
 </body>
 </html>
