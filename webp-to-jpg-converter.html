@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,17 +9,25 @@
 <meta name="description" content="Convert WEBP to JPG instantly online. Free browser-based WEBP to JPG converter. Private and fast.">
 
 <link rel="canonical" href="https://fastimgtool.com/webp-to-jpg-converter.html">
+
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#050b18">
 
+<meta property="og:site_name" content="ToolForge">
 <meta property="og:type" content="website">
-<meta property="og:title" content="WEBP to JPG Converter - Free Online Tool">
+<meta property="og:title" content="WEBP to JPG Converter | ToolForge">
 <meta property="og:description" content="Convert WEBP images to JPG instantly. Private browser-based conversion.">
 <meta property="og:url" content="https://fastimgtool.com/webp-to-jpg-converter.html">
+
+<meta property="og:image" content="https://fastimgtool.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="WEBP to JPG converter interface">
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>
 
 <style>
+
 :root{
 --bg:#050b18;
 --card:#0b1225;
@@ -29,7 +38,12 @@
 --accent2:#003cff;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:system-ui,-apple-system;
+}
 
 body{
 background:var(--bg);
@@ -43,8 +57,14 @@ margin:auto;
 padding:20px;
 }
 
-header{text-align:center;margin:40px 0 20px;}
-header a{text-decoration:none;}
+header{
+text-align:center;
+margin:40px 0 20px;
+}
+
+header a{
+text-decoration:none;
+}
 
 h1{
 font-size:2.4rem;
@@ -53,7 +73,10 @@ background:linear-gradient(135deg,var(--accent),var(--accent2));
 -webkit-text-fill-color:transparent;
 }
 
-.sub{color:var(--muted);margin-top:8px;}
+.sub{
+color:var(--muted);
+margin-top:8px;
+}
 
 .card{
 background:var(--card);
@@ -70,17 +93,12 @@ padding:40px;
 border-radius:14px;
 cursor:pointer;
 transition:.2s;
-outline:none;
 }
 
-.upload:hover,.upload.dragover{
+.upload:hover,
+.upload.dragover{
 border-color:var(--accent);
 background:#020617;
-}
-
-.upload:focus-visible{
-outline:2px solid var(--accent);
-outline-offset:2px;
 }
 
 button{
@@ -114,7 +132,7 @@ border:2px solid var(--border);
 
 .status{
 margin-top:15px;
-font-size:0.9rem;
+font-size:.9rem;
 color:var(--accent);
 min-height:1.5em;
 }
@@ -122,28 +140,15 @@ min-height:1.5em;
 .fileinfo{
 margin-top:10px;
 color:var(--muted);
-font-size:0.85rem;
+font-size:.85rem;
 }
 
 .ad{
 margin:40px 0;
 display:flex;
 justify-content:center;
+min-height:90px;
 }
-
-.nav{
-margin-top:60px;
-text-align:center;
-}
-
-.nav a{
-color:#60a5fa;
-margin:10px;
-display:inline-block;
-text-decoration:none;
-}
-
-.nav a:hover{text-decoration:underline;}
 
 footer{
 margin-top:60px;
@@ -151,9 +156,10 @@ padding:30px 0;
 text-align:center;
 color:#64748b;
 border-top:1px solid var(--border);
-font-size:0.9rem;
 }
+
 </style>
+
 </head>
 
 <body>
@@ -165,6 +171,7 @@ font-size:0.9rem;
 <div class="sub">Fast • Private • Browser-Based Tools</div>
 </header>
 
+<!-- TOP AD -->
 <div class="ad">
 <ins class="adsbygoogle"
 style="display:block"
@@ -178,7 +185,7 @@ data-full-width-responsive="true"></ins>
 
 <h2>Convert WEBP → JPG</h2>
 
-<div class="upload" id="uploadArea" tabindex="0" role="button">
+<div class="upload" id="uploadArea">
 Click or Drag WEBP Image Here
 <input type="file" id="fileInput" accept="image/webp,image/x-webp" hidden>
 </div>
@@ -195,14 +202,45 @@ Click or Drag WEBP Image Here
 
 </div>
 
-<div class="nav">
-<h2>Explore More Tools</h2>
+<!-- MIDDLE AD -->
+<div class="ad">
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-8332278519903196"
+data-ad-slot="8664200172"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
+</div>
 
-<a href="/">Image Compressor</a>
-<a href="/image-resizer.html">Image Resizer</a>
-<a href="/convert-jpg-to-png-online-free.html">JPG → PNG</a>
-<a href="/png-to-jpg-converter.html">PNG → JPG</a>
-<a href="/webp-to-jpg-converter.html">WEBP → JPG</a>
+<!-- TOOLS NAVIGATION -->
+<div id="toolNav" style="margin-top:60px;text-align:center">
+Loading tools...
+</div>
+
+<!-- GUIDES -->
+<div style="margin-top:60px;text-align:center">
+
+<h2>Guides & Resources</h2>
+
+<p style="color:#94a3b8;margin-top:10px;">
+Learn how to optimize and manage images
+</p>
+
+<div style="margin-top:20px;">
+
+<a href="/compress-image-online-free.html" style="margin:10px;display:inline-block;color:#60a5fa;">
+How to Compress Images
+</a>
+
+<a href="/resize-image-online-free.html" style="margin:10px;display:inline-block;color:#60a5fa;">
+How to Resize Images
+</a>
+
+<a href="/how-to-convert-jpg-to-png-online-free.html" style="margin:10px;display:inline-block;color:#60a5fa;">
+How to Convert JPG to PNG
+</a>
+
+</div>
 
 </div>
 
@@ -216,6 +254,12 @@ Click or Drag WEBP Image Here
 </div>
 
 <script>
+
+window.addEventListener("load",()=>{
+document.querySelectorAll(".adsbygoogle").forEach(()=>{
+(adsbygoogle = window.adsbygoogle || []).push({});
+});
+});
 
 let currentFile=null
 let previewUrl=null
@@ -255,10 +299,6 @@ alert("Upload WEBP image")
 return
 }
 
-if(file.size>50*1024*1024){
-if(!confirm("File >50MB. Continue?"))return
-}
-
 currentFile=file
 convertBtn.disabled=false
 preview.style.display="none"
@@ -283,41 +323,22 @@ img.onload=()=>{
 
 URL.revokeObjectURL(url)
 
-if(img.width*img.height>32000000){
-alert("Image too large")
-reset()
-return
-}
-
 const canvas=document.createElement("canvas")
 canvas.width=img.width
 canvas.height=img.height
 
 const ctx=canvas.getContext("2d")
 
-try{
 ctx.drawImage(img,0,0)
-}catch{
-alert("Canvas error")
-reset()
-return
-}
 
 canvas.toBlob(blob=>{
-
-if(!blob){
-alert("Conversion failed")
-reset()
-return
-}
 
 const downloadUrl=URL.createObjectURL(blob)
 
 imgPreview.src=downloadUrl
 preview.style.display="block"
 
-const safeName=currentFile.name.replace(/[^\w.-]/g,"")
-const newName=safeName.replace(/\.webp$/i,".jpg")
+const newName=currentFile.name.replace(/\.webp$/i,".jpg")
 
 const a=document.createElement("a")
 a.href=downloadUrl
@@ -355,6 +376,41 @@ converting=false
 window.addEventListener("beforeunload",()=>{
 if(previewUrl)URL.revokeObjectURL(previewUrl)
 })
+
+</script>
+
+<script>
+
+async function loadNav() {
+
+const nav = document.getElementById("toolNav");
+if(!nav) return;
+
+try {
+
+const response = await fetch("/nav-tools.html",{cache:"no-store"});
+
+if(!response.ok) throw new Error("Nav load failed");
+
+const html = await response.text();
+
+nav.innerHTML = html;
+
+} catch(err) {
+
+console.warn("Navigation failed");
+
+nav.innerHTML = `
+<h2>Explore Tools</h2>
+<a href="/">Image Compressor</a>
+<a href="/image-resizer.html">Image Resizer</a>
+`;
+
+}
+
+}
+
+document.addEventListener("DOMContentLoaded", loadNav);
 
 </script>
 
