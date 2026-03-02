@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+
+<link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>{{title}}</h1>
+
+</header>
+
+<main class="tool-container">
+
+<div class="tool-box">
+
+<input type="file" id="fileInput" accept="image/*">
+
+<div id="preview"></div>
+
+<button id="downloadBtn">Download</button>
+
+</div>
+
+</main>
+
+<section class="related-tools">
+
+<h2>Related Tools</h2>
+
+<div id="related-tools-container"></div>
+
+</section>
+
+<footer>
+
+<p>© FastImgTool</p>
+
+</footer>
+
+<script src="/assets/js/nav.js"></script>
+
+<script src="/tools/{{slug}}/tool.js"></script>
+
+</body>
+
+</html>
