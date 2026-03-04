@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Image Tools – Fast Image Tools</title>
+    <meta name="description" content="Browse all free online image tools: resize, compress, convert, crop, blur, sharpen, and more. No uploads, private.">
+    <link rel="canonical" href="https://fastimgtool.com/tools/">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- same meta tags as homepage -->
+    <link rel="icon" href="/assets/favicon.png">
+    <style>
+        /* reuse same styles as homepage, maybe adjust container */
+        body { background: #050b18; color: #e6edf7; font-family: system-ui; }
+        .navbar, .footer { background: #0b1225; border-color: #1e293b; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        h1 { font-size: 2rem; margin-bottom: 20px; }
+        .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+        .tool-card { background: #111a30; border: 1px solid #2a3a5a; border-radius: 12px; padding: 20px; }
+        .tool-card h3 { font-size: 1.2rem; }
+        .tool-card p { font-size: 0.85rem; color: #a0b3d9; }
+        .btn { background: #2a3a5a; padding: 6px 14px; border-radius: 30px; color: #e6edf7; text-decoration: none; font-size: 0.85rem; }
+        .btn:hover { background: #4da3ff; }
+        .footer { margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">...</nav> <!-- copy navbar from index.html -->
+    <main class="container">
+        <h1>All Image Tools</h1>
+        <div id="tools-container" class="tool-grid">Loading tools...</div>
+    </main>
+    <footer class="footer">...</footer> <!-- copy footer from index.html -->
+    <script>
+        async function loadTools() {
+            const res = await fetch('/data/tools.json');
+            const tools = await res.json();
+            let html = '';
+            tools.forEach(tool => {
+                html += `<div class="tool-card"><h3>${tool.title}</h3><p>${tool.description}</p><a href="/tools/${tool.slug}/" class="btn">Open Tool</a></div>`;
+            });
+            document.getElementById('tools-container').innerHTML = html;
+        }
+        loadTools();
+    </script>
+</body>
+</html>

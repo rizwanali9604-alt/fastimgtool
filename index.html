@@ -1,324 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="canonical" href="https://fastimgtool.com/">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Image Tools – Free Online Image Editor & Converter</title>
+    <meta name="description" content="Fast, private, browser‑based image tools: resize, compress, convert, crop, blur, sharpen, and more. No uploads, 100% free.">
+    <link rel="canonical" href="https://fastimgtool.com/">
+    <link rel="stylesheet" href="/assets/css/style.css">
 
-<title>Fast Image Compressor – Reduce JPG PNG WEBP Size Online</title>
-<meta name="description" content="Compress images instantly. Private. No uploads. Supports JPG PNG WEBP.">
+    <!-- Preconnect for AdSense -->
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <link rel="preconnect" href="https://googleads.g.doubleclick.net">
 
-<!-- ADSENSE SCRIPT (LOAD ONLY ONCE) -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Fast Image Tools – Free Online Image Editor & Converter">
+    <meta property="og:description" content="Free, private image tools: resize, compress, convert, and edit images instantly in your browser.">
+    <meta property="og:url" content="https://fastimgtool.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://fastimgtool.com/assets/og-image.png">
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
-body{
-background:#050b18;
-color:#e6edf7;
-min-height:100vh;
-display:flex;
-flex-direction:column;
-}
-.container{max-width:1100px;margin:auto;padding:20px;width:100%}
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fast Image Tools">
+    <meta name="twitter:description" content="Free, private image tools – no uploads, no signup.">
+    <meta name="twitter:image" content="https://fastimgtool.com/assets/og-image.png">
 
-header{text-align:center;margin:30px 0}
-h1{
-font-size:2.6rem;
-background:linear-gradient(135deg,#4da3ff,#003cff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-.sub{color:#94a3b8;margin-top:10px}
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
 
-.card{
-background:#0b1225;
-border:1px solid #1e293b;
-border-radius:18px;
-padding:30px;
-box-shadow:0 0 40px rgba(0,60,255,.15);
-margin-top:25px;
-}
+    <!-- AdSense (Auto Ads) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>
 
-.upload{
-border:2px dashed #334155;
-padding:40px;
-text-align:center;
-border-radius:14px;
-cursor:pointer;
-transition:.2s;
-}
-.upload:hover{border-color:#3b82f6;background:#020617}
+    <style>
+        /* Global resets */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #050b18;
+            color: #e6edf7;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-.controls{margin-top:20px;display:flex;gap:20px;flex-wrap:wrap}
+        /* Navigation bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #0b1225;
+            border-bottom: 1px solid #1e293b;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo a {
+            font-size: 1.4rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #4da3ff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            color: #a0b3d9;
+            transition: color 0.2s;
+            font-size: 0.95rem;
+        }
+        .nav-links a:hover {
+            color: #4da3ff;
+        }
 
-input[type=range]{width:100%}
+        /* Hero section */
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #0f1a2f, #050b18);
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 30px;
+        }
+        .hero h1 {
+            font-size: 2.4rem;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #4da3ff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1rem;
+            color: #a0b3d9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
 
-select{
-width:100%;
-padding:8px;
-border-radius:8px;
-background:#020617;
-color:#e6edf7;
-border:1px solid #334155;
-}
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
 
-button{
-background:#2563eb;
-color:white;
-border:none;
-padding:14px 30px;
-border-radius:40px;
-font-weight:600;
-margin-top:25px;
-cursor:pointer;
-width:100%;
-max-width:260px;
-display:block;
-margin-left:auto;
-margin-right:auto;
-}
-button:disabled{background:#475569;cursor:not-allowed}
+        /* Category sections */
+        .category-section {
+            margin: 40px 0;
+        }
+        .category-title {
+            font-size: 1.5rem;
+            border-bottom: 2px solid #2a3a5a;
+            padding-bottom: 6px;
+            margin-bottom: 20px;
+            color: #e6edf7;
+        }
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+        }
+        .tool-card {
+            background: #111a30;
+            border: 1px solid #2a3a5a;
+            border-radius: 12px;
+            padding: 20px;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .tool-card:hover {
+            transform: translateY(-3px);
+            border-color: #4da3ff;
+            box-shadow: 0 6px 16px rgba(77,163,255,0.2);
+        }
+        .tool-card h3 {
+            margin-top: 0;
+            color: #e6edf7;
+            font-size: 1.2rem;
+        }
+        .tool-card p {
+            color: #a0b3d9;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            margin: 10px 0;
+        }
+        .tool-card .btn {
+            display: inline-block;
+            background: #2a3a5a;
+            color: #e6edf7;
+            padding: 6px 14px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+        .tool-card .btn:hover {
+            background: #4da3ff;
+            color: white;
+        }
 
-.preview{display:none;margin-top:25px;text-align:center}
-.preview img{
-max-width:100%;
-max-height:220px;
-border-radius:10px;
-margin-top:10px;
-}
+        /* Guides preview */
+        .guides-preview {
+            margin: 40px 0;
+            background: #0f1a2f;
+            border-radius: 16px;
+            padding: 30px;
+        }
+        .guides-preview h2 {
+            margin-top: 0;
+            color: #e6edf7;
+            font-size: 1.5rem;
+        }
+        .guides-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .guides-list a {
+            background: #2a3a5a;
+            padding: 5px 14px;
+            border-radius: 30px;
+            color: #e6edf7;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+        .guides-list a:hover {
+            background: #4da3ff;
+        }
 
-.download{
-display:inline-block;
-margin-top:15px;
-background:#020617;
-padding:14px 28px;
-border-radius:40px;
-color:white;
-text-decoration:none;
-border:1px solid #334155;
-}
+        /* Footer */
+        .footer {
+            background: #0b1225;
+            border-top: 1px solid #1e293b;
+            padding: 40px 20px 20px;
+            margin-top: 50px;
+        }
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 30px;
+        }
+        .footer-col h4 {
+            color: #e6edf7;
+            font-size: 1rem;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col li {
+            margin-bottom: 8px;
+        }
+        .footer-col a {
+            color: #a0b3d9;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .footer-col a:hover {
+            color: #4da3ff;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 20px;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
 
-.ad{margin:35px 0;display:flex;justify-content:center}
-
-footer{
-margin-top:40px;
-padding:25px;
-text-align:center;
-color:#64748b;
-border-top:1px solid #1e293b;
-}
-
-@media(max-width:600px){
-h1{font-size:2rem}
-}
-</style>
+        /* Responsive */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<div class="container">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/">⚡ FastImageTool</a>
+        </div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/tools/">Tools</a>
+            <a href="/guides/">Guides</a>
+            <a href="/blog/">Blog</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+    </nav>
 
-<header>
-<h1>⚡ Fast Image Compressor</h1>
-<div class="sub">Private • Instant • No Uploads</div>
-</header>
+    <header>
+        <div class="hero">
+            <h1>⚡ Fast Image Tools</h1>
+            <p>Free, private, browser‑based image tools. No uploads, no signup, just fast editing.</p>
+            <div id="toolNav" style="margin-top: 15px;"></div>
+        </div>
+    </header>
 
-<!-- TOP AD -->
-<div class="ad">
-<ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-8332278519903196"
-data-ad-slot="9490701260"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins>
-</div>
+    <main class="container" id="tools">
 
-<div class="card">
+        <!-- Categories will be injected here by JavaScript -->
+        <div id="categories-container"></div>
 
-<div class="upload" id="upload">Click or Drop Image</div>
-<input type="file" id="file" accept="image/*" hidden>
+        <!-- Guides preview section (dynamic) -->
+        <div class="guides-preview" id="guides-preview" style="display: none;">
+            <h2>📚 Popular Guides</h2>
+            <div id="guides-list" class="guides-list">
+                <!-- Will be populated with guides -->
+            </div>
+        </div>
+        <!-- Latest blog post -->
+        <div style="margin: 40px 0; text-align:center;">
+            <h2>📝 Latest from Our Blog</h2>
+            <p><a href="/blog/first-post.html" style="color:#4da3ff;">How to Optimize Images for Web →</a></p>
+        </div>
 
-<div class="controls">
-<div style="flex:1">
-<label>Quality <span id="qv">80</span>%</label>
-<input type="range" id="quality" min="10" max="100" value="80">
-</div>
+    </main>
 
-<div style="flex:1">
-<label>Format</label>
-<select id="format">
-<option value="image/jpeg">JPEG</option>
-<option value="image/png">PNG</option>
-<option value="image/webp">WEBP</option>
-</select>
-</div>
-</div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="/tools/">All Tools</a></li>
+                    <li><a href="/guides/">All Guides</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacy.html">Privacy policy</a></li>
+                    <li><a href="/terms.html">Terms & conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/about.html">About us</a></li>
+                    <li><a href="/contact.html">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 FastImgTool – All rights reserved.</p>
+        </div>
+    </footer>
 
-<button id="compress" disabled>Compress</button>
+    <script>
+        // Load tools and build categories
+        async function loadHomepage() {
+            try {
+                // Fetch tools (required)
+                const toolsRes = await fetch('/data/tools.json');
+                if (!toolsRes.ok) throw new Error('Failed to fetch tools');
+                const tools = await toolsRes.json();
 
-<div class="preview" id="preview"></div>
+                // Group tools by category
+                const categories = {};
+                tools.forEach(tool => {
+                    const cat = tool.category || 'uncategorized';
+                    if (!categories[cat]) categories[cat] = [];
+                    categories[cat].push(tool);
+                });
 
-</div>
+                const categoryNames = {
+                    'resize': '📏 Resize & Scale',
+                    'compression': '🗜️ Compression',
+                    'conversion': '🔄 Format Conversion',
+                    'effects': '✨ Effects & Filters',
+                    'editing': '✂️ Editing Tools',
+                    'test': '🧪 Test Tools',
+                    'uncategorized': '📦 Other Tools'
+                };
 
-<!-- MIDDLE AD -->
-<div class="ad">
-<ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-8332278519903196"
-data-ad-slot="8664200172"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins>
-</div>
-<div id="toolNav" style="margin-top:60px;text-align:center">
-Loading tools...
-</div>
+                let html = '';
+                for (const [cat, toolsList] of Object.entries(categories)) {
+                    const displayName = categoryNames[cat] || cat;
+                    html += `<div class="category-section"><h2 class="category-title">${displayName}</h2><div class="tool-grid">`;
+                    toolsList.forEach(tool => {
+                        html += `
+                            <div class="tool-card">
+                                <h3>${tool.title}</h3>
+                                <p>${tool.description}</p>
+                                <a href="/tools/${tool.slug}/" class="btn">Open Tool →</a>
+                            </div>
+                        `;
+                    });
+                    html += `</div></div>`;
+                }
+                document.getElementById('categories-container').innerHTML = html;
 
+            } catch (err) {
+                console.error('Error loading tools:', err);
+                document.getElementById('categories-container').innerHTML = '<p style="color:red;">Failed to load tools. Please refresh.</p>';
+            }
 
-<!-- LEARN & GUIDES -->
-<div style="margin-top:60px;text-align:center">
+            // Fetch guides (independent, won't break categories)
+            try {
+                const guidesRes = await fetch('/data/guides.json');
+                if (!guidesRes.ok) throw new Error('Failed to fetch guides');
+                const guides = await guidesRes.json();
 
-<h2>Guides & Resources</h2>
+                const guidesPreview = document.getElementById('guides-preview');
+                if (guides && guides.length > 0) {
+                    // Random guides for preview
+                    const shuffled = guides.sort(() => 0.5 - Math.random());
+                    const previewGuides = shuffled.slice(0, 8);
+                    let guidesHtml = '';
+                    previewGuides.forEach(guide => {
+                        guidesHtml += `<a href="${guide.url}">${guide.title}</a>`;
+                    });
+                    document.getElementById('guides-list').innerHTML = guidesHtml;
+                    guidesPreview.style.display = 'block'; // show section
+                } else {
+                    // No guides, hide section
+                    guidesPreview.style.display = 'none';
+                }
+            } catch (err) {
+                console.error('Error loading guides:', err);
+                // Hide guides section if error
+                document.getElementById('guides-preview').style.display = 'none';
+            }
+        }
 
-<p style="color:#94a3b8;margin-top:10px;">
-Learn how to optimize and manage images
-</p>
-
-<div style="margin-top:20px;">
-
-<a href="/compress-image-online-free.html" style="margin:10px;display:inline-block;color:#60a5fa;">
-How to Compress Images Online
-</a>
-
-<a href="/resize-image-online-free.html" style="margin:10px;display:inline-block;color:#60a5fa;">
-How to Resize Images Online
-</a>
-
-<a href="/how-to-convert-jpg-to-png-online-free.html" style="margin:10px;display:inline-block;color:#60a5fa;">
-How to Convert JPG to PNG
-</a>
-
-</div>
-
-</div>
-<footer>
-© 2026 ToolForge —
-<a href="/about.html">About</a> •
-<a href="/privacy.html">Privacy Policy</a> •
-<a href="/contact.html">Contact</a>
-</footer>
-
-</div>
-
-<script>
-window.addEventListener("load", () => {
-  document.querySelectorAll(".adsbygoogle").forEach(() => {
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  });
-});
-
-const upload=document.getElementById("upload");
-const fileInput=document.getElementById("file");
-const btn=document.getElementById("compress");
-const q=document.getElementById("quality");
-const qv=document.getElementById("qv");
-const preview=document.getElementById("preview");
-const format=document.getElementById("format");
-
-let file=null;
-let url=null;
-
-q.addEventListener("input",()=>qv.textContent=q.value);
-
-upload.addEventListener("click",()=>fileInput.click());
-upload.addEventListener("dragover",e=>e.preventDefault());
-
-upload.addEventListener("drop",e=>{
-e.preventDefault();
-handleFile(e.dataTransfer.files[0]);
-});
-
-fileInput.addEventListener("change",e=>{
-handleFile(e.target.files[0]);
-});
-
-function handleFile(f){
-if(!f || !f.type.startsWith("image/")){
-alert("Please upload image file");
-return;
-}
-if(f.size>20*1024*1024){
-alert("Max file size 20MB");
-return;
-}
-file=f;
-btn.disabled=false;
-}
-
-btn.addEventListener("click",()=>{
-if(!file)return;
-
-const reader=new FileReader();
-
-reader.onload=e=>{
-const image=new Image();
-image.src=e.target.result;
-
-image.onload=()=>{
-const canvas=document.createElement("canvas");
-canvas.width=image.width;
-canvas.height=image.height;
-const ctx=canvas.getContext("2d");
-ctx.drawImage(image,0,0);
-
-canvas.toBlob(blob=>{
-
-if(url) URL.revokeObjectURL(url);
-
-const newUrl = URL.createObjectURL(blob);
-url = newUrl;
-
-setTimeout(() => {
- URL.revokeObjectURL(newUrl);
-}, 10000);
-
-const before=(file.size/1024).toFixed(1)+" KB";
-const after=(blob.size/1024).toFixed(1)+" KB";
-
-preview.innerHTML=`
-<h3>Preview</h3>
-<img src="${url}">
-<p style="margin-top:10px;color:#94a3b8">
-Original: ${before} → Compressed: ${after}
-</p>
-<a href="${url}" download="compressed.${format.value.split('/')[1]}" class="download">
-Download Image
-</a>
-`;
-
-preview.style.display="block";
-
-},format.value,
-format.value==="image/png"?undefined:q.value/100);
-
-};
-};
-
-reader.readAsDataURL(file);
-});
-</script>
-
-
-<script src="/assets/js/nav.js"></script>
+        loadHomepage();
+    </script>
+    <script src="/assets/js/nav.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-

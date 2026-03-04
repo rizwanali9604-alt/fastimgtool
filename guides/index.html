@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Guides – Fast Image Tools</title>
+    <meta name="description" content="Learn how to resize, compress, convert, and edit images with our free guides.">
+    <link rel="canonical" href="https://fastimgtool.com/guides/">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="icon" href="/assets/favicon.png">
+    <style>
+        body { background: #050b18; color: #e6edf7; font-family: system-ui; }
+        .navbar, .footer { background: #0b1225; border-color: #1e293b; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        h1 { font-size: 2rem; margin-bottom: 20px; }
+        .guides-list { display: flex; flex-direction: column; gap: 15px; }
+        .guide-item { background: #111a30; border: 1px solid #2a3a5a; border-radius: 10px; padding: 15px 20px; }
+        .guide-item a { color: #4da3ff; font-size: 1.1rem; text-decoration: none; }
+        .guide-item a:hover { text-decoration: underline; }
+        .guide-item p { color: #a0b3d9; font-size: 0.9rem; margin-top: 5px; }
+        .footer { margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">...</nav>
+    <main class="container">
+        <h1>All Guides</h1>
+        <div id="guides-container" class="guides-list">Loading guides...</div>
+    </main>
+    <footer class="footer">...</footer>
+    <script>
+        async function loadGuides() {
+            const res = await fetch('/data/guides.json');
+            const guides = await res.json();
+            let html = '';
+            guides.forEach(guide => {
+                html += `<div class="guide-item"><a href="${guide.url}">${guide.title}</a><p>${guide.description || 'Learn more...'}</p></div>`;
+            });
+            document.getElementById('guides-container').innerHTML = html;
+        }
+        loadGuides();
+    </script>
+</body>
+</html>

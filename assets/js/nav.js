@@ -1,50 +1,23 @@
-async function loadTools() {
+fetch("/data/tools.json")
+.then(res => res.json())
+.then(tools => {
 
-const container = document.getElementById("toolNav");
-if(!container) return;
+const nav = document.getElementById("toolNav");
 
-try {
-
-const response = await fetch("/data/tools.json");
-
-if(!response.ok) throw new Error("Fetch failed");
-
-const tools = await response.json();
-
-let html = `
-<h2>Explore Tools</h2>
-<div style="margin-top:20px;">
-`;
+if(!nav) return;
 
 tools.forEach(tool => {
 
-html += `
-<a href="${tool.file}" 
-style="margin:10px;display:inline-block;color:#60a5fa;">
-${tool.title}
-</a>
-`;
+const a = document.createElement("a");
+
+a.href = `/tools/${tool.slug}/`;
+
+a.textContent = tool.name;
+
+a.style.marginRight = "15px";
+
+nav.appendChild(a);
 
 });
 
-html += "</div>";
-
-container.innerHTML = html;
-
-} catch (err) {
-
-container.innerHTML = `
-<h2>Explore Tools</h2>
-
-<a href="/">Fast Image Compressor</a>
-<a href="/image-resizer.html">Image Resizer</a>
-<a href="/convert-jpg-to-png-online-free.html">Convert JPG to PNG</a>
-<a href="/png-to-jpg-converter.html">PNG to JPG Converter</a>
-<a href="/webp-to-jpg-converter.html">WEBP to JPG Converter</a>
-`;
-
-}
-
-}
-
-document.addEventListener("DOMContentLoaded", loadTools);
+});
