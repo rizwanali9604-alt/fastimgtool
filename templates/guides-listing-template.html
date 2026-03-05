@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Guides – Fast Image Tools</title>
+    <meta name="description" content="Learn how to resize, compress, convert, and edit images with our free guides.">
+    <link rel="canonical" href="https://fastimgtool.com/guides/">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="icon" href="/assets/favicon.png">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <link rel="preconnect" href="https://googleads.g.doubleclick.net">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>
+    <style>
+        .navbar, .footer { background: #0b1225; border-color: #1e293b; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        h1 { font-size: 2rem; margin-bottom: 20px; }
+        .guides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .guide-card {
+            background: #111a30;
+            border: 1px solid #2a3a5a;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .guide-card h3 a {
+            color: #4da3ff;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .guide-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .guide-card p {
+            color: #a0b3d9;
+            font-size: 0.9rem;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">...</nav> <!-- same navbar -->
+    <main class="container">
+        <h1>All Guides</h1>
+        <div class="guides-grid">
+            {{guides}}
+        </div>
+    </main>
+    <footer class="footer">...</footer> <!-- same footer -->
+    <script src="/assets/js/nav.js"></script>
+</body>
+</html>
