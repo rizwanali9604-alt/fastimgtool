@@ -4,32 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Image Tools – Fast Image Tools</title>
-    <meta name="description" content="Browse all free online image tools: resize, compress, convert, crop, blur, sharpen, and more. No uploads, private.">
+    <meta name="description" content="Browse all free online image tools: resize, compress, convert, crop, blur, sharpen, and more.">
     <link rel="canonical" href="https://fastimgtool.com/tools/">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <!-- same meta tags as homepage -->
     <link rel="icon" href="/assets/favicon.png">
     <style>
-        /* reuse same styles as homepage, maybe adjust container */
-        body { background: #050b18; color: #e6edf7; font-family: system-ui; }
+        /* reuse navbar/footer styles from homepage */
         .navbar, .footer { background: #0b1225; border-color: #1e293b; }
         .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
         h1 { font-size: 2rem; margin-bottom: 20px; }
-        .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
-        .tool-card { background: #111a30; border: 1px solid #2a3a5a; border-radius: 12px; padding: 20px; }
-        .tool-card h3 { font-size: 1.2rem; }
-        .tool-card p { font-size: 0.85rem; color: #a0b3d9; }
-        .btn { background: #2a3a5a; padding: 6px 14px; border-radius: 30px; color: #e6edf7; text-decoration: none; font-size: 0.85rem; }
-        .btn:hover { background: #4da3ff; }
-        .footer { margin-top: 50px; }
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .tool-card {
+            background: #111a30;
+            border: 1px solid #2a3a5a;
+            border-radius: 12px;
+            padding: 20px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .tool-card:hover {
+            transform: translateY(-3px);
+            border-color: #4da3ff;
+        }
+        .tool-card h3 {
+            margin-top: 0;
+            color: #e6edf7;
+            font-size: 1.2rem;
+        }
+        .tool-card p {
+            color: #a0b3d9;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin: 10px 0;
+        }
+        .tool-card .btn {
+            display: inline-block;
+            background: #2a3a5a;
+            color: #e6edf7;
+            padding: 6px 14px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .tool-card .btn:hover {
+            background: #4da3ff;
+        }
     </style>
 </head>
 <body>
-   <!-- Navigation Bar -->
+    <!-- REPLACE WITH ACTUAL NAVBAR (copy from index.html) -->
     <nav class="navbar">
-        <div class="logo">
-            <a href="/">⚡ FastImageTool</a>
-        </div>
+        <div class="logo"><a href="/">⚡ FastImageTool</a></div>
         <div class="nav-links">
             <a href="/">Home</a>
             <a href="/tools/">Tools</a>
@@ -42,8 +70,12 @@
 
     <main class="container">
         <h1>All Image Tools</h1>
-        <div id="tools-container" class="tool-grid">Loading tools...</div>
+        <div id="tools-container" class="tool-grid">
+            Loading tools...
+        </div>
     </main>
+
+    <!-- REPLACE WITH ACTUAL FOOTER (copy from index.html) -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-col">
@@ -80,7 +112,13 @@
             const tools = await res.json();
             let html = '';
             tools.forEach(tool => {
-                html += `<div class="tool-card"><h3>${tool.title}</h3><p>${tool.description}</p><a href="/tools/${tool.slug}/" class="btn">Open Tool</a></div>`;
+                html += `
+                    <div class="tool-card">
+                        <h3>${tool.title}</h3>
+                        <p>${tool.description}</p>
+                        <a href="/tools/${tool.slug}/" class="btn">Open Tool</a>
+                    </div>
+                `;
             });
             document.getElementById('tools-container').innerHTML = html;
         }

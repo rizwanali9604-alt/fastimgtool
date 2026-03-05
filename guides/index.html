@@ -9,24 +9,39 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="icon" href="/assets/favicon.png">
     <style>
-        body { background: #050b18; color: #e6edf7; font-family: system-ui; }
         .navbar, .footer { background: #0b1225; border-color: #1e293b; }
         .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
         h1 { font-size: 2rem; margin-bottom: 20px; }
-        .guides-list { display: flex; flex-direction: column; gap: 15px; }
-        .guide-item { background: #111a30; border: 1px solid #2a3a5a; border-radius: 10px; padding: 15px 20px; }
-        .guide-item a { color: #4da3ff; font-size: 1.1rem; text-decoration: none; }
-        .guide-item a:hover { text-decoration: underline; }
-        .guide-item p { color: #a0b3d9; font-size: 0.9rem; margin-top: 5px; }
-        .footer { margin-top: 50px; }
+        .guides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .guide-card {
+            background: #111a30;
+            border: 1px solid #2a3a5a;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .guide-card h3 a {
+            color: #4da3ff;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .guide-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .guide-card p {
+            color: #a0b3d9;
+            font-size: 0.9rem;
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
+    <!-- REPLACE WITH ACTUAL NAVBAR -->
     <nav class="navbar">
-        <div class="logo">
-            <a href="/">⚡ FastImageTool</a>
-        </div>
+        <div class="logo"><a href="/">⚡ FastImageTool</a></div>
         <div class="nav-links">
             <a href="/">Home</a>
             <a href="/tools/">Tools</a>
@@ -39,9 +54,13 @@
 
     <main class="container">
         <h1>All Guides</h1>
-        <div id="guides-container" class="guides-list">Loading guides...</div>
+        <div id="guides-container" class="guides-grid">
+            Loading guides...
+        </div>
     </main>
-   <footer class="footer">
+
+    <!-- REPLACE WITH ACTUAL FOOTER -->
+    <footer class="footer">
         <div class="footer-container">
             <div class="footer-col">
                 <h4>Product</h4>
@@ -77,7 +96,12 @@
             const guides = await res.json();
             let html = '';
             guides.forEach(guide => {
-                html += `<div class="guide-item"><a href="${guide.url}">${guide.title}</a><p>${guide.description || 'Learn more...'}</p></div>`;
+                html += `
+                    <div class="guide-card">
+                        <h3><a href="${guide.url}">${guide.title}</a></h3>
+                        <p>${guide.description || 'Learn more...'}</p>
+                    </div>
+                `;
             });
             document.getElementById('guides-container').innerHTML = html;
         }
