@@ -25,12 +25,55 @@
     </style>
 </head>
 <body>
-    <nav class="navbar">...</nav> <!-- copy navbar from index.html -->
+   <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/">⚡ FastImageTool</a>
+        </div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/tools/">Tools</a>
+            <a href="/guides/">Guides</a>
+            <a href="/blog/">Blog</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+    </nav>
+
     <main class="container">
         <h1>All Image Tools</h1>
         <div id="tools-container" class="tool-grid">Loading tools...</div>
     </main>
-    <footer class="footer">...</footer> <!-- copy footer from index.html -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="/tools/">All Tools</a></li>
+                    <li><a href="/guides/">All Guides</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacy.html">Privacy policy</a></li>
+                    <li><a href="/terms.html">Terms & conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/about.html">About us</a></li>
+                    <li><a href="/contact.html">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 FastImgTool – All rights reserved.</p>
+        </div>
+    </footer>
+
     <script>
         async function loadTools() {
             const res = await fetch('/data/tools.json');
