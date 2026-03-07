@@ -13,13 +13,14 @@ const CONFIG = {
     TOOLS_LISTING_TEMPLATE: path.join(__dirname, "templates", "tools-listing-template.html"),
     GUIDES_LISTING_TEMPLATE: path.join(__dirname, "templates", "guides-listing-template.html"),
     BLOG_TEMPLATE: path.join(__dirname, "templates", "blog-template.html"),
+    TOOL_CONTENT_FILE: path.join(__dirname, "data", "tool-content.json"),
 };
 
 async function ensureDir(dir) {
     await fs.mkdir(dir, { recursive: true });
 }
 
-// ------------------- Original Tool Generation -------------------
+// ------------------- Helper Functions -------------------
 async function loadTools() {
     let raw;
     try {
@@ -42,7 +43,6 @@ async function loadTools() {
         process.exit(1);
     }
 
-    // Basic validation (you can expand this)
     const validated = tools.filter(tool => tool.slug && tool.title && tool.description);
     if (validated.length === 0) {
         console.error('❌ No valid tools found');
@@ -60,7 +60,6 @@ async function loadTemplate() {
         process.exit(1);
     }
 
-    // Check required placeholders
     const required = ['{{title}}', '{{description}}', '{{slug}}'];
     for (const token of required) {
         if (!template.includes(token)) {
@@ -69,21 +68,6 @@ async function loadTemplate() {
         }
     }
     return template;
-}
-
-async function generatePage(tool, template) {
-    const toolDir = path.join(CONFIG.OUTPUT_DIR, tool.slug);
-    await ensureDir(toolDir);
-
-    const html = template
-        .replace(/\{\{title\}\}/g, tool.title)
-        .replace(/\{\{description\}\}/g, tool.description)
-        .replace(/\{\{slug\}\}/g, tool.slug);
-
-    const outPath = path.join(toolDir, 'index.html');
-    await fs.writeFile(outPath, html, 'utf8');
-    console.log(`✅ Generated: ${outPath}`);
-    return outPath;
 }
 
 async function generateSitemap(tools) {
@@ -104,7 +88,7 @@ async function generateSitemap(tools) {
     console.log('📄 sitemap.xml generated');
 }
 
-// ------------------- New Listing Generators -------------------
+// ------------------- Listing Generators -------------------
 async function generateToolsListing() {
     const tools = JSON.parse(await fs.readFile(CONFIG.DATA_FILE, 'utf8'));
     const template = await fs.readFile(CONFIG.TOOLS_LISTING_TEMPLATE, 'utf8');
@@ -153,7 +137,7 @@ async function generateBlogIndex() {
 
     const page = template.replace('{{posts}}', listItems);
     const outputPath = path.join(__dirname, 'blog', 'index.html');
-    await ensureDir(path.dirname(outputPath)); // ensure blog folder exists
+    await ensureDir(path.dirname(outputPath));
     await fs.writeFile(outputPath, page, 'utf8');
     console.log('✅ Generated: blog/index.html');
 }
@@ -163,14 +147,51 @@ async function build() {
     console.log('\n🚀 ToolForge Builder Starting\n');
     const start = Date.now();
 
-    // 1. Generate individual tool pages
+    // 1. Load tools, template, and AI content
     const tools = await loadTools();
     const template = await loadTemplate();
+
+    // Load AI content
+    let toolContentMap = new Map();
+    try {
+        const contentRaw = await fs.readFile(CONFIG.TOOL_CONTENT_FILE, 'utf8');
+        const contentArray = JSON.parse(contentRaw);
+        toolContentMap = new Map(contentArray.map(c => [c.slug, c]));
+        console.log('📦 Loaded AI content for tools');
+    } catch (err) {
+        console.warn('⚠️ No tool-content.json found or error reading. Proceeding with empty content.');
+    }
+
     await ensureDir(CONFIG.OUTPUT_DIR);
 
-    // Generate each tool page
+    // 2. Define page generator (inside build to access toolContentMap)
+    async function generatePage(tool) {
+        const toolDir = path.join(CONFIG.OUTPUT_DIR, tool.slug);
+        await ensureDir(toolDir);
+
+        const toolContent = toolContentMap.get(tool.slug) || {};
+
+        let html = template
+            .replace(/\{\{title\}\}/g, tool.title)
+            .replace(/\{\{description\}\}/g, tool.description)
+            .replace(/\{\{slug\}\}/g, tool.slug)
+            .replace(/\{\{about\}\}/g, toolContent.about || '')
+            .replace(/\{\{howTo\}\}/g, toolContent.howTo || '')
+            .replace(/\{\{whyUse\}\}/g, toolContent.whyUse || '')
+            .replace(/\{\{useCases\}\}/g, toolContent.useCases || '')
+            .replace(/\{\{faq\}\}/g, toolContent.faq || '')
+            .replace(/\{\{screenshot\}\}/g, `/assets/images/tools/${tool.slug}-screenshot.jpg`);
+
+
+        const outPath = path.join(toolDir, 'index.html');
+        await fs.writeFile(outPath, html, 'utf8');
+        console.log(`✅ Generated: ${outPath}`);
+        return outPath;
+    }
+
+    // 3. Generate all tool pages
     const results = await Promise.allSettled(
-        tools.map(tool => generatePage(tool, template))
+        tools.map(tool => generatePage(tool))
     );
 
     let success = 0;
@@ -179,10 +200,10 @@ async function build() {
         else console.error(`❌ Failed to generate ${tools[i].slug}: ${res.reason}`);
     });
 
-    // Generate sitemap
+    // 4. Generate sitemap
     await generateSitemap(tools);
 
-    // 2. Generate listing pages
+    // 5. Generate listing pages
     await generateToolsListing();
     await generateGuidesListing();
     await generateBlogIndex();
