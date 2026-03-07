@@ -128,6 +128,17 @@
             margin: 15px 0 15px 30px;
             color: #a0b3d9;
         }
+         .guide-screenshot {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+.guide-screenshot img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
     </style>
 </head>
 <body>
@@ -149,8 +160,13 @@
 
     <!-- Guide Content -->
     <main class="guide-content">
-        <h1>{{h1}}</h1>
-        {{content}}
+    <h1>{{h1}}</h1>
+    <!-- Guide Screenshot -->
+    <div class="guide-screenshot">
+        <img src="{{image}}" alt="{{title}} – screenshot" loading="lazy">
+    </div>
+    {{content}}
+    ...
         <div style="text-align:center; margin:40px 0;">
             <a href="/tools/{{tool_slug}}/" style="background:#4da3ff; color:white; padding:12px 24px; border-radius:4px; text-decoration:none;">Try the {{tool_name}} Tool</a>
         </div>

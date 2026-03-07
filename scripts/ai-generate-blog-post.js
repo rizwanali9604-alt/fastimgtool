@@ -24,7 +24,7 @@ const CONFIG = {
         }
         return key;
     })(),
-    model: 'deepseek-chat',
+  model: 'deepseek/deepseek-chat',
     maxRetries: 3,
     retryDelay: 1000,
     rateLimitDelay: 3000,          // Longer delay for longer generations
@@ -35,8 +35,7 @@ const CONFIG = {
     blogPostsFile: path.join(__dirname, '..', 'data', 'blog-posts.json'),
 };
 
-const openai = new OpenAI({ baseURL: 'https://api.deepseek.com', apiKey: CONFIG.apiKey });
-
+const openai = new OpenAI({ baseURL: 'https://openrouter.ai/api/v1', apiKey: CONFIG.apiKey });
 // ==================== Utilities ====================
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -138,8 +137,9 @@ async function generateAll() {
             continue;
         }
 
-        // Build full HTML
-        const html = `<!DOCTYPE html>
+      const imagePath = `/assets/images/blog/${topic.slug}.jpg`;
+
+const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -151,10 +151,27 @@ async function generateAll() {
     <link rel="icon" href="/assets/favicon.png">
     <!-- AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>
+    <style>
+        .blog-screenshot {
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .blog-screenshot img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+    </style>
 </head>
 <body>
 ${navbar}
     <main style="max-width:800px; margin:40px auto; padding:20px;">
+        <h1>${topic.title}</h1>
+        <div class="blog-screenshot">
+            <img src="${imagePath}" alt="${topic.title} – blog image" loading="lazy">
+        </div>
         <article>
             ${content}
             <p style="text-align:center; margin-top:40px;">
@@ -166,7 +183,6 @@ ${footer}
     <script src="/assets/js/nav.js"></script>
 </body>
 </html>`;
-
         const outPath = path.join(CONFIG.blogDir, `${topic.slug}.html`);
         await fs.writeFile(outPath, html, 'utf8');
         console.log(`✅ Saved: blog/${topic.slug}.html`);
