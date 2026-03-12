@@ -73,62 +73,80 @@
   },
   {
     "slug": "image-to-webp",
-    "title": "Image To Webp",
-    "description": "Free online image to webp tool. Fast, private, browser‑based."
+    "title": "Image to WebP",
+    "description": "Convert images to WebP format instantly. Free online tool.",
+    "category": "conversion"
   },
   {
     "slug": "heic-to-jpg",
-    "title": "Heic To Jpg",
-    "description": "Free online heic to jpg tool. Fast, private, browser‑based."
+    "title": "HEIC to JPG",
+    "description": "Convert HEIC images to JPG instantly. Free online tool.",
+    "category": "conversion"
   },
   {
     "slug": "image-to-base64",
-    "title": "Image To Base64",
-    "description": "Free online image to base64 tool. Fast, private, browser‑based."
+    "title": "Image to Base64",
+    "description": "Convert images to Base64 strings. Free online developer tool.",
+    "category": "conversion"
   },
   {
     "slug": "base64-to-image",
-    "title": "Base64 To Image",
-    "description": "Free online base64 to image tool. Fast, private, browser‑based."
+    "title": "Base64 to Image",
+    "description": "Convert Base64 strings back to images. Free online tool.",
+    "category": "conversion"
   },
   {
     "slug": "png-to-webp",
-    "title": "Png To Webp",
-    "description": "Free online png to webp tool. Fast, private, browser‑based."
+    "title": "PNG to WebP",
+    "description": "Convert PNG images to WebP format instantly. Free online tool.",
+    "category": "conversion"
   },
   {
     "slug": "gif-to-png",
-    "title": "Gif To Png",
-    "description": "Free online gif to png tool. Fast, private, browser‑based."
+    "title": "GIF to PNG",
+    "description": "Convert GIF images to PNG (first frame). Free online tool.",
+    "category": "conversion"
   },
   {
     "slug": "bmp-to-jpg",
-    "title": "Bmp To Jpg",
-    "description": "Free online bmp to jpg tool. Fast, private, browser‑based."
+    "title": "BMP to JPG",
+    "description": "Convert BMP images to JPG format instantly. Free online tool.",
+    "category": "conversion"
   },
   {
     "slug": "tiff-to-jpg",
-    "title": "Tiff To Jpg",
-    "description": "Free online tiff to jpg tool. Fast, private, browser‑based."
+    "title": "TIFF to JPG",
+    "description": "Convert TIFF images to JPG format. Free online tool.",
+    "category": "conversion"
   },
   {
     "slug": "image-brightness",
     "title": "Image Brightness",
-    "description": "Free online image brightness tool. Fast, private, browser‑based."
+    "description": "Adjust image brightness instantly. Free online tool.",
+    "category": "effects"
   },
   {
     "slug": "image-contrast",
     "title": "Image Contrast",
-    "description": "Free online image contrast tool. Fast, private, browser‑based."
+    "description": "Adjust image contrast instantly. Free online tool.",
+    "category": "effects"
   },
   {
     "slug": "image-saturation",
     "title": "Image Saturation",
-    "description": "Free online image saturation tool. Fast, private, browser‑based."
+    "description": "Adjust image saturation instantly. Free online tool.",
+    "category": "effects"
   },
   {
     "slug": "image-invert",
     "title": "Image Invert",
-    "description": "Free online image invert tool. Fast, private, browser‑based."
+    "description": "Invert image colors (negative). Free online tool.",
+    "category": "effects"
+  },
+  {
+    "slug": "image-sepia",
+    "title": "Image Sepia",
+    "description": "Apply a warm sepia tone to your images. Free online tool.",
+    "category": "effects"
   }
 ]
