@@ -90,5 +90,45 @@
     "slug": "base64-to-image",
     "title": "Base64 To Image",
     "description": "Free online base64 to image tool. Fast, private, browser‑based."
+  },
+  {
+    "slug": "png-to-webp",
+    "title": "Png To Webp",
+    "description": "Free online png to webp tool. Fast, private, browser‑based."
+  },
+  {
+    "slug": "gif-to-png",
+    "title": "Gif To Png",
+    "description": "Free online gif to png tool. Fast, private, browser‑based."
+  },
+  {
+    "slug": "bmp-to-jpg",
+    "title": "Bmp To Jpg",
+    "description": "Free online bmp to jpg tool. Fast, private, browser‑based."
+  },
+  {
+    "slug": "tiff-to-jpg",
+    "title": "Tiff To Jpg",
+    "description": "Free online tiff to jpg tool. Fast, private, browser‑based."
+  },
+  {
+    "slug": "image-brightness",
+    "title": "Image Brightness",
+    "description": "Free online image brightness tool. Fast, private, browser‑based."
+  },
+  {
+    "slug": "image-contrast",
+    "title": "Image Contrast",
+    "description": "Free online image contrast tool. Fast, private, browser‑based."
+  },
+  {
+    "slug": "image-saturation",
+    "title": "Image Saturation",
+    "description": "Free online image saturation tool. Fast, private, browser‑based."
+  },
+  {
+    "slug": "image-invert",
+    "title": "Image Invert",
+    "description": "Free online image invert tool. Fast, private, browser‑based."
   }
 ]
