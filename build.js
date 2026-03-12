@@ -70,24 +70,81 @@ async function loadTemplate() {
     return template;
 }
 
-async function generateSitemap(tools) {
+async function generateSitemap(tools, guides, blogPosts) {
     const today = new Date().toISOString().split('T')[0];
-    const urls = tools.map(tool => `
+    let urls = [];
+
+    // Homepage
+    urls.push(`
+  <url>
+    <loc>${CONFIG.DOMAIN}/</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>`);
+
+    // Tool pages
+    tools.forEach(tool => {
+        urls.push(`
   <url>
     <loc>${CONFIG.DOMAIN}/tools/${tool.slug}/</loc>
     <lastmod>${today}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>`).join('');
+  </url>`);
+    });
+
+    // Guide pages
+    guides.forEach(guide => {
+        urls.push(`
+  <url>
+    <loc>${CONFIG.DOMAIN}${guide.url}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`);
+    });
+
+    // Blog posts
+    blogPosts.forEach(post => {
+        urls.push(`
+  <url>
+    <loc>${CONFIG.DOMAIN}${post.url}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`);
+    });
+
+    // Static pages
+    const staticPages = [
+        '/about.html',
+        '/contact.html',
+        '/privacy.html',
+        '/terms.html',
+        '/faq.html',
+        '/community.html',
+        '/tools/',
+        '/guides/',
+        '/blog/'
+    ];
+    staticPages.forEach(page => {
+        urls.push(`
+  <url>
+    <loc>${CONFIG.DOMAIN}${page}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>`);
+    });
 
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.join('')}
 </urlset>`;
 
     await fs.writeFile(CONFIG.SITEMAP_FILE, sitemap, 'utf8');
-    console.log('📄 sitemap.xml generated');
+    console.log('📄 sitemap.xml generated with all pages');
 }
-
 // ------------------- Listing Generators -------------------
 async function generateToolsListing() {
     const tools = JSON.parse(await fs.readFile(CONFIG.DATA_FILE, 'utf8'));
@@ -151,6 +208,10 @@ async function build() {
     const tools = await loadTools();
     const template = await loadTemplate();
 
+// Load guides and blog posts for sitemap
+const guides = JSON.parse(await fs.readFile(CONFIG.GUIDES_DATA_FILE, 'utf8'));
+const blogPosts = JSON.parse(await fs.readFile(CONFIG.BLOG_POSTS_FILE, 'utf8'));
+
     // Load AI content
     let toolContentMap = new Map();
     try {
@@ -201,7 +262,7 @@ async function build() {
     });
 
     // 4. Generate sitemap
-    await generateSitemap(tools);
+   await generateSitemap(tools, guides, blogPosts);
 
     // 5. Generate listing pages
     await generateToolsListing();

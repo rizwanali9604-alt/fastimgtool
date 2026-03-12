@@ -75,5 +75,20 @@
     "slug": "image-to-webp",
     "title": "Image To Webp",
     "description": "Free online image to webp tool. Fast, private, browser‑based."
+  },
+  {
+    "slug": "heic-to-jpg",
+    "title": "Heic To Jpg",
+    "description": "Free online heic to jpg tool. Fast, private, browser‑based."
+  },
+  {
+    "slug": "image-to-base64",
+    "title": "Image To Base64",
+    "description": "Free online image to base64 tool. Fast, private, browser‑based."
+  },
+  {
+    "slug": "base64-to-image",
+    "title": "Base64 To Image",
+    "description": "Free online base64 to image tool. Fast, private, browser‑based."
   }
 ]
