@@ -5,5 +5,68 @@
     "description": "Learn the best practices for image optimization to speed up your website.",
     "keywords": ["image optimization", "web performance", "compress images"],
     "wordCount": 1200
+  },
+  {
+    "slug": "image-file-formats-explained",
+    "title": "Image File Formats Explained: JPG, PNG, WEBP, and More",
+    "description": "Understand the differences between common image formats and when to use each.",
+    "keywords": ["image formats", "JPG vs PNG", "WEBP benefits"],
+    "wordCount": 1500
+  },
+  {
+    "slug": "how-to-resize-images-for-social-media",
+    "title": "How to Resize Images for Social Media (2026 Guide)",
+    "description": "Perfect image sizes for Instagram, Facebook, Twitter, and LinkedIn – updated for 2026.",
+    "keywords": ["resize image for social media", "social media image sizes"],
+    "wordCount": 1300
+  },
+  {
+    "slug": "batch-image-processing-tips",
+    "title": "Batch Image Processing: Save Time with These Tips",
+    "description": "Learn how to resize, compress, and convert multiple images at once efficiently.",
+    "keywords": ["batch image processing", "bulk image resize"],
+    "wordCount": 1100
+  },
+  {
+    "slug": "image-seo-guide",
+    "title": "The Ultimate Guide to Image SEO for Higher Rankings",
+    "description": "Optimize your images to improve page speed, user experience, and search rankings.",
+    "keywords": ["image SEO", "alt text", "image optimization for SEO"],
+    "wordCount": 1600
+  },
+  {
+    "slug": "how-to-compress-images-for-email",
+    "title": "How to Compress Images for Email (Stay Under Attachment Limits)",
+    "description": "Reduce image file size for email without losing quality. Practical tips and tools.",
+    "keywords": ["compress image for email", "email attachment size"],
+    "wordCount": 1000
+  },
+  {
+    "slug": "webp-vs-jpg-vs-png",
+    "title": "WEBP vs JPG vs PNG: Which Format Should You Use?",
+    "description": "A detailed comparison of modern image formats and when to choose each.",
+    "keywords": ["WEBP vs JPG", "PNG vs WEBP", "best image format"],
+    "wordCount": 1400
+  },
+  {
+    "slug": "how-to-create-a-favicon",
+    "title": "How to Create a Favicon for Your Website (Easy Steps)",
+    "description": "Generate a favicon from any image and add it to your site for better branding.",
+    "keywords": ["create favicon", "favicon generator", "website icon"],
+    "wordCount": 900
+  },
+  {
+    "slug": "image-compression-best-practices",
+    "title": "Image Compression Best Practices for 2026",
+    "description": "Maintain visual quality while reducing file size. Tips for photographers and webmasters.",
+    "keywords": ["image compression best practices", "lossless compression"],
+    "wordCount": 1200
+  },
+  {
+    "slug": "remove-background-from-image",
+    "title": "How to Remove Background from an Image (Free Methods)",
+    "description": "Simple techniques to remove image backgrounds without expensive software.",
+    "keywords": ["remove background", "transparent background", "image masking"],
+    "wordCount": 1100
   }
 ]

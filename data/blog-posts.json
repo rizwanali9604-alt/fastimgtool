@@ -2,7 +2,61 @@
   {
     "title": "How to Optimize Images for Web",
     "url": "/blog/first-post.html",
-    "date": "March 7, 2026",
+    "date": "March 13, 2026",
     "description": "Learn the best practices for image optimization to speed up your website."
+  },
+  {
+    "title": "Image File Formats Explained: JPG, PNG, WEBP, and More",
+    "url": "/blog/image-file-formats-explained.html",
+    "date": "March 13, 2026",
+    "description": "Understand the differences between common image formats and when to use each."
+  },
+  {
+    "title": "How to Resize Images for Social Media (2026 Guide)",
+    "url": "/blog/how-to-resize-images-for-social-media.html",
+    "date": "March 13, 2026",
+    "description": "Perfect image sizes for Instagram, Facebook, Twitter, and LinkedIn – updated for 2026."
+  },
+  {
+    "title": "Batch Image Processing: Save Time with These Tips",
+    "url": "/blog/batch-image-processing-tips.html",
+    "date": "March 13, 2026",
+    "description": "Learn how to resize, compress, and convert multiple images at once efficiently."
+  },
+  {
+    "title": "The Ultimate Guide to Image SEO for Higher Rankings",
+    "url": "/blog/image-seo-guide.html",
+    "date": "March 13, 2026",
+    "description": "Optimize your images to improve page speed, user experience, and search rankings."
+  },
+  {
+    "title": "How to Compress Images for Email (Stay Under Attachment Limits)",
+    "url": "/blog/how-to-compress-images-for-email.html",
+    "date": "March 13, 2026",
+    "description": "Reduce image file size for email without losing quality. Practical tips and tools."
+  },
+  {
+    "title": "WEBP vs JPG vs PNG: Which Format Should You Use?",
+    "url": "/blog/webp-vs-jpg-vs-png.html",
+    "date": "March 13, 2026",
+    "description": "A detailed comparison of modern image formats and when to choose each."
+  },
+  {
+    "title": "How to Create a Favicon for Your Website (Easy Steps)",
+    "url": "/blog/how-to-create-a-favicon.html",
+    "date": "March 13, 2026",
+    "description": "Generate a favicon from any image and add it to your site for better branding."
+  },
+  {
+    "title": "Image Compression Best Practices for 2026",
+    "url": "/blog/image-compression-best-practices.html",
+    "date": "March 13, 2026",
+    "description": "Maintain visual quality while reducing file size. Tips for photographers and webmasters."
+  },
+  {
+    "title": "How to Remove Background from an Image (Free Methods)",
+    "url": "/blog/remove-background-from-image.html",
+    "date": "March 13, 2026",
+    "description": "Simple techniques to remove image backgrounds without expensive software."
   }
 ]
