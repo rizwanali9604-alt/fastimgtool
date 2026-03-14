@@ -1,0 +1,1292 @@
+[
+  {
+    "title": "Fast Image Compressor",
+    "description": "Compress JPG PNG WEBP images instantly. Free online image compressor.",
+    "url": "/tools/image-compressor/",
+    "type": "tool"
+  },
+  {
+    "title": "Image Resizer Online",
+    "description": "Resize JPG PNG WEBP images instantly with this free browser-based tool.",
+    "url": "/tools/image-resizer/",
+    "type": "tool"
+  },
+  {
+    "title": "Convert JPG to PNG",
+    "description": "Convert JPG images to PNG instantly. Private browser-based conversion.",
+    "url": "/tools/jpg-to-png/",
+    "type": "tool"
+  },
+  {
+    "title": "PNG to JPG Converter",
+    "description": "Convert PNG images to JPG instantly online.",
+    "url": "/tools/png-to-jpg/",
+    "type": "tool"
+  },
+  {
+    "title": "WEBP to JPG Converter",
+    "description": "Convert WEBP images to JPG instantly online.",
+    "url": "/tools/webp-to-jpg/",
+    "type": "tool"
+  },
+  {
+    "title": "Test Tool",
+    "description": "Free online test tool. Fast, private, browser‑based.",
+    "url": "/tools/test-tool/",
+    "type": "tool"
+  },
+  {
+    "title": "Image Blur",
+    "description": "Free online image blur tool. Fast, private, browser‑based.",
+    "url": "/tools/image-blur/",
+    "type": "tool"
+  },
+  {
+    "title": "Image Sharpen",
+    "description": "Free online image sharpen tool. Fast, private, browser‑based.",
+    "url": "/tools/image-sharpen/",
+    "type": "tool"
+  },
+  {
+    "title": "Image Grayscale",
+    "description": "Free online image grayscale tool. Fast, private, browser‑based.",
+    "url": "/tools/image-grayscale/",
+    "type": "tool"
+  },
+  {
+    "title": "Flip Image",
+    "description": "Flip images horizontally or vertically instantly. Free online tool.",
+    "url": "/tools/flip-image/",
+    "type": "tool"
+  },
+  {
+    "title": "Image Crop",
+    "description": "Crop images to any size instantly. Free online tool.",
+    "url": "/tools/image-crop/",
+    "type": "tool"
+  },
+  {
+    "title": "Rotate Image",
+    "description": "Rotate images 90°, 180°, or 270° instantly. Free online tool.",
+    "url": "/tools/rotate-image/",
+    "type": "tool"
+  },
+  {
+    "title": "Image to WebP",
+    "description": "Convert images to WebP format instantly. Free online tool.",
+    "url": "/tools/image-to-webp/",
+    "type": "tool"
+  },
+  {
+    "title": "HEIC to JPG",
+    "description": "Convert HEIC images to JPG instantly. Free online tool.",
+    "url": "/tools/heic-to-jpg/",
+    "type": "tool"
+  },
+  {
+    "title": "Image to Base64",
+    "description": "Convert images to Base64 strings. Free online developer tool.",
+    "url": "/tools/image-to-base64/",
+    "type": "tool"
+  },
+  {
+    "title": "Base64 to Image",
+    "description": "Convert Base64 strings back to images. Free online tool.",
+    "url": "/tools/base64-to-image/",
+    "type": "tool"
+  },
+  {
+    "title": "PNG to WebP",
+    "description": "Convert PNG images to WebP format instantly. Free online tool.",
+    "url": "/tools/png-to-webp/",
+    "type": "tool"
+  },
+  {
+    "title": "GIF to PNG",
+    "description": "Convert GIF images to PNG (first frame). Free online tool.",
+    "url": "/tools/gif-to-png/",
+    "type": "tool"
+  },
+  {
+    "title": "BMP to JPG",
+    "description": "Convert BMP images to JPG format instantly. Free online tool.",
+    "url": "/tools/bmp-to-jpg/",
+    "type": "tool"
+  },
+  {
+    "title": "TIFF to JPG",
+    "description": "Convert TIFF images to JPG format. Free online tool.",
+    "url": "/tools/tiff-to-jpg/",
+    "type": "tool"
+  },
+  {
+    "title": "Image Brightness",
+    "description": "Adjust image brightness instantly. Free online tool.",
+    "url": "/tools/image-brightness/",
+    "type": "tool"
+  },
+  {
+    "title": "Image Contrast",
+    "description": "Adjust image contrast instantly. Free online tool.",
+    "url": "/tools/image-contrast/",
+    "type": "tool"
+  },
+  {
+    "title": "Image Saturation",
+    "description": "Adjust image saturation instantly. Free online tool.",
+    "url": "/tools/image-saturation/",
+    "type": "tool"
+  },
+  {
+    "title": "Image Invert",
+    "description": "Invert image colors (negative). Free online tool.",
+    "url": "/tools/image-invert/",
+    "type": "tool"
+  },
+  {
+    "title": "Image Sepia",
+    "description": "Apply a warm sepia tone to your images. Free online tool.",
+    "url": "/tools/image-sepia/",
+    "type": "tool"
+  },
+  {
+    "title": "How to Resize an Image Online – Free & Private Tool",
+    "description": "Learn how to resize any image quickly and privately with our free online image resizer. No signup required.",
+    "url": "/guides/how-to-resize-image-online.html",
+    "type": "guide"
+  },
+  {
+    "title": "Resize Image for Instagram – Perfect Post & Story Dimensions",
+    "description": "Learn the ideal Instagram image sizes for posts, stories, and profile pictures. Use our resizer to fit instantly.",
+    "url": "/guides/resize-image-for-instagram.html",
+    "type": "guide"
+  },
+  {
+    "title": "Resize Image for YouTube Thumbnail – Best Size (1280x720)",
+    "description": "Create eye-catching YouTube thumbnails with the perfect size. Our resizer makes it easy.",
+    "url": "/guides/resize-image-for-youtube-thumbnail.html",
+    "type": "guide"
+  },
+  {
+    "title": "Resize Image for Facebook Cover – Exact Dimensions (851x315)",
+    "description": "Get the perfect Facebook cover photo size with our free resizer. Ensure your cover looks great on all devices.",
+    "url": "/guides/resize-image-for-facebook-cover.html",
+    "type": "guide"
+  },
+  {
+    "title": "Resize Image for Email – Reduce Attachment Size",
+    "description": "Learn how to resize images for email attachments to stay under size limits. Fast and private.",
+    "url": "/guides/resize-image-for-email.html",
+    "type": "guide"
+  },
+  {
+    "title": "How to Compress an Image Online – Reduce File Size Free",
+    "description": "Compress images without losing quality using our free online tool. Private, fast, and no signup.",
+    "url": "/guides/how-to-compress-image-online.html",
+    "type": "guide"
+  },
+  {
+    "title": "Compress Image for Email – Stay Under Attachment Limits",
+    "description": "Reduce image size for email attachments quickly with our compressor. Free and private.",
+    "url": "/guides/compress-image-for-email.html",
+    "type": "guide"
+  },
+  {
+    "title": "Compress Image for WhatsApp – Send Photos Faster",
+    "description": "Optimize images for WhatsApp to save data and send instantly. Use our free compressor.",
+    "url": "/guides/compress-image-for-whatsapp.html",
+    "type": "guide"
+  },
+  {
+    "title": "Compress Image for Website – Improve Page Speed",
+    "description": "Learn how to compress images for web to boost loading speed and SEO. Free tool.",
+    "url": "/guides/compress-image-for-website.html",
+    "type": "guide"
+  },
+  {
+    "title": "Compress Image Without Losing Quality – Best Settings",
+    "description": "Find the perfect balance between file size and image quality. Our tool lets you adjust compression level.",
+    "url": "/guides/compress-image-without-losing-quality.html",
+    "type": "guide"
+  },
+  {
+    "title": "How to Convert JPG to PNG Online – Free & Private",
+    "description": "Convert JPG images to PNG format instantly. Lossless, with transparency support.",
+    "url": "/guides/how-to-convert-jpg-to-png.html",
+    "type": "guide"
+  },
+  {
+    "title": "Convert JPG to PNG with Transparency – Add Alpha Channel",
+    "description": "Learn how to add transparency when converting JPG to PNG. Our tool preserves quality.",
+    "url": "/guides/convert-jpg-to-png-with-transparency.html",
+    "type": "guide"
+  },
+  {
+    "title": "Convert JPG to PNG for Web – When to Use PNG",
+    "description": "Understand when to use PNG over JPG for web images. Convert instantly.",
+    "url": "/guides/convert-jpg-to-png-for-web.html",
+    "type": "guide"
+  },
+  {
+    "title": "Convert JPG to PNG for Printing – Preserve Quality",
+    "description": "PNG offers lossless compression, making it suitable for printing. Convert your JPGs with our tool.",
+    "url": "/guides/convert-jpg-to-png-for-printing.html",
+    "type": "guide"
+  },
+  {
+    "title": "Batch Convert JPG to PNG – Multiple Images at Once",
+    "description": "Learn how to convert multiple JPG images to PNG. (Batch feature coming soon – for now, use our tool one by one.)",
+    "url": "/guides/batch-convert-jpg-to-png.html",
+    "type": "guide"
+  },
+  {
+    "title": "How to Convert PNG to JPG Online – Free & Fast",
+    "description": "Convert PNG images to JPG format instantly. Smaller file size, wide compatibility.",
+    "url": "/guides/how-to-convert-png-to-jpg.html",
+    "type": "guide"
+  },
+  {
+    "title": "Convert PNG to JPG with White Background – Handle Transparency",
+    "description": "Learn how PNG transparency is handled when converting to JPG. Our tool adds a white background.",
+    "url": "/guides/convert-png-to-jpg-with-white-background.html",
+    "type": "guide"
+  },
+  {
+    "title": "Convert PNG to JPG for Email – Reduce Attachment Size",
+    "description": "Make your images smaller for email by converting PNG to JPG. Free and private.",
+    "url": "/guides/convert-png-to-jpg-for-email.html",
+    "type": "guide"
+  },
+  {
+    "title": "Convert PNG to JPG for Website – Speed Up Loading",
+    "description": "Optimize your website images by converting PNG to JPG. Smaller files load faster.",
+    "url": "/guides/convert-png-to-jpg-for-website.html",
+    "type": "guide"
+  },
+  {
+    "title": "Batch Convert PNG to JPG – Multiple Images at Once",
+    "description": "Learn how to convert multiple PNG images to JPG. (Batch feature coming soon – for now, use our tool one by one.)",
+    "url": "/guides/batch-convert-png-to-jpg.html",
+    "type": "guide"
+  },
+  {
+    "title": "How to Convert WEBP to JPG Online – Free & Private",
+    "description": "Convert WEBP images to JPG format instantly. Compatible with all devices and software.",
+    "url": "/guides/how-to-convert-webp-to-jpg.html",
+    "type": "guide"
+  },
+  {
+    "title": "WEBP vs JPG: Which Format Is Better?",
+    "description": "Compare WEBP and JPG formats – file size, quality, compatibility. Choose the right one for your needs.",
+    "url": "/guides/webp-vs-jpg-which-is-better.html",
+    "type": "guide"
+  },
+  {
+    "title": "Convert WEBP to JPG for WordPress",
+    "description": "Ensure compatibility with older WordPress themes by converting WEBP to JPG.",
+    "url": "/guides/convert-webp-to-jpg-for-wordpress.html",
+    "type": "guide"
+  },
+  {
+    "title": "Convert WEBP to JPG for Email",
+    "description": "Email clients may not display WEBP. Convert to JPG for reliable sharing.",
+    "url": "/guides/convert-webp-to-jpg-for-email.html",
+    "type": "guide"
+  },
+  {
+    "title": "Batch Convert WEBP to JPG – Multiple Images at Once",
+    "description": "Learn how to convert multiple WEBP images to JPG. (Batch feature coming soon – for now, use our tool one by one.)",
+    "url": "/guides/batch-convert-webp-to-jpg.html",
+    "type": "guide"
+  },
+  {
+    "title": "How to Blur an Image Online – Free & Private",
+    "description": "Easily blur images to hide details or create artistic effects. No signup required.",
+    "url": "/guides/how-to-blur-image-online.html",
+    "type": "guide"
+  },
+  {
+    "title": "Blur Image Background – Make Subject Stand Out",
+    "description": "Learn how to blur the background of an image to emphasize the main subject.",
+    "url": "/guides/blur-image-background.html",
+    "type": "guide"
+  },
+  {
+    "title": "Blur Face in Image – Protect Privacy",
+    "description": "Quickly blur faces in photos to anonymize people. Free and private.",
+    "url": "/guides/blur-face-in-image.html",
+    "type": "guide"
+  },
+  {
+    "title": "Gaussian Blur vs Motion Blur: What's the Difference?",
+    "description": "Understand the difference between Gaussian blur (smooth) and motion blur (directional).",
+    "url": "/guides/gaussian-blur-vs-motion-blur.html",
+    "type": "guide"
+  },
+  {
+    "title": "Blur Image for Privacy – Hide Sensitive Information",
+    "description": "Learn how to blur sensitive parts of an image before sharing online.",
+    "url": "/guides/blur-image-for-privacy.html",
+    "type": "guide"
+  },
+  {
+    "title": "How to Sharpen an Image Online – Free & Private",
+    "description": "Sharpen blurry images instantly with our free online tool. No signup, no uploads.",
+    "url": "/guides/how-to-sharpen-image-online.html",
+    "type": "guide"
+  },
+  {
+    "title": "Sharpen Blurry Photos – Bring Them Back to Life",
+    "description": "Fix slightly out-of-focus photos with our sharpening tool. Easy and free.",
+    "url": "/guides/sharpen-blurry-photos.html",
+    "type": "guide"
+  },
+  {
+    "title": "Sharpen Image for Print – Get Crisp Results",
+    "description": "Prepare images for printing by sharpening them. Our tool helps.",
+    "url": "/guides/sharpen-image-for-print.html",
+    "type": "guide"
+  },
+  {
+    "title": "Unsharp Mask Explained – How Sharpening Works",
+    "description": "Learn about the unsharp mask technique and how our tool applies it.",
+    "url": "/guides/unsharp-mask-explained.html",
+    "type": "guide"
+  },
+  {
+    "title": "Sharpen Image for Social Media – Make Your Posts Pop",
+    "description": "Enhance your social media images with sharpening. Free and instant.",
+    "url": "/guides/sharpen-image-for-social-media.html",
+    "type": "guide"
+  },
+  {
+    "title": "How to Convert an Image to Grayscale Online",
+    "description": "Convert any image to black and white instantly with our free tool. Private and fast.",
+    "url": "/guides/how-to-convert-image-to-grayscale.html",
+    "type": "guide"
+  },
+  {
+    "title": "Convert Image to Black and White – Free Online Tool",
+    "description": "Easily turn your color photos into black and white. No signup required.",
+    "url": "/guides/convert-image-to-black-and-white.html",
+    "type": "guide"
+  },
+  {
+    "title": "Why Use Grayscale Images? Benefits & Creative Uses",
+    "description": "Discover the benefits of grayscale images – from artistic expression to file size reduction.",
+    "url": "/guides/why-use-grayscale-images.html",
+    "type": "guide"
+  },
+  {
+    "title": "Grayscale vs Sepia: What's the Difference?",
+    "description": "Learn the difference between true black and white (grayscale) and warm-toned sepia.",
+    "url": "/guides/grayscale-vs-sepia.html",
+    "type": "guide"
+  },
+  {
+    "title": "Convert Photo to Black and White – Free Online Converter",
+    "description": "Turn your color photos into beautiful black and white images instantly.",
+    "url": "/guides/convert-photo-to-black-and-white.html",
+    "type": "guide"
+  },
+  {
+    "title": "How to Flip an Image Online – Horizontal or Vertical",
+    "description": "Flip images horizontally or vertically with our free tool. Instant and private.",
+    "url": "/guides/how-to-flip-image-online.html",
+    "type": "guide"
+  },
+  {
+    "title": "Flip Image Horizontally – Create Mirror Image",
+    "description": "Easily flip any image left-to-right. Perfect for design and correcting selfies.",
+    "url": "/guides/flip-image-horizontally.html",
+    "type": "guide"
+  },
+  {
+    "title": "Flip Image Vertically – Turn Upside Down",
+    "description": "Flip an image vertically to create an upside-down effect. Free tool.",
+    "url": "/guides/flip-image-vertically.html",
+    "type": "guide"
+  },
+  {
+    "title": "Flip vs Rotate: What's the Difference?",
+    "description": "Understand the difference between flipping (mirroring) and rotating (turning) an image.",
+    "url": "/guides/flip-vs-rotate.html",
+    "type": "guide"
+  },
+  {
+    "title": "Flip Image for Design – Create Symmetry",
+    "description": "Learn how flipping images can help in graphic design and photo editing.",
+    "url": "/guides/flip-image-for-design.html",
+    "type": "guide"
+  },
+  {
+    "title": "How to Rotate an Image Online – 90°, 180°, 270°",
+    "description": "Rotate images instantly with our free tool. No signup, private.",
+    "url": "/guides/how-to-rotate-image-online.html",
+    "type": "guide"
+  },
+  {
+    "title": "Rotate Image 90 Degrees Clockwise",
+    "description": "Quickly rotate any image 90° clockwise. Free online tool.",
+    "url": "/guides/rotate-image-90-degrees.html",
+    "type": "guide"
+  },
+  {
+    "title": "Rotate Image 180 Degrees – Turn Upside Down",
+    "description": "Rotate an image 180 degrees to flip it upside down. Free and instant.",
+    "url": "/guides/rotate-image-180-degrees.html",
+    "type": "guide"
+  },
+  {
+    "title": "Rotate Image Counterclockwise – 90° Left",
+    "description": "Rotate an image 90 degrees counterclockwise. Free tool.",
+    "url": "/guides/rotate-image-counterclockwise.html",
+    "type": "guide"
+  },
+  {
+    "title": "Rotate Image for Social Media – Get the Right Orientation",
+    "description": "Ensure your images are correctly oriented before posting on social media.",
+    "url": "/guides/rotate-image-for-social-media.html",
+    "type": "guide"
+  },
+  {
+    "title": "How to Crop an Image Online – Free & Private",
+    "description": "Crop images to remove unwanted areas or focus on a subject. No signup.",
+    "url": "/guides/how-to-crop-image-online.html",
+    "type": "guide"
+  },
+  {
+    "title": "Crop Image to Square – Perfect for Social Media",
+    "description": "Easily crop any image into a perfect square. Ideal for Instagram and profile pictures.",
+    "url": "/guides/crop-image-to-square.html",
+    "type": "guide"
+  },
+  {
+    "title": "Crop Image for Passport – Get the Right Size",
+    "description": "Learn how to crop an image to passport photo dimensions. Our tool helps.",
+    "url": "/guides/crop-image-for-passport.html",
+    "type": "guide"
+  },
+  {
+    "title": "Crop Image to Aspect Ratio (16:9, 4:3, 1:1)",
+    "description": "Crop images to common aspect ratios for videos, prints, and social media.",
+    "url": "/guides/crop-image-aspect-ratio.html",
+    "type": "guide"
+  },
+  {
+    "title": "Crop Image for Website – Fit Your Design",
+    "description": "Crop images to fit exactly into your website layout. Free tool.",
+    "url": "/guides/crop-image-for-website.html",
+    "type": "guide"
+  },
+  {
+    "title": "Fast Image Compressor – for Email",
+    "description": "Learn how to compress image for email with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-compressor-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "Fast Image Compressor – for WhatsApp",
+    "description": "Learn how to compress image for whatsapp with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-compressor-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "Fast Image Compressor – for Website",
+    "description": "Learn how to compress image for website with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-compressor-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "Fast Image Compressor – Without Losing Quality",
+    "description": "Learn how to compress image without losing quality with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-compressor-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "Fast Image Compressor – Best Settings",
+    "description": "Learn how to best image compression settings with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-compressor-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Resizer Online – for Instagram",
+    "description": "Learn how to resize image for instagram with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-resizer-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Resizer Online – for Facebook Cover",
+    "description": "Learn how to resize image for facebook cover with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-resizer-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Resizer Online – for YouTube Thumbnail",
+    "description": "Learn how to resize image for youtube thumbnail with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-resizer-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Resizer Online – for Email",
+    "description": "Learn how to resize image for email with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-resizer-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Resizer Online – Without Losing Quality",
+    "description": "Learn how to resize image without losing quality with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-resizer-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "Convert JPG to PNG – JPG to PNG",
+    "description": "Learn how to convert jpg to png with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/jpg-to-png-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "Convert JPG to PNG – PNG to JPG",
+    "description": "Learn how to convert png to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/jpg-to-png-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "Convert JPG to PNG – WEBP to JPG",
+    "description": "Learn how to convert webp to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/jpg-to-png-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "Convert JPG to PNG – HEIC to JPG",
+    "description": "Learn how to convert heic to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/jpg-to-png-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "Convert JPG to PNG – Image to Base64",
+    "description": "Learn how to convert image to base64 with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/jpg-to-png-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "PNG to JPG Converter – JPG to PNG",
+    "description": "Learn how to convert jpg to png with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/png-to-jpg-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "PNG to JPG Converter – PNG to JPG",
+    "description": "Learn how to convert png to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/png-to-jpg-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "PNG to JPG Converter – WEBP to JPG",
+    "description": "Learn how to convert webp to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/png-to-jpg-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "PNG to JPG Converter – HEIC to JPG",
+    "description": "Learn how to convert heic to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/png-to-jpg-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "PNG to JPG Converter – Image to Base64",
+    "description": "Learn how to convert image to base64 with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/png-to-jpg-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "WEBP to JPG Converter – JPG to PNG",
+    "description": "Learn how to convert jpg to png with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/webp-to-jpg-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "WEBP to JPG Converter – PNG to JPG",
+    "description": "Learn how to convert png to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/webp-to-jpg-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "WEBP to JPG Converter – WEBP to JPG",
+    "description": "Learn how to convert webp to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/webp-to-jpg-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "WEBP to JPG Converter – HEIC to JPG",
+    "description": "Learn how to convert heic to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/webp-to-jpg-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "WEBP to JPG Converter – Image to Base64",
+    "description": "Learn how to convert image to base64 with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/webp-to-jpg-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "Test Tool – How to Use",
+    "description": "Learn how to how to use with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/test-tool-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "Test Tool – Tips and Tricks",
+    "description": "Learn how to tips and tricks with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/test-tool-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "Test Tool – Common Mistakes",
+    "description": "Learn how to common mistakes with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/test-tool-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "Test Tool – Best Practices",
+    "description": "Learn how to best practices with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/test-tool-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "Test Tool – FAQ",
+    "description": "Learn how to frequently asked questions with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/test-tool-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Blur – Blur",
+    "description": "Learn how to apply blur to image with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-blur-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Blur – Sharpen",
+    "description": "Learn how to sharpen image online with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-blur-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Blur – Grayscale",
+    "description": "Learn how to convert image to grayscale with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-blur-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Blur – Invert",
+    "description": "Learn how to invert image colors with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-blur-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Blur – Sepia",
+    "description": "Learn how to add sepia tone to image with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-blur-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Sharpen – Blur",
+    "description": "Learn how to apply blur to image with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-sharpen-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Sharpen – Sharpen",
+    "description": "Learn how to sharpen image online with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-sharpen-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Sharpen – Grayscale",
+    "description": "Learn how to convert image to grayscale with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-sharpen-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Sharpen – Invert",
+    "description": "Learn how to invert image colors with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-sharpen-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Sharpen – Sepia",
+    "description": "Learn how to add sepia tone to image with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-sharpen-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Grayscale – Blur",
+    "description": "Learn how to apply blur to image with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-grayscale-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Grayscale – Sharpen",
+    "description": "Learn how to sharpen image online with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-grayscale-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Grayscale – Grayscale",
+    "description": "Learn how to convert image to grayscale with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-grayscale-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Grayscale – Invert",
+    "description": "Learn how to invert image colors with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-grayscale-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Grayscale – Sepia",
+    "description": "Learn how to add sepia tone to image with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-grayscale-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "Flip Image – Blur",
+    "description": "Learn how to apply blur to image with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/flip-image-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "Flip Image – Sharpen",
+    "description": "Learn how to sharpen image online with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/flip-image-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "Flip Image – Grayscale",
+    "description": "Learn how to convert image to grayscale with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/flip-image-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "Flip Image – Invert",
+    "description": "Learn how to invert image colors with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/flip-image-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "Flip Image – Sepia",
+    "description": "Learn how to add sepia tone to image with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/flip-image-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Crop – Crop",
+    "description": "Learn how to crop image online with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-crop-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Crop – Rotate",
+    "description": "Learn how to rotate image with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-crop-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Crop – Flip Horizontal",
+    "description": "Learn how to flip image horizontally with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-crop-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Crop – Flip Vertical",
+    "description": "Learn how to flip image vertically with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-crop-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Crop – Brightness",
+    "description": "Learn how to adjust image brightness with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-crop-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "Rotate Image – Crop",
+    "description": "Learn how to crop image online with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/rotate-image-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "Rotate Image – Rotate",
+    "description": "Learn how to rotate image with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/rotate-image-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "Rotate Image – Flip Horizontal",
+    "description": "Learn how to flip image horizontally with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/rotate-image-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "Rotate Image – Flip Vertical",
+    "description": "Learn how to flip image vertically with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/rotate-image-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "Rotate Image – Brightness",
+    "description": "Learn how to adjust image brightness with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/rotate-image-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image to WebP – JPG to PNG",
+    "description": "Learn how to convert jpg to png with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-to-webp-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image to WebP – PNG to JPG",
+    "description": "Learn how to convert png to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-to-webp-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image to WebP – WEBP to JPG",
+    "description": "Learn how to convert webp to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-to-webp-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image to WebP – HEIC to JPG",
+    "description": "Learn how to convert heic to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-to-webp-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image to WebP – Image to Base64",
+    "description": "Learn how to convert image to base64 with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-to-webp-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "HEIC to JPG – JPG to PNG",
+    "description": "Learn how to convert jpg to png with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/heic-to-jpg-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "HEIC to JPG – PNG to JPG",
+    "description": "Learn how to convert png to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/heic-to-jpg-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "HEIC to JPG – WEBP to JPG",
+    "description": "Learn how to convert webp to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/heic-to-jpg-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "HEIC to JPG – HEIC to JPG",
+    "description": "Learn how to convert heic to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/heic-to-jpg-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "HEIC to JPG – Image to Base64",
+    "description": "Learn how to convert image to base64 with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/heic-to-jpg-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image to Base64 – JPG to PNG",
+    "description": "Learn how to convert jpg to png with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-to-base64-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image to Base64 – PNG to JPG",
+    "description": "Learn how to convert png to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-to-base64-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image to Base64 – WEBP to JPG",
+    "description": "Learn how to convert webp to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-to-base64-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image to Base64 – HEIC to JPG",
+    "description": "Learn how to convert heic to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-to-base64-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image to Base64 – Image to Base64",
+    "description": "Learn how to convert image to base64 with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-to-base64-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "Base64 to Image – JPG to PNG",
+    "description": "Learn how to convert jpg to png with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/base64-to-image-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "Base64 to Image – PNG to JPG",
+    "description": "Learn how to convert png to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/base64-to-image-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "Base64 to Image – WEBP to JPG",
+    "description": "Learn how to convert webp to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/base64-to-image-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "Base64 to Image – HEIC to JPG",
+    "description": "Learn how to convert heic to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/base64-to-image-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "Base64 to Image – Image to Base64",
+    "description": "Learn how to convert image to base64 with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/base64-to-image-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "PNG to WebP – JPG to PNG",
+    "description": "Learn how to convert jpg to png with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/png-to-webp-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "PNG to WebP – PNG to JPG",
+    "description": "Learn how to convert png to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/png-to-webp-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "PNG to WebP – WEBP to JPG",
+    "description": "Learn how to convert webp to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/png-to-webp-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "PNG to WebP – HEIC to JPG",
+    "description": "Learn how to convert heic to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/png-to-webp-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "PNG to WebP – Image to Base64",
+    "description": "Learn how to convert image to base64 with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/png-to-webp-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "GIF to PNG – JPG to PNG",
+    "description": "Learn how to convert jpg to png with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/gif-to-png-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "GIF to PNG – PNG to JPG",
+    "description": "Learn how to convert png to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/gif-to-png-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "GIF to PNG – WEBP to JPG",
+    "description": "Learn how to convert webp to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/gif-to-png-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "GIF to PNG – HEIC to JPG",
+    "description": "Learn how to convert heic to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/gif-to-png-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "GIF to PNG – Image to Base64",
+    "description": "Learn how to convert image to base64 with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/gif-to-png-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "BMP to JPG – JPG to PNG",
+    "description": "Learn how to convert jpg to png with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/bmp-to-jpg-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "BMP to JPG – PNG to JPG",
+    "description": "Learn how to convert png to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/bmp-to-jpg-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "BMP to JPG – WEBP to JPG",
+    "description": "Learn how to convert webp to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/bmp-to-jpg-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "BMP to JPG – HEIC to JPG",
+    "description": "Learn how to convert heic to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/bmp-to-jpg-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "BMP to JPG – Image to Base64",
+    "description": "Learn how to convert image to base64 with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/bmp-to-jpg-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "TIFF to JPG – JPG to PNG",
+    "description": "Learn how to convert jpg to png with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/tiff-to-jpg-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "TIFF to JPG – PNG to JPG",
+    "description": "Learn how to convert png to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/tiff-to-jpg-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "TIFF to JPG – WEBP to JPG",
+    "description": "Learn how to convert webp to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/tiff-to-jpg-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "TIFF to JPG – HEIC to JPG",
+    "description": "Learn how to convert heic to jpg with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/tiff-to-jpg-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "TIFF to JPG – Image to Base64",
+    "description": "Learn how to convert image to base64 with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/tiff-to-jpg-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Brightness – Blur",
+    "description": "Learn how to apply blur to image with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-brightness-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Brightness – Sharpen",
+    "description": "Learn how to sharpen image online with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-brightness-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Brightness – Grayscale",
+    "description": "Learn how to convert image to grayscale with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-brightness-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Brightness – Invert",
+    "description": "Learn how to invert image colors with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-brightness-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Brightness – Sepia",
+    "description": "Learn how to add sepia tone to image with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-brightness-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Contrast – Blur",
+    "description": "Learn how to apply blur to image with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-contrast-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Contrast – Sharpen",
+    "description": "Learn how to sharpen image online with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-contrast-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Contrast – Grayscale",
+    "description": "Learn how to convert image to grayscale with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-contrast-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Contrast – Invert",
+    "description": "Learn how to invert image colors with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-contrast-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Contrast – Sepia",
+    "description": "Learn how to add sepia tone to image with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-contrast-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Saturation – Blur",
+    "description": "Learn how to apply blur to image with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-saturation-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Saturation – Sharpen",
+    "description": "Learn how to sharpen image online with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-saturation-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Saturation – Grayscale",
+    "description": "Learn how to convert image to grayscale with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-saturation-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Saturation – Invert",
+    "description": "Learn how to invert image colors with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-saturation-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Saturation – Sepia",
+    "description": "Learn how to add sepia tone to image with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-saturation-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Invert – Blur",
+    "description": "Learn how to apply blur to image with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-invert-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Invert – Sharpen",
+    "description": "Learn how to sharpen image online with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-invert-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Invert – Grayscale",
+    "description": "Learn how to convert image to grayscale with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-invert-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Invert – Invert",
+    "description": "Learn how to invert image colors with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-invert-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Invert – Sepia",
+    "description": "Learn how to add sepia tone to image with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-invert-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Sepia – Blur",
+    "description": "Learn how to apply blur to image with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-sepia-guide-1.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Sepia – Sharpen",
+    "description": "Learn how to sharpen image online with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-sepia-guide-2.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Sepia – Grayscale",
+    "description": "Learn how to convert image to grayscale with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-sepia-guide-3.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Sepia – Invert",
+    "description": "Learn how to invert image colors with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-sepia-guide-4.html",
+    "type": "guide"
+  },
+  {
+    "title": "Image Sepia – Sepia",
+    "description": "Learn how to add sepia tone to image with our free online tool. Fast, private, browser‑based.",
+    "url": "/guides/image-sepia-guide-5.html",
+    "type": "guide"
+  },
+  {
+    "title": "How to Optimize Images for Web",
+    "description": "Learn the best practices for image optimization to speed up your website.",
+    "url": "/blog/first-post.html",
+    "type": "blog"
+  },
+  {
+    "title": "Image File Formats Explained: JPG, PNG, WEBP, and More",
+    "description": "Understand the differences between common image formats and when to use each.",
+    "url": "/blog/image-file-formats-explained.html",
+    "type": "blog"
+  },
+  {
+    "title": "How to Resize Images for Social Media (2026 Guide)",
+    "description": "Perfect image sizes for Instagram, Facebook, Twitter, and LinkedIn – updated for 2026.",
+    "url": "/blog/how-to-resize-images-for-social-media.html",
+    "type": "blog"
+  },
+  {
+    "title": "Batch Image Processing: Save Time with These Tips",
+    "description": "Learn how to resize, compress, and convert multiple images at once efficiently.",
+    "url": "/blog/batch-image-processing-tips.html",
+    "type": "blog"
+  },
+  {
+    "title": "The Ultimate Guide to Image SEO for Higher Rankings",
+    "description": "Optimize your images to improve page speed, user experience, and search rankings.",
+    "url": "/blog/image-seo-guide.html",
+    "type": "blog"
+  },
+  {
+    "title": "How to Compress Images for Email (Stay Under Attachment Limits)",
+    "description": "Reduce image file size for email without losing quality. Practical tips and tools.",
+    "url": "/blog/how-to-compress-images-for-email.html",
+    "type": "blog"
+  },
+  {
+    "title": "WEBP vs JPG vs PNG: Which Format Should You Use?",
+    "description": "A detailed comparison of modern image formats and when to choose each.",
+    "url": "/blog/webp-vs-jpg-vs-png.html",
+    "type": "blog"
+  },
+  {
+    "title": "How to Create a Favicon for Your Website (Easy Steps)",
+    "description": "Generate a favicon from any image and add it to your site for better branding.",
+    "url": "/blog/how-to-create-a-favicon.html",
+    "type": "blog"
+  },
+  {
+    "title": "Image Compression Best Practices for 2026",
+    "description": "Maintain visual quality while reducing file size. Tips for photographers and webmasters.",
+    "url": "/blog/image-compression-best-practices.html",
+    "type": "blog"
+  },
+  {
+    "title": "How to Remove Background from an Image (Free Methods)",
+    "description": "Simple techniques to remove image backgrounds without expensive software.",
+    "url": "/blog/remove-background-from-image.html",
+    "type": "blog"
+  }
+]
