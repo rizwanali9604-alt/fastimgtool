@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fast Image Tools – Free Online Image Editor & Converter</title>
     <meta name="description" content="Fast, private, browser‑based image tools: resize, compress, convert, crop, blur, sharpen, and more. No uploads, 100% free.">
+    <script src="https://unpkg.com/lunr@2.3.9/lunr.min.js"></script>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DHHVPY5DJK"></script>
 <script>
@@ -290,6 +291,12 @@
         </div>
     </header>
 
+    <!-- Search Bar -->
+<div style="max-width:600px; margin:20px auto; padding:0 15px;">
+    <input type="text" id="searchInput" placeholder="Search tools, guides, blog..." style="width:100%; padding:12px; border-radius:30px; border:1px solid #2a3a5a; background:#0b1225; color:#e6edf7; font-size:1rem;">
+    <div id="searchResults" style="margin-top:10px;"></div>
+</div>
+
     <main class="container" id="tools">
 
         <!-- Categories will be injected here by JavaScript -->
@@ -450,5 +457,59 @@
         loadHomepage();
     </script>
     <script src="/assets/js/nav.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const resultsDiv = document.getElementById('searchResults');
+    if (!searchInput || !resultsDiv) return;
+
+    let idx = null;
+    let documents = [];
+
+    fetch('/search.json')
+        .then(res => res.json())
+        .then(data => {
+            documents = data;
+            idx = lunr(function() {
+                this.ref('url');
+                this.field('title', { boost: 10 });
+                this.field('description');
+                data.forEach(doc => this.add(doc));
+            });
+        });
+
+    searchInput.addEventListener('input', function() {
+        const query = this.value.trim();
+        if (query.length < 2) {
+            resultsDiv.innerHTML = '';
+            return;
+        }
+
+        if (!idx) return;
+
+        const results = idx.search(query).map(res => {
+            return documents.find(d => d.url === res.ref);
+        });
+
+        if (results.length === 0) {
+            resultsDiv.innerHTML = '<p style="color:#a0b3d9;">No results found.</p>';
+            return;
+        }
+
+        let html = '<ul style="list-style:none; padding:0;">';
+        results.slice(0, 5).forEach(item => {
+            html += `
+                <li style="margin:10px 0; padding:10px; background:#111a30; border-radius:8px;">
+                    <a href="${item.url}" style="color:#4da3ff; text-decoration:none; font-weight:bold;">${item.title}</a>
+                    <span style="color:#a0b3d9; font-size:0.8rem; margin-left:8px;">(${item.type})</span>
+                    <p style="color:#a0b3d9; font-size:0.9rem; margin:2px 0 0 0;">${item.description}</p>
+                </li>
+            `;
+        });
+        html += '</ul>';
+        resultsDiv.innerHTML = html;
+    });
+});
+</script>
 </body>
 </html>
