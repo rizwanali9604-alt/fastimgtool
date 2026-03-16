@@ -1,4 +1,4 @@
-// scripts/generate-search-index.js
+// scripts/generate-search-index.js (Improved)
 const fs = require('fs').promises;
 const path = require('path');
 
@@ -11,6 +11,7 @@ async function loadTools() {
         description: t.description,
         url: `/tools/${t.slug}/`,
         type: 'tool',
+        category: t.category || 'uncategorized'
     }));
 }
 
@@ -21,6 +22,7 @@ async function loadGuides() {
         description: g.description,
         url: `/guides/${g.slug}.html`,
         type: 'guide',
+        tool_slug: g.tool_slug
     }));
 }
 
@@ -31,6 +33,7 @@ async function loadBlogPosts() {
         description: b.description,
         url: b.url,
         type: 'blog',
+        date: b.date
     }));
 }
 
@@ -41,7 +44,10 @@ async function main() {
         loadGuides(),
         loadBlogPosts(),
     ]);
+
     const index = [...tools, ...guides, ...blogPosts];
+    console.log(`📊 Found ${tools.length} tools, ${guides.length} guides, ${blogPosts.length} blog posts`);
+
     await fs.writeFile(OUTPUT_FILE, JSON.stringify(index, null, 2));
     console.log(`✅ search.json created with ${index.length} entries.`);
 }
