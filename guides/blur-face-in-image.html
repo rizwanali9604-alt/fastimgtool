@@ -3,68 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Blur Face in Image Online – Free Step-by-Step Guide</title>
-    <meta name="description" content="Learn how to blur faces in photos online for free. Step-by-step guide with screenshots. No signup, no uploads – all in your browser.">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- DYNAMIC TITLE -->
+    <title>Blur Face in Image – Protect Privacy – Fast Image Tools</title>
+    <!-- DYNAMIC META DESCRIPTION -->
+    <meta name="description" content="{{meta_description}}">
+    <link rel="stylesheet" href="/assets/css/style.css"> <!-- your main CSS -->
+    <style>
+        /* Additional styles specific to guides – can be moved to main CSS */
+        .guide-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1e1e2f;
+        }
+        .guide-container h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #f0b400;
+            padding-bottom: 0.5rem;
+        }
+        .guide-container h2 {
+            font-size: 2rem;
+            margin: 2rem 0 1rem;
+            color: #2a2a40;
+            border-left: 5px solid #f0b400;
+            padding-left: 1rem;
+        }
+        .guide-container h3 {
+            font-size: 1.5rem;
+            margin: 1.5rem 0 0.5rem;
+            color: #2a2a40;
+        }
+        .guide-container p {
+            margin-bottom: 1rem;
+        }
+        .step-card {
+            background: #f9f9fc;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-left: 4px solid #f0b400;
+        }
+        .step-card h3 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .step-card h3::before {
+            content: "●";
+            color: #f0b400;
+            font-size: 2rem;
+            line-height: 1;
+        }
+        .step-card img {
+            max-width: 100%;
+            border-radius: 8px;
+            border: 1px solid #eaeef2;
+            margin: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .bullet-list {
+            list-style: none;
+            padding: 0;
+        }
+        .bullet-list li {
+            margin: 0.8rem 0;
+            padding-left: 2rem;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="%23f0b400"><circle cx="12" cy="12" r="6"/></svg>') left center no-repeat;
+            background-size: 1.2rem;
+        }
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #eaeef2;
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+        }
+        .faq-item h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #1e1e2f;
+        }
+        .faq-item p {
+            margin: 0;
+            color: #4a4a5e;
+        }
+        .related-links {
+            background: #f0f4f8;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        .related-links ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .related-links li a {
+            display: inline-block;
+            background: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #1e1e2f;
+            font-weight: 500;
+            border: 1px solid #d0d9e8;
+            transition: all 0.2s;
+        }
+        .related-links li a:hover {
+            background: #f0b400;
+            color: white;
+            border-color: #f0b400;
+        }
+        @media (max-width: 600px) {
+            .guide-container h1 { font-size: 2rem; }
+            .guide-container h2 { font-size: 1.5rem; }
+            .step-card { padding: 1rem; }
+        }
+    </style>
 </head>
 <body>
-    <div id="navbar"></div>
+    <div id="navbar"></div> <!-- your existing navbar -->
 
     <main class="guide-container">
-        <h1>How to Blur Face in Image Online – Free Step-by-Step Guide</h1>
+        <!-- DYNAMIC H1 -->
+        <h1>{{h1_title}}</h1>
 
-        <p>Blurring faces in photos is essential for privacy, online anonymity, or creative editing. In this guide, you'll learn how to quickly blur any face using our free online tools – no signup required.</p>
+        <!-- DYNAMIC INTRODUCTION -->
+        <p>{{introduction}}</p>
 
-        <h2>Step-by-Step: Blur a Face Using Fast Image Tools</h2>
+        <!-- MAIN STEPS SECTION -->
+        <h2>Step-by-Step Guide</h2>
 
-        <h3>Step 1: Open the Image Blur Tool</h3>
-        <p>Go to our <a href="/tools/image-blur/" target="_blank">Image Blur Tool</a>. It works entirely in your browser – your images never leave your device.</p>
-        <img src="assets/images/guides/blur-upload.jpg" alt="Image Blur Tool upload area" style="max-width:100%; border:1px solid #ccc; margin:10px 0;">
+        <!-- REPEAT STEP CARD FOR EACH STEP -->
+        <div class="step-card">
+            <h3>Step {{step_number}}: {{step_title}}</h3>
+            <p>{{step_description}}</p>
+            <!-- if image exists -->
+            <img src="{{step_image_url}}" alt="{{step_image_alt}}">
+        </div>
 
-        <h3>Step 2: Upload your image</h3>
-        <p>Drag and drop your photo onto the page, or click the upload area to select a file from your computer. Supported formats: JPG, PNG, WEBP.</p>
-        <img src="assets/images/guides/blur-upload.jpg" alt="Drag and drop upload" style="max-width:100%; border:1px solid #ccc; margin:10px 0;">
+        <!-- OPTIONAL ADDITIONAL STEPS (you can repeat the card as needed) -->
 
-        <h3>Step 3: Adjust the blur intensity</h3>
-        <p>Move the slider to increase or decrease the blur. You'll see a live preview – perfect for getting exactly the amount of blur you need.</p>
-        <img src="assets/images/guides/blur-slider.jpg" alt="Blur intensity slider with preview" style="max-width:100%; border:1px solid #ccc; margin:10px 0;">
-
-        <h3>Step 4: (Optional) Crop to focus on the face</h3>
-        <p>If the tool blurs the whole image and you only want the face blurred, use our <a href="/tools/image-crop/">Image Crop Tool</a> afterwards to crop out just the face area.</p>
-
-        <h3>Step 5: Download your image</h3>
-        <p>Click the “Download” button to save your blurred image. It will be processed instantly and saved to your device.</p>
-        <img src="assets/images/guides/blur-download.jpg" alt="Download button" style="max-width:100%; border:1px solid #ccc; margin:10px 0;">
-
-        <h2>Why Blur Faces?</h2>
-        <ul>
-            <li><strong>Protect privacy</strong> in photos shared online – hide identities of bystanders or children.</li>
-            <li><strong>Create anonymous profile pictures</strong> for forums or social media.</li>
-            <li><strong>Comply with content guidelines</strong> for platforms that require face blurring.</li>
-            <li><strong>Artistic effect</strong> – add a creative, anonymous look to your images.</li>
+        <!-- WHY SECTION -->
+        <h2>Why {{topic}}?</h2>
+        <ul class="bullet-list">
+            <!-- REPEAT FOR EACH REASON -->
+            <li>{{reason_1}}</li>
+            <li>{{reason_2}}</li>
+            <li>{{reason_3}}</li>
+            <li>{{reason_4}}</li>
         </ul>
 
+        <!-- FAQ SECTION -->
         <h2>Frequently Asked Questions</h2>
 
-        <h3>Can I blur multiple faces at once?</h3>
-        <p>Our <a href="/tools/image-blur/">Image Blur Tool</a> currently applies uniform blur to the whole image. For multiple faces, you can upload the same image repeatedly and crop each face using the <a href="/tools/image-crop/">Crop Tool</a>, or try a dedicated face‑blurring tool (coming soon).</p>
+        <div class="faq-item">
+            <h3>{{faq_question_1}}</h3>
+            <p>{{faq_answer_1}}</p>
+        </div>
+        <div class="faq-item">
+            <h3>{{faq_question_2}}</h3>
+            <p>{{faq_answer_2}}</p>
+        </div>
+        <div class="faq-item">
+            <h3>{{faq_question_3}}</h3>
+            <p>{{faq_answer_3}}</p>
+        </div>
+        <div class="faq-item">
+            <h3>{{faq_question_4}}</h3>
+            <p>{{faq_answer_4}}</p>
+        </div>
 
-        <h3>Is it really free?</h3>
-        <p>Yes, all our tools are 100% free. No signup, no hidden costs. We support the site through unobtrusive ads.</p>
-
-        <h3>Will my images be stored on your server?</h3>
-        <p>No – everything happens in your browser. Your images are never uploaded to any server. You can even use the tools offline.</p>
-
-        <h3>Can I blur faces in videos?</h3>
-        <p>Not yet – our tools currently work only with static images. For video, you would need dedicated video editing software.</p>
-
-        <h2>Related Resources</h2>
-        <ul>
-            <li><a href="/tools/image-blur/">Image Blur Tool</a></li>
-            <li><a href="/tools/image-crop/">Image Crop Tool</a></li>
-            <li><a href="/">Fast Image Tools Home</a></li>
-            <li><a href="/guides/resize-image-for-instagram.html">How to Resize Images for Instagram</a></li>
-        </ul>
+        <!-- RELATED RESOURCES -->
+        <div class="related-links">
+            <h3>Related Tools & Guides</h3>
+            <ul>
+                <!-- REPEAT FOR EACH LINK -->
+                <li><a href="{{link_url_1}}">{{link_text_1}}</a></li>
+                <li><a href="{{link_url_2}}">{{link_text_2}}</a></li>
+                <li><a href="{{link_url_3}}">{{link_text_3}}</a></li>
+                <li><a href="{{link_url_4}}">{{link_text_4}}</a></li>
+            </ul>
+        </div>
     </main>
 
     <script src="/assets/js/nav.js"></script>
