@@ -93,7 +93,13 @@
 
     <!-- Tool Screenshot (added) -->
     <div class="tool-screenshot">
-        <img src="/assets/images/tools/bmp-to-jpg-screenshot.jpg" alt="Screenshot of BMP to JPG tool in action" loading="lazy">
+        <picture>
+  <source srcset="{{screenshot|replace:'.jpg','.webp'|replace:'.jpeg','.webp'}}" type="image/webp">
+  <picture>
+  <source srcset="/assets/images/tools/bmp-to-jpg-screenshot.webp" type="image/webp">
+  <img src="/assets/images/tools/bmp-to-jpg-screenshot.jpg" alt="Screenshot of BMP to JPG tool in action" loading="lazy">
+</picture>
+</picture>
     </div>
 
     <!-- Enhanced SEO Content Section (AI‑Generated) -->

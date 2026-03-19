@@ -270,7 +270,8 @@ const blogPosts = JSON.parse(await fs.readFile(CONFIG.BLOG_POSTS_FILE, 'utf8'));
             .replace(/\{\{whyUse\}\}/g, toolContent.whyUse || '')
             .replace(/\{\{useCases\}\}/g, toolContent.useCases || '')
             .replace(/\{\{faq\}\}/g, toolContent.faq || '')
-            .replace(/\{\{screenshot\}\}/g, `/assets/images/tools/${tool.slug}-screenshot.jpg`);
+                    .replace(/\{\{screenshot_jpg\}\}/g, `/assets/images/tools/${tool.slug}-screenshot.jpg`)
+        .replace(/\{\{screenshot_webp\}\}/g, `/assets/images/tools/${tool.slug}-screenshot.webp`);
 
 
         const outPath = path.join(toolDir, 'index.html');
