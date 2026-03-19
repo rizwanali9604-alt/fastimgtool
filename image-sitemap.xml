@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://fastimgtool.com/guides/how-to-convert-jpg-to-png.html</loc>
+    <image:image>
+      <image:loc>https://fastimgtool.com/images/guides/jpg-to-png-before.jpg</image:loc>
+      <image:caption>Original JPG image with white background – before conversion</image:caption>
+      <image:title>JPG image with white background</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fastimgtool.com/images/guides/jpg-to-png-after.png</image:loc>
+      <image:caption>Converted PNG image with transparent background – after conversion</image:caption>
+      <image:title>PNG image with transparency</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fastimgtool.com/images/guides/jpg-to-png-step1.jpg</image:loc>
+      <image:caption>Step 1: Upload your JPG file to our converter</image:caption>
+      <image:title>JPG to PNG converter upload step</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://fastimgtool.com/guides/how-to-blur-image-online.html</loc>
+    <image:image>
+      <image:loc>https://fastimgtool.com/images/guides/blur-face-before.jpg</image:loc>
+      <image:caption>Original photo with visible face before blurring</image:caption>
+      <image:title>Photo with visible face – before blur</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fastimgtool.com/images/guides/blur-face-after.jpg</image:loc>
+      <image:caption>Same photo with face blurred for privacy protection</image:caption>
+      <image:title>Photo with blurred face for privacy</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fastimgtool.com/images/guides/blur-brush-tool.jpg</image:loc>
+      <image:caption>Using the blur brush tool to paint over faces manually</image:caption>
+      <image:title>Blur brush tool interface</image:title>
+    </image:image>
+  </url>
+</urlset>

@@ -1,0 +1,44 @@
+{
+  "guides": [
+    {
+      "slug": "how-to-convert-jpg-to-png",
+      "images": [
+        {
+          "filename": "jpg-to-png-before.jpg",
+          "caption": "Original JPG image with white background – before conversion",
+          "title": "JPG image with white background"
+        },
+        {
+          "filename": "jpg-to-png-after.png",
+          "caption": "Converted PNG image with transparent background – after conversion",
+          "title": "PNG image with transparency"
+        },
+        {
+          "filename": "jpg-to-png-step1.jpg",
+          "caption": "Step 1: Upload your JPG file to our converter",
+          "title": "JPG to PNG converter upload step"
+        }
+      ]
+    },
+    {
+      "slug": "how-to-blur-image-online",
+      "images": [
+        {
+          "filename": "blur-face-before.jpg",
+          "caption": "Original photo with visible face before blurring",
+          "title": "Photo with visible face – before blur"
+        },
+        {
+          "filename": "blur-face-after.jpg",
+          "caption": "Same photo with face blurred for privacy protection",
+          "title": "Photo with blurred face for privacy"
+        },
+        {
+          "filename": "blur-brush-tool.jpg",
+          "caption": "Using the blur brush tool to paint over faces manually",
+          "title": "Blur brush tool interface"
+        }
+      ]
+    }
+  ]
+}
