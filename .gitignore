@@ -2,4 +2,4 @@ node_modules/
 package-lock.json
 .DS_Store
 *.log
-.env
+.envpython_marketing/service_account.json 
