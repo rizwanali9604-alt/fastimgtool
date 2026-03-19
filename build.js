@@ -181,23 +181,52 @@ async function generateGuidesListing() {
     console.log('✅ Generated: guides/index.html');
 }
 
+// ========== IMPROVED BLOG INDEX GENERATION ==========
 async function generateBlogIndex() {
-    const posts = JSON.parse(await fs.readFile(CONFIG.BLOG_POSTS_FILE, 'utf8'));
+    // Read blog posts data
+    let posts = [];
+    try {
+        posts = JSON.parse(await fs.readFile(CONFIG.BLOG_POSTS_FILE, 'utf8'));
+    } catch (err) {
+        console.warn('⚠️ Could not read blog-posts.json, proceeding with empty list.');
+        posts = [];
+    }
+
+    // Read the blog template
     const template = await fs.readFile(CONFIG.BLOG_TEMPLATE, 'utf8');
 
-    const listItems = posts.map(post => `
-        <li class="post-item">
-            <a href="${post.url}">${post.title}</a>
-            <span class="post-date">– ${post.date}</span>
-        </li>
-    `).join('');
+    // Generate the list of posts (or a message if none)
+    let listItems = '';
+    if (posts.length === 0) {
+        listItems = '<li class="post-item">No blog posts yet. Check back soon!</li>';
+    } else {
+        listItems = posts.map(post => `
+            <li class="post-item">
+                <a href="${post.url}">${post.title}</a>
+                <span class="post-date">– ${post.date}</span>
+            </li>
+        `).join('');
+    }
 
-    const page = template.replace('{{posts}}', listItems);
+    // Build the final HTML by replacing all placeholders
+    let page = template
+        // Replace basic meta tags
+        .replace('{{title}}', 'Blog – Fast Image Tools')
+        .replace('{{description}}', 'Read the latest articles, tutorials, and guides about image editing, compression, and conversion.')
+        // Remove the entire image section (screenshot not needed for index)
+        .replace(/<div class="blog-screenshot">[\s\S]*?<\/div>/, '')
+        // Replace canonical link with a clean one using the domain from config
+        .replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${CONFIG.DOMAIN}/blog/">`)
+        // Finally, insert the posts list
+        .replace('{{posts}}', listItems);
+
+    // Write the generated page
     const outputPath = path.join(__dirname, 'blog', 'index.html');
     await ensureDir(path.dirname(outputPath));
     await fs.writeFile(outputPath, page, 'utf8');
     console.log('✅ Generated: blog/index.html');
 }
+// =====================================================
 
 // ------------------- Main Build -------------------
 async function build() {
