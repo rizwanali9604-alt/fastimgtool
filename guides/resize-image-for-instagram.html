@@ -1,14 +1,303 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How to Resize an Image for Instagram: The Complete Guide</title>
     <meta name="description" content="Learn how to perfectly resize any image for Instagram posts, stories, and more. Follow our step-by-step guide to avoid cropping and boost your profile's look.">
+    <script src="https://unpkg.com/lunr@2.3.9/lunr.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DHHVPY5DJK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DHHVPY5DJK');
+</script>
+    <link rel="canonical" href="https://fastimgtool.com/">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Preconnect for AdSense -->
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <link rel="preconnect" href="https://googleads.g.doubleclick.net">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Fast Image Tools – Free Online Image Editor & Converter">
+    <meta property="og:description" content="Free, private image tools: resize, compress, convert, and edit images instantly in your browser.">
+    <meta property="og:url" content="https://fastimgtool.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://fastimgtool.com/assets/og-image.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fast Image Tools">
+    <meta name="twitter:description" content="Free, private image tools – no uploads, no signup.">
+    <meta name="twitter:image" content="https://fastimgtool.com/assets/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+
+    <!-- AdSense (Auto Ads) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>
+
+    <style>
+        /* Global resets */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #050b18;
+            color: #e6edf7;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigation bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #0b1225;
+            border-bottom: 1px solid #1e293b;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo a {
+            font-size: 1.4rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #4da3ff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            color: #a0b3d9;
+            transition: color 0.2s;
+            font-size: 0.95rem;
+        }
+        .nav-links a:hover {
+            color: #4da3ff;
+        }
+
+        /* Hero section */
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #0f1a2f, #050b18);
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 30px;
+        }
+        .hero h1 {
+            font-size: 2.4rem;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #4da3ff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1rem;
+            color: #a0b3d9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Category sections */
+        .category-section {
+            margin: 40px 0;
+        }
+        .category-title {
+            font-size: 1.5rem;
+            border-bottom: 2px solid #2a3a5a;
+            padding-bottom: 6px;
+            margin-bottom: 20px;
+            color: #e6edf7;
+        }
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+        }
+        .tool-card {
+            background: #111a30;
+            border: 1px solid #2a3a5a;
+            border-radius: 12px;
+            padding: 20px;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .tool-card:hover {
+            transform: translateY(-3px);
+            border-color: #4da3ff;
+            box-shadow: 0 6px 16px rgba(77,163,255,0.2);
+        }
+        .tool-card h3 {
+            margin-top: 0;
+            color: #e6edf7;
+            font-size: 1.2rem;
+        }
+        .tool-card p {
+            color: #a0b3d9;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            margin: 10px 0;
+        }
+        .tool-card .btn {
+            display: inline-block;
+            background: #2a3a5a;
+            color: #e6edf7;
+            padding: 6px 14px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+        .tool-card .btn:hover {
+            background: #4da3ff;
+            color: white;
+        }
+
+        /* Guides preview */
+        .guides-preview {
+            margin: 40px 0;
+            background: #0f1a2f;
+            border-radius: 16px;
+            padding: 30px;
+        }
+        .guides-preview h2 {
+            margin-top: 0;
+            color: #e6edf7;
+            font-size: 1.5rem;
+        }
+        .guides-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .guides-list a {
+            background: #2a3a5a;
+            padding: 5px 14px;
+            border-radius: 30px;
+            color: #e6edf7;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+        .guides-list a:hover {
+            background: #4da3ff;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0b1225;
+            border-top: 1px solid #1e293b;
+            padding: 40px 20px 20px;
+            margin-top: 50px;
+        }
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 30px;
+        }
+        .footer-col h4 {
+            color: #e6edf7;
+            font-size: 1rem;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col li {
+            margin-bottom: 8px;
+        }
+        .footer-col a {
+            color: #a0b3d9;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .footer-col a:hover {
+            color: #4da3ff;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 20px;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/">⚡ FastImageTool</a>
+        </div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/tools/">Tools</a>
+            <a href="/guides/">Guides</a>
+            <a href="/blog/">Blog</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/community.html">Community</a>
+        </div>
+    </nav>
 
-<h2>Why Resizing Your Images for Instagram is Non-Negotiable</h2>
+    <header>
+        <div class="hero">
+            <h1>⚡ Fast Image Tools</h1>
+            <p>Free, private, browser‑based image tools. No uploads, no signup, just fast editing.</p>
+            <div id="toolNav" style="margin-top: 15px;"></div>
+        </div>
+    </header>
+
+    <!-- Search Bar -->
+<div style="max-width:600px; margin:20px auto; padding:0 15px;">
+    <input type="text" id="searchInput" placeholder="Search tools, guides, blog..." style="width:100%; padding:12px; border-radius:30px; border:1px solid #2a3a5a; background:#0b1225; color:#e6edf7; font-size:1rem;">
+    <div id="searchResults" style="margin-top:10px;"></div>
+</div>
+
+    <div class="guide-article"><h2>Why Resizing Your Images for Instagram is Non-Negotiable</h2>
 <p>In the visually driven world of Instagram, first impressions are everything. You could have the most stunning photograph, the most compelling graphic, or the most important message, but if it's awkwardly cropped, pixelated, or blurry, your audience will scroll right past it. Instagram isn't just a social platform; it's a curated gallery, and your feed is your exhibition. Uploading an image without considering Instagram's specific size requirements is like hanging a masterpiece in a warped frame—it detracts from the art itself.</p>
 <p>When you don't resize an image for Instagram correctly, the platform's automatic cropping can chop off crucial elements—a subject's head, essential text, or key product features. This not only looks unprofessional but can also render your content ineffective or even confusing. Furthermore, improperly sized images may be compressed by Instagram, leading to a loss in quality, detail, and color vibrancy. In an ecosystem where engagement is currency, a poorly presented image can mean fewer likes, comments, shares, and ultimately, a weaker connection with your community or customers.</p>
 <p>This comprehensive guide is your one-stop resource to master the art of image sizing. We'll walk you through every recommended dimension, provide foolproof methods to resize image for Instagram across different devices, and share pro tips to ensure your visuals aren't just the right size, but are optimized for maximum impact. Let's transform your feed from amateur to exceptional.</p>
@@ -106,6 +395,189 @@
 <h2>Conclusion: Your Path to Flawless Instagram Images</h2>
 <p>Knowing how to properly resize an image for Instagram is a fundamental skill for anyone serious about their presence on the platform. It's the difference between looking like an amateur and presenting yourself as a polished, professional creator or brand. By adhering to the recommended dimensions—1080x1080 for squares, 1080x1350 for portraits, and 1080x1920 for Stories—you take full control of how your content is perceived.</p>
 <p>Remember, the process is simple: choose the right format for your content, use a reliable tool (whether online, mobile, or desktop) to adjust the dimensions and crop, and always prioritize image quality and strong composition. Incorporate the pro tips of planning your crop, maintaining high resolution, and previewing your feed to elevate your work further.</p>
-<p>Don't let awkward cropping or pixelation undermine your creative efforts. Take these guidelines, apply them to your next post, and watch as your Instagram feed transforms into a cohesive, high-impact visual portfolio that captures attention and engages your audience from the very first pixel.</p>
+<p>Don't let awkward cropping or pixelation undermine your creative efforts. Take these guidelines, apply them to your next post, and watch as your Instagram feed transforms into a cohesive, high-impact visual portfolio that captures attention and engages your audience from the very first pixel.</p></div>
+        <div class="related-section">
+            <h3>🔧 Related Tool</h3>
+            <div class="related-links">
+                <a href="/tools/image-resizer/">Try the tool →</a>
+            </div>
+        </div>
+        
+        <div class="related-section">
+            <h3>📚 Related Guides</h3>
+            <div class="related-links">
+                <a href="/guides/how-to-compress-image-online.html">How to Compress Images Online</a>
+                <a href="/guides/how-to-convert-jpg-to-png.html">How to Convert JPG to PNG</a>
+                <a href="/guides/how-to-crop-image-online.html">How to Crop an Image Online</a>
+                <a href="/guides/how-to-blur-image-online.html">How to Blur an Image Online</a>
+            </div>
+        </div>
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="/tools/">All Tools</a></li>
+                    <li><a href="/guides/">All Guides</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacy.html">Privacy policy</a></li>
+                    <li><a href="/terms.html">Terms & conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/about.html">About us</a></li>
+                    <li><a href="/contact.html">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 FastImgTool – All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Load tools and build categories
+        async function loadHomepage() {
+            try {
+                // Fetch tools (required)
+                const toolsRes = await fetch('/data/tools.json');
+                if (!toolsRes.ok) throw new Error('Failed to fetch tools');
+                const tools = await toolsRes.json();
+
+                // Group tools by category
+                const categories = {};
+                tools.forEach(tool => {
+                    const cat = tool.category || 'uncategorized';
+                    if (!categories[cat]) categories[cat] = [];
+                    categories[cat].push(tool);
+                });
+
+                const categoryNames = {
+                    'resize': '📏 Resize & Scale',
+                    'compression': '🗜️ Compression',
+                    'conversion': '🔄 Format Conversion',
+                    'effects': '✨ Effects & Filters',
+                    'editing': '✂️ Editing Tools',
+                    'test': '🧪 Test Tools',
+                    'uncategorized': '📦 Other Tools'
+                };
+
+                let html = '';
+                for (const [cat, toolsList] of Object.entries(categories)) {
+                    const displayName = categoryNames[cat] || cat;
+                    html += `<div class="category-section"><h2 class="category-title">${displayName}</h2><div class="tool-grid">`;
+                    toolsList.forEach(tool => {
+                        html += `
+                            <div class="tool-card">
+                                <h3>${tool.title}</h3>
+                                <p>${tool.description}</p>
+                                <a href="/tools/${tool.slug}/" class="btn">Open Tool →</a>
+                            </div>
+                        `;
+                    });
+                    html += `</div></div>`;
+                }
+                document.getElementById('categories-container').innerHTML = html;
+
+            } catch (err) {
+                console.error('Error loading tools:', err);
+                document.getElementById('categories-container').innerHTML = '<p style="color:red;">Failed to load tools. Please refresh.</p>';
+            }
+
+            // Fetch guides (independent, won't break categories)
+            try {
+                const guidesRes = await fetch('/data/guides.json');
+                if (!guidesRes.ok) throw new Error('Failed to fetch guides');
+                const guides = await guidesRes.json();
+
+                const guidesPreview = document.getElementById('guides-preview');
+                if (guides && guides.length > 0) {
+                    // Random guides for preview
+                    const shuffled = guides.sort(() => 0.5 - Math.random());
+                    const previewGuides = shuffled.slice(0, 8);
+                    let guidesHtml = '';
+                    previewGuides.forEach(guide => {
+                        guidesHtml += `<a href="${guide.url}">${guide.title}</a>`;
+                    });
+                    document.getElementById('guides-list').innerHTML = guidesHtml;
+                    guidesPreview.style.display = 'block'; // show section
+                } else {
+                    // No guides, hide section
+                    guidesPreview.style.display = 'none';
+                }
+            } catch (err) {
+                console.error('Error loading guides:', err);
+                // Hide guides section if error
+                document.getElementById('guides-preview').style.display = 'none';
+            }
+        }
+
+        loadHomepage();
+    </script>
+    <script src="/assets/js/nav.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const resultsDiv = document.getElementById('searchResults');
+    if (!searchInput || !resultsDiv) return;
+
+    let idx = null;
+    let documents = [];
+
+    fetch('/search.json')
+        .then(res => res.json())
+        .then(data => {
+            documents = data;
+            idx = lunr(function() {
+                this.ref('url');
+                this.field('title', { boost: 10 });
+                this.field('description');
+                data.forEach(doc => this.add(doc));
+            });
+        });
+
+    searchInput.addEventListener('input', function() {
+        const query = this.value.trim();
+        if (query.length < 2) {
+            resultsDiv.innerHTML = '';
+            return;
+        }
+
+        if (!idx) return;
+
+        const results = idx.search(query).map(res => {
+            return documents.find(d => d.url === res.ref);
+        });
+
+        if (results.length === 0) {
+            resultsDiv.innerHTML = '<p style="color:#a0b3d9;">No results found.</p>';
+            return;
+        }
+
+        let html = '<ul style="list-style:none; padding:0;">';
+        results.slice(0, 5).forEach(item => {
+            html += `
+                <li style="margin:10px 0; padding:10px; background:#111a30; border-radius:8px;">
+                    <a href="${item.url}" style="color:#4da3ff; text-decoration:none; font-weight:bold;">${item.title}</a>
+                    <span style="color:#a0b3d9; font-size:0.8rem; margin-left:8px;">(${item.type})</span>
+                    <p style="color:#a0b3d9; font-size:0.9rem; margin:2px 0 0 0;">${item.description}</p>
+                </li>
+            `;
+        });
+        html += '</ul>';
+        resultsDiv.innerHTML = html;
+    });
+});
+</script>
 </body>
 </html>
