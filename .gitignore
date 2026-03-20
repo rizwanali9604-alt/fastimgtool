@@ -3,3 +3,4 @@ package-lock.json
 .DS_Store
 *.log
 .envpython_marketing/service_account.json 
+guides_backup/ 
