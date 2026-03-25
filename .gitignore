@@ -4,3 +4,4 @@ package-lock.json
 *.log
 .envpython_marketing/service_account.json 
 guides_backup/ 
+*.bak 
