@@ -51,6 +51,7 @@
             font-family: system-ui, -apple-system, sans-serif;
             background: #050b18;
             color: #e6edf7;
+            line-height: 1.6;
         }
         a {
             text-decoration: none;
@@ -248,6 +249,127 @@
             font-size: 0.85rem;
         }
 
+        /* Guide Article Styles */
+        .guide-article {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .guide-article h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #4da3ff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .guide-article h2 {
+            font-size: 1.8rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #e6edf7;
+            border-bottom: 2px solid #2a3a5a;
+            padding-bottom: 0.5rem;
+        }
+        .guide-article h3 {
+            font-size: 1.4rem;
+            margin-top: 1.8rem;
+            margin-bottom: 0.8rem;
+            color: #cbd5e1;
+        }
+        .guide-article p {
+            margin-bottom: 1.2rem;
+            color: #a0b3d9;
+            font-size: 1.05rem;
+        }
+        .guide-article ul, .guide-article ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            color: #a0b3d9;
+        }
+        .guide-article li {
+            margin-bottom: 0.5rem;
+        }
+        .guide-article strong {
+            color: #e6edf7;
+        }
+        .guide-article img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #2a3a5a;
+            margin: 1.5rem 0;
+            display: block;
+        }
+        .image-compare {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 2rem 0;
+        }
+        .related-section {
+            background: #0f1a2f;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 3rem 0;
+        }
+        .related-section h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: #e6edf7;
+        }
+        .related-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .related-links a {
+            background: #2a3a5a;
+            padding: 8px 16px;
+            border-radius: 30px;
+            color: #e6edf7;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .related-links a:hover {
+            background: #4da3ff;
+        }
+        .cta-box {
+            text-align: center;
+            background: linear-gradient(135deg, #0f1a2f, #1a2b4a);
+            border-radius: 16px;
+            padding: 40px;
+            margin: 3rem 0;
+            border: 1px solid #2a3a5a;
+        }
+        .cta-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #e6edf7;
+        }
+        .cta-box p {
+            margin-bottom: 1.5rem;
+            color: #a0b3d9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #4da3ff, #00d4ff);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(77, 163, 255, 0.4);
+        }
+
         /* Responsive */
         @media (max-width: 600px) {
             .navbar {
@@ -261,6 +383,15 @@
             }
             .hero h1 {
                 font-size: 2rem;
+            }
+            .guide-article h1 {
+                font-size: 2rem;
+            }
+            .guide-article h2 {
+                font-size: 1.5rem;
+            }
+            .image-compare {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -297,770 +428,15 @@
     <div id="searchResults" style="margin-top:10px;"></div>
 </div>
 
-    <div class="guide-article"><h2>JPG to PNG Conversion: Unlocking Image Quality and Transparency</h2>
-<p>In the digital world, the choice between JPG and PNG can make or break your project's visual impact. While JPG is the undisputed king for photographs, PNG holds the crown for graphics, logos, and any image requiring crystal-clear quality or a transparent background. If you've ever tried to place a logo with an ugly white square onto a colored website background, you've felt the pain of using the wrong format. Converting JPG to PNG is the simple solution, but knowing <em>when</em> and <em>how</em> to do it effectively is key. This comprehensive guide will walk you through everything from the fundamental differences between these formats to step-by-step conversion methods and pro tips for achieving the best results.</p>
+    <div class="guide-article">
+        <h1>JPG to PNG Conversion: The Ultimate Guide to Unlocking Quality & Transparency</h1>
+        <p>Have you ever tried to place a logo on your website, only to be stuck with an unsightly white box that clashes with your design? Or perhaps you've watched a crisp graphic turn blurry after a few edits? These are the telltale signs of using the wrong image format. In the digital realm, choosing between JPG and PNG isn't just a technicality—it's a decision that defines the professionalism and impact of your visuals. Converting a JPG to a PNG is the key that unlocks lossless quality and seamless transparency, but doing it effectively requires the right knowledge. This comprehensive, 2000-word guide will be your definitive resource. You'll learn not just how to convert files, but <em>why</em> you should, when it's essential, and how to achieve flawless results every time.</p>
 
-<div class="image-compare">
-  <img src="/images/guides/jpg-to-png-before.jpg" alt="Original JPG image with white background" loading="lazy">
-  <img src="/images/guides/jpg-to-png-after.png" alt="Converted PNG image with transparent background" loading="lazy">
-</div>
-
-<h2>JPG vs. PNG: Understanding the Core Differences</h2>
-<p>Before you convert, it's crucial to understand what each format brings to the table. Think of JPG and PNG as specialized tools in your digital toolbox.</p>
-
-<h3>What is a JPG (or JPEG)?</h3>
-<p>JPG, developed by the Joint Photographic Experts Group, is a <strong>lossy compression</strong> format. This means it dramatically reduces file size by permanently discarding some image data, particularly details the human eye is less likely to notice. This makes it perfect for:</p>
-<ul>
-    <li><strong>Photographs and realistic images:</strong> Complex scenes with gradients, shadows, and millions of colors.</li>
-    <li><strong>Web usage where small file size is critical:</strong> Faster website loading times and lower bandwidth usage.</li>
-    <li><strong>Digital camera outputs:</strong> Most cameras default to JPG for efficient storage.</li>
-</ul>
-<p>The downside? Each time you edit and save a JPG, it re-compresses and loses more data, leading to a gradual degradation in quality known as "generation loss." It also does <strong>not support transparency</strong>.</p>
-
-<h3>What is a PNG?</h3>
-<p>PNG (Portable Network Graphics) was created as a superior, patent-free alternative to the older GIF format. Its standout feature is <strong>lossless compression</strong>. No image data is lost during compression, so the quality remains perfect every time you open and save the file. Key features include:</p>
-<ul>
-    <li><strong>Lossless Quality:</strong> Ideal for text, line art, logos, icons, and screenshots where sharp edges and clarity are paramount.</li>
-    <li><strong>Transparency Support (Alpha Channel):</strong> This is PNG's superpower. It can have fully transparent, semi-transparent (opacity), or opaque pixels, allowing for clean overlays on any background.</li>
-    <li><strong>No Color Limitations:</strong> Unlike GIF, PNG supports millions of colors.</li>
-</ul>
-<p>The trade-off? File sizes are typically much larger than JPGs for photographic content, making them less ideal for photo-heavy websites.</p>
-
-<h2>Top Reasons to Convert JPG to PNG</h2>
-<p>So, when should you make the switch from JPG to PNG? Here are the most common and compelling reasons.</p>
-
-<h3>1. You Need a Transparent Background</h3>
-<p>This is the number one reason for conversion. A JPG always has a solid background (usually white or black). If you need to place an image—like a logo, icon, or product shot—onto a website, video, or document with a non-white background, that solid box will look amateurish. Converting to PNG allows you to remove the background cleanly, letting the underlying color or design show through seamlessly.</p>
-
-<h3>2. Preserving Perfect Quality for Graphics and Text</h3>
-<p>If your JPG contains text, sharp lines, or simple graphics, JPG compression can introduce visual noise called "artifacts"—blurry edges or strange speckles. Converting such images to PNG stops any further quality loss and preserves the crisp, clean lines you need for a professional presentation.</p>
-
-<h3>3. For Repeated Editing</h3>
-<p>Planning to edit an image multiple times? Starting with or converting to PNG ensures you aren't baking in quality loss with every "Save As." You maintain the original fidelity throughout your editing process. Once finished, you can export a final copy as a JPG for web use if needed.</p>
-
-<h3>4. Creating High-Quality Screenshots</h3>
-<p>Screenshots of software interfaces, text articles, or data charts are full of sharp edges and solid colors. Saving them directly as PNG (or converting a JPG screenshot to PNG) guarantees that every pixel and letter remains razor-sharp and readable.</p>
-
-<h2>How to Convert JPG to PNG: Step-by-Step Methods</h2>
-<p>Converting an image is straightforward. The best method for you depends on your needs: speed, advanced editing, or batch processing.</p>
-
-<h3>Method 1: Using a Dedicated Online Converter (Fast & Easy)</h3>
-<p>For quick, one-off conversions without installing software, online tools are perfect. Here’s how to use our tool:</p>
-<ol>
-    <li><strong>Open the Converter:</strong> Navigate to our <a href="/tools/jpg-to-png/">JPG to PNG Converter</a> tool.</li>
-    <li><strong>Upload Your JPG:</strong> Click the upload area or drag and drop your JPG file into the browser window. Most tools support batch uploads.</li>
-    <img src="/images/guides/jpg-to-png-step1.jpg" alt="Step 1: Upload your JPG file to the online converter tool" loading="lazy">
-    <li><strong>Adjust Settings (If Available):</strong> Some converters offer options like renaming or adjusting output quality. For PNG, quality is usually lossless and locked.</li>
-    <li><strong>Initiate Conversion:</strong> Click the "Convert," "Start," or similar button.</li>
-    <li><strong>Download Your PNG:</strong> Once processing is complete, a download link will appear. Click it to save the new PNG file to your device.</li>
-</ol>
-<p><strong>Pro Tip:</strong> Use online converters from a trusted source to ensure your images are not stored or misused. Check their privacy policy.</p>
-
-<h3>Method 2: Using Image Editing Software (For Precision)</h3>
-<p>If you need to edit the image (like manually refining a transparent background) before converting, use software like Adobe Photoshop, GIMP (free), or Affinity Photo.</p>
-<ol>
-    <li><strong>Open the JPG:</strong> Launch your software and open the JPG file (File > Open).</li>
-    <li><strong>Edit as Needed:</strong> This is your chance to remove the background, adjust colors, or clean up the image. Use tools like the Magic Wand, Background Eraser, or Pen Tool for precise transparency.</li>
-    <li><strong>Save As PNG:</strong> Go to <em>File > Save As</em> or <em>Export As</em>. In the format dropdown, select "PNG."</li>
-    <li><strong>Configure PNG Options:</strong> A dialog box may appear. You can often choose between PNG-8 (smaller, limited colors) and PNG-24 (truecolor with alpha transparency). For full quality and transparency, always choose PNG-24.</li>
-    <li><strong>Save the File:</strong> Name your file and choose a location, then click Save.</li>
-</ol>
-
-<h3>Method 3: Using Built-in OS Tools (Quick & Native)</h3>
-<p>Both Windows and macOS have built-in ways to perform a basic conversion.</p>
-<ul>
-    <li><strong>On Windows (Paint):</strong> Open the JPG in Paint. Click "File" > "Save as" > "PNG picture."</li>
-    <li><strong>On macOS (Preview):</strong> Open the JPG in Preview. Click "File" > "Export." In the format dropdown, choose PNG and click Save.</li>
-</ul>
-
-<h2>Pro Tips for a Flawless JPG to PNG Conversion</h2>
-<p>Go beyond a simple file format swap with these expert strategies.</p>
-
-<h3>1. Start with the Highest Quality JPG Possible</h3>
-<p>You cannot create data that wasn't there to begin with. If your original JPG is low-resolution or heavily compressed, converting to PNG will only preserve those flaws. Always use the highest quality source file available.</p>
-
-<h3>2. Understand That Conversion Doesn't *Create* Transparency</h3>
-<p>This is a critical point. Simply converting a JPG with a white background to PNG will give you a PNG... with a white background. The conversion process changes the file container, not the content inside. To <strong>achieve transparency</strong>, you must use an image editor (like in Method 2) to <em>remove the background</em> <strong>before</strong> or <strong>during</strong> the save process.</p>
-
-<h3>3. Know When NOT to Convert JPG to PNG</h3>
-<p>Conversion is not always the answer. Do <strong>not</strong> convert full-color photographs intended for the web to PNG. The file size will balloon (often 5-10x larger) without any visible quality benefit for the viewer, drastically slowing down your webpage. Use PNG for graphics, JPG for photos.</p>
-
-<h3>4. Use Batch Conversion for Efficiency</h3>
-<p>Need to convert dozens of images? Manual methods are tedious. Use advanced software (like Adobe Lightroom, XnConvert, or advanced online tools) that offer batch processing. You can apply the same conversion settings to hundreds of files at once, saving immense time.</p>
-
-<h3>5. Optimize Your Final PNG File</h3>
-<p>Even lossless files can be optimized. Tools like TinyPNG or PNGGauntlet use smart compression techniques to reduce PNG file size without touching the visible quality or transparency. Always run your final PNGs through an optimizer before putting them on a website.</p>
-
-<h2>Common Questions About JPG to PNG Conversion</h2>
-
-<h3>Does converting JPG to PNG improve quality?</h3>
-<p><strong>No, it does not.</strong> PNG's lossless compression preserves the existing quality of the JPG but cannot restore any quality that was lost when the JPG was originally created or saved. It prevents <em>future</em> quality loss.</p>
-
-<h3>Can I convert PNG back to JPG?</h3>
-<p>Yes, absolutely. This is often done as a final step after editing a PNG to create a smaller, web-friendly version of a photograph. However, remember that converting back to JPG will apply lossy compression and remove any transparency (replacing it with a solid color).</p>
-
-<h3>Is it safe to use free online converters?</h3>
-<p>Generally, yes, for non-sensitive images. For personal photos, confidential graphics, or proprietary logos, it's safer to use a reputable, secure tool with a clear privacy policy stating that files are deleted after conversion, or use desktop software.</p>
-
-<h3>What's the difference between PNG-8 and PNG-24?</h3>
-<p>PNG-8 supports up to 256 colors and basic on/off transparency (a pixel is either fully transparent or fully opaque). PNG-24 supports millions of colors and alpha-channel transparency (allowing for smooth transparency gradients and shadows). For most professional uses, PNG-24 is the standard.</p>
-
-<h2>Conclusion: Choosing the Right Tool for the Job</h2>
-<p>Converting JPG to PNG is a fundamental skill for anyone working with digital images. It's the gateway to professional-looking graphics with transparent backgrounds and flawless, editable quality. Remember, the core principle is to match the format to the image's purpose: use <strong>JPG for complex photographs</strong> where file size matters, and use <strong>PNG for graphics, text, and logos</strong> where clarity and transparency are non-negotiable. Whether you choose a lightning-fast online converter for a single image or a powerful editor for precise background removal, you now have the knowledge to make the right choice and execute the conversion like a pro. Start by identifying your need—is it transparency, or preserving sharp details?—and let that guide your process to perfect results.</p></div>
-        <div class="related-section">
-            <h3>🔧 Related Tool</h3>
-            <div class="related-links">
-                <a href="/tools/jpg-to-png/">Try the tool →</a>
-            </div>
+        <div class="image-compare">
+          <img src="/images/guides/jpg-to-png-before.jpg" alt="Original JPG image with a solid white background, looking blocky on a colored webpage" loading="lazy">
+          <img src="/images/guides/jpg-to-png-after.png" alt="Converted PNG image with a transparent background, blending seamlessly onto the webpage" loading="lazy">
         </div>
-        
-        <div class="related-section">
-            <h3>📚 Related Guides</h3>
-            <div class="related-links">
-                <a href="/guides/how-to-compress-image-online.html">How to Compress Images Online</a>
-                <a href="/guides/how-to-convert-jpg-to-png.html">How to Convert JPG to PNG</a>
-                <a href="/guides/how-to-crop-image-online.html">How to Crop an Image Online</a>
-                <a href="/guides/how-to-blur-image-online.html">How to Blur an Image Online</a>
-            </div>
-        </div>
-    
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-col">
-                <h4>Product</h4>
-                <ul>
-                    <li><a href="/tools/">All Tools</a></li>
-                    <li><a href="/guides/">All Guides</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="/privacy.html">Privacy policy</a></li>
-                    <li><a href="/terms.html">Terms & conditions</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="/about.html">About us</a></li>
-                    <li><a href="/contact.html">Contact us</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 FastImgTool – All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Load tools and build categories
-        async function loadHomepage() {
-            try {
-                // Fetch tools (required)
-                const toolsRes = await fetch('/data/tools.json');
-                if (!toolsRes.ok) throw new Error('Failed to fetch tools');
-                const tools = await toolsRes.json();
-
-                // Group tools by category
-                const categories = {};
-                tools.forEach(tool => {
-                    const cat = tool.category || 'uncategorized';
-                    if (!categories[cat]) categories[cat] = [];
-                    categories[cat].push(tool);
-                });
-
-                const categoryNames = {
-                    'resize': '📏 Resize & Scale',
-                    'compression': '🗜️ Compression',
-                    'conversion': '🔄 Format Conversion',
-                    'effects': '✨ Effects & Filters',
-                    'editing': '✂️ Editing Tools',
-                    'test': '🧪 Test Tools',
-                    'uncategorized': '📦 Other Tools'
-                };
-
-                let html = '';
-                for (const [cat, toolsList] of Object.entries(categories)) {
-                    const displayName = categoryNames[cat] || cat;
-                    html += `<div class="category-section"><h2 class="category-title">${displayName}</h2><div class="tool-grid">`;
-                    toolsList.forEach(tool => {
-                        html += `
-                            <div class="tool-card">
-                                <h3>${tool.title}</h3>
-                                <p>${tool.description}</p>
-                                <a href="/tools/${tool.slug}/" class="btn">Open Tool →</a>
-                            </div>
-                        `;
-                    });
-                    html += `</div></div>`;
-                }
-                document.getElementById('categories-container').innerHTML = html;
-
-            } catch (err) {
-                console.error('Error loading tools:', err);
-                document.getElementById('categories-container').innerHTML = '<p style="color:red;">Failed to load tools. Please refresh.</p>';
-            }
-
-            // Fetch guides (independent, won't break categories)
-            try {
-                const guidesRes = await fetch('/data/guides.json');
-                if (!guidesRes.ok) throw new Error('Failed to fetch guides');
-                const guides = await guidesRes.json();
-
-                const guidesPreview = document.getElementById('guides-preview');
-                if (guides && guides.length > 0) {
-                    // Random guides for preview
-                    const shuffled = guides.sort(() => 0.5 - Math.random());
-                    const previewGuides = shuffled.slice(0, 8);
-                    let guidesHtml = '';
-                    previewGuides.forEach(guide => {
-                        guidesHtml += `<a href="${guide.url}">${guide.title}</a>`;
-                    });
-                    document.getElementById('guides-list').innerHTML = guidesHtml;
-                    guidesPreview.style.display = 'block'; // show section
-                } else {
-                    // No guides, hide section
-                    guidesPreview.style.display = 'none';
-                }
-            } catch (err) {
-                console.error('Error loading guides:', err);
-                // Hide guides section if error
-                document.getElementById('guides-preview').style.display = 'none';
-            }
-        }
-
-        loadHomepage();
-    </script>
-    <script src="/assets/js/nav.js"></script>
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.getElementById('searchInput');
-    const resultsDiv = document.getElementById('searchResults');
-    if (!searchInput || !resultsDiv) return;
-
-    let idx = null;
-    let documents = [];
-
-    fetch('/search.json')
-        .then(res => res.json())
-        .then(data => {
-            documents = data;
-            idx = lunr(function() {
-                this.ref('url');
-                this.field('title', { boost: 10 });
-                this.field('description');
-                data.forEach(doc => this.add(doc));
-            });
-        });
-
-    searchInput.addEventListener('input', function() {
-        const query = this.value.trim();
-        if (query.length < 2) {
-            resultsDiv.innerHTML = '';
-            return;
-        }
-
-        if (!idx) return;
-
-        const results = idx.search(query).map(res => {
-            return documents.find(d => d.url === res.ref);
-        });
-
-        if (results.length === 0) {
-            resultsDiv.innerHTML = '<p style="color:#a0b3d9;">No results found.</p>';
-            return;
-        }
-
-        let html = '<ul style="list-style:none; padding:0;">';
-        results.slice(0, 5).forEach(item => {
-            html += `
-                <li style="margin:10px 0; padding:10px; background:#111a30; border-radius:8px;">
-                    <a href="${item.url}" style="color:#4da3ff; text-decoration:none; font-weight:bold;">${item.title}</a>
-                    <span style="color:#a0b3d9; font-size:0.8rem; margin-left:8px;">(${item.type})</span>
-                    <p style="color:#a0b3d9; font-size:0.9rem; margin:2px 0 0 0;">${item.description}</p>
-                </li>
-            `;
-        });
-        html += '</ul>';
-        resultsDiv.innerHTML = html;
-    });
-});
-</script>
-<h3>📧 Get free image tips – Subscribe now!</h3>
-<div id="mc_embed_shell">
-      <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-  <style type="text/css">
-        #mc_embed_signup{background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;}
-        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<div id="mc_embed_signup">
-    <form action="https://fastimgtool.us19.list-manage.com/subscribe/post?u=88d0cd80fa5ce04ab9bc4a074&amp;id=b5e1d64b6a&amp;f_id=00e782e3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-        <div id="mc_embed_signup_scroll"><h2>Subscribe</h2>
-            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-            <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
-        <div id="mce-responses" class="clear foot">
-            <div class="response" id="mce-error-response" style="display: none;"></div>
-            <div class="response" id="mce-success-response" style="display: none;"></div>
-        </div>
-    <div aria-hidden="true" style="position: absolute; left: -5000px;">
-        /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
-        <input type="text" name="b_88d0cd80fa5ce04ab9bc4a074_b5e1d64b6a" tabindex="-1" value="">
-    </div>
-        <div class="optionalParent">
-            <div class="clear foot">
-                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-                <p style="margin: 0px auto;"><a href="http://eepurl.com/jCgLUU" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
-            </div>
-        </div>
-    </div>
-</form>
-</div>
-<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='COMPANY';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
-    // SMS Phone Multi-Country Functionality
-    if(!window.MC) {
-      window.MC = {};
-    }
-    window.MC.smsPhoneData = {
-      defaultCountryCode: 'IN',
-      programs: [],
-      smsProgramDataCountryNames: []
-    };
-
-    function getCountryUnicodeFlag(countryCode) {
-       return countryCode.toUpperCase().replace(/./g, (char) => String.fromCodePoint(char.charCodeAt(0) + 127397))
-    };
-
-    // HTML sanitization function to prevent XSS
-    function sanitizeHtml(str) {
-      if (typeof str !== 'string') return '';
-      return str
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#x27;')
-        .replace(/\//g, '&#x2F;');
-    }
-
-    // URL sanitization function to prevent javascript: and data: URLs
-    function sanitizeUrl(url) {
-      if (typeof url !== 'string') return '';
-      const trimmedUrl = url.trim().toLowerCase();
-      if (trimmedUrl.startsWith('javascript:') || trimmedUrl.startsWith('data:') || trimmedUrl.startsWith('vbscript:')) {
-        return '#';
-      }
-      return url;
-    }
-
-    const getBrowserLanguage = () => {
-      if (!window?.navigator?.language?.split('-')[1]) {
-        return window?.navigator?.language?.toUpperCase();
-      }
-      return window?.navigator?.language?.split('-')[1];
-    };
-
-    function getDefaultCountryProgram(defaultCountryCode, smsProgramData) {
-      if (!smsProgramData || smsProgramData.length === 0) {
-        return null;
-      }
-
-      const browserLanguage = getBrowserLanguage();
-
-      if (browserLanguage) {
-        const foundProgram = smsProgramData.find(
-          (program) => program?.countryCode === browserLanguage,
-        );
-        if (foundProgram) {
-          return foundProgram;
-        }
-      }
-
-      if (defaultCountryCode) {
-        const foundProgram = smsProgramData.find(
-          (program) => program?.countryCode === defaultCountryCode,
-        );
-        if (foundProgram) {
-          return foundProgram;
-        }
-      }
-
-      return smsProgramData[0];
-    }
-
-    function updateSmsLegalText(countryCode, fieldName) {
-      if (!countryCode || !fieldName) {
-        return;
-      }
-      
-      const programs = window?.MC?.smsPhoneData?.programs;
-      if (!programs || !Array.isArray(programs)) {
-        return;
-      }
-      
-      const program = programs.find(program => program?.countryCode === countryCode);
-      if (!program || !program.requiredTemplate) {
-        return;
-      }
-      
-      const legalTextElement = document.querySelector('#legal-text-' + fieldName);
-      if (!legalTextElement) {
-        return;
-      }
-      
-      // Remove HTML tags and clean up the text
-      const divRegex = new RegExp('</?[div][^>]*>', 'gi');
-      const fullAnchorRegex = new RegExp('<a.*?</a>', 'g');
-      const anchorRegex = new RegExp('<a href="(.*?)" target="(.*?)">(.*?)</a>');
-      
-      const template = program.requiredTemplate.replace(divRegex, '');
-      
-      
-
-      legalTextElement.textContent = '';
-      const parts = template.split(/(<a href=".*?" target=".*?">.*?<\/a>)/g);
-      parts.forEach(function(part) {
-        if (!part) {
-          return;
-        }
-        const anchorMatch = part.match(/<a href="(.*?)" target="(.*?)">(.*?)<\/a>/);
-        if (anchorMatch) {
-          const linkElement = document.createElement('a');
-          linkElement.href = sanitizeUrl(anchorMatch[1]);
-          linkElement.target = sanitizeHtml(anchorMatch[2]);
-          linkElement.textContent = sanitizeHtml(anchorMatch[3]);
-          legalTextElement.appendChild(linkElement);
-        } else {
-          legalTextElement.appendChild(document.createTextNode(part));
-        }
-      });
-          
-    }
-
-    function generateDropdownOptions(smsProgramData) {
-      if (!smsProgramData || smsProgramData.length === 0) {
-        return '';
-      }
-      
-      return smsProgramData.map(program => {
-        const flag = getCountryUnicodeFlag(program.countryCode);
-        const countryName = getCountryName(program.countryCode);
-        const callingCode = program.countryCallingCode || '';
-        // Sanitize all values to prevent XSS
-        const sanitizedCountryCode = sanitizeHtml(program.countryCode || '');
-        const sanitizedCountryName = sanitizeHtml(countryName || '');
-        const sanitizedCallingCode = sanitizeHtml(callingCode || '');
-        return '<option value="' + sanitizedCountryCode + '">' + sanitizedCountryName + ' ' + sanitizedCallingCode + '</option>';
-      }).join('');
-    }
-
-    function getCountryName(countryCode) {
-      if (window.MC?.smsPhoneData?.smsProgramDataCountryNames && Array.isArray(window.MC.smsPhoneData.smsProgramDataCountryNames)) {
-        for (let i = 0; i < window.MC.smsPhoneData.smsProgramDataCountryNames.length; i++) {
-          if (window.MC.smsPhoneData.smsProgramDataCountryNames[i].code === countryCode) {
-            return window.MC.smsPhoneData.smsProgramDataCountryNames[i].name;
-          }
-        }
-      }
-      return countryCode;
-    }
-
-    function getDefaultPlaceholder(countryCode) {
-      if (!countryCode || typeof countryCode !== 'string') {
-        return '+1 000 000 0000'; // Default US placeholder
-      }
-      
-            var mockPlaceholders = [
-        {
-          countryCode: 'US',
-          placeholder: '+1 000 000 0000',
-          helpText: 'Include the US country code +1 before the phone number',
-        },
-        {
-          countryCode: 'GB',
-          placeholder: '+44 0000 000000',
-          helpText: 'Include the GB country code +44 before the phone number',
-        },
-        {
-          countryCode: 'CA',
-          placeholder: '+1 000 000 0000',
-          helpText: 'Include the CA country code +1 before the phone number',
-        },
-        {
-          countryCode: 'AU',
-          placeholder: '+61 000 000 000',
-          helpText: 'Include the AU country code +61 before the phone number',
-        },
-        {
-          countryCode: 'DE',
-          placeholder: '+49 000 0000000',
-          helpText: 'Fügen Sie vor der Telefonnummer die DE-Ländervorwahl +49 ein',
-        },
-        {
-          countryCode: 'FR',
-          placeholder: '+33 0 00 00 00 00',
-          helpText: 'Incluez le code pays FR +33 avant le numéro de téléphone',
-        },
-        {
-          countryCode: 'ES',
-          placeholder: '+34 000 000 000',
-          helpText: 'Incluya el código de país ES +34 antes del número de teléfono',
-        },
-        {
-          countryCode: 'NL',
-          placeholder: '+31 0 00000000',
-          helpText: 'Voeg de NL-landcode +31 toe vóór het telefoonnummer',
-        },
-        {
-          countryCode: 'BE',
-          placeholder: '+32 000 00 00 00',
-          helpText: 'Incluez le code pays BE +32 avant le numéro de téléphone',
-        },
-        {
-          countryCode: 'CH',
-          placeholder: '+41 00 000 00 00',
-          helpText: 'Fügen Sie vor der Telefonnummer die CH-Ländervorwahl +41 ein',
-        },
-        {
-          countryCode: 'AT',
-          placeholder: '+43 000 000 0000',
-          helpText: 'Fügen Sie vor der Telefonnummer die AT-Ländervorwahl +43 ein',
-        },
-        {
-          countryCode: 'IE',
-          placeholder: '+353 00 000 0000',
-          helpText: 'Include the IE country code +353 before the phone number',
-        },
-        {
-          countryCode: 'IT',
-          placeholder: '+39 000 000 0000',
-          helpText: 'Includere il prefisso internazionale IT +39 prima del numero di telefono',
-        },
-      ];
-
-      const selectedPlaceholder = mockPlaceholders.find(function(item) {
-        return item && item.countryCode === countryCode;
-      });
-      
-      return selectedPlaceholder ? selectedPlaceholder.placeholder : mockPlaceholders[0].placeholder;
-    }
-
-    function updatePlaceholder(countryCode, fieldName) {
-      if (!countryCode || !fieldName) {
-        return;
-      }
-      
-      const phoneInput = document.querySelector('#mce-' + fieldName);
-      if (!phoneInput) {
-        return;
-      }
-      
-      const placeholder = getDefaultPlaceholder(countryCode);
-      if (placeholder) {
-        phoneInput.placeholder = placeholder;
-      }
-    }
-
-    function updateCountryCodeInstruction(countryCode, fieldName) {
-      updatePlaceholder(countryCode, fieldName);
-      
-    }
-
-    function getDefaultHelpText(countryCode) {
-      var mockPlaceholders = [
-        {
-          countryCode: 'US',
-          placeholder: '+1 000 000 0000',
-          helpText: 'Include the US country code +1 before the phone number',
-        },
-        {
-          countryCode: 'GB',
-          placeholder: '+44 0000 000000',
-          helpText: 'Include the GB country code +44 before the phone number',
-        },
-        {
-          countryCode: 'CA',
-          placeholder: '+1 000 000 0000',
-          helpText: 'Include the CA country code +1 before the phone number',
-        },
-        {
-          countryCode: 'AU',
-          placeholder: '+61 000 000 000',
-          helpText: 'Include the AU country code +61 before the phone number',
-        },
-        {
-          countryCode: 'DE',
-          placeholder: '+49 000 0000000',
-          helpText: 'Fügen Sie vor der Telefonnummer die DE-Ländervorwahl +49 ein',
-        },
-        {
-          countryCode: 'FR',
-          placeholder: '+33 0 00 00 00 00',
-          helpText: 'Incluez le code pays FR +33 avant le numéro de téléphone',
-        },
-        {
-          countryCode: 'ES',
-          placeholder: '+34 000 000 000',
-          helpText: 'Incluya el código de país ES +34 antes del número de teléfono',
-        },
-        {
-          countryCode: 'NL',
-          placeholder: '+31 0 00000000',
-          helpText: 'Voeg de NL-landcode +31 toe vóór het telefoonnummer',
-        },
-        {
-          countryCode: 'BE',
-          placeholder: '+32 000 00 00 00',
-          helpText: 'Incluez le code pays BE +32 avant le numéro de téléphone',
-        },
-        {
-          countryCode: 'CH',
-          placeholder: '+41 00 000 00 00',
-          helpText: 'Fügen Sie vor der Telefonnummer die CH-Ländervorwahl +41 ein',
-        },
-        {
-          countryCode: 'AT',
-          placeholder: '+43 000 000 0000',
-          helpText: 'Fügen Sie vor der Telefonnummer die AT-Ländervorwahl +43 ein',
-        },
-        {
-          countryCode: 'IE',
-          placeholder: '+353 00 000 0000',
-          helpText: 'Include the IE country code +353 before the phone number',
-        },
-        {
-          countryCode: 'IT',
-          placeholder: '+39 000 000 0000',
-          helpText: 'Includere il prefisso internazionale IT +39 prima del numero di telefono',
-        },
-      ];
-      
-      if (!countryCode || typeof countryCode !== 'string') {
-        return mockPlaceholders[0].helpText;
-      }
-      
-      const selectedHelpText = mockPlaceholders.find(function(item) {
-          return item && item.countryCode === countryCode;
-        });
-        
-        return selectedHelpText ? selectedHelpText.helpText : mockPlaceholders[0].helpText;
-    }
-
-    function setDefaultHelpText(countryCode) {
-      const helpTextSpan = document.querySelector('#help-text');
-      if (!helpTextSpan) {
-        return;
-      }
-
-        
-    }
-
-    function updateHelpTextCountryCode(countryCode, fieldName) {
-      if (!countryCode || !fieldName) {
-        return;
-      }
-      
-      setDefaultHelpText(countryCode);
-    }
-
-    function initializeSmsPhoneDropdown(fieldName) {
-      if (!fieldName || typeof fieldName !== 'string') {
-        return;
-      }
-      
-      const dropdown = document.querySelector('#country-select-' + fieldName);
-      const displayFlag = document.querySelector('#flag-display-' + fieldName);
-      
-      if (!dropdown || !displayFlag) {
-        return;
-      }
-
-      const smsPhoneData = window.MC?.smsPhoneData;
-      if (smsPhoneData && smsPhoneData.programs && Array.isArray(smsPhoneData.programs)) {
-        dropdown.innerHTML = generateDropdownOptions(smsPhoneData.programs);
-      }
-
-      const defaultProgram = getDefaultCountryProgram(smsPhoneData?.defaultCountryCode, smsPhoneData?.programs);
-      if (defaultProgram && defaultProgram.countryCode) {
-        dropdown.value = defaultProgram.countryCode;
-        
-        const flagSpan = displayFlag?.querySelector('#flag-emoji-' + fieldName);
-        if (flagSpan) {
-          flagSpan.textContent = getCountryUnicodeFlag(defaultProgram.countryCode);
-          flagSpan.setAttribute('aria-label', sanitizeHtml(defaultProgram.countryCode) + ' flag');
-        }
-        
-        updateSmsLegalText(defaultProgram.countryCode, fieldName);
-        updatePlaceholder(defaultProgram.countryCode, fieldName);
-        updateCountryCodeInstruction(defaultProgram.countryCode, fieldName);
-      }
-
-     
-      var smsNotRequiredRemoveCountryCodeEnabled = true;
-      var smsField = Object.values({"EMAIL":{"name":"EMAIL","label":"Email Address","helper_text":"","merge_id":0,"type":"email","required":true,"audience_field_name":"Email Address","field_type":"merge","enabled":true,"order":null},"FNAME":{"name":"FNAME","label":"First Name","helper_text":"","type":"text","required":false,"audience_field_name":"First Name","enabled":false,"order":null,"field_type":"merge","merge_id":1},"LNAME":{"name":"LNAME","label":"Last Name","helper_text":"","type":"text","required":false,"audience_field_name":"Last Name","enabled":false,"order":null,"field_type":"merge","merge_id":2},"ADDRESS":{"name":"ADDRESS","label":"Address","helper_text":"","type":"address","required":false,"audience_field_name":"Address","enabled":false,"order":null,"field_type":"merge","merge_id":3,"countries":{"2":"Albania","3":"Algeria","4":"Andorra","5":"Angola","6":"Argentina","7":"Armenia","8":"Australia","9":"Austria","10":"Azerbaijan","11":"Bahamas","12":"Bahrain","13":"Bangladesh","14":"Barbados","15":"Belarus","16":"Belgium","17":"Belize","18":"Benin","19":"Bermuda","20":"Bhutan","21":"Bolivia","22":"Bosnia and Herzegovina","23":"Botswana","24":"Brazil","25":"Bulgaria","26":"Burkina Faso","27":"Burundi","28":"Cambodia","29":"Cameroon","30":"Canada","31":"Cape Verde","32":"Cayman Islands","33":"Central African Republic","34":"Chad","35":"Chile","36":"China","37":"Colombia","38":"Congo","40":"Croatia","41":"Cyprus","42":"Czech Republic","43":"Denmark","44":"Djibouti","45":"Ecuador","46":"Egypt","47":"El Salvador","48":"Equatorial Guinea","49":"Eritrea","50":"Estonia","51":"Ethiopia","52":"Fiji","53":"Finland","54":"France","56":"Gabon","57":"Gambia","58":"Georgia","59":"Germany","60":"Ghana","61":"Greece","62":"Guam","63":"Guinea","64":"Guinea-Bissau","65":"Guyana","66":"Honduras","67":"Hong Kong","68":"Hungary","69":"Iceland","70":"India","71":"Indonesia","74":"Ireland","75":"Israel","76":"Italy","78":"Japan","79":"Jordan","80":"Kazakhstan","81":"Kenya","82":"Kuwait","83":"Kyrgyzstan","84":"Lao People's Democratic Republic","85":"Latvia","86":"Lebanon","87":"Lesotho","88":"Liberia","90":"Liechtenstein","91":"Lithuania","92":"Luxembourg","93":"Macedonia","94":"Madagascar","95":"Malawi","96":"Malaysia","97":"Maldives","98":"Mali","99":"Malta","100":"Mauritania","101":"Mexico","102":"Moldova","103":"Monaco","104":"Mongolia","105":"Morocco","106":"Mozambique","107":"Namibia","108":"Nepal","109":"Netherlands","110":"Netherlands Antilles","111":"New Zealand","112":"Nicaragua","113":"Niger","114":"Nigeria","116":"Norway","117":"Oman","118":"Pakistan","119":"Panama","120":"Paraguay","121":"Peru","122":"Philippines","123":"Poland","124":"Portugal","126":"Qatar","127":"Reunion","128":"Romania","129":"Russia","130":"Rwanda","132":"Samoa (Independent)","133":"Saudi Arabia","134":"Senegal","135":"Seychelles","136":"Sierra Leone","137":"Singapore","138":"Slovakia","139":"Slovenia","140":"Somalia","141":"South Africa","142":"South Korea","143":"Spain","144":"Sri Lanka","146":"Suriname","147":"Swaziland","148":"Sweden","149":"Switzerland","152":"Taiwan","153":"Tanzania","154":"Thailand","155":"Togo","156":"Tunisia","157":"Turkiye","158":"Turkmenistan","159":"Uganda","161":"Ukraine","162":"United Arab Emirates","163":"Uruguay","164":"USA","165":"Uzbekistan","166":"Vatican City State (Holy See)","167":"Venezuela","168":"Vietnam","169":"Virgin Islands (British)","170":"Yemen","173":"Zambia","174":"Zimbabwe","175":"Antigua And Barbuda","176":"Anguilla","178":"American Samoa","179":"Aruba","180":"Brunei Darussalam","181":"Bouvet Island","183":"Cook Islands","185":"Christmas Island","187":"Dominican Republic","188":"Western Sahara","189":"Falkland Islands","191":"Faroe Islands","192":"Grenada","193":"French Guiana","194":"Gibraltar","195":"Greenland","196":"Guadeloupe","198":"Guatemala","200":"Haiti","202":"Jamaica","203":"Kiribati","204":"Comoros","205":"Saint Kitts and Nevis","206":"Saint Lucia","207":"Marshall Islands","208":"Macau","210":"Martinique","212":"Mauritius","213":"New Caledonia","214":"Norfolk Island","215":"Nauru","217":"Niue","219":"Papua New Guinea","221":"Pitcairn","222":"Palau","223":"Solomon Islands","225":"Svalbard and Jan Mayen Islands","227":"San Marino","232":"Tonga","233":"Timor-Leste","234":"Trinidad and Tobago","235":"Tuvalu","237":"Saint Vincent and the Grenadines","238":"Virgin Islands (U.S.)","239":"Vanuatu","241":"Mayotte","242":"Myanmar","255":"Sao Tome and Principe","257":"South Georgia and the South Sandwich Islands","260":"Tajikistan","262":"United Kingdom","268":"Costa Rica","270":"Guernsey","272":"North Korea","274":"Afghanistan","275":"Cote D'Ivoire","276":"Cuba","277":"French Polynesia","278":"Iran","279":"Iraq","281":"Libya","282":"Palestine","285":"Syria","286":"Aaland Islands","287":"Turks & Caicos Islands","288":"Jersey  (Channel Islands)","289":"Dominica","290":"Montenegro","293":"Sudan","294":"Montserrat","298":"Curacao","302":"Sint Maarten","311":"South Sudan","315":"Republic of Kosovo","318":"Congo, Democratic Republic of the","323":"Isle of Man","324":"Saint Martin","325":"Bonaire, Saint Eustatius and Saba","326":"Serbia"},"defaultcountry":164},"PHONE":{"name":"PHONE","label":"Phone Number","helper_text":"","type":"phone","required":false,"audience_field_name":"Phone Number","phoneformat":"","enabled":false,"order":null,"field_type":"merge","merge_id":4},"BIRTHDAY":{"name":"BIRTHDAY","label":"Birthday","helper_text":"","type":"birthday","required":false,"audience_field_name":"Birthday","dateformat":"MM/DD","enabled":false,"order":null,"field_type":"merge","merge_id":5},"COMPANY":{"name":"COMPANY","label":"Company","helper_text":"","type":"text","required":false,"audience_field_name":"Company","enabled":false,"order":null,"field_type":"merge","merge_id":6}}).find(function(f) { return f.name === fieldName && f.type === 'smsphone'; });
-      var isRequired = smsField ? smsField.required : false;
-      var shouldAppendCountryCode = smsNotRequiredRemoveCountryCodeEnabled ? isRequired : true;
-      
-      var phoneInput = document.querySelector('#mce-' + fieldName);
-      if (phoneInput && defaultProgram.countryCallingCode && shouldAppendCountryCode) {
-        phoneInput.value = defaultProgram.countryCallingCode;
-      }
-      
-
-
-      displayFlag?.addEventListener('click', function(e) {
-        dropdown.focus();
-      });
-
-
-      dropdown?.addEventListener('change', function() {
-        const selectedCountry = this.value;
-        
-        if (!selectedCountry || typeof selectedCountry !== 'string') {
-          return;
-        }
-        
-        const flagSpan = displayFlag?.querySelector('#flag-emoji-' + fieldName);
-        if (flagSpan) {
-          flagSpan.textContent = getCountryUnicodeFlag(selectedCountry);
-          flagSpan.setAttribute('aria-label', sanitizeHtml(selectedCountry) + ' flag');
-        }
-
-         
-        const selectedProgram = window.MC?.smsPhoneData?.programs.find(function(program) {
-          return program && program.countryCode === selectedCountry;
-        });
-
-        var smsNotRequiredRemoveCountryCodeEnabled = true;
-        var smsField = Object.values({"EMAIL":{"name":"EMAIL","label":"Email Address","helper_text":"","merge_id":0,"type":"email","required":true,"audience_field_name":"Email Address","field_type":"merge","enabled":true,"order":null},"FNAME":{"name":"FNAME","label":"First Name","helper_text":"","type":"text","required":false,"audience_field_name":"First Name","enabled":false,"order":null,"field_type":"merge","merge_id":1},"LNAME":{"name":"LNAME","label":"Last Name","helper_text":"","type":"text","required":false,"audience_field_name":"Last Name","enabled":false,"order":null,"field_type":"merge","merge_id":2},"ADDRESS":{"name":"ADDRESS","label":"Address","helper_text":"","type":"address","required":false,"audience_field_name":"Address","enabled":false,"order":null,"field_type":"merge","merge_id":3,"countries":{"2":"Albania","3":"Algeria","4":"Andorra","5":"Angola","6":"Argentina","7":"Armenia","8":"Australia","9":"Austria","10":"Azerbaijan","11":"Bahamas","12":"Bahrain","13":"Bangladesh","14":"Barbados","15":"Belarus","16":"Belgium","17":"Belize","18":"Benin","19":"Bermuda","20":"Bhutan","21":"Bolivia","22":"Bosnia and Herzegovina","23":"Botswana","24":"Brazil","25":"Bulgaria","26":"Burkina Faso","27":"Burundi","28":"Cambodia","29":"Cameroon","30":"Canada","31":"Cape Verde","32":"Cayman Islands","33":"Central African Republic","34":"Chad","35":"Chile","36":"China","37":"Colombia","38":"Congo","40":"Croatia","41":"Cyprus","42":"Czech Republic","43":"Denmark","44":"Djibouti","45":"Ecuador","46":"Egypt","47":"El Salvador","48":"Equatorial Guinea","49":"Eritrea","50":"Estonia","51":"Ethiopia","52":"Fiji","53":"Finland","54":"France","56":"Gabon","57":"Gambia","58":"Georgia","59":"Germany","60":"Ghana","61":"Greece","62":"Guam","63":"Guinea","64":"Guinea-Bissau","65":"Guyana","66":"Honduras","67":"Hong Kong","68":"Hungary","69":"Iceland","70":"India","71":"Indonesia","74":"Ireland","75":"Israel","76":"Italy","78":"Japan","79":"Jordan","80":"Kazakhstan","81":"Kenya","82":"Kuwait","83":"Kyrgyzstan","84":"Lao People's Democratic Republic","85":"Latvia","86":"Lebanon","87":"Lesotho","88":"Liberia","90":"Liechtenstein","91":"Lithuania","92":"Luxembourg","93":"Macedonia","94":"Madagascar","95":"Malawi","96":"Malaysia","97":"Maldives","98":"Mali","99":"Malta","100":"Mauritania","101":"Mexico","102":"Moldova","103":"Monaco","104":"Mongolia","105":"Morocco","106":"Mozambique","107":"Namibia","108":"Nepal","109":"Netherlands","110":"Netherlands Antilles","111":"New Zealand","112":"Nicaragua","113":"Niger","114":"Nigeria","116":"Norway","117":"Oman","118":"Pakistan","119":"Panama","120":"Paraguay","121":"Peru","122":"Philippines","123":"Poland","124":"Portugal","126":"Qatar","127":"Reunion","128":"Romania","129":"Russia","130":"Rwanda","132":"Samoa (Independent)","133":"Saudi Arabia","134":"Senegal","135":"Seychelles","136":"Sierra Leone","137":"Singapore","138":"Slovakia","139":"Slovenia","140":"Somalia","141":"South Africa","142":"South Korea","143":"Spain","144":"Sri Lanka","146":"Suriname","147":"Swaziland","148":"Sweden","149":"Switzerland","152":"Taiwan","153":"Tanzania","154":"Thailand","155":"Togo","156":"Tunisia","157":"Turkiye","158":"Turkmenistan","159":"Uganda","161":"Ukraine","162":"United Arab Emirates","163":"Uruguay","164":"USA","165":"Uzbekistan","166":"Vatican City State (Holy See)","167":"Venezuela","168":"Vietnam","169":"Virgin Islands (British)","170":"Yemen","173":"Zambia","174":"Zimbabwe","175":"Antigua And Barbuda","176":"Anguilla","178":"American Samoa","179":"Aruba","180":"Brunei Darussalam","181":"Bouvet Island","183":"Cook Islands","185":"Christmas Island","187":"Dominican Republic","188":"Western Sahara","189":"Falkland Islands","191":"Faroe Islands","192":"Grenada","193":"French Guiana","194":"Gibraltar","195":"Greenland","196":"Guadeloupe","198":"Guatemala","200":"Haiti","202":"Jamaica","203":"Kiribati","204":"Comoros","205":"Saint Kitts and Nevis","206":"Saint Lucia","207":"Marshall Islands","208":"Macau","210":"Martinique","212":"Mauritius","213":"New Caledonia","214":"Norfolk Island","215":"Nauru","217":"Niue","219":"Papua New Guinea","221":"Pitcairn","222":"Palau","223":"Solomon Islands","225":"Svalbard and Jan Mayen Islands","227":"San Marino","232":"Tonga","233":"Timor-Leste","234":"Trinidad and Tobago","235":"Tuvalu","237":"Saint Vincent and the Grenadines","238":"Virgin Islands (U.S.)","239":"Vanuatu","241":"Mayotte","242":"Myanmar","255":"Sao Tome and Principe","257":"South Georgia and the South Sandwich Islands","260":"Tajikistan","262":"United Kingdom","268":"Costa Rica","270":"Guernsey","272":"North Korea","274":"Afghanistan","275":"Cote D'Ivoire","276":"Cuba","277":"French Polynesia","278":"Iran","279":"Iraq","281":"Libya","282":"Palestine","285":"Syria","286":"Aaland Islands","287":"Turks & Caicos Islands","288":"Jersey  (Channel Islands)","289":"Dominica","290":"Montenegro","293":"Sudan","294":"Montserrat","298":"Curacao","302":"Sint Maarten","311":"South Sudan","315":"Republic of Kosovo","318":"Congo, Democratic Republic of the","323":"Isle of Man","324":"Saint Martin","325":"Bonaire, Saint Eustatius and Saba","326":"Serbia"},"defaultcountry":164},"PHONE":{"name":"PHONE","label":"Phone Number","helper_text":"","type":"phone","required":false,"audience_field_name":"Phone Number","phoneformat":"","enabled":false,"order":null,"field_type":"merge","merge_id":4},"BIRTHDAY":{"name":"BIRTHDAY","label":"Birthday","helper_text":"","type":"birthday","required":false,"audience_field_name":"Birthday","dateformat":"MM/DD","enabled":false,"order":null,"field_type":"merge","merge_id":5},"COMPANY":{"name":"COMPANY","label":"Company","helper_text":"","type":"text","required":false,"audience_field_name":"Company","enabled":false,"order":null,"field_type":"merge","merge_id":6}}).find(function(f) { return f.name === fieldName && f.type === 'smsphone'; });
-        var isRequired = smsField ? smsField.required : false;
-        var shouldAppendCountryCode = smsNotRequiredRemoveCountryCodeEnabled ? isRequired : true;
-        
-        var phoneInput = document.querySelector('#mce-' + fieldName);
-        if (phoneInput && selectedProgram.countryCallingCode && shouldAppendCountryCode) {
-          phoneInput.value = selectedProgram.countryCallingCode;
-        }
-        
-        
-        updateSmsLegalText(selectedCountry, fieldName);
-        updatePlaceholder(selectedCountry, fieldName);
-        updateCountryCodeInstruction(selectedCountry, fieldName);
-      });
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-      const smsPhoneFields = document.querySelectorAll('[id^="country-select-"]');
-      
-      smsPhoneFields.forEach(function(dropdown) {
-        const fieldName = dropdown?.id.replace('country-select-', '');
-        initializeSmsPhoneDropdown(fieldName);
-      });
-    });
-    </script></div>
-
-</body>
-</html>
+        <h2>What is JPG to PNG Conversion?</h2>
+        <p>At its core, converting a JPG (or JPEG) to a PNG is the process of changing an image file from one format to another. But this simple act has profound implications for the image's data, quality, and capabilities. It's like repackaging the contents of a cardboard box (JPG) into a durable, clear plastic container (PNG). The contents are the same pixels, but the new container offers better protection and new features.</p>
+        <p><strong>Why does this conversion matter?</strong> Because JPG and PNG are built for fundamentally different purposes. JPG uses "lossy" compression, prioritizing small file sizes for photographs at the cost of some permanent data loss. PNG uses "lossless" compression,
