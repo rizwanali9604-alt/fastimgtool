@@ -14,7 +14,7 @@
   gtag('js', new Date());
   gtag('config', 'G-DHHVPY5DJK');
 </script>
-    <link rel="canonical" href="https://fastimgtool.com/">
+    <link rel="canonical" href="https://fastimgtool.com/guides/how-to-crop-image-online.html">
     <link rel="stylesheet" href="/assets/css/style.css">
 
     <!-- Preconnect for AdSense -->
@@ -22,17 +22,17 @@
     <link rel="preconnect" href="https://googleads.g.doubleclick.net">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Fast Image Tools – Free Online Image Editor & Converter">
-    <meta property="og:description" content="Free, private image tools: resize, compress, convert, and edit images instantly in your browser.">
-    <meta property="og:url" content="https://fastimgtool.com/">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://fastimgtool.com/assets/og-image.png">
+    <meta property="og:title" content="How to Crop an Image Online for Free: A Complete Guide">
+    <meta property="og:description" content="Master image cropping with our step-by-step guide. Learn free online tools, pro techniques, and platform-specific tips.">
+    <meta property="og:url" content="https://fastimgtool.com/guides/how-to-crop-image-online.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://fastimgtool.com/assets/guides/crop-image-online-og.png">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Fast Image Tools">
-    <meta name="twitter:description" content="Free, private image tools – no uploads, no signup.">
-    <meta name="twitter:image" content="https://fastimgtool.com/assets/og-image.png">
+    <meta name="twitter:title" content="How to Crop an Image Online for Free">
+    <meta name="twitter:description" content="The definitive guide to cropping images online. Free, fast, and no software required.">
+    <meta name="twitter:image" content="https://fastimgtool.com/assets/guides/crop-image-online-og.png">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/favicon.png">
@@ -51,6 +51,7 @@
             font-family: system-ui, -apple-system, sans-serif;
             background: #050b18;
             color: #e6edf7;
+            line-height: 1.6;
         }
         a {
             text-decoration: none;
@@ -89,118 +90,153 @@
             color: #4da3ff;
         }
 
-        /* Hero section */
-        .hero {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #0f1a2f, #050b18);
-            border-radius: 0 0 20px 20px;
-            margin-bottom: 30px;
+        /* Guide Article Container */
+        .guide-article-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
-        .hero h1 {
-            font-size: 2.4rem;
-            margin-bottom: 8px;
+
+        .guide-header {
+            margin-bottom: 40px;
+        }
+
+        .guide-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
             background: linear-gradient(135deg, #4da3ff, #00d4ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            line-height: 1.2;
         }
-        .hero p {
-            font-size: 1rem;
+
+        .guide-header .meta {
             color: #a0b3d9;
-            max-width: 700px;
-            margin: 0 auto;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #2a3a5a;
+            padding-bottom: 20px;
         }
 
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        /* Category sections */
-        .category-section {
-            margin: 40px 0;
-        }
-        .category-title {
-            font-size: 1.5rem;
-            border-bottom: 2px solid #2a3a5a;
-            padding-bottom: 6px;
-            margin-bottom: 20px;
-            color: #e6edf7;
-        }
-        .tool-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            gap: 20px;
-        }
-        .tool-card {
-            background: #111a30;
-            border: 1px solid #2a3a5a;
-            border-radius: 12px;
-            padding: 20px;
-            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        }
-        .tool-card:hover {
-            transform: translateY(-3px);
-            border-color: #4da3ff;
-            box-shadow: 0 6px 16px rgba(77,163,255,0.2);
-        }
-        .tool-card h3 {
-            margin-top: 0;
-            color: #e6edf7;
-            font-size: 1.2rem;
-        }
-        .tool-card p {
-            color: #a0b3d9;
-            font-size: 0.85rem;
-            line-height: 1.4;
-            margin: 10px 0;
-        }
-        .tool-card .btn {
-            display: inline-block;
-            background: #2a3a5a;
-            color: #e6edf7;
-            padding: 6px 14px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 0.85rem;
-            transition: background 0.2s;
-        }
-        .tool-card .btn:hover {
-            background: #4da3ff;
-            color: white;
-        }
-
-        /* Guides preview */
-        .guides-preview {
-            margin: 40px 0;
-            background: #0f1a2f;
+        /* Article Content Styling */
+        .guide-content {
+            background: #0b1225;
             border-radius: 16px;
-            padding: 30px;
+            padding: 40px;
+            border: 1px solid #1e293b;
         }
-        .guides-preview h2 {
-            margin-top: 0;
+
+        .guide-content h2 {
+            font-size: 2rem;
             color: #e6edf7;
-            font-size: 1.5rem;
+            margin-top: 2.5em;
+            margin-bottom: 0.8em;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #2a3a5a;
         }
-        .guides-list {
+
+        .guide-content h3 {
+            font-size: 1.5rem;
+            color: #4da3ff;
+            margin-top: 2em;
+            margin-bottom: 0.7em;
+        }
+
+        .guide-content p {
+            margin-bottom: 1.5em;
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
+
+        .guide-content ul, .guide-content ol {
+            margin-bottom: 1.5em;
+            padding-left: 2em;
+            color: #cbd5e1;
+        }
+
+        .guide-content li {
+            margin-bottom: 0.7em;
+        }
+
+        .guide-content strong {
+            color: #e6edf7;
+        }
+
+        .image-placeholder {
+            background: #111a30;
+            border: 2px dashed #2a3a5a;
+            border-radius: 12px;
+            padding: 60px 20px;
+            text-align: center;
+            margin: 2.5em 0;
+            color: #a0b3d9;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #0f1a2f, #1a2b4d);
+            border: 1px solid #4da3ff;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            margin: 3em 0;
+        }
+
+        .cta-box h3 {
+            color: #e6edf7;
+            margin-top: 0;
+        }
+
+        .cta-box p {
+            margin-bottom: 1.5em;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, #4da3ff, #00d4ff);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(77, 163, 255, 0.3);
+        }
+
+        .related-section {
+            background: #111a30;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 40px;
+            border: 1px solid #2a3a5a;
+        }
+
+        .related-section h3 {
+            color: #e6edf7;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .related-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 15px;
+            gap: 12px;
         }
-        .guides-list a {
+
+        .related-links a {
             background: #2a3a5a;
-            padding: 5px 14px;
+            padding: 8px 18px;
             border-radius: 30px;
             color: #e6edf7;
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             transition: background 0.2s;
         }
-        .guides-list a:hover {
+
+        .related-links a:hover {
             background: #4da3ff;
         }
 
@@ -209,7 +245,7 @@
             background: #0b1225;
             border-top: 1px solid #1e293b;
             padding: 40px 20px 20px;
-            margin-top: 50px;
+            margin-top: 80px;
         }
         .footer-container {
             max-width: 1200px;
@@ -249,18 +285,26 @@
         }
 
         /* Responsive */
-        @media (max-width: 600px) {
-            .navbar {
-                flex-direction: column;
-                gap: 10px;
+        @media (max-width: 768px) {
+            .guide-article-container {
+                padding: 0 15px;
+            }
+            .guide-header h1 {
+                font-size: 2.2rem;
+            }
+            .guide-content {
+                padding: 25px;
+            }
+            .guide-content h2 {
+                font-size: 1.7rem;
+            }
+            .guide-content h3 {
+                font-size: 1.3rem;
             }
             .nav-links {
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 12px;
-            }
-            .hero h1 {
-                font-size: 2rem;
             }
         }
     </style>
@@ -283,759 +327,60 @@
         </div>
     </nav>
 
-    <header>
-        <div class="hero">
-            <h1>⚡ Fast Image Tools</h1>
-            <p>Free, private, browser‑based image tools. No uploads, no signup, just fast editing.</p>
-            <div id="toolNav" style="margin-top: 15px;"></div>
-        </div>
-    </header>
+    <main class="guide-article-container">
+        <header class="guide-header">
+            <h1>How to Crop an Image Online for Free: The Complete 2024 Guide</h1>
+            <p class="meta">Master the art of cropping to create perfect images for social media, websites, and more—no software required.</p>
+        </header>
 
-    <!-- Search Bar -->
-<div style="max-width:600px; margin:20px auto; padding:0 15px;">
-    <input type="text" id="searchInput" placeholder="Search tools, guides, blog..." style="width:100%; padding:12px; border-radius:30px; border:1px solid #2a3a5a; background:#0b1225; color:#e6edf7; font-size:1rem;">
-    <div id="searchResults" style="margin-top:10px;"></div>
-</div>
+        <article class="guide-content">
+            <h2>1. Introduction: Unlock the Power of a Perfect Crop</h2>
+            <p>Have you ever scrolled through a flawless Instagram feed or visited a website with stunning, perfectly framed images and wondered, "How do they do that?" Often, the secret isn't an expensive camera or years of Photoshop training—it's the simple, transformative power of a well-executed crop.</p>
+            <p>Cropping is the digital equivalent of trimming away the noise to reveal the signal. It's about intentionality. In this guide, you'll learn not just the mechanics of how to <strong>crop image online</strong> for free, but the art and strategy behind it. We'll cover:</p>
+            <ul>
+                <li>The fundamental definition of cropping and why it's a non-negotiable skill for anyone who works with images.</li>
+                <li>Real-world use cases, from social media branding to fixing common photo mistakes.</li>
+                <li>A detailed, step-by-step walkthrough using free online tools.</li>
+                <li>Professional composition techniques like the Rule of Thirds.</li>
+                <li>Alternative methods and answers to frequently asked questions.</li>
+            </ul>
+            <p>By the end, you'll be equipped to turn good images into great ones, ensuring they look professional on any platform.</p>
 
-    <div class="guide-article"><h2>Why Cropping an Image is Your Secret Weapon</h2>
-<p>Have you ever taken a photo that was almost perfect, but a distracting object at the edge ruined the shot? Or perhaps you need a profile picture that fits a specific square frame, but your image is a rectangle. This is where the simple, yet incredibly powerful, act of cropping comes in. Cropping an image online is more than just cutting off edges; it's about refining your visual message, improving composition, and ensuring your photos look professional on any platform, from social media to your personal blog.</p>
-<p>In today's digital world, we're all content creators. Whether you're a small business owner crafting Instagram posts, a student preparing a presentation, or someone just wanting to tidy up personal photos, knowing how to crop an image online effectively is an essential skill. The best part? You don't need expensive software like Photoshop. With free, web-based tools, you can achieve stunning results in seconds. This comprehensive guide will walk you through everything you need to know, from basic steps to advanced composition techniques, all centered around the simple act of using a free tool to <strong>crop image online</strong>.</p>
-
-<h2>What Does It Mean to Crop an Image?</h2>
-<p>At its core, cropping is the process of removing unwanted outer areas from a photograph or graphic. Think of it as using a digital pair of scissors to trim away the parts you don't need, leaving you with a focused, intentional image. This serves several key purposes:</p>
-<ul>
-<li><strong>Changing Aspect Ratio:</strong> Converting a landscape (wide) photo to a portrait (tall) one, or making it a perfect square for Instagram.</li>
-<li><strong>Improving Composition:</strong> Using rules like the "Rule of Thirds" to create a more balanced and engaging image.</li>
-<li><strong>Removing Distractions:</strong> Eliminating photobombers, stray objects, messy backgrounds, or excessive blank space.</li>
-<li><strong>Zooming In on the Subject:</strong> Bringing the viewer's attention directly to the main focal point, like a person's face or a product detail.</li>
-<li><strong>Fitting Specific Dimensions:</strong> Preparing images for website banners, social media headers, or print materials that require exact pixel sizes.</li>
-</ul>
-
-<h2>Step-by-Step: How to Crop an Image Online (The Easy Way)</h2>
-<p>Let's break down the fundamental process using a typical free online tool. The steps are universally simple, making it accessible for everyone.</p>
-
-<h3>Step 1: Choose and Open Your Online Cropping Tool</h3>
-<p>Your journey starts by selecting a reliable tool. A quick search for "<strong>crop image online</strong>" will yield many options. For this guide, we'll use a generic example. Navigate to your chosen tool's website. Look for a clear "Upload" button or drag-and-drop area. The interface should be clean and intuitive.</p>
-
-<h3>Step 2: Upload Your Image File</h3>
-<p>Click the "Upload" button and select the image from your computer, phone, or cloud storage (like Google Drive or Dropbox, if supported). Most modern tools also allow you to simply drag the image file from your folder and drop it directly into the browser window. Supported formats usually include JPG, PNG, GIF, and WebP.</p>
-
-<h3>Step 3: Select Your Cropping Area</h3>
-<p>This is where the magic happens. Once your image loads, you'll see a cropping overlay. Here are the common methods:</p>
-<ul>
-<li><strong>Freeform Crop:</strong> Click and drag the corners or edges of the overlay to manually select any rectangular area you desire. This offers maximum control.</li>
-<li><strong>Preset Aspect Ratios:</strong> Most tools offer preset ratios like 1:1 (Square), 4:3, 16:9 (Widescreen), or 9:16 (Story/Reel). Selecting one locks the crop box to that specific proportion, which is perfect for social media.</li>
-<li><strong>Enter Custom Dimensions:</strong> For precise needs, you can often input exact pixel dimensions (e.g., 1200 x 630 for a Facebook link preview). Some tools, like the one in our original guide, will crop from the center based on the numbers you enter.</li>
-</ul>
-<p><strong>Pro Tip:</strong> When using freeform, pay attention to the background. Many tools have a shaded or blurred area outside the crop box, helping you visualize the final result clearly.</p>
-
-<h3>Step 4: Fine-Tune and Apply the Crop</h3>
-<p>After selecting your area, you can usually click and drag inside the box to reposition the entire selection. This is crucial for perfect composition. Once you're 100% satisfied with what's inside the box, click the "Apply," "Crop," or "OK" button. The tool will process the image, permanently removing the pixels outside your selected area.</p>
-
-<h3>Step 5: Download Your Newly Cropped Image</h3>
-<p>Finally, hit the "Download," "Save," or "Export" button. The tool will process the image and save it as a new file to your device, leaving your original image untouched. Some advanced tools may offer options for download quality or format before saving.</p>
-
-<h2>Beyond the Basics: Pro Techniques for a Perfect Crop</h2>
-<p>Now that you know the mechanics, let's elevate your skills. Cropping with intention can transform a good photo into a great one.</p>
-
-<h3>1. Master Composition with the Rule of Thirds</h3>
-<p>Imagine dividing your image with two equally spaced horizontal lines and two vertical lines, creating a nine-part grid. The Rule of Thirds suggests that placing your subject along these lines or at their intersections creates a more dynamic and naturally pleasing image than centering it. Most online cropping tools have a "Rule of Thirds" grid overlay you can toggle on. Use it to align your subject's eyes or a key product feature with these power points.</p>
-
-<h3>2. Crop for Different Social Media Platforms</h3>
-<p>Each platform has its own ideal image dimensions. Cropping blindly can lead to awkward cuts. Here’s a quick cheat sheet:</p>
-<ul>
-<li><strong>Instagram Feed:</strong> Square (1:1), Portrait (4:5), or Landscape (1.91:1). Crop tightly to keep focus on mobile screens.</li>
-<li><strong>Instagram Stories/Reels:</strong> Portrait (9:16). Ensure vital info is in the center to avoid being covered by UI elements.</li>
-<li><strong>Facebook Cover Photo:</strong> Landscape (820 x 312 pixels). Be mindful that the profile picture will cover the bottom-left corner.</li>
-<li><strong>Twitter/X Header:</strong> Wide landscape (1500 x 500 pixels). Keep important elements centered.</li>
-<li><strong>Pinterest Pin:</strong> Tall portrait (2:3 ratio, like 1000 x 1500px). Vertical images perform significantly better.</li>
-</ul>
-<p>Always <strong>crop image online</strong> with the final platform in mind.</p>
-
-<h3>3. Create Focus and Eliminate Visual Noise</h3>
-<p>A powerful crop isolates your subject. Get closer than you think you need to. Remove that extra sliver of blank wall, the half-person at the edge of a group shot, or the cluttered countertop in a product photo. Ask yourself: "Does this element add to the story?" If not, crop it out. This creates a cleaner, more professional, and emotionally resonant image.</p>
-
-<h3>4. Correct Slight Alignment Issues</h3>
-<p>Is your horizon line slightly tilted? While dedicated rotation tools are better, a strategic crop can sometimes minimize the appearance of a crooked photo. By cropping in and changing the frame's relationship to the slanted line, you can often create a more balanced feel.</p>
-
-<h2>Choosing the Right Online Tool to Crop Your Image</h2>
-<p>Not all online tools are created equal. Here’s what to look for when you search for a way to <strong>crop image online</strong>:</p>
-<ul>
-<li><strong>Ease of Use:</strong> A clean, intuitive interface is key. You shouldn't need a manual.</li>
-<li><strong>No Registration Required:</strong> The best tools let you crop and download instantly without signing up.</li>
-<li><strong>Privacy Focused:</strong> Ensure the tool processes your image locally in the browser and doesn't store your photos on its servers.</li>
-<li><strong>Additional Features:</strong> Basic resizing, rotation, and format conversion (e.g., PNG to JPG) are handy bonuses.</li>
-<li><strong>Speed and Reliability:</strong> The tool should work quickly without lag or crashes, even with larger images.</li>
-</ul>
-<p>Many all-in-one online photo editors also offer cropping as a core feature, giving you more creative control if you need it later.</p>
-
-<h2>Common Cropping Mistakes to Avoid</h2>
-<ol>
-<li><strong>Cropping Too Tight at Joints:</strong> Avoid cropping at ankles, wrists, or knees. It creates an awkward, amputated feel. Crop mid-thigh or mid-calf instead.</li>
-<li><strong>Leaving Too Much Headroom:</strong> In portraits, excessive space above the head can make the subject feel lost. Crop closer to fill the frame with your subject.</li>
-<li><strong>Ignoring the Background:</strong> A perfect crop on your subject can be ruined by a distracting object now sitting right at the new edge of the frame. Always scan the borders of your final crop.</li>
-<li><strong>Sacrificing Resolution for Size:</strong> Cropping a small image to an even smaller portion can result in a pixelated, low-quality final product. Always start with the highest resolution image possible.</li>
-<li><strong>Forgetting the Story:</strong> Sometimes, the environment around the subject is crucial for context. Don't crop so tightly that you remove all sense of place or scale.</li>
-</ol>
-
-<h2>Conclusion: Your Images, Perfected in Minutes</h2>
-<p>Learning how to expertly <strong>crop image online</strong> is one of the fastest ways to improve the quality of your visual content. It requires no artistic training, just a bit of practice and an eye for what looks balanced. By following the simple steps outlined in this guide—choosing a tool, uploading, selecting your area with intention, and downloading—you can transform your photos for any purpose. Remember the pro tips: use the Rule of Thirds, crop for your specific platform, and always aim to strengthen the focus of your image.</p>
-<p>The power to create polished, engaging, and professional-looking images is literally at your fingertips. So, the next time a photo isn't quite right, don't delete it. Open your favorite free tool, take a moment to crop it thoughtfully, and watch as a good image becomes a great one. Start cropping today and see the immediate difference it makes in your social media feeds, presentations, and personal photo albums.</p></div>
-        <div class="related-section">
-            <h3>🔧 Related Tool</h3>
-            <div class="related-links">
-                <a href="/tools/image-crop/">Try the tool →</a>
+            <div class="image-placeholder">
+                [Image: A side-by-side comparison showing a cluttered, poorly composed original photo next to a clean, tightly cropped and impactful version. Alt Text: Visual example of the transformative power of cropping an image online.]
             </div>
-        </div>
-        
-        <div class="related-section">
-            <h3>📚 Related Guides</h3>
-            <div class="related-links">
-                <a href="/guides/how-to-compress-image-online.html">How to Compress Images Online</a>
-                <a href="/guides/how-to-convert-jpg-to-png.html">How to Convert JPG to PNG</a>
-                <a href="/guides/how-to-crop-image-online.html">How to Crop an Image Online</a>
-                <a href="/guides/how-to-blur-image-online.html">How to Blur an Image Online</a>
-            </div>
-        </div>
-    
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-col">
-                <h4>Product</h4>
-                <ul>
-                    <li><a href="/tools/">All Tools</a></li>
-                    <li><a href="/guides/">All Guides</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="/privacy.html">Privacy policy</a></li>
-                    <li><a href="/terms.html">Terms & conditions</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="/about.html">About us</a></li>
-                    <li><a href="/contact.html">Contact us</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 FastImgTool – All rights reserved.</p>
-        </div>
-    </footer>
+            <h2>2. What is Image Cropping? (And Why It Matters More Than You Think)</h2>
+            <p>At its technical core, <strong>cropping</strong> is the process of selecting and removing the outer portions of a digital image to change its frame, aspect ratio, or composition. It's like using a digital pair of scissors to cut away everything that doesn't serve your visual story.</p>
+            <p>But to view it merely as "cutting" is to miss its profound impact. Cropping is a foundational editing technique because it directly controls what the viewer sees and feels. It's the first step in guiding the eye and crafting a narrative. Here’s why it matters:</p>
+            <ul>
+                <li><strong>Composition is King:</strong> A crop can turn a snapshot into a photograph. It allows you to apply timeless rules of composition, creating balance, leading lines, and focus that our brains find inherently pleasing.</li>
+                <li><strong>Platform Perfection:</strong> The digital world is built on specific shapes. A square Instagram post, a vertical Story, a wide website banner—each requires a different aspect ratio. Cropping tailors your image to fit these digital canvases perfectly.</li>
+                <li><strong>Focus & Clarity:</strong> Every unnecessary element in a frame competes for attention. Cropping eliminates distractions—the stray passerby, the messy edge of a table, the excessive blank sky—ensuring your subject gets the spotlight it deserves.</li>
+                <li><strong>Accessibility:</strong> Unlike complex photo manipulation, cropping is quick, easy to learn, and requires zero artistic training. With free online tools, it's a skill available to everyone.</li>
+            </ul>
 
-    <script>
-        // Load tools and build categories
-        async function loadHomepage() {
-            try {
-                // Fetch tools (required)
-                const toolsRes = await fetch('/data/tools.json');
-                if (!toolsRes.ok) throw new Error('Failed to fetch tools');
-                const tools = await toolsRes.json();
+            <h2>3. Why You Might Need to Crop an Image (Common Use Cases)</h2>
+            <p>When should you reach for the crop tool? Almost always. Here are the most common and impactful scenarios where cropping saves the day:</p>
+            <ul>
+                <li><strong>Social Media Preparation:</strong> Adapting a single image for Instagram (square, portrait, landscape), Facebook covers, Twitter headers, Pinterest pins, and LinkedIn posts. Each has unique dimensions.</li>
+                <li><strong>Improving Portrait Photography:</strong> Fixing awkward framing, removing too much headroom, or tightening the shot to emphasize a subject's expression.</li>
+                <li><strong>E-commerce & Product Photos:</strong> Creating clean, consistent product thumbnails by cropping out backgrounds and focusing solely on the item.</li>
+                <li><strong>Website & Blog Graphics:</strong> Ensuring featured images fit widget dimensions, creating custom header graphics, or preparing images for email newsletters.</li>
+                <li><strong>Content Creation:</strong> Isolating the best part of a screenshot, creating memes, or extracting a detail from a larger graphic for emphasis.</li>
+                <li><strong>Basic Photo Correction:</strong> Straightening a horizon by cropping skewed edges, removing timestamp watermarks from old digital photos, or eliminating lens distortion at the corners.</li>
+                <li><strong>Print Projects:</strong> Preparing photos for standard print sizes (e.g., 4x6, 5x7, 8x10) which have fixed aspect ratios.</li>
+            </ul>
 
-                // Group tools by category
-                const categories = {};
-                tools.forEach(tool => {
-                    const cat = tool.category || 'uncategorized';
-                    if (!categories[cat]) categories[cat] = [];
-                    categories[cat].push(tool);
-                });
+            <h2>4. Step-by-Step: How to Crop an Image Online for Free</h2>
+            <p>Let's walk through the universal process using a typical free online editor. The steps are intuitive and similar across most quality tools, including our own <a href="/tools/image-crop/">Image Crop Tool</a>.</p>
 
-                const categoryNames = {
-                    'resize': '📏 Resize & Scale',
-                    'compression': '🗜️ Compression',
-                    'conversion': '🔄 Format Conversion',
-                    'effects': '✨ Effects & Filters',
-                    'editing': '✂️ Editing Tools',
-                    'test': '🧪 Test Tools',
-                    'uncategorized': '📦 Other Tools'
-                };
+            <h3>Step 1: Select a Reliable, Free Online Tool</h3>
+            <p>Start by choosing a tool that prioritizes ease of use, privacy, and speed. Look for one that processes images directly in your browser (client-side) so your photos are never uploaded to a server. Navigate to the tool's website—you'll typically find a clear, central workspace ready for your image.</p>
 
-                let html = '';
-                for (const [cat, toolsList] of Object.entries(categories)) {
-                    const displayName = categoryNames[cat] || cat;
-                    html += `<div class="category-section"><h2 class="category-title">${displayName}</h2><div class="tool-grid">`;
-                    toolsList.forEach(tool => {
-                        html += `
-                            <div class="tool-card">
-                                <h3>${tool.title}</h3>
-                                <p>${tool.description}</p>
-                                <a href="/tools/${tool.slug}/" class="btn">Open Tool →</a>
-                            </div>
-                        `;
-                    });
-                    html += `</div></div>`;
-                }
-                document.getElementById('categories-container').innerHTML = html;
+            <h3>Step 2: Upload or Drag & Drop Your Image</h3>
+            <p>Click the prominent "Upload," "Choose File," or "Open Image" button. Browse your computer, phone, or connected cloud storage (like Google Drive) to select the image you want to crop. Most modern tools also support drag-and-drop: simply click the file on your desktop and drag it into the browser window. Accepted formats are usually JPG, PNG, GIF, and WebP.</p>
 
-            } catch (err) {
-                console.error('Error loading tools:', err);
-                document.getElementById('categories-container').innerHTML = '<p style="color:red;">Failed to load tools. Please refresh.</p>';
-            }
-
-            // Fetch guides (independent, won't break categories)
-            try {
-                const guidesRes = await fetch('/data/guides.json');
-                if (!guidesRes.ok) throw new Error('Failed to fetch guides');
-                const guides = await guidesRes.json();
-
-                const guidesPreview = document.getElementById('guides-preview');
-                if (guides && guides.length > 0) {
-                    // Random guides for preview
-                    const shuffled = guides.sort(() => 0.5 - Math.random());
-                    const previewGuides = shuffled.slice(0, 8);
-                    let guidesHtml = '';
-                    previewGuides.forEach(guide => {
-                        guidesHtml += `<a href="${guide.url}">${guide.title}</a>`;
-                    });
-                    document.getElementById('guides-list').innerHTML = guidesHtml;
-                    guidesPreview.style.display = 'block'; // show section
-                } else {
-                    // No guides, hide section
-                    guidesPreview.style.display = 'none';
-                }
-            } catch (err) {
-                console.error('Error loading guides:', err);
-                // Hide guides section if error
-                document.getElementById('guides-preview').style.display = 'none';
-            }
-        }
-
-        loadHomepage();
-    </script>
-    <script src="/assets/js/nav.js"></script>
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.getElementById('searchInput');
-    const resultsDiv = document.getElementById('searchResults');
-    if (!searchInput || !resultsDiv) return;
-
-    let idx = null;
-    let documents = [];
-
-    fetch('/search.json')
-        .then(res => res.json())
-        .then(data => {
-            documents = data;
-            idx = lunr(function() {
-                this.ref('url');
-                this.field('title', { boost: 10 });
-                this.field('description');
-                data.forEach(doc => this.add(doc));
-            });
-        });
-
-    searchInput.addEventListener('input', function() {
-        const query = this.value.trim();
-        if (query.length < 2) {
-            resultsDiv.innerHTML = '';
-            return;
-        }
-
-        if (!idx) return;
-
-        const results = idx.search(query).map(res => {
-            return documents.find(d => d.url === res.ref);
-        });
-
-        if (results.length === 0) {
-            resultsDiv.innerHTML = '<p style="color:#a0b3d9;">No results found.</p>';
-            return;
-        }
-
-        let html = '<ul style="list-style:none; padding:0;">';
-        results.slice(0, 5).forEach(item => {
-            html += `
-                <li style="margin:10px 0; padding:10px; background:#111a30; border-radius:8px;">
-                    <a href="${item.url}" style="color:#4da3ff; text-decoration:none; font-weight:bold;">${item.title}</a>
-                    <span style="color:#a0b3d9; font-size:0.8rem; margin-left:8px;">(${item.type})</span>
-                    <p style="color:#a0b3d9; font-size:0.9rem; margin:2px 0 0 0;">${item.description}</p>
-                </li>
-            `;
-        });
-        html += '</ul>';
-        resultsDiv.innerHTML = html;
-    });
-});
-</script>
-<h3>📧 Get free image tips – Subscribe now!</h3>
-<div id="mc_embed_shell">
-      <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-  <style type="text/css">
-        #mc_embed_signup{background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;}
-        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<div id="mc_embed_signup">
-    <form action="https://fastimgtool.us19.list-manage.com/subscribe/post?u=88d0cd80fa5ce04ab9bc4a074&amp;id=b5e1d64b6a&amp;f_id=00e782e3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-        <div id="mc_embed_signup_scroll"><h2>Subscribe</h2>
-            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-            <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
-        <div id="mce-responses" class="clear foot">
-            <div class="response" id="mce-error-response" style="display: none;"></div>
-            <div class="response" id="mce-success-response" style="display: none;"></div>
-        </div>
-    <div aria-hidden="true" style="position: absolute; left: -5000px;">
-        /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
-        <input type="text" name="b_88d0cd80fa5ce04ab9bc4a074_b5e1d64b6a" tabindex="-1" value="">
-    </div>
-        <div class="optionalParent">
-            <div class="clear foot">
-                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-                <p style="margin: 0px auto;"><a href="http://eepurl.com/jCgLUU" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
-            </div>
-        </div>
-    </div>
-</form>
-</div>
-<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='COMPANY';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
-    // SMS Phone Multi-Country Functionality
-    if(!window.MC) {
-      window.MC = {};
-    }
-    window.MC.smsPhoneData = {
-      defaultCountryCode: 'IN',
-      programs: [],
-      smsProgramDataCountryNames: []
-    };
-
-    function getCountryUnicodeFlag(countryCode) {
-       return countryCode.toUpperCase().replace(/./g, (char) => String.fromCodePoint(char.charCodeAt(0) + 127397))
-    };
-
-    // HTML sanitization function to prevent XSS
-    function sanitizeHtml(str) {
-      if (typeof str !== 'string') return '';
-      return str
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#x27;')
-        .replace(/\//g, '&#x2F;');
-    }
-
-    // URL sanitization function to prevent javascript: and data: URLs
-    function sanitizeUrl(url) {
-      if (typeof url !== 'string') return '';
-      const trimmedUrl = url.trim().toLowerCase();
-      if (trimmedUrl.startsWith('javascript:') || trimmedUrl.startsWith('data:') || trimmedUrl.startsWith('vbscript:')) {
-        return '#';
-      }
-      return url;
-    }
-
-    const getBrowserLanguage = () => {
-      if (!window?.navigator?.language?.split('-')[1]) {
-        return window?.navigator?.language?.toUpperCase();
-      }
-      return window?.navigator?.language?.split('-')[1];
-    };
-
-    function getDefaultCountryProgram(defaultCountryCode, smsProgramData) {
-      if (!smsProgramData || smsProgramData.length === 0) {
-        return null;
-      }
-
-      const browserLanguage = getBrowserLanguage();
-
-      if (browserLanguage) {
-        const foundProgram = smsProgramData.find(
-          (program) => program?.countryCode === browserLanguage,
-        );
-        if (foundProgram) {
-          return foundProgram;
-        }
-      }
-
-      if (defaultCountryCode) {
-        const foundProgram = smsProgramData.find(
-          (program) => program?.countryCode === defaultCountryCode,
-        );
-        if (foundProgram) {
-          return foundProgram;
-        }
-      }
-
-      return smsProgramData[0];
-    }
-
-    function updateSmsLegalText(countryCode, fieldName) {
-      if (!countryCode || !fieldName) {
-        return;
-      }
-      
-      const programs = window?.MC?.smsPhoneData?.programs;
-      if (!programs || !Array.isArray(programs)) {
-        return;
-      }
-      
-      const program = programs.find(program => program?.countryCode === countryCode);
-      if (!program || !program.requiredTemplate) {
-        return;
-      }
-      
-      const legalTextElement = document.querySelector('#legal-text-' + fieldName);
-      if (!legalTextElement) {
-        return;
-      }
-      
-      // Remove HTML tags and clean up the text
-      const divRegex = new RegExp('</?[div][^>]*>', 'gi');
-      const fullAnchorRegex = new RegExp('<a.*?</a>', 'g');
-      const anchorRegex = new RegExp('<a href="(.*?)" target="(.*?)">(.*?)</a>');
-      
-      const template = program.requiredTemplate.replace(divRegex, '');
-      
-      
-
-      legalTextElement.textContent = '';
-      const parts = template.split(/(<a href=".*?" target=".*?">.*?<\/a>)/g);
-      parts.forEach(function(part) {
-        if (!part) {
-          return;
-        }
-        const anchorMatch = part.match(/<a href="(.*?)" target="(.*?)">(.*?)<\/a>/);
-        if (anchorMatch) {
-          const linkElement = document.createElement('a');
-          linkElement.href = sanitizeUrl(anchorMatch[1]);
-          linkElement.target = sanitizeHtml(anchorMatch[2]);
-          linkElement.textContent = sanitizeHtml(anchorMatch[3]);
-          legalTextElement.appendChild(linkElement);
-        } else {
-          legalTextElement.appendChild(document.createTextNode(part));
-        }
-      });
-          
-    }
-
-    function generateDropdownOptions(smsProgramData) {
-      if (!smsProgramData || smsProgramData.length === 0) {
-        return '';
-      }
-      
-      return smsProgramData.map(program => {
-        const flag = getCountryUnicodeFlag(program.countryCode);
-        const countryName = getCountryName(program.countryCode);
-        const callingCode = program.countryCallingCode || '';
-        // Sanitize all values to prevent XSS
-        const sanitizedCountryCode = sanitizeHtml(program.countryCode || '');
-        const sanitizedCountryName = sanitizeHtml(countryName || '');
-        const sanitizedCallingCode = sanitizeHtml(callingCode || '');
-        return '<option value="' + sanitizedCountryCode + '">' + sanitizedCountryName + ' ' + sanitizedCallingCode + '</option>';
-      }).join('');
-    }
-
-    function getCountryName(countryCode) {
-      if (window.MC?.smsPhoneData?.smsProgramDataCountryNames && Array.isArray(window.MC.smsPhoneData.smsProgramDataCountryNames)) {
-        for (let i = 0; i < window.MC.smsPhoneData.smsProgramDataCountryNames.length; i++) {
-          if (window.MC.smsPhoneData.smsProgramDataCountryNames[i].code === countryCode) {
-            return window.MC.smsPhoneData.smsProgramDataCountryNames[i].name;
-          }
-        }
-      }
-      return countryCode;
-    }
-
-    function getDefaultPlaceholder(countryCode) {
-      if (!countryCode || typeof countryCode !== 'string') {
-        return '+1 000 000 0000'; // Default US placeholder
-      }
-      
-            var mockPlaceholders = [
-        {
-          countryCode: 'US',
-          placeholder: '+1 000 000 0000',
-          helpText: 'Include the US country code +1 before the phone number',
-        },
-        {
-          countryCode: 'GB',
-          placeholder: '+44 0000 000000',
-          helpText: 'Include the GB country code +44 before the phone number',
-        },
-        {
-          countryCode: 'CA',
-          placeholder: '+1 000 000 0000',
-          helpText: 'Include the CA country code +1 before the phone number',
-        },
-        {
-          countryCode: 'AU',
-          placeholder: '+61 000 000 000',
-          helpText: 'Include the AU country code +61 before the phone number',
-        },
-        {
-          countryCode: 'DE',
-          placeholder: '+49 000 0000000',
-          helpText: 'Fügen Sie vor der Telefonnummer die DE-Ländervorwahl +49 ein',
-        },
-        {
-          countryCode: 'FR',
-          placeholder: '+33 0 00 00 00 00',
-          helpText: 'Incluez le code pays FR +33 avant le numéro de téléphone',
-        },
-        {
-          countryCode: 'ES',
-          placeholder: '+34 000 000 000',
-          helpText: 'Incluya el código de país ES +34 antes del número de teléfono',
-        },
-        {
-          countryCode: 'NL',
-          placeholder: '+31 0 00000000',
-          helpText: 'Voeg de NL-landcode +31 toe vóór het telefoonnummer',
-        },
-        {
-          countryCode: 'BE',
-          placeholder: '+32 000 00 00 00',
-          helpText: 'Incluez le code pays BE +32 avant le numéro de téléphone',
-        },
-        {
-          countryCode: 'CH',
-          placeholder: '+41 00 000 00 00',
-          helpText: 'Fügen Sie vor der Telefonnummer die CH-Ländervorwahl +41 ein',
-        },
-        {
-          countryCode: 'AT',
-          placeholder: '+43 000 000 0000',
-          helpText: 'Fügen Sie vor der Telefonnummer die AT-Ländervorwahl +43 ein',
-        },
-        {
-          countryCode: 'IE',
-          placeholder: '+353 00 000 0000',
-          helpText: 'Include the IE country code +353 before the phone number',
-        },
-        {
-          countryCode: 'IT',
-          placeholder: '+39 000 000 0000',
-          helpText: 'Includere il prefisso internazionale IT +39 prima del numero di telefono',
-        },
-      ];
-
-      const selectedPlaceholder = mockPlaceholders.find(function(item) {
-        return item && item.countryCode === countryCode;
-      });
-      
-      return selectedPlaceholder ? selectedPlaceholder.placeholder : mockPlaceholders[0].placeholder;
-    }
-
-    function updatePlaceholder(countryCode, fieldName) {
-      if (!countryCode || !fieldName) {
-        return;
-      }
-      
-      const phoneInput = document.querySelector('#mce-' + fieldName);
-      if (!phoneInput) {
-        return;
-      }
-      
-      const placeholder = getDefaultPlaceholder(countryCode);
-      if (placeholder) {
-        phoneInput.placeholder = placeholder;
-      }
-    }
-
-    function updateCountryCodeInstruction(countryCode, fieldName) {
-      updatePlaceholder(countryCode, fieldName);
-      
-    }
-
-    function getDefaultHelpText(countryCode) {
-      var mockPlaceholders = [
-        {
-          countryCode: 'US',
-          placeholder: '+1 000 000 0000',
-          helpText: 'Include the US country code +1 before the phone number',
-        },
-        {
-          countryCode: 'GB',
-          placeholder: '+44 0000 000000',
-          helpText: 'Include the GB country code +44 before the phone number',
-        },
-        {
-          countryCode: 'CA',
-          placeholder: '+1 000 000 0000',
-          helpText: 'Include the CA country code +1 before the phone number',
-        },
-        {
-          countryCode: 'AU',
-          placeholder: '+61 000 000 000',
-          helpText: 'Include the AU country code +61 before the phone number',
-        },
-        {
-          countryCode: 'DE',
-          placeholder: '+49 000 0000000',
-          helpText: 'Fügen Sie vor der Telefonnummer die DE-Ländervorwahl +49 ein',
-        },
-        {
-          countryCode: 'FR',
-          placeholder: '+33 0 00 00 00 00',
-          helpText: 'Incluez le code pays FR +33 avant le numéro de téléphone',
-        },
-        {
-          countryCode: 'ES',
-          placeholder: '+34 000 000 000',
-          helpText: 'Incluya el código de país ES +34 antes del número de teléfono',
-        },
-        {
-          countryCode: 'NL',
-          placeholder: '+31 0 00000000',
-          helpText: 'Voeg de NL-landcode +31 toe vóór het telefoonnummer',
-        },
-        {
-          countryCode: 'BE',
-          placeholder: '+32 000 00 00 00',
-          helpText: 'Incluez le code pays BE +32 avant le numéro de téléphone',
-        },
-        {
-          countryCode: 'CH',
-          placeholder: '+41 00 000 00 00',
-          helpText: 'Fügen Sie vor der Telefonnummer die CH-Ländervorwahl +41 ein',
-        },
-        {
-          countryCode: 'AT',
-          placeholder: '+43 000 000 0000',
-          helpText: 'Fügen Sie vor der Telefonnummer die AT-Ländervorwahl +43 ein',
-        },
-        {
-          countryCode: 'IE',
-          placeholder: '+353 00 000 0000',
-          helpText: 'Include the IE country code +353 before the phone number',
-        },
-        {
-          countryCode: 'IT',
-          placeholder: '+39 000 000 0000',
-          helpText: 'Includere il prefisso internazionale IT +39 prima del numero di telefono',
-        },
-      ];
-      
-      if (!countryCode || typeof countryCode !== 'string') {
-        return mockPlaceholders[0].helpText;
-      }
-      
-      const selectedHelpText = mockPlaceholders.find(function(item) {
-          return item && item.countryCode === countryCode;
-        });
-        
-        return selectedHelpText ? selectedHelpText.helpText : mockPlaceholders[0].helpText;
-    }
-
-    function setDefaultHelpText(countryCode) {
-      const helpTextSpan = document.querySelector('#help-text');
-      if (!helpTextSpan) {
-        return;
-      }
-
-        
-    }
-
-    function updateHelpTextCountryCode(countryCode, fieldName) {
-      if (!countryCode || !fieldName) {
-        return;
-      }
-      
-      setDefaultHelpText(countryCode);
-    }
-
-    function initializeSmsPhoneDropdown(fieldName) {
-      if (!fieldName || typeof fieldName !== 'string') {
-        return;
-      }
-      
-      const dropdown = document.querySelector('#country-select-' + fieldName);
-      const displayFlag = document.querySelector('#flag-display-' + fieldName);
-      
-      if (!dropdown || !displayFlag) {
-        return;
-      }
-
-      const smsPhoneData = window.MC?.smsPhoneData;
-      if (smsPhoneData && smsPhoneData.programs && Array.isArray(smsPhoneData.programs)) {
-        dropdown.innerHTML = generateDropdownOptions(smsPhoneData.programs);
-      }
-
-      const defaultProgram = getDefaultCountryProgram(smsPhoneData?.defaultCountryCode, smsPhoneData?.programs);
-      if (defaultProgram && defaultProgram.countryCode) {
-        dropdown.value = defaultProgram.countryCode;
-        
-        const flagSpan = displayFlag?.querySelector('#flag-emoji-' + fieldName);
-        if (flagSpan) {
-          flagSpan.textContent = getCountryUnicodeFlag(defaultProgram.countryCode);
-          flagSpan.setAttribute('aria-label', sanitizeHtml(defaultProgram.countryCode) + ' flag');
-        }
-        
-        updateSmsLegalText(defaultProgram.countryCode, fieldName);
-        updatePlaceholder(defaultProgram.countryCode, fieldName);
-        updateCountryCodeInstruction(defaultProgram.countryCode, fieldName);
-      }
-
-     
-      var smsNotRequiredRemoveCountryCodeEnabled = true;
-      var smsField = Object.values({"EMAIL":{"name":"EMAIL","label":"Email Address","helper_text":"","merge_id":0,"type":"email","required":true,"audience_field_name":"Email Address","field_type":"merge","enabled":true,"order":null},"FNAME":{"name":"FNAME","label":"First Name","helper_text":"","type":"text","required":false,"audience_field_name":"First Name","enabled":false,"order":null,"field_type":"merge","merge_id":1},"LNAME":{"name":"LNAME","label":"Last Name","helper_text":"","type":"text","required":false,"audience_field_name":"Last Name","enabled":false,"order":null,"field_type":"merge","merge_id":2},"ADDRESS":{"name":"ADDRESS","label":"Address","helper_text":"","type":"address","required":false,"audience_field_name":"Address","enabled":false,"order":null,"field_type":"merge","merge_id":3,"countries":{"2":"Albania","3":"Algeria","4":"Andorra","5":"Angola","6":"Argentina","7":"Armenia","8":"Australia","9":"Austria","10":"Azerbaijan","11":"Bahamas","12":"Bahrain","13":"Bangladesh","14":"Barbados","15":"Belarus","16":"Belgium","17":"Belize","18":"Benin","19":"Bermuda","20":"Bhutan","21":"Bolivia","22":"Bosnia and Herzegovina","23":"Botswana","24":"Brazil","25":"Bulgaria","26":"Burkina Faso","27":"Burundi","28":"Cambodia","29":"Cameroon","30":"Canada","31":"Cape Verde","32":"Cayman Islands","33":"Central African Republic","34":"Chad","35":"Chile","36":"China","37":"Colombia","38":"Congo","40":"Croatia","41":"Cyprus","42":"Czech Republic","43":"Denmark","44":"Djibouti","45":"Ecuador","46":"Egypt","47":"El Salvador","48":"Equatorial Guinea","49":"Eritrea","50":"Estonia","51":"Ethiopia","52":"Fiji","53":"Finland","54":"France","56":"Gabon","57":"Gambia","58":"Georgia","59":"Germany","60":"Ghana","61":"Greece","62":"Guam","63":"Guinea","64":"Guinea-Bissau","65":"Guyana","66":"Honduras","67":"Hong Kong","68":"Hungary","69":"Iceland","70":"India","71":"Indonesia","74":"Ireland","75":"Israel","76":"Italy","78":"Japan","79":"Jordan","80":"Kazakhstan","81":"Kenya","82":"Kuwait","83":"Kyrgyzstan","84":"Lao People's Democratic Republic","85":"Latvia","86":"Lebanon","87":"Lesotho","88":"Liberia","90":"Liechtenstein","91":"Lithuania","92":"Luxembourg","93":"Macedonia","94":"Madagascar","95":"Malawi","96":"Malaysia","97":"Maldives","98":"Mali","99":"Malta","100":"Mauritania","101":"Mexico","102":"Moldova","103":"Monaco","104":"Mongolia","105":"Morocco","106":"Mozambique","107":"Namibia","108":"Nepal","109":"Netherlands","110":"Netherlands Antilles","111":"New Zealand","112":"Nicaragua","113":"Niger","114":"Nigeria","116":"Norway","117":"Oman","118":"Pakistan","119":"Panama","120":"Paraguay","121":"Peru","122":"Philippines","123":"Poland","124":"Portugal","126":"Qatar","127":"Reunion","128":"Romania","129":"Russia","130":"Rwanda","132":"Samoa (Independent)","133":"Saudi Arabia","134":"Senegal","135":"Seychelles","136":"Sierra Leone","137":"Singapore","138":"Slovakia","139":"Slovenia","140":"Somalia","141":"South Africa","142":"South Korea","143":"Spain","144":"Sri Lanka","146":"Suriname","147":"Swaziland","148":"Sweden","149":"Switzerland","152":"Taiwan","153":"Tanzania","154":"Thailand","155":"Togo","156":"Tunisia","157":"Turkiye","158":"Turkmenistan","159":"Uganda","161":"Ukraine","162":"United Arab Emirates","163":"Uruguay","164":"USA","165":"Uzbekistan","166":"Vatican City State (Holy See)","167":"Venezuela","168":"Vietnam","169":"Virgin Islands (British)","170":"Yemen","173":"Zambia","174":"Zimbabwe","175":"Antigua And Barbuda","176":"Anguilla","178":"American Samoa","179":"Aruba","180":"Brunei Darussalam","181":"Bouvet Island","183":"Cook Islands","185":"Christmas Island","187":"Dominican Republic","188":"Western Sahara","189":"Falkland Islands","191":"Faroe Islands","192":"Grenada","193":"French Guiana","194":"Gibraltar","195":"Greenland","196":"Guadeloupe","198":"Guatemala","200":"Haiti","202":"Jamaica","203":"Kiribati","204":"Comoros","205":"Saint Kitts and Nevis","206":"Saint Lucia","207":"Marshall Islands","208":"Macau","210":"Martinique","212":"Mauritius","213":"New Caledonia","214":"Norfolk Island","215":"Nauru","217":"Niue","219":"Papua New Guinea","221":"Pitcairn","222":"Palau","223":"Solomon Islands","225":"Svalbard and Jan Mayen Islands","227":"San Marino","232":"Tonga","233":"Timor-Leste","234":"Trinidad and Tobago","235":"Tuvalu","237":"Saint Vincent and the Grenadines","238":"Virgin Islands (U.S.)","239":"Vanuatu","241":"Mayotte","242":"Myanmar","255":"Sao Tome and Principe","257":"South Georgia and the South Sandwich Islands","260":"Tajikistan","262":"United Kingdom","268":"Costa Rica","270":"Guernsey","272":"North Korea","274":"Afghanistan","275":"Cote D'Ivoire","276":"Cuba","277":"French Polynesia","278":"Iran","279":"Iraq","281":"Libya","282":"Palestine","285":"Syria","286":"Aaland Islands","287":"Turks & Caicos Islands","288":"Jersey  (Channel Islands)","289":"Dominica","290":"Montenegro","293":"Sudan","294":"Montserrat","298":"Curacao","302":"Sint Maarten","311":"South Sudan","315":"Republic of Kosovo","318":"Congo, Democratic Republic of the","323":"Isle of Man","324":"Saint Martin","325":"Bonaire, Saint Eustatius and Saba","326":"Serbia"},"defaultcountry":164},"PHONE":{"name":"PHONE","label":"Phone Number","helper_text":"","type":"phone","required":false,"audience_field_name":"Phone Number","phoneformat":"","enabled":false,"order":null,"field_type":"merge","merge_id":4},"BIRTHDAY":{"name":"BIRTHDAY","label":"Birthday","helper_text":"","type":"birthday","required":false,"audience_field_name":"Birthday","dateformat":"MM/DD","enabled":false,"order":null,"field_type":"merge","merge_id":5},"COMPANY":{"name":"COMPANY","label":"Company","helper_text":"","type":"text","required":false,"audience_field_name":"Company","enabled":false,"order":null,"field_type":"merge","merge_id":6}}).find(function(f) { return f.name === fieldName && f.type === 'smsphone'; });
-      var isRequired = smsField ? smsField.required : false;
-      var shouldAppendCountryCode = smsNotRequiredRemoveCountryCodeEnabled ? isRequired : true;
-      
-      var phoneInput = document.querySelector('#mce-' + fieldName);
-      if (phoneInput && defaultProgram.countryCallingCode && shouldAppendCountryCode) {
-        phoneInput.value = defaultProgram.countryCallingCode;
-      }
-      
-
-
-      displayFlag?.addEventListener('click', function(e) {
-        dropdown.focus();
-      });
-
-
-      dropdown?.addEventListener('change', function() {
-        const selectedCountry = this.value;
-        
-        if (!selectedCountry || typeof selectedCountry !== 'string') {
-          return;
-        }
-        
-        const flagSpan = displayFlag?.querySelector('#flag-emoji-' + fieldName);
-        if (flagSpan) {
-          flagSpan.textContent = getCountryUnicodeFlag(selectedCountry);
-          flagSpan.setAttribute('aria-label', sanitizeHtml(selectedCountry) + ' flag');
-        }
-
-         
-        const selectedProgram = window.MC?.smsPhoneData?.programs.find(function(program) {
-          return program && program.countryCode === selectedCountry;
-        });
-
-        var smsNotRequiredRemoveCountryCodeEnabled = true;
-        var smsField = Object.values({"EMAIL":{"name":"EMAIL","label":"Email Address","helper_text":"","merge_id":0,"type":"email","required":true,"audience_field_name":"Email Address","field_type":"merge","enabled":true,"order":null},"FNAME":{"name":"FNAME","label":"First Name","helper_text":"","type":"text","required":false,"audience_field_name":"First Name","enabled":false,"order":null,"field_type":"merge","merge_id":1},"LNAME":{"name":"LNAME","label":"Last Name","helper_text":"","type":"text","required":false,"audience_field_name":"Last Name","enabled":false,"order":null,"field_type":"merge","merge_id":2},"ADDRESS":{"name":"ADDRESS","label":"Address","helper_text":"","type":"address","required":false,"audience_field_name":"Address","enabled":false,"order":null,"field_type":"merge","merge_id":3,"countries":{"2":"Albania","3":"Algeria","4":"Andorra","5":"Angola","6":"Argentina","7":"Armenia","8":"Australia","9":"Austria","10":"Azerbaijan","11":"Bahamas","12":"Bahrain","13":"Bangladesh","14":"Barbados","15":"Belarus","16":"Belgium","17":"Belize","18":"Benin","19":"Bermuda","20":"Bhutan","21":"Bolivia","22":"Bosnia and Herzegovina","23":"Botswana","24":"Brazil","25":"Bulgaria","26":"Burkina Faso","27":"Burundi","28":"Cambodia","29":"Cameroon","30":"Canada","31":"Cape Verde","32":"Cayman Islands","33":"Central African Republic","34":"Chad","35":"Chile","36":"China","37":"Colombia","38":"Congo","40":"Croatia","41":"Cyprus","42":"Czech Republic","43":"Denmark","44":"Djibouti","45":"Ecuador","46":"Egypt","47":"El Salvador","48":"Equatorial Guinea","49":"Eritrea","50":"Estonia","51":"Ethiopia","52":"Fiji","53":"Finland","54":"France","56":"Gabon","57":"Gambia","58":"Georgia","59":"Germany","60":"Ghana","61":"Greece","62":"Guam","63":"Guinea","64":"Guinea-Bissau","65":"Guyana","66":"Honduras","67":"Hong Kong","68":"Hungary","69":"Iceland","70":"India","71":"Indonesia","74":"Ireland","75":"Israel","76":"Italy","78":"Japan","79":"Jordan","80":"Kazakhstan","81":"Kenya","82":"Kuwait","83":"Kyrgyzstan","84":"Lao People's Democratic Republic","85":"Latvia","86":"Lebanon","87":"Lesotho","88":"Liberia","90":"Liechtenstein","91":"Lithuania","92":"Luxembourg","93":"Macedonia","94":"Madagascar","95":"Malawi","96":"Malaysia","97":"Maldives","98":"Mali","99":"Malta","100":"Mauritania","101":"Mexico","102":"Moldova","103":"Monaco","104":"Mongolia","105":"Morocco","106":"Mozambique","107":"Namibia","108":"Nepal","109":"Netherlands","110":"Netherlands Antilles","111":"New Zealand","112":"Nicaragua","113":"Niger","114":"Nigeria","116":"Norway","117":"Oman","118":"Pakistan","119":"Panama","120":"Paraguay","121":"Peru","122":"Philippines","123":"Poland","124":"Portugal","126":"Qatar","127":"Reunion","128":"Romania","129":"Russia","130":"Rwanda","132":"Samoa (Independent)","133":"Saudi Arabia","134":"Senegal","135":"Seychelles","136":"Sierra Leone","137":"Singapore","138":"Slovakia","139":"Slovenia","140":"Somalia","141":"South Africa","142":"South Korea","143":"Spain","144":"Sri Lanka","146":"Suriname","147":"Swaziland","148":"Sweden","149":"Switzerland","152":"Taiwan","153":"Tanzania","154":"Thailand","155":"Togo","156":"Tunisia","157":"Turkiye","158":"Turkmenistan","159":"Uganda","161":"Ukraine","162":"United Arab Emirates","163":"Uruguay","164":"USA","165":"Uzbekistan","166":"Vatican City State (Holy See)","167":"Venezuela","168":"Vietnam","169":"Virgin Islands (British)","170":"Yemen","173":"Zambia","174":"Zimbabwe","175":"Antigua And Barbuda","176":"Anguilla","178":"American Samoa","179":"Aruba","180":"Brunei Darussalam","181":"Bouvet Island","183":"Cook Islands","185":"Christmas Island","187":"Dominican Republic","188":"Western Sahara","189":"Falkland Islands","191":"Faroe Islands","192":"Grenada","193":"French Guiana","194":"Gibraltar","195":"Greenland","196":"Guadeloupe","198":"Guatemala","200":"Haiti","202":"Jamaica","203":"Kiribati","204":"Comoros","205":"Saint Kitts and Nevis","206":"Saint Lucia","207":"Marshall Islands","208":"Macau","210":"Martinique","212":"Mauritius","213":"New Caledonia","214":"Norfolk Island","215":"Nauru","217":"Niue","219":"Papua New Guinea","221":"Pitcairn","222":"Palau","223":"Solomon Islands","225":"Svalbard and Jan Mayen Islands","227":"San Marino","232":"Tonga","233":"Timor-Leste","234":"Trinidad and Tobago","235":"Tuvalu","237":"Saint Vincent and the Grenadines","238":"Virgin Islands (U.S.)","239":"Vanuatu","241":"Mayotte","242":"Myanmar","255":"Sao Tome and Principe","257":"South Georgia and the South Sandwich Islands","260":"Tajikistan","262":"United Kingdom","268":"Costa Rica","270":"Guernsey","272":"North Korea","274":"Afghanistan","275":"Cote D'Ivoire","276":"Cuba","277":"French Polynesia","278":"Iran","279":"Iraq","281":"Libya","282":"Palestine","285":"Syria","286":"Aaland Islands","287":"Turks & Caicos Islands","288":"Jersey  (Channel Islands)","289":"Dominica","290":"Montenegro","293":"Sudan","294":"Montserrat","298":"Curacao","302":"Sint Maarten","311":"South Sudan","315":"Republic of Kosovo","318":"Congo, Democratic Republic of the","323":"Isle of Man","324":"Saint Martin","325":"Bonaire, Saint Eustatius and Saba","326":"Serbia"},"defaultcountry":164},"PHONE":{"name":"PHONE","label":"Phone Number","helper_text":"","type":"phone","required":false,"audience_field_name":"Phone Number","phoneformat":"","enabled":false,"order":null,"field_type":"merge","merge_id":4},"BIRTHDAY":{"name":"BIRTHDAY","label":"Birthday","helper_text":"","type":"birthday","required":false,"audience_field_name":"Birthday","dateformat":"MM/DD","enabled":false,"order":null,"field_type":"merge","merge_id":5},"COMPANY":{"name":"COMPANY","label":"Company","helper_text":"","type":"text","required":false,"audience_field_name":"Company","enabled":false,"order":null,"field_type":"merge","merge_id":6}}).find(function(f) { return f.name === fieldName && f.type === 'smsphone'; });
-        var isRequired = smsField ? smsField.required : false;
-        var shouldAppendCountryCode = smsNotRequiredRemoveCountryCodeEnabled ? isRequired : true;
-        
-        var phoneInput = document.querySelector('#mce-' + fieldName);
-        if (phoneInput && selectedProgram.countryCallingCode && shouldAppendCountryCode) {
-          phoneInput.value = selectedProgram.countryCallingCode;
-        }
-        
-        
-        updateSmsLegalText(selectedCountry, fieldName);
-        updatePlaceholder(selectedCountry, fieldName);
-        updateCountryCodeInstruction(selectedCountry, fieldName);
-      });
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-      const smsPhoneFields = document.querySelectorAll('[id^="country-select-"]');
-      
-      smsPhoneFields.forEach(function(dropdown) {
-        const fieldName = dropdown?.id.replace('country-select-', '');
-        initializeSmsPhoneDropdown(fieldName);
-      });
-    });
-    </script></div>
-
-
-</body>
-</html>
+            <h3>Step 3: Define Your Crop Area</h3>
+            <p>Once your image loads, a cropping interface will appear. You have several ways to define the new area:</p>
+           
