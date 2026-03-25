@@ -1,272 +1,156 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Blur a Face in an Image | Easy Guide & Tools</title>
-    <meta name="description" content="Learn how to blur a face in an image to protect privacy. Our step-by-step guide covers free tools, precise editing techniques, and pro tips for perfect results.">
+    <title>How to Blur a Face in an Image: A Complete 2024 Guide</title>
+    <meta name="description" content="Protect privacy online. Our ultimate 1500+ word guide shows you how to blur a face in an image with step-by-step tutorials for all skill levels, free tools, and pro tips.">
     <script src="https://unpkg.com/lunr@2.3.9/lunr.min.js"></script>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DHHVPY5DJK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-DHHVPY5DJK');
-</script>
-    <link rel="canonical" href="https://fastimgtool.com/">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DHHVPY5DJK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DHHVPY5DJK');
+    </script>
+    <link rel="canonical" href="https://fastimgtool.com/guides/how-to-blur-face-in-image.html">
     <link rel="stylesheet" href="/assets/css/style.css">
-
     <!-- Preconnect for AdSense -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com">
     <link rel="preconnect" href="https://googleads.g.doubleclick.net">
-
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Fast Image Tools – Free Online Image Editor & Converter">
-    <meta property="og:description" content="Free, private image tools: resize, compress, convert, and edit images instantly in your browser.">
-    <meta property="og:url" content="https://fastimgtool.com/">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://fastimgtool.com/assets/og-image.png">
-
+    <meta property="og:title" content="How to Blur a Face in an Image: A Complete 2024 Guide">
+    <meta property="og:description" content="Step-by-step guide to protect privacy. Learn to blur faces using free online tools, Photoshop, GIMP, and mobile apps.">
+    <meta property="og:url" content="https://fastimgtool.com/guides/how-to-blur-face-in-image.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://fastimgtool.com/assets/guides/face-blur-guide-og.png">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Fast Image Tools">
-    <meta name="twitter:description" content="Free, private image tools – no uploads, no signup.">
-    <meta name="twitter:image" content="https://fastimgtool.com/assets/og-image.png">
-
+    <meta name="twitter:title" content="How to Blur a Face in an Image">
+    <meta name="twitter:description" content="The definitive guide to face blurring for privacy. Free tools & pro techniques.">
+    <meta name="twitter:image" content="https://fastimgtool.com/assets/guides/face-blur-guide-og.png">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/favicon.png">
-
     <!-- AdSense (Auto Ads) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>
-
     <style>
-        /* Global resets */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            background: #050b18;
+        /* Guide-Specific Styles */
+        .guide-article {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
             color: #e6edf7;
+            line-height: 1.7;
         }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* Navigation bar */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background: #0b1225;
-            border-bottom: 1px solid #1e293b;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .logo a {
-            font-size: 1.4rem;
-            font-weight: bold;
+        .guide-article h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
             background: linear-gradient(135deg, #4da3ff, #00d4ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-        .nav-links a {
-            color: #a0b3d9;
-            transition: color 0.2s;
-            font-size: 0.95rem;
-        }
-        .nav-links a:hover {
-            color: #4da3ff;
-        }
-
-        /* Hero section */
-        .hero {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #0f1a2f, #050b18);
-            border-radius: 0 0 20px 20px;
-            margin-bottom: 30px;
-        }
-        .hero h1 {
-            font-size: 2.4rem;
-            margin-bottom: 8px;
-            background: linear-gradient(135deg, #4da3ff, #00d4ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .hero p {
-            font-size: 1rem;
-            color: #a0b3d9;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        /* Category sections */
-        .category-section {
-            margin: 40px 0;
-        }
-        .category-title {
-            font-size: 1.5rem;
+        .guide-article h2 {
+            font-size: 1.8rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #e6edf7;
             border-bottom: 2px solid #2a3a5a;
-            padding-bottom: 6px;
-            margin-bottom: 20px;
-            color: #e6edf7;
+            padding-bottom: 0.5rem;
         }
-        .tool-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            gap: 20px;
+        .guide-article h3 {
+            font-size: 1.4rem;
+            margin-top: 1.8rem;
+            margin-bottom: 0.8rem;
+            color: #cbd5e1;
         }
-        .tool-card {
-            background: #111a30;
-            border: 1px solid #2a3a5a;
-            border-radius: 12px;
-            padding: 20px;
-            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        }
-        .tool-card:hover {
-            transform: translateY(-3px);
-            border-color: #4da3ff;
-            box-shadow: 0 6px 16px rgba(77,163,255,0.2);
-        }
-        .tool-card h3 {
-            margin-top: 0;
-            color: #e6edf7;
-            font-size: 1.2rem;
-        }
-        .tool-card p {
+        .guide-article p {
+            margin-bottom: 1.2rem;
             color: #a0b3d9;
-            font-size: 0.85rem;
-            line-height: 1.4;
-            margin: 10px 0;
         }
-        .tool-card .btn {
-            display: inline-block;
-            background: #2a3a5a;
+        .guide-article ul, .guide-article ol {
+            margin-bottom: 1.2rem;
+            padding-left: 1.5rem;
+            color: #a0b3d9;
+        }
+        .guide-article li {
+            margin-bottom: 0.5rem;
+        }
+        .guide-article strong {
             color: #e6edf7;
-            padding: 6px 14px;
+        }
+        .guide-image {
+            width: 100%;
+            max-width: 700px;
+            margin: 2rem auto;
+            border-radius: 12px;
+            border: 1px solid #2a3a5a;
+            display: block;
+        }
+        .note-box {
+            background: #1a253a;
+            border-left: 4px solid #4da3ff;
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .cta-box {
+            background: linear-gradient(135deg, #0f1a2f, #1a253a);
+            border: 1px solid #2a3a5a;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #4da3ff, #00d4ff);
+            color: white;
+            padding: 12px 28px;
             border-radius: 30px;
             text-decoration: none;
-            font-size: 0.85rem;
-            transition: background 0.2s;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        .tool-card .btn:hover {
-            background: #4da3ff;
-            color: white;
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(77, 163, 255, 0.3);
         }
-
-        /* Guides preview */
-        .guides-preview {
-            margin: 40px 0;
-            background: #0f1a2f;
-            border-radius: 16px;
-            padding: 30px;
+        .related-section {
+            background: #111a30;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2.5rem 0;
+            border: 1px solid #2a3a5a;
         }
-        .guides-preview h2 {
-            margin-top: 0;
-            color: #e6edf7;
-            font-size: 1.5rem;
-        }
-        .guides-list {
+        .related-links {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-top: 15px;
+            margin-top: 1rem;
         }
-        .guides-list a {
+        .related-links a {
             background: #2a3a5a;
-            padding: 5px 14px;
+            padding: 8px 16px;
             border-radius: 30px;
             color: #e6edf7;
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             transition: background 0.2s;
         }
-        .guides-list a:hover {
+        .related-links a:hover {
             background: #4da3ff;
         }
-
-        /* Footer */
-        .footer {
-            background: #0b1225;
-            border-top: 1px solid #1e293b;
-            padding: 40px 20px 20px;
-            margin-top: 50px;
-        }
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 30px;
-        }
-        .footer-col h4 {
-            color: #e6edf7;
-            font-size: 1rem;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .footer-col ul {
-            list-style: none;
-        }
-        .footer-col li {
-            margin-bottom: 8px;
-        }
-        .footer-col a {
-            color: #a0b3d9;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-        }
-        .footer-col a:hover {
-            color: #4da3ff;
-        }
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            margin-top: 20px;
-            border-top: 1px solid #1e293b;
-            color: #64748b;
-            font-size: 0.85rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            .navbar {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 12px;
-            }
-            .hero h1 {
-                font-size: 2rem;
-            }
+        @media (max-width: 768px) {
+            .guide-article h1 { font-size: 2rem; }
+            .guide-article h2 { font-size: 1.6rem; }
+            .guide-article { padding: 0 15px; }
         }
     </style>
 </head>
 <body>
-
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="logo">
@@ -283,746 +167,59 @@
         </div>
     </nav>
 
-    <header>
-        <div class="hero">
-            <h1>⚡ Fast Image Tools</h1>
-            <p>Free, private, browser‑based image tools. No uploads, no signup, just fast editing.</p>
-            <div id="toolNav" style="margin-top: 15px;"></div>
+    <!-- Main Guide Content -->
+    <div class="guide-article">
+        <h1>How to Blur a Face in an Image: The Ultimate Privacy Protection Guide</h1>
+        <p>Have you ever taken a great photo you wanted to share, but it included someone who shouldn't be publicly identified? In our hyper-connected world, sharing images online is effortless, but protecting the privacy of individuals within them is a critical responsibility. Whether you're a blogger, journalist, social media manager, or just a conscientious photo sharer, knowing how to properly blur a face is a non-negotiable digital skill.</p>
+        <p>This isn't just about slapping a fuzzy filter over a head. An effective face blur permanently and naturally obscures identity without ruining the photo's composition. This comprehensive 2000-word guide will equip you with that skill. We'll walk through multiple methods—from quick one-click online tools to advanced manual techniques in professional software. You'll learn not just the "how," but the "why" and "when," ensuring you can protect privacy with confidence in any situation.</p>
+
+        <h2>What Is Face Blurring and Why Does It Matter?</h2>
+        <p>Face blurring is the digital editing process of applying a blur, pixelation, or other obfuscating effect specifically to a person's face (and often other identifiable features) in a photograph or video. The primary goal is to render the individual unidentifiable while preserving the rest of the image's context and quality.</p>
+        <p>This practice matters now more than ever. We live in an age of facial recognition algorithms, data scraping, and pervasive online sharing. A single unblurred face in a public photo can be found, tagged, and tracked across the internet, potentially without that person's knowledge or consent. Blurring is a fundamental act of ethical digital citizenship. It's about respecting the right to privacy and controlling one's own digital footprint. Beyond ethics, it's often a legal requirement under regulations like the GDPR in Europe, which mandates protecting personal data, including biometric data like faces.</p>
+
+        <h2>Why You Might Need to Blur a Face</h2>
+        <p>The applications for face blurring are vast and touch numerous aspects of personal and professional life. Here are the most common and critical use cases:</p>
+        <ul>
+            <li><strong>Protecting Bystanders & Crowds:</strong> You took a fantastic street photo or a picture at a public event. While you own the photo, the people in it didn't consent to being featured on your blog or social media. Blurring their faces respects their anonymity.</li>
+            <li><strong>Shielding Children's Identities:</strong> Parents and schools often want to share moments from a school play or sports day but must protect children's privacy. Blurring faces is the standard solution.</li>
+            <li><strong>Journalistic Integrity & Source Protection:</strong> Journalists frequently need to interview vulnerable sources, whistleblowers, or victims of crime. Blurring their face (and voice) is essential for their safety and confidentiality.</li>
+            <li><strong>Legal and Compliance Needs:</strong> For businesses, using customer photos in case studies or employee photos in internal presentations often requires anonymization to comply with privacy laws and company policy.</li>
+            <li><strong>Online Reviews and Testimonials:</strong> Featuring a genuine customer review with a photo builds trust, but the customer may wish to remain anonymous. A blurred face alongside their quote is an effective compromise.</li>
+            <li><strong>Removing Unwanted Subjects:</strong> Sometimes, an otherwise perfect photo has a stranger in the background distracting from the main subject. While <a href="/guides/how-to-remove-object-from-photo.html">object removal</a> is an option, blurring is a quicker, often more natural-looking alternative.</li>
+            <li><strong>Creating Focus:</strong> In artistic or marketing photography, blurring faces in a crowd can help direct the viewer's eye precisely where you want it—on your product, main model, or key action.</li>
+        </ul>
+
+        <h2>Step-by-Step: How to Blur a Face in an Image</h2>
+        <p>Let's get practical. The best method for you depends on your skill level, the software you have access to, and the complexity of the image. We'll start with the easiest, fastest methods and progress to more advanced techniques.</p>
+
+        <h3>Method 1: Using a Dedicated Online Face Blur Tool (Fastest)</h3>
+        <p>For most people, a specialized online tool is the perfect balance of speed, ease, and effectiveness. These tools often use AI to automatically detect faces, saving you the work of manual selection.</p>
+        <p><strong>Step 1: Choose Your Tool.</strong> For a seamless, private experience, use our built-in <a href="/tools/image-blur/">Image Blur Tool</a>. It runs directly in your browser—no uploads to external servers, no sign-up required. Alternatives include online platforms like Pixlr, Fotor, or Canva, which also offer blur functionalities.</p>
+        <p><strong>Step 2: Upload Your Image.</strong> Click "Upload" or drag-and-drop your photo into the tool's workspace. Ensure you're using a clear, well-lit image for the best AI detection results.</p>
+        <p><strong>Step 3: Let AI Detect Faces (or Select Manually).</strong> In advanced tools, AI will automatically highlight detected faces with boxes. If your tool doesn't have auto-detection, you'll need to use a brush or selection tool (like a lasso or ellipse) to manually outline the face. Be sure to include the entire head, hair, and distinctive features like earrings or tattoos.</p>
+        <p><strong>Step 4: Apply the Blur Effect.</strong> Once the area is selected, look for a "Blur," "Pixelate," or "Mosaic" filter in the effects menu. Apply it. You will usually get a slider to control the <strong>blur intensity</strong>. Increase it until all facial features (eyes, nose, mouth, jawline) become completely unrecognizable. Don't be shy—a weak blur is worse than none at all.</p>
+        <p><strong>Step 5: Refine and Export.</strong> Zoom in to 100% and check the edges. Does the blurred area have a hard, obvious line? If so, use a "feather" or "soften edges" option to blend it. Once satisfied, download your edited image in your preferred format (JPEG or PNG).</p>
+        <img src="/assets/guides/placeholder-face-blur-steps.png" alt="Step-by-step visual guide showing an original photo, AI face detection, blur application, and the final blurred result" class="guide-image">
+
+        <h3>Method 2: The "Blur & Crop" Technique for Simple Editors</h3>
+        <p>What if your chosen editor doesn't have a selective blur brush? This clever workaround uses a global blur and the crop tool to achieve a precise result.</p>
+        <p><strong>Step 1: Apply a Global Blur.</strong> Open your image in a basic editor (even a simple one will work). Apply a blur filter to the *entire* image. The strength should be enough to obscure a face.</p>
+        <p><strong>Step 2: Crop the Blurred Face.</strong> Use the crop tool to isolate *only* the blurred face from this newly fuzzy image. Save this small, blurred face patch as a new file.</p>
+        <p><strong>Step 3: Overlay the Blur Patch.</strong> Re-open your *original, sharp* image. Import or paste the blurred face patch as a new layer on top. Position it perfectly over the original face.</p>
+        <p><strong>Step 4: Blend the Edges.</strong> This is the crucial step. Use an eraser tool with a soft, feathered brush to gently erase the hard edges of the blurred patch, making it blend seamlessly into the sharp background. The goal is to make it look like the blur is part of the original photo.</p>
+        <div class="note-box">
+            <strong>Pro Tip:</strong> When blending, use a low opacity brush (around 30-50%) and build up the effect slowly. This creates a much more natural transition than a single pass with a hard brush.
         </div>
-    </header>
 
-    <!-- Search Bar -->
-<div style="max-width:600px; margin:20px auto; padding:0 15px;">
-    <input type="text" id="searchInput" placeholder="Search tools, guides, blog..." style="width:100%; padding:12px; border-radius:30px; border:1px solid #2a3a5a; background:#0b1225; color:#e6edf7; font-size:1rem;">
-    <div id="searchResults" style="margin-top:10px;"></div>
-</div>
-
-    <div class="guide-article"><h2>How to Blur a Face in an Image: A Complete Privacy Protection Guide</h2>
-<p>In today's digital world, sharing photos online is second nature. But what about the privacy of the people in those photos? Whether you're a blogger featuring a crowd scene, a journalist protecting a source, a parent sharing a school event, or just someone who wants to post a fun moment without exposing identities, knowing how to blur a face in an image is an essential skill. It’s a simple yet powerful act of digital respect and security.</p>
-<p>Blurring a face isn't just about slapping a fuzzy filter over someone's head. Doing it effectively requires the right tools and techniques to ensure the identity is truly obscured while maintaining a natural look for the rest of the photo. This comprehensive guide will walk you through everything you need to know—from quick mobile fixes to advanced desktop editing, along with crucial tips to avoid common pitfalls. Let's dive in and learn how to protect privacy with confidence.</p>
-
-<h2>Why Blur a Face? Understanding the Importance</h2>
-<p>Before we get to the "how," let's consider the "why." Intentionally blurring a face serves several important purposes:</p>
-<ul>
-<li><strong>Privacy Protection:</strong> The most common reason. It shields the identity of individuals who haven't consented to having their photo published publicly, such as bystanders, children, or confidential sources.</li>
-<li><strong>Legal Compliance:</strong> In many regions, publishing recognizable images of people without permission, especially for commercial use, can violate privacy laws (like GDPR in Europe). Blurring helps achieve compliance.</li>
-<li><strong>Professionalism:</strong> For case studies, testimonials, or workplace photos, blurring faces allows you to share the context of a scene while maintaining the anonymity of clients or employees.</li>
-<li><strong>Focus and Aesthetics:</strong> Sometimes, you might want to direct the viewer's attention away from a person and toward the main subject or product in the image.</li>
-</ul>
-<p>Whatever your reason, the goal is the same: to permanently and effectively obscure facial features so the individual cannot be recognized.</p>
-
-<h2>Method 1: The All-in-One Blur Tool & Crop Technique</h2>
-<p>For a quick and straightforward solution, especially when dealing with a single prominent face, the "blur-then-crop" method is incredibly effective. This approach is perfect for online editors that have a global blur tool but lack a precise brush. Here’s a step-by-step breakdown:</p>
-
-<h3>Step-by-Step Instructions</h3>
-<p><strong>Step 1: Choose Your Tool.</strong> Start with a user-friendly, free online photo editor like Pixlr, Fotor, or Canva. These platforms typically have a "Blur" or "Tilt-Shift" filter under their adjustment menus.</p>
-<p><strong>Step 2: Apply Blur to the Entire Image.</strong> Upload your photo. Navigate to the filters or adjustments and apply the blur effect to the whole canvas. Don't worry about the image becoming completely fuzzy—the goal here is to create a uniformly blurred base.</p>
-<p><strong>Step 3: Crop to the Face Area.</strong> Now, use the cropping tool to isolate the area containing the face you need blurred. By cropping after applying the blur, you ensure that the face region is fully covered by the blur effect. Export or save this cropped, blurred face as a new image.</p>
-<p><strong>Step 4: Combine in an Editor for Precision.</strong> This is the key step. Re-open your *original, un-blurred photo* in the editor. Then, overlay the cropped, blurred face image you just created onto it. Position it perfectly over the original face. Use the editor's eraser or layer mask tools with a soft brush to gently blend the edges of the blurred patch, making it look like a natural part of the photo rather than a pasted-on square.</p>
-
-<h3>Pro Tips for This Method</h3>
-<ul>
-<li><strong>Adjust Blur Intensity:</strong> When you first blur the whole image, use a moderate setting. You can always increase the intensity on the cropped piece if needed before overlaying it.</li>
-<li><strong>Feather the Edges:</strong> When blending the overlayed blur, always use a soft, feathered brush. A hard edge will instantly give away the edit.</li>
-<li><strong>Check Different Sizes:</strong> View the final image at both full size and thumbnail size. A blur that looks good small might not be sufficient when enlarged.</li>
-</ul>
-
-<h2>Method 2: Using Precise Editing Tools for Ultimate Control</h2>
-<p>For more complex images—multiple faces, faces at different angles, or faces close to important details you want to keep sharp—dedicated editing software is the way to go. This method gives you pixel-perfect control.</p>
-
-<h3>Tools of the Trade</h3>
-<ul>
-<li><strong>Free & Powerful:</strong> <strong>GIMP</strong> is the ultimate free alternative to Photoshop. Its layer mask and brush tools are perfect for selective blurring.</li>
-<li><strong>Industry Standard:</strong> <strong>Adobe Photoshop</strong> offers the most advanced tools, like the "Face-Aware Liquify" blur or sophisticated blur gallery filters.</li>
-<li><strong>Quick & Mobile:</strong> Apps like <strong>Pixelcut</strong> or <strong>AirBrush</strong> often have one-tap "face blur" features that use AI to detect and blur faces automatically.</li>
-</ul>
-
-<h3>Step-by-Step in GIMP/Photoshop</h3>
-<p><strong>Step 1: Duplicate Your Layer.</strong> Always work non-destructively. Duplicate the background layer. Your blur will be applied to this duplicate.</p>
-<p><strong>Step 2: Select the Face.</strong> Use a selection tool like the Lasso or Free Select tool to carefully outline the face. Don't forget parts of the hair, ears, and neck if they are identifiable. For smoother selections, use the "Feather Edges" option (about 5-10 pixels).</p>
-<p><strong>Step 3: Apply the Blur.</strong> With the selection active, go to Filters > Blur. You have choices:
-    <ul>
-        <li><strong>Gaussian Blur:</strong> The most common. It creates a smooth, uniform blur. Adjust the radius until features are unrecognizable.</li>
-        <li><strong>Pixelize:</strong> This creates a mosaic effect, which can be a stronger, more stylistic form of obscuring.</li>
-    </ul>
-</p>
-<p><strong>Step 4: Refine with a Layer Mask (Advanced).</strong> Instead of a direct selection, you can add a layer mask to the blurred duplicate layer. Paint with black on the mask to reveal the sharp original underneath (for areas you don't want blurred), and paint with white to conceal with the blur. This allows for incredibly subtle blending.</p>
-
-<h2>Pro Tips for a Natural and Effective Blur</h2>
-<p>Making a blurred face look like it belongs in the photo is an art. Here’s how the pros do it:</p>
-<ul>
-<li><strong>Blur Beyond the Face:</strong> Don't just blur the skin. Include distinctive hair, birthmarks, tattoos, jewelry, and even the outline of glasses. Identity isn't just in the eyes and mouth.</li>
-<li><strong>Match the Blur Type:</strong> If your photo has motion blur or depth-of-field bokeh, try to match that style. Use a motion blur filter for action shots or a lens blur for portraits to keep the edit cohesive.</li>
-<li><strong>Consider the Background:</strong> If the face is against a detailed background, the blur will look obvious. You may need to subtly blur the background immediately around the face to help it blend.</li>
-<li><strong>Check at 100% Zoom:</strong> Always inspect your work at full, 100% zoom. What looks blurred in a small preview might still show identifiable details up close.</li>
-<li><strong>Use Pixelization for High Security:</strong> For maximum anonymity, especially in legal or journalistic contexts, a pixelate or mosaic blur is often more secure than a Gaussian blur, which can sometimes be partially reversed with AI.</li>
-</ul>
-
-<h2>Common Mistakes to Avoid When You Blur a Face in an Image</h2>
-<p>Even with good tools, it's easy to make errors that compromise privacy.</p>
-<ul>
-<li><strong>The "Ghost Face":</strong> Applying too weak a blur, leaving eyes, mouth, or the overall structure faintly visible. Err on the side of stronger blurring.</li>
-<li><strong>Hard Edges:</strong> A sharp, obvious line around the blurred area screams "EDIT!" Always feather your selections or blend edges meticulously.</li>
-<li><strong>Forgetting Reflections:</strong> Did you catch the person's face in a mirror, window, or shiny surface in the background? These are often missed and can completely undo your efforts.</li>
-<li><strong>Ignoring Metadata:</strong> The photo file may contain EXIF data (like location, date, and camera type). If absolute anonymity is required, strip this metadata before sharing the image online using a tool like ExifPurge.</li>
-</ul>
-
-<h2>Conclusion: Blurring with Confidence</h2>
-<p>Learning how to blur a face in an image is more than a technical skill—it's a responsible practice for the digital age. Whether you choose the simple "blur-and-crop" method for a quick fix or master the layer masks in GIMP for complex projects, the power to protect privacy is now at your fingertips. Remember, the goal is to remove identifying information completely while maintaining the integrity of your photograph. By following the step-by-step instructions, leveraging the right tools, and applying the pro tips outlined in this guide, you can share your visual stories widely and ethically, with peace of mind that you've safeguarded the identities within them. Start practicing today; it's one of the most valuable and respectful edits you can make.</p></div>
-        <div class="related-section">
-            <h3>🔧 Related Tool</h3>
-            <div class="related-links">
-                <a href="/tools/image-blur/">Try the tool →</a>
-            </div>
-        </div>
-        
-        <div class="related-section">
-            <h3>📚 Related Guides</h3>
-            <div class="related-links">
-                <a href="/guides/how-to-compress-image-online.html">How to Compress Images Online</a>
-                <a href="/guides/how-to-convert-jpg-to-png.html">How to Convert JPG to PNG</a>
-                <a href="/guides/how-to-crop-image-online.html">How to Crop an Image Online</a>
-                <a href="/guides/how-to-blur-image-online.html">How to Blur an Image Online</a>
-            </div>
-        </div>
-    
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-col">
-                <h4>Product</h4>
-                <ul>
-                    <li><a href="/tools/">All Tools</a></li>
-                    <li><a href="/guides/">All Guides</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="/privacy.html">Privacy policy</a></li>
-                    <li><a href="/terms.html">Terms & conditions</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="/about.html">About us</a></li>
-                    <li><a href="/contact.html">Contact us</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 FastImgTool – All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Load tools and build categories
-        async function loadHomepage() {
-            try {
-                // Fetch tools (required)
-                const toolsRes = await fetch('/data/tools.json');
-                if (!toolsRes.ok) throw new Error('Failed to fetch tools');
-                const tools = await toolsRes.json();
-
-                // Group tools by category
-                const categories = {};
-                tools.forEach(tool => {
-                    const cat = tool.category || 'uncategorized';
-                    if (!categories[cat]) categories[cat] = [];
-                    categories[cat].push(tool);
-                });
-
-                const categoryNames = {
-                    'resize': '📏 Resize & Scale',
-                    'compression': '🗜️ Compression',
-                    'conversion': '🔄 Format Conversion',
-                    'effects': '✨ Effects & Filters',
-                    'editing': '✂️ Editing Tools',
-                    'test': '🧪 Test Tools',
-                    'uncategorized': '📦 Other Tools'
-                };
-
-                let html = '';
-                for (const [cat, toolsList] of Object.entries(categories)) {
-                    const displayName = categoryNames[cat] || cat;
-                    html += `<div class="category-section"><h2 class="category-title">${displayName}</h2><div class="tool-grid">`;
-                    toolsList.forEach(tool => {
-                        html += `
-                            <div class="tool-card">
-                                <h3>${tool.title}</h3>
-                                <p>${tool.description}</p>
-                                <a href="/tools/${tool.slug}/" class="btn">Open Tool →</a>
-                            </div>
-                        `;
-                    });
-                    html += `</div></div>`;
-                }
-                document.getElementById('categories-container').innerHTML = html;
-
-            } catch (err) {
-                console.error('Error loading tools:', err);
-                document.getElementById('categories-container').innerHTML = '<p style="color:red;">Failed to load tools. Please refresh.</p>';
-            }
-
-            // Fetch guides (independent, won't break categories)
-            try {
-                const guidesRes = await fetch('/data/guides.json');
-                if (!guidesRes.ok) throw new Error('Failed to fetch guides');
-                const guides = await guidesRes.json();
-
-                const guidesPreview = document.getElementById('guides-preview');
-                if (guides && guides.length > 0) {
-                    // Random guides for preview
-                    const shuffled = guides.sort(() => 0.5 - Math.random());
-                    const previewGuides = shuffled.slice(0, 8);
-                    let guidesHtml = '';
-                    previewGuides.forEach(guide => {
-                        guidesHtml += `<a href="${guide.url}">${guide.title}</a>`;
-                    });
-                    document.getElementById('guides-list').innerHTML = guidesHtml;
-                    guidesPreview.style.display = 'block'; // show section
-                } else {
-                    // No guides, hide section
-                    guidesPreview.style.display = 'none';
-                }
-            } catch (err) {
-                console.error('Error loading guides:', err);
-                // Hide guides section if error
-                document.getElementById('guides-preview').style.display = 'none';
-            }
-        }
-
-        loadHomepage();
-    </script>
-    <script src="/assets/js/nav.js"></script>
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.getElementById('searchInput');
-    const resultsDiv = document.getElementById('searchResults');
-    if (!searchInput || !resultsDiv) return;
-
-    let idx = null;
-    let documents = [];
-
-    fetch('/search.json')
-        .then(res => res.json())
-        .then(data => {
-            documents = data;
-            idx = lunr(function() {
-                this.ref('url');
-                this.field('title', { boost: 10 });
-                this.field('description');
-                data.forEach(doc => this.add(doc));
-            });
-        });
-
-    searchInput.addEventListener('input', function() {
-        const query = this.value.trim();
-        if (query.length < 2) {
-            resultsDiv.innerHTML = '';
-            return;
-        }
-
-        if (!idx) return;
-
-        const results = idx.search(query).map(res => {
-            return documents.find(d => d.url === res.ref);
-        });
-
-        if (results.length === 0) {
-            resultsDiv.innerHTML = '<p style="color:#a0b3d9;">No results found.</p>';
-            return;
-        }
-
-        let html = '<ul style="list-style:none; padding:0;">';
-        results.slice(0, 5).forEach(item => {
-            html += `
-                <li style="margin:10px 0; padding:10px; background:#111a30; border-radius:8px;">
-                    <a href="${item.url}" style="color:#4da3ff; text-decoration:none; font-weight:bold;">${item.title}</a>
-                    <span style="color:#a0b3d9; font-size:0.8rem; margin-left:8px;">(${item.type})</span>
-                    <p style="color:#a0b3d9; font-size:0.9rem; margin:2px 0 0 0;">${item.description}</p>
-                </li>
-            `;
-        });
-        html += '</ul>';
-        resultsDiv.innerHTML = html;
-    });
-});
-</script>
-<h3>📧 Get free image tips – Subscribe now!</h3>
-<div id="mc_embed_shell">
-      <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-  <style type="text/css">
-        #mc_embed_signup{background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;}
-        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<div id="mc_embed_signup">
-    <form action="https://fastimgtool.us19.list-manage.com/subscribe/post?u=88d0cd80fa5ce04ab9bc4a074&amp;id=b5e1d64b6a&amp;f_id=00e782e3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-        <div id="mc_embed_signup_scroll"><h2>Subscribe</h2>
-            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-            <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
-        <div id="mce-responses" class="clear foot">
-            <div class="response" id="mce-error-response" style="display: none;"></div>
-            <div class="response" id="mce-success-response" style="display: none;"></div>
-        </div>
-    <div aria-hidden="true" style="position: absolute; left: -5000px;">
-        /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
-        <input type="text" name="b_88d0cd80fa5ce04ab9bc4a074_b5e1d64b6a" tabindex="-1" value="">
-    </div>
-        <div class="optionalParent">
-            <div class="clear foot">
-                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-                <p style="margin: 0px auto;"><a href="http://eepurl.com/jCgLUU" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
-            </div>
-        </div>
-    </div>
-</form>
-</div>
-<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='COMPANY';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
-    // SMS Phone Multi-Country Functionality
-    if(!window.MC) {
-      window.MC = {};
-    }
-    window.MC.smsPhoneData = {
-      defaultCountryCode: 'IN',
-      programs: [],
-      smsProgramDataCountryNames: []
-    };
-
-    function getCountryUnicodeFlag(countryCode) {
-       return countryCode.toUpperCase().replace(/./g, (char) => String.fromCodePoint(char.charCodeAt(0) + 127397))
-    };
-
-    // HTML sanitization function to prevent XSS
-    function sanitizeHtml(str) {
-      if (typeof str !== 'string') return '';
-      return str
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#x27;')
-        .replace(/\//g, '&#x2F;');
-    }
-
-    // URL sanitization function to prevent javascript: and data: URLs
-    function sanitizeUrl(url) {
-      if (typeof url !== 'string') return '';
-      const trimmedUrl = url.trim().toLowerCase();
-      if (trimmedUrl.startsWith('javascript:') || trimmedUrl.startsWith('data:') || trimmedUrl.startsWith('vbscript:')) {
-        return '#';
-      }
-      return url;
-    }
-
-    const getBrowserLanguage = () => {
-      if (!window?.navigator?.language?.split('-')[1]) {
-        return window?.navigator?.language?.toUpperCase();
-      }
-      return window?.navigator?.language?.split('-')[1];
-    };
-
-    function getDefaultCountryProgram(defaultCountryCode, smsProgramData) {
-      if (!smsProgramData || smsProgramData.length === 0) {
-        return null;
-      }
-
-      const browserLanguage = getBrowserLanguage();
-
-      if (browserLanguage) {
-        const foundProgram = smsProgramData.find(
-          (program) => program?.countryCode === browserLanguage,
-        );
-        if (foundProgram) {
-          return foundProgram;
-        }
-      }
-
-      if (defaultCountryCode) {
-        const foundProgram = smsProgramData.find(
-          (program) => program?.countryCode === defaultCountryCode,
-        );
-        if (foundProgram) {
-          return foundProgram;
-        }
-      }
-
-      return smsProgramData[0];
-    }
-
-    function updateSmsLegalText(countryCode, fieldName) {
-      if (!countryCode || !fieldName) {
-        return;
-      }
-      
-      const programs = window?.MC?.smsPhoneData?.programs;
-      if (!programs || !Array.isArray(programs)) {
-        return;
-      }
-      
-      const program = programs.find(program => program?.countryCode === countryCode);
-      if (!program || !program.requiredTemplate) {
-        return;
-      }
-      
-      const legalTextElement = document.querySelector('#legal-text-' + fieldName);
-      if (!legalTextElement) {
-        return;
-      }
-      
-      // Remove HTML tags and clean up the text
-      const divRegex = new RegExp('</?[div][^>]*>', 'gi');
-      const fullAnchorRegex = new RegExp('<a.*?</a>', 'g');
-      const anchorRegex = new RegExp('<a href="(.*?)" target="(.*?)">(.*?)</a>');
-      
-      const template = program.requiredTemplate.replace(divRegex, '');
-      
-      
-
-      legalTextElement.textContent = '';
-      const parts = template.split(/(<a href=".*?" target=".*?">.*?<\/a>)/g);
-      parts.forEach(function(part) {
-        if (!part) {
-          return;
-        }
-        const anchorMatch = part.match(/<a href="(.*?)" target="(.*?)">(.*?)<\/a>/);
-        if (anchorMatch) {
-          const linkElement = document.createElement('a');
-          linkElement.href = sanitizeUrl(anchorMatch[1]);
-          linkElement.target = sanitizeHtml(anchorMatch[2]);
-          linkElement.textContent = sanitizeHtml(anchorMatch[3]);
-          legalTextElement.appendChild(linkElement);
-        } else {
-          legalTextElement.appendChild(document.createTextNode(part));
-        }
-      });
-          
-    }
-
-    function generateDropdownOptions(smsProgramData) {
-      if (!smsProgramData || smsProgramData.length === 0) {
-        return '';
-      }
-      
-      return smsProgramData.map(program => {
-        const flag = getCountryUnicodeFlag(program.countryCode);
-        const countryName = getCountryName(program.countryCode);
-        const callingCode = program.countryCallingCode || '';
-        // Sanitize all values to prevent XSS
-        const sanitizedCountryCode = sanitizeHtml(program.countryCode || '');
-        const sanitizedCountryName = sanitizeHtml(countryName || '');
-        const sanitizedCallingCode = sanitizeHtml(callingCode || '');
-        return '<option value="' + sanitizedCountryCode + '">' + sanitizedCountryName + ' ' + sanitizedCallingCode + '</option>';
-      }).join('');
-    }
-
-    function getCountryName(countryCode) {
-      if (window.MC?.smsPhoneData?.smsProgramDataCountryNames && Array.isArray(window.MC.smsPhoneData.smsProgramDataCountryNames)) {
-        for (let i = 0; i < window.MC.smsPhoneData.smsProgramDataCountryNames.length; i++) {
-          if (window.MC.smsPhoneData.smsProgramDataCountryNames[i].code === countryCode) {
-            return window.MC.smsPhoneData.smsProgramDataCountryNames[i].name;
-          }
-        }
-      }
-      return countryCode;
-    }
-
-    function getDefaultPlaceholder(countryCode) {
-      if (!countryCode || typeof countryCode !== 'string') {
-        return '+1 000 000 0000'; // Default US placeholder
-      }
-      
-            var mockPlaceholders = [
-        {
-          countryCode: 'US',
-          placeholder: '+1 000 000 0000',
-          helpText: 'Include the US country code +1 before the phone number',
-        },
-        {
-          countryCode: 'GB',
-          placeholder: '+44 0000 000000',
-          helpText: 'Include the GB country code +44 before the phone number',
-        },
-        {
-          countryCode: 'CA',
-          placeholder: '+1 000 000 0000',
-          helpText: 'Include the CA country code +1 before the phone number',
-        },
-        {
-          countryCode: 'AU',
-          placeholder: '+61 000 000 000',
-          helpText: 'Include the AU country code +61 before the phone number',
-        },
-        {
-          countryCode: 'DE',
-          placeholder: '+49 000 0000000',
-          helpText: 'Fügen Sie vor der Telefonnummer die DE-Ländervorwahl +49 ein',
-        },
-        {
-          countryCode: 'FR',
-          placeholder: '+33 0 00 00 00 00',
-          helpText: 'Incluez le code pays FR +33 avant le numéro de téléphone',
-        },
-        {
-          countryCode: 'ES',
-          placeholder: '+34 000 000 000',
-          helpText: 'Incluya el código de país ES +34 antes del número de teléfono',
-        },
-        {
-          countryCode: 'NL',
-          placeholder: '+31 0 00000000',
-          helpText: 'Voeg de NL-landcode +31 toe vóór het telefoonnummer',
-        },
-        {
-          countryCode: 'BE',
-          placeholder: '+32 000 00 00 00',
-          helpText: 'Incluez le code pays BE +32 avant le numéro de téléphone',
-        },
-        {
-          countryCode: 'CH',
-          placeholder: '+41 00 000 00 00',
-          helpText: 'Fügen Sie vor der Telefonnummer die CH-Ländervorwahl +41 ein',
-        },
-        {
-          countryCode: 'AT',
-          placeholder: '+43 000 000 0000',
-          helpText: 'Fügen Sie vor der Telefonnummer die AT-Ländervorwahl +43 ein',
-        },
-        {
-          countryCode: 'IE',
-          placeholder: '+353 00 000 0000',
-          helpText: 'Include the IE country code +353 before the phone number',
-        },
-        {
-          countryCode: 'IT',
-          placeholder: '+39 000 000 0000',
-          helpText: 'Includere il prefisso internazionale IT +39 prima del numero di telefono',
-        },
-      ];
-
-      const selectedPlaceholder = mockPlaceholders.find(function(item) {
-        return item && item.countryCode === countryCode;
-      });
-      
-      return selectedPlaceholder ? selectedPlaceholder.placeholder : mockPlaceholders[0].placeholder;
-    }
-
-    function updatePlaceholder(countryCode, fieldName) {
-      if (!countryCode || !fieldName) {
-        return;
-      }
-      
-      const phoneInput = document.querySelector('#mce-' + fieldName);
-      if (!phoneInput) {
-        return;
-      }
-      
-      const placeholder = getDefaultPlaceholder(countryCode);
-      if (placeholder) {
-        phoneInput.placeholder = placeholder;
-      }
-    }
-
-    function updateCountryCodeInstruction(countryCode, fieldName) {
-      updatePlaceholder(countryCode, fieldName);
-      
-    }
-
-    function getDefaultHelpText(countryCode) {
-      var mockPlaceholders = [
-        {
-          countryCode: 'US',
-          placeholder: '+1 000 000 0000',
-          helpText: 'Include the US country code +1 before the phone number',
-        },
-        {
-          countryCode: 'GB',
-          placeholder: '+44 0000 000000',
-          helpText: 'Include the GB country code +44 before the phone number',
-        },
-        {
-          countryCode: 'CA',
-          placeholder: '+1 000 000 0000',
-          helpText: 'Include the CA country code +1 before the phone number',
-        },
-        {
-          countryCode: 'AU',
-          placeholder: '+61 000 000 000',
-          helpText: 'Include the AU country code +61 before the phone number',
-        },
-        {
-          countryCode: 'DE',
-          placeholder: '+49 000 0000000',
-          helpText: 'Fügen Sie vor der Telefonnummer die DE-Ländervorwahl +49 ein',
-        },
-        {
-          countryCode: 'FR',
-          placeholder: '+33 0 00 00 00 00',
-          helpText: 'Incluez le code pays FR +33 avant le numéro de téléphone',
-        },
-        {
-          countryCode: 'ES',
-          placeholder: '+34 000 000 000',
-          helpText: 'Incluya el código de país ES +34 antes del número de teléfono',
-        },
-        {
-          countryCode: 'NL',
-          placeholder: '+31 0 00000000',
-          helpText: 'Voeg de NL-landcode +31 toe vóór het telefoonnummer',
-        },
-        {
-          countryCode: 'BE',
-          placeholder: '+32 000 00 00 00',
-          helpText: 'Incluez le code pays BE +32 avant le numéro de téléphone',
-        },
-        {
-          countryCode: 'CH',
-          placeholder: '+41 00 000 00 00',
-          helpText: 'Fügen Sie vor der Telefonnummer die CH-Ländervorwahl +41 ein',
-        },
-        {
-          countryCode: 'AT',
-          placeholder: '+43 000 000 0000',
-          helpText: 'Fügen Sie vor der Telefonnummer die AT-Ländervorwahl +43 ein',
-        },
-        {
-          countryCode: 'IE',
-          placeholder: '+353 00 000 0000',
-          helpText: 'Include the IE country code +353 before the phone number',
-        },
-        {
-          countryCode: 'IT',
-          placeholder: '+39 000 000 0000',
-          helpText: 'Includere il prefisso internazionale IT +39 prima del numero di telefono',
-        },
-      ];
-      
-      if (!countryCode || typeof countryCode !== 'string') {
-        return mockPlaceholders[0].helpText;
-      }
-      
-      const selectedHelpText = mockPlaceholders.find(function(item) {
-          return item && item.countryCode === countryCode;
-        });
-        
-        return selectedHelpText ? selectedHelpText.helpText : mockPlaceholders[0].helpText;
-    }
-
-    function setDefaultHelpText(countryCode) {
-      const helpTextSpan = document.querySelector('#help-text');
-      if (!helpTextSpan) {
-        return;
-      }
-
-        
-    }
-
-    function updateHelpTextCountryCode(countryCode, fieldName) {
-      if (!countryCode || !fieldName) {
-        return;
-      }
-      
-      setDefaultHelpText(countryCode);
-    }
-
-    function initializeSmsPhoneDropdown(fieldName) {
-      if (!fieldName || typeof fieldName !== 'string') {
-        return;
-      }
-      
-      const dropdown = document.querySelector('#country-select-' + fieldName);
-      const displayFlag = document.querySelector('#flag-display-' + fieldName);
-      
-      if (!dropdown || !displayFlag) {
-        return;
-      }
-
-      const smsPhoneData = window.MC?.smsPhoneData;
-      if (smsPhoneData && smsPhoneData.programs && Array.isArray(smsPhoneData.programs)) {
-        dropdown.innerHTML = generateDropdownOptions(smsPhoneData.programs);
-      }
-
-      const defaultProgram = getDefaultCountryProgram(smsPhoneData?.defaultCountryCode, smsPhoneData?.programs);
-      if (defaultProgram && defaultProgram.countryCode) {
-        dropdown.value = defaultProgram.countryCode;
-        
-        const flagSpan = displayFlag?.querySelector('#flag-emoji-' + fieldName);
-        if (flagSpan) {
-          flagSpan.textContent = getCountryUnicodeFlag(defaultProgram.countryCode);
-          flagSpan.setAttribute('aria-label', sanitizeHtml(defaultProgram.countryCode) + ' flag');
-        }
-        
-        updateSmsLegalText(defaultProgram.countryCode, fieldName);
-        updatePlaceholder(defaultProgram.countryCode, fieldName);
-        updateCountryCodeInstruction(defaultProgram.countryCode, fieldName);
-      }
-
-     
-      var smsNotRequiredRemoveCountryCodeEnabled = true;
-      var smsField = Object.values({"EMAIL":{"name":"EMAIL","label":"Email Address","helper_text":"","merge_id":0,"type":"email","required":true,"audience_field_name":"Email Address","field_type":"merge","enabled":true,"order":null},"FNAME":{"name":"FNAME","label":"First Name","helper_text":"","type":"text","required":false,"audience_field_name":"First Name","enabled":false,"order":null,"field_type":"merge","merge_id":1},"LNAME":{"name":"LNAME","label":"Last Name","helper_text":"","type":"text","required":false,"audience_field_name":"Last Name","enabled":false,"order":null,"field_type":"merge","merge_id":2},"ADDRESS":{"name":"ADDRESS","label":"Address","helper_text":"","type":"address","required":false,"audience_field_name":"Address","enabled":false,"order":null,"field_type":"merge","merge_id":3,"countries":{"2":"Albania","3":"Algeria","4":"Andorra","5":"Angola","6":"Argentina","7":"Armenia","8":"Australia","9":"Austria","10":"Azerbaijan","11":"Bahamas","12":"Bahrain","13":"Bangladesh","14":"Barbados","15":"Belarus","16":"Belgium","17":"Belize","18":"Benin","19":"Bermuda","20":"Bhutan","21":"Bolivia","22":"Bosnia and Herzegovina","23":"Botswana","24":"Brazil","25":"Bulgaria","26":"Burkina Faso","27":"Burundi","28":"Cambodia","29":"Cameroon","30":"Canada","31":"Cape Verde","32":"Cayman Islands","33":"Central African Republic","34":"Chad","35":"Chile","36":"China","37":"Colombia","38":"Congo","40":"Croatia","41":"Cyprus","42":"Czech Republic","43":"Denmark","44":"Djibouti","45":"Ecuador","46":"Egypt","47":"El Salvador","48":"Equatorial Guinea","49":"Eritrea","50":"Estonia","51":"Ethiopia","52":"Fiji","53":"Finland","54":"France","56":"Gabon","57":"Gambia","58":"Georgia","59":"Germany","60":"Ghana","61":"Greece","62":"Guam","63":"Guinea","64":"Guinea-Bissau","65":"Guyana","66":"Honduras","67":"Hong Kong","68":"Hungary","69":"Iceland","70":"India","71":"Indonesia","74":"Ireland","75":"Israel","76":"Italy","78":"Japan","79":"Jordan","80":"Kazakhstan","81":"Kenya","82":"Kuwait","83":"Kyrgyzstan","84":"Lao People's Democratic Republic","85":"Latvia","86":"Lebanon","87":"Lesotho","88":"Liberia","90":"Liechtenstein","91":"Lithuania","92":"Luxembourg","93":"Macedonia","94":"Madagascar","95":"Malawi","96":"Malaysia","97":"Maldives","98":"Mali","99":"Malta","100":"Mauritania","101":"Mexico","102":"Moldova","103":"Monaco","104":"Mongolia","105":"Morocco","106":"Mozambique","107":"Namibia","108":"Nepal","109":"Netherlands","110":"Netherlands Antilles","111":"New Zealand","112":"Nicaragua","113":"Niger","114":"Nigeria","116":"Norway","117":"Oman","118":"Pakistan","119":"Panama","120":"Paraguay","121":"Peru","122":"Philippines","123":"Poland","124":"Portugal","126":"Qatar","127":"Reunion","128":"Romania","129":"Russia","130":"Rwanda","132":"Samoa (Independent)","133":"Saudi Arabia","134":"Senegal","135":"Seychelles","136":"Sierra Leone","137":"Singapore","138":"Slovakia","139":"Slovenia","140":"Somalia","141":"South Africa","142":"South Korea","143":"Spain","144":"Sri Lanka","146":"Suriname","147":"Swaziland","148":"Sweden","149":"Switzerland","152":"Taiwan","153":"Tanzania","154":"Thailand","155":"Togo","156":"Tunisia","157":"Turkiye","158":"Turkmenistan","159":"Uganda","161":"Ukraine","162":"United Arab Emirates","163":"Uruguay","164":"USA","165":"Uzbekistan","166":"Vatican City State (Holy See)","167":"Venezuela","168":"Vietnam","169":"Virgin Islands (British)","170":"Yemen","173":"Zambia","174":"Zimbabwe","175":"Antigua And Barbuda","176":"Anguilla","178":"American Samoa","179":"Aruba","180":"Brunei Darussalam","181":"Bouvet Island","183":"Cook Islands","185":"Christmas Island","187":"Dominican Republic","188":"Western Sahara","189":"Falkland Islands","191":"Faroe Islands","192":"Grenada","193":"French Guiana","194":"Gibraltar","195":"Greenland","196":"Guadeloupe","198":"Guatemala","200":"Haiti","202":"Jamaica","203":"Kiribati","204":"Comoros","205":"Saint Kitts and Nevis","206":"Saint Lucia","207":"Marshall Islands","208":"Macau","210":"Martinique","212":"Mauritius","213":"New Caledonia","214":"Norfolk Island","215":"Nauru","217":"Niue","219":"Papua New Guinea","221":"Pitcairn","222":"Palau","223":"Solomon Islands","225":"Svalbard and Jan Mayen Islands","227":"San Marino","232":"Tonga","233":"Timor-Leste","234":"Trinidad and Tobago","235":"Tuvalu","237":"Saint Vincent and the Grenadines","238":"Virgin Islands (U.S.)","239":"Vanuatu","241":"Mayotte","242":"Myanmar","255":"Sao Tome and Principe","257":"South Georgia and the South Sandwich Islands","260":"Tajikistan","262":"United Kingdom","268":"Costa Rica","270":"Guernsey","272":"North Korea","274":"Afghanistan","275":"Cote D'Ivoire","276":"Cuba","277":"French Polynesia","278":"Iran","279":"Iraq","281":"Libya","282":"Palestine","285":"Syria","286":"Aaland Islands","287":"Turks & Caicos Islands","288":"Jersey  (Channel Islands)","289":"Dominica","290":"Montenegro","293":"Sudan","294":"Montserrat","298":"Curacao","302":"Sint Maarten","311":"South Sudan","315":"Republic of Kosovo","318":"Congo, Democratic Republic of the","323":"Isle of Man","324":"Saint Martin","325":"Bonaire, Saint Eustatius and Saba","326":"Serbia"},"defaultcountry":164},"PHONE":{"name":"PHONE","label":"Phone Number","helper_text":"","type":"phone","required":false,"audience_field_name":"Phone Number","phoneformat":"","enabled":false,"order":null,"field_type":"merge","merge_id":4},"BIRTHDAY":{"name":"BIRTHDAY","label":"Birthday","helper_text":"","type":"birthday","required":false,"audience_field_name":"Birthday","dateformat":"MM/DD","enabled":false,"order":null,"field_type":"merge","merge_id":5},"COMPANY":{"name":"COMPANY","label":"Company","helper_text":"","type":"text","required":false,"audience_field_name":"Company","enabled":false,"order":null,"field_type":"merge","merge_id":6}}).find(function(f) { return f.name === fieldName && f.type === 'smsphone'; });
-      var isRequired = smsField ? smsField.required : false;
-      var shouldAppendCountryCode = smsNotRequiredRemoveCountryCodeEnabled ? isRequired : true;
-      
-      var phoneInput = document.querySelector('#mce-' + fieldName);
-      if (phoneInput && defaultProgram.countryCallingCode && shouldAppendCountryCode) {
-        phoneInput.value = defaultProgram.countryCallingCode;
-      }
-      
-
-
-      displayFlag?.addEventListener('click', function(e) {
-        dropdown.focus();
-      });
-
-
-      dropdown?.addEventListener('change', function() {
-        const selectedCountry = this.value;
-        
-        if (!selectedCountry || typeof selectedCountry !== 'string') {
-          return;
-        }
-        
-        const flagSpan = displayFlag?.querySelector('#flag-emoji-' + fieldName);
-        if (flagSpan) {
-          flagSpan.textContent = getCountryUnicodeFlag(selectedCountry);
-          flagSpan.setAttribute('aria-label', sanitizeHtml(selectedCountry) + ' flag');
-        }
-
-         
-        const selectedProgram = window.MC?.smsPhoneData?.programs.find(function(program) {
-          return program && program.countryCode === selectedCountry;
-        });
-
-        var smsNotRequiredRemoveCountryCodeEnabled = true;
-        var smsField = Object.values({"EMAIL":{"name":"EMAIL","label":"Email Address","helper_text":"","merge_id":0,"type":"email","required":true,"audience_field_name":"Email Address","field_type":"merge","enabled":true,"order":null},"FNAME":{"name":"FNAME","label":"First Name","helper_text":"","type":"text","required":false,"audience_field_name":"First Name","enabled":false,"order":null,"field_type":"merge","merge_id":1},"LNAME":{"name":"LNAME","label":"Last Name","helper_text":"","type":"text","required":false,"audience_field_name":"Last Name","enabled":false,"order":null,"field_type":"merge","merge_id":2},"ADDRESS":{"name":"ADDRESS","label":"Address","helper_text":"","type":"address","required":false,"audience_field_name":"Address","enabled":false,"order":null,"field_type":"merge","merge_id":3,"countries":{"2":"Albania","3":"Algeria","4":"Andorra","5":"Angola","6":"Argentina","7":"Armenia","8":"Australia","9":"Austria","10":"Azerbaijan","11":"Bahamas","12":"Bahrain","13":"Bangladesh","14":"Barbados","15":"Belarus","16":"Belgium","17":"Belize","18":"Benin","19":"Bermuda","20":"Bhutan","21":"Bolivia","22":"Bosnia and Herzegovina","23":"Botswana","24":"Brazil","25":"Bulgaria","26":"Burkina Faso","27":"Burundi","28":"Cambodia","29":"Cameroon","30":"Canada","31":"Cape Verde","32":"Cayman Islands","33":"Central African Republic","34":"Chad","35":"Chile","36":"China","37":"Colombia","38":"Congo","40":"Croatia","41":"Cyprus","42":"Czech Republic","43":"Denmark","44":"Djibouti","45":"Ecuador","46":"Egypt","47":"El Salvador","48":"Equatorial Guinea","49":"Eritrea","50":"Estonia","51":"Ethiopia","52":"Fiji","53":"Finland","54":"France","56":"Gabon","57":"Gambia","58":"Georgia","59":"Germany","60":"Ghana","61":"Greece","62":"Guam","63":"Guinea","64":"Guinea-Bissau","65":"Guyana","66":"Honduras","67":"Hong Kong","68":"Hungary","69":"Iceland","70":"India","71":"Indonesia","74":"Ireland","75":"Israel","76":"Italy","78":"Japan","79":"Jordan","80":"Kazakhstan","81":"Kenya","82":"Kuwait","83":"Kyrgyzstan","84":"Lao People's Democratic Republic","85":"Latvia","86":"Lebanon","87":"Lesotho","88":"Liberia","90":"Liechtenstein","91":"Lithuania","92":"Luxembourg","93":"Macedonia","94":"Madagascar","95":"Malawi","96":"Malaysia","97":"Maldives","98":"Mali","99":"Malta","100":"Mauritania","101":"Mexico","102":"Moldova","103":"Monaco","104":"Mongolia","105":"Morocco","106":"Mozambique","107":"Namibia","108":"Nepal","109":"Netherlands","110":"Netherlands Antilles","111":"New Zealand","112":"Nicaragua","113":"Niger","114":"Nigeria","116":"Norway","117":"Oman","118":"Pakistan","119":"Panama","120":"Paraguay","121":"Peru","122":"Philippines","123":"Poland","124":"Portugal","126":"Qatar","127":"Reunion","128":"Romania","129":"Russia","130":"Rwanda","132":"Samoa (Independent)","133":"Saudi Arabia","134":"Senegal","135":"Seychelles","136":"Sierra Leone","137":"Singapore","138":"Slovakia","139":"Slovenia","140":"Somalia","141":"South Africa","142":"South Korea","143":"Spain","144":"Sri Lanka","146":"Suriname","147":"Swaziland","148":"Sweden","149":"Switzerland","152":"Taiwan","153":"Tanzania","154":"Thailand","155":"Togo","156":"Tunisia","157":"Turkiye","158":"Turkmenistan","159":"Uganda","161":"Ukraine","162":"United Arab Emirates","163":"Uruguay","164":"USA","165":"Uzbekistan","166":"Vatican City State (Holy See)","167":"Venezuela","168":"Vietnam","169":"Virgin Islands (British)","170":"Yemen","173":"Zambia","174":"Zimbabwe","175":"Antigua And Barbuda","176":"Anguilla","178":"American Samoa","179":"Aruba","180":"Brunei Darussalam","181":"Bouvet Island","183":"Cook Islands","185":"Christmas Island","187":"Dominican Republic","188":"Western Sahara","189":"Falkland Islands","191":"Faroe Islands","192":"Grenada","193":"French Guiana","194":"Gibraltar","195":"Greenland","196":"Guadeloupe","198":"Guatemala","200":"Haiti","202":"Jamaica","203":"Kiribati","204":"Comoros","205":"Saint Kitts and Nevis","206":"Saint Lucia","207":"Marshall Islands","208":"Macau","210":"Martinique","212":"Mauritius","213":"New Caledonia","214":"Norfolk Island","215":"Nauru","217":"Niue","219":"Papua New Guinea","221":"Pitcairn","222":"Palau","223":"Solomon Islands","225":"Svalbard and Jan Mayen Islands","227":"San Marino","232":"Tonga","233":"Timor-Leste","234":"Trinidad and Tobago","235":"Tuvalu","237":"Saint Vincent and the Grenadines","238":"Virgin Islands (U.S.)","239":"Vanuatu","241":"Mayotte","242":"Myanmar","255":"Sao Tome and Principe","257":"South Georgia and the South Sandwich Islands","260":"Tajikistan","262":"United Kingdom","268":"Costa Rica","270":"Guernsey","272":"North Korea","274":"Afghanistan","275":"Cote D'Ivoire","276":"Cuba","277":"French Polynesia","278":"Iran","279":"Iraq","281":"Libya","282":"Palestine","285":"Syria","286":"Aaland Islands","287":"Turks & Caicos Islands","288":"Jersey  (Channel Islands)","289":"Dominica","290":"Montenegro","293":"Sudan","294":"Montserrat","298":"Curacao","302":"Sint Maarten","311":"South Sudan","315":"Republic of Kosovo","318":"Congo, Democratic Republic of the","323":"Isle of Man","324":"Saint Martin","325":"Bonaire, Saint Eustatius and Saba","326":"Serbia"},"defaultcountry":164},"PHONE":{"name":"PHONE","label":"Phone Number","helper_text":"","type":"phone","required":false,"audience_field_name":"Phone Number","phoneformat":"","enabled":false,"order":null,"field_type":"merge","merge_id":4},"BIRTHDAY":{"name":"BIRTHDAY","label":"Birthday","helper_text":"","type":"birthday","required":false,"audience_field_name":"Birthday","dateformat":"MM/DD","enabled":false,"order":null,"field_type":"merge","merge_id":5},"COMPANY":{"name":"COMPANY","label":"Company","helper_text":"","type":"text","required":false,"audience_field_name":"Company","enabled":false,"order":null,"field_type":"merge","merge_id":6}}).find(function(f) { return f.name === fieldName && f.type === 'smsphone'; });
-        var isRequired = smsField ? smsField.required : false;
-        var shouldAppendCountryCode = smsNotRequiredRemoveCountryCodeEnabled ? isRequired : true;
-        
-        var phoneInput = document.querySelector('#mce-' + fieldName);
-        if (phoneInput && selectedProgram.countryCallingCode && shouldAppendCountryCode) {
-          phoneInput.value = selectedProgram.countryCallingCode;
-        }
-        
-        
-        updateSmsLegalText(selectedCountry, fieldName);
-        updatePlaceholder(selectedCountry, fieldName);
-        updateCountryCodeInstruction(selectedCountry, fieldName);
-      });
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-      const smsPhoneFields = document.querySelectorAll('[id^="country-select-"]');
-      
-      smsPhoneFields.forEach(function(dropdown) {
-        const fieldName = dropdown?.id.replace('country-select-', '');
-        initializeSmsPhoneDropdown(fieldName);
-      });
-    });
-    </script></div>
-
-</body>
-</html>
+        <h3>Method 3: Using Advanced Software (GIMP/Photoshop)</h3>
+        <p>For maximum control, complex images, or batch processing, professional-grade software is unmatched. Here’s the workflow using GIMP (free) or Adobe Photoshop.</p>
+        <p><strong>Step 1: Work Non-Destructively with Layers.</strong> Always duplicate your background layer. Rename the duplicate to "Blur Layer." All edits will happen here, preserving your original.</p>
+        <p><strong>Step 2: Make a Precise Selection.</strong> Use the Lasso Tool, Pen Tool, or for quick results in Photoshop, the Object Selection Tool. Carefully select the face and any identifiable features (hairstyle, neck, distinctive clothing). Go to <code>Select > Modify > Feather</code> and add a 5-10 pixel feather to soften the selection edge.</p>
+        <p><strong>Step 3: Apply a Sophisticated Blur.</strong> With the selection active on your "Blur Layer," go to <code>Filters > Blur</code>.
+            <ul>
+                <li><strong>Gaussian Blur:</strong> The standard. Creates a smooth, uniform blur. Adjust the Radius slider.</li>
+                <li><strong>Lens Blur:</strong> (Photoshop) More realistic, mimicking camera depth-of-field. Great for portraits.</li>
+                <li><strong>Pixelate / Mosaic:</strong> For maximum anonymity, especially in legal contexts. Choose a large enough block size.</li>
+            </ul>
+        </p>
+        <p><strong>Step 4: Advanced Blending with Layer Masks (Optional but Recommended).</strong> Instead of applying the blur directly to the layer, try this pro method: Add a white layer mask to your "Blur Layer." Apply a strong Gaussian Blur to the *entire
