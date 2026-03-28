@@ -3,20 +3,22 @@ import sys
 import time
 import requests
 import subprocess
-from dotenv import load_dotenv
+from bs4 import BeautifulSoup
 
-# Load environment variables
-load_dotenv()
-API_KEY = os.getenv("DEEPSEEK_API_KEY") or os.getenv("OPENROUTER_API_KEY")
-if not API_KEY:
-    print("ERROR: No API key found. Set DEEPSEEK_API_KEY or OPENROUTER_API_KEY in .env")
-    sys.exit(1)
+# HARDCODED API KEY (temporary fix)
+API_KEY = "sk-a6adfb79b7054e47b531627dca9dc0f1"
 
 URL = "https://api.deepseek.com/v1/chat/completions"
 HEADERS = {
     "Authorization": f"Bearer {API_KEY}",
     "Content-Type": "application/json"
 }
+
+def count_words_in_file(filepath):
+    with open(filepath, 'r', encoding='utf-8') as f:
+        soup = BeautifulSoup(f.read(), 'html.parser')
+        text = soup.get_text()
+        return len(text.split())
 
 def read_guide(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
@@ -26,7 +28,7 @@ def write_guide(filepath, content):
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(content)
 
-def expand_with_ai(original_html):
+def expand_with_ai(original_html, max_retries=3):
     prompt = f"""
 You are an expert SEO content writer. Rewrite and expand the following guide to be 1500–2000 words, using this structure:
 
@@ -52,22 +54,33 @@ Return ONLY the full HTML content, starting with <!DOCTYPE html> and ending with
         "temperature": 0.7,
         "max_tokens": 4000
     }
-    response = requests.post(URL, headers=HEADERS, json=payload)
-    if response.status_code != 200:
-        print(f"API error: {response.status_code}")
-        print(response.text)
-        sys.exit(1)
-    data = response.json()
-    return data['choices'][0]['message']['content']
+    for attempt in range(max_retries):
+        try:
+            response = requests.post(URL, headers=HEADERS, json=payload, timeout=120)  # increased timeout
+            if response.status_code != 200:
+                print(f"  API error: {response.status_code}")
+                print(response.text)
+                raise Exception(f"API returned {response.status_code}")
+            data = response.json()
+            return data['choices'][0]['message']['content']
+        except requests.exceptions.Timeout:
+            print(f"  Timeout on attempt {attempt+1}/{max_retries}. Retrying in 10 seconds...")
+            time.sleep(10)
+            continue
+        except Exception as e:
+            print(f"  Exception: {e}")
+            if attempt == max_retries - 1:
+                raise
+            time.sleep(5)
+    raise Exception("Max retries exceeded")
 
 def git_commit(filepath, message):
-    repo_dir = os.path.dirname(os.path.dirname(filepath))  # assumes file is inside repo
+    repo_dir = os.path.dirname(os.path.dirname(filepath))
     try:
         subprocess.run(["git", "add", filepath], cwd=repo_dir, check=True, capture_output=True)
         subprocess.run(["git", "commit", "-m", message], cwd=repo_dir, check=True, capture_output=True)
         print(f"  Committed: {os.path.basename(filepath)}")
     except subprocess.CalledProcessError as e:
-        # If nothing to commit (no changes), that's fine
         if "nothing to commit" not in str(e.stderr):
             print(f"  Git error: {e}")
 
@@ -77,33 +90,41 @@ def main():
         print(f"Guides directory not found: {guides_dir}")
         sys.exit(1)
 
-    # Get all HTML files except index.html
     files = [f for f in os.listdir(guides_dir) if f.endswith('.html') and f != 'index.html']
     total = len(files)
-    print(f"Found {total} guides to expand.\n")
+    print(f"Found {total} guides. Checking word counts...\n")
 
-    for idx, filename in enumerate(files, 1):
+    to_expand = []
+    for f in files:
+        filepath = os.path.join(guides_dir, f)
+        wc = count_words_in_file(filepath)
+        if wc < 1500:
+            to_expand.append((f, wc))
+            print(f"  {f}: {wc} words (needs expansion)")
+        else:
+            print(f"  {f}: {wc} words (already good)")
+
+    print(f"\n{len(to_expand)} guides need expansion.\n")
+    if not to_expand:
+        print("No guides to expand. Exiting.")
+        return
+
+    for idx, (filename, wc) in enumerate(to_expand, 1):
         filepath = os.path.join(guides_dir, filename)
-        print(f"[{idx}/{total}] Expanding {filename}...")
+        print(f"[{idx}/{len(to_expand)}] Expanding {filename} (current words: {wc})...")
         try:
             original = read_guide(filepath)
             new_html = expand_with_ai(original)
-            # Backup
             backup = filepath + ".bak"
             write_guide(backup, original)
             write_guide(filepath, new_html)
-            # Git commit
             git_commit(filepath, f"Expanded guide: {filename}")
-            # Optional: push after each? Better to push at end.
         except Exception as e:
             print(f"  ERROR on {filename}: {e}")
-            # Continue with next file
             continue
-        # Small delay to avoid rate limits
-        time.sleep(5)  # 5 seconds between requests
+        time.sleep(5)  # delay between guides
         print()
 
-    # After all done, push all commits at once
     repo_dir = r"E:\Projects\fastimgtool"
     try:
         print("Pushing all commits to GitHub...")
