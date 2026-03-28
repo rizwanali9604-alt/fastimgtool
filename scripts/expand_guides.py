@@ -3,17 +3,15 @@ import sys
 import requests
 from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
-API_KEY = os.getenv("DEEPSEEK_API_KEY")   # Expect this in .env
+# Load .env from marketing engine folder
+load_dotenv(r"E:\ToolForge\marketing_engine\.env")
+API_KEY = os.getenv("DEEPSEEK_API_KEY") or os.getenv("OPENROUTER_API_KEY")
 if not API_KEY:
-    # Fallback: maybe it's stored as OPENROUTER_API_KEY (same key)
-    API_KEY = os.getenv("OPENROUTER_API_KEY")
-if not API_KEY:
-    print("ERROR: DEEPSEEK_API_KEY or OPENROUTER_API_KEY not found in .env")
+    print("ERROR: No API key found. Set DEEPSEEK_API_KEY or OPENROUTER_API_KEY in .env")
     sys.exit(1)
 
-# DeepSeek API endpoint
+print(f"API key loaded: {API_KEY[:10]}...")  # debug
+
 URL = "https://api.deepseek.com/v1/chat/completions"
 HEADERS = {
     "Authorization": f"Bearer {API_KEY}",
@@ -49,22 +47,22 @@ Here is the original guide:
 Return ONLY the full HTML content, starting with <!DOCTYPE html> and ending with </html>. Do not include any extra explanation outside the HTML.
 """
     payload = {
-        "model": "deepseek-chat",           # DeepSeek's chat model
+        "model": "deepseek-chat",
         "messages": [{"role": "user", "content": prompt}],
         "temperature": 0.7,
         "max_tokens": 4000
     }
-    response = requests.post(URL, headers=HEADERS, json=payload)
+    response = requests.post(URL, headers=HEADERS, json=payload, timeout=60)
     if response.status_code != 200:
         print(f"API error: {response.status_code}")
         print(response.text)
-        sys.exit(1)
+        raise Exception(f"API returned {response.status_code}")
     data = response.json()
     return data['choices'][0]['message']['content']
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python expand_guide.py <guide_file_path>")
+        print("Usage: python expand_guides.py <guide_file_path>")
         sys.exit(1)
     guide_path = sys.argv[1]
     if not os.path.exists(guide_path):
@@ -74,9 +72,8 @@ if __name__ == "__main__":
     print(f"Expanding {guide_path}...")
     original = read_guide(guide_path)
     new_html = expand_with_ai(original)
-    # Backup original
+    # Backup
     backup = guide_path + ".bak"
     write_guide(backup, original)
-    print(f"Backup saved to {backup}")
     write_guide(guide_path, new_html)
     print("Done! Guide expanded.")
