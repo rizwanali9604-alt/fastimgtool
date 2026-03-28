@@ -132,7 +132,7 @@ def insert_new_resources(soup, text):
     # You can replace these with your actual affiliate links.
     aff_links = [
         ('Amazon Image Tools', 'https://www.amazon.in/s?k=image+editing+software&tag=fastimgtool78-21'),
-        ('Canva', 'https://www.canva.com/join/affiliate-link'),
+        
         # add more
     ]
     p_aff = soup.new_tag('p')
