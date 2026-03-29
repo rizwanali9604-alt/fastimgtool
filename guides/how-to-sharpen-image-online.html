@@ -1,325 +1,146 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Sharpen Image Online: Free Tool &amp; Pro Guide to Enhance Photo Clarity</title>
-<meta content="Master image sharpening with our free online tool. This 2000-word guide explains what sharpening is, when to use it, and provides detailed steps &amp; pro tips for perfect results every time." name="description"/>
-<link href="https://fastimgtool.com/guides/how-to-sharpen-image-online.html" rel="canonical"/>
-<link href="/assets/css/style.css" rel="stylesheet"/>
-<!-- Open Graph / Facebook -->
-<meta content="Sharpen Image Online: Free Tool &amp; Pro Guide" property="og:title"/>
-<meta content="Learn how to sharpen images online for free. Step-by-step guide with pro tips to enhance photo details and clarity instantly." property="og:description"/>
-<meta content="https://fastimgtool.com/guides/how-to-sharpen-image-online.html" property="og:url"/>
-<meta content="article" property="og:type"/>
-<meta content="https://fastimgtool.com/assets/og-image-sharpen-guide.png" property="og:image"/>
-<!-- Twitter -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="Sharpen Image Online: Free Tool &amp; Pro Guide" name="twitter:title"/>
-<meta content="Free guide &amp; tool to sharpen images online. Enhance photo clarity in seconds." name="twitter:description"/>
-<meta content="https://fastimgtool.com/assets/og-image-sharpen-guide.png" name="twitter:image"/>
-<!-- Favicon -->
-<link href="/assets/favicon.png" rel="icon" type="image/png"/>
-<style>
-        /* Global resets */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            background: #050b18;
-            color: #e6edf7;
-            line-height: 1.7;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* Navigation bar */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background: #0b1225;
-            border-bottom: 1px solid #1e293b;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .logo a {
-            font-size: 1.4rem;
-            font-weight: bold;
-            background: linear-gradient(135deg, #4da3ff, #00d4ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-        .nav-links a {
-            color: #a0b3d9;
-            transition: color 0.2s;
-            font-size: 0.95rem;
-        }
-        .nav-links a:hover {
-            color: #4da3ff;
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        /* Guide Article Styling */
-        .guide-article {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .guide-article h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #4da3ff, #00d4ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .guide-article h2 {
-            font-size: 1.8rem;
-            margin: 2.5rem 0 1rem;
-            color: #e6edf7;
-            border-bottom: 2px solid #2a3a5a;
-            padding-bottom: 0.5rem;
-        }
-        .guide-article h3 {
-            font-size: 1.4rem;
-            margin: 1.8rem 0 0.8rem;
-            color: #cbd5e1;
-        }
-        .guide-article p {
-            margin-bottom: 1.2rem;
-            color: #a0b3d9;
-        }
-        .guide-article ul, .guide-article ol {
-            margin: 1rem 0 1rem 2rem;
-            color: #a0b3d9;
-        }
-        .guide-article li {
-            margin-bottom: 0.5rem;
-        }
-        .guide-article strong {
-            color: #e6edf7;
-        }
-        .guide-article a {
-            color: #4da3ff;
-            text-decoration: underline;
-        }
-        .guide-article a:hover {
-            color: #00d4ff;
-        }
-        .image-placeholder {
-            width: 100%;
-            background: #111a30;
-            border: 1px solid #2a3a5a;
-            border-radius: 12px;
-            padding: 40px;
-            text-align: center;
-            margin: 2rem 0;
-            color: #a0b3d9;
-            font-style: italic;
-        }
-        .cta-box {
-            background: linear-gradient(135deg, #0f1a2f, #1a2b4a);
-            border: 1px solid #4da3ff;
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            margin: 3rem 0;
-        }
-        .cta-box h3 {
-            color: #e6edf7;
-            margin-bottom: 1rem;
-        }
-        .cta-box p {
-            margin-bottom: 1.5rem;
-        }
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #4da3ff, #00d4ff);
-            color: white;
-            padding: 12px 28px;
-            border-radius: 30px;
-            font-weight: bold;
-            text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(77, 163, 255, 0.4);
-        }
-
-        /* Footer */
-        .footer {
-            background: #0b1225;
-            border-top: 1px solid #1e293b;
-            padding: 40px 20px 20px;
-            margin-top: 50px;
-        }
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 30px;
-        }
-        .footer-col h4 {
-            color: #e6edf7;
-            font-size: 1rem;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .footer-col ul {
-            list-style: none;
-        }
-        .footer-col li {
-            margin-bottom: 8px;
-        }
-        .footer-col a {
-            color: #a0b3d9;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-        }
-        .footer-col a:hover {
-            color: #4da3ff;
-        }
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            margin-top: 20px;
-            border-top: 1px solid #1e293b;
-            color: #64748b;
-            font-size: 0.85rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            .navbar {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 12px;
-            }
-            .guide-article h1 {
-                font-size: 2rem;
-            }
-            .guide-article h2 {
-                font-size: 1.5rem;
-            }
-            .guide-article h3 {
-                font-size: 1.2rem;
-            }
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Sharpen an Image Online – Bring Blurry Photos Back to Life</title>
+    <meta name="description" content="Learn how to sharpen an image online easily and for free. Step-by-step guide to fix blurry photos, enhance details, and improve clarity using our browser-based tool.">
+    <link rel="canonical" href="https://fastimgtool.com/guides/how-to-sharpen-image-online.html">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="icon" href="/assets/favicon.png">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DHHVPY5DJK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-DHHVPY5DJK');
+    </script>
+    <style>
+        .content { max-width: 800px; margin: 40px auto; padding: 20px; background: #111a30; border-radius: 12px; line-height: 1.8; }
+        .content h1 { color: #4da3ff; margin-bottom: 20px; }
+        .content p { color: #a0b3d9; margin-bottom: 15px; }
+        .recommended-tools { margin-top: 40px; padding: 20px; background: #0f1a2f; border-radius: 12px; }
+        .recommended-tools h3 { color: #4da3ff; }
+        .recommended-tools ul { margin-left: 20px; }
+        .recommended-tools a { color: #4da3ff; }
     </style>
-<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196"></script>
 </head>
-<body><div class="content">
-<nav class="navbar">
-<div class="logo"><a href="/">⚡ FastImageTool</a></div>
-<div class="nav-links">
-<a href="/">Home</a>
-<a href="/tools/">Tools</a>
-<a href="/guides/">Guides</a>
-<a href="/blog/">Blog</a>
-<a href="/about.html.html.html">About</a>
-<a href="/contact.html.html.html">Contact</a>
-<a href="/community.html">Community</a>
-</div>
-</nav>
-<!-- Navigation Bar -->
-<div class="container">
-<article class="guide-article">
-<div class="guide-image">
-<img alt="Illustration for the guide" src="https://placehold.co/800x400/111a30/4da3ff?text=Image+Guide" style="width:100%; border-radius:12px; margin-bottom:20px; max-width: 100%; height: auto;"/>
-</div>
-<h1>From Blurry to Brilliant: Your Ultimate Guide to Sharpen Image Online</h1>
-<h2>Conclusion</h2><h2>FAQ</h2><h2>Step-by-Step</h2><h2>Introduction</h2><p>Have you ever taken what you thought was the perfect photo, only to find it looks a bit soft, fuzzy, or lacking in crisp detail when you view it on a larger screen? Whether it's a slightly out-of-focus portrait, a landscape shot through morning haze, or a product image that just doesn't pop, soft focus is a common photography hurdle. But before you consider deleting that precious memory or reshooting an entire project, there's a powerful and accessible solution: learning how to <strong>sharpen image online</strong>.</p>
-<p>Image sharpening is a post-processing technique that enhances the definition of edges within a photo. It works by increasing the contrast along the lines where different tones and colors meet, creating the visual perception of greater detail and clarity. The best part? You don't need expensive, complicated software like Photoshop to achieve professional-looking results. With modern free online tools, anyone can transform a soft image into a sharp, eye-catching masterpiece in minutes.</p>
-<p>This comprehensive guide will walk you through not only the basic steps of using an online sharpening tool but also the underlying principles, advanced techniques, and pro tips to ensure you get the best results every time. Let's turn your blurry woes into sharp successes.</p>
-<h2>What is Image Sharpening?</h2>
-<p>At its core, image sharpening is a digital process that enhances the apparent clarity and detail of a photograph. It doesn't actually add new information or fix severe blur caused by major camera shake or a completely missed focus. Instead, it works by accentuating the edges—the boundaries between light and dark areas—within the existing image data.</p>
-<p>Think of it like tracing over a pencil sketch with a fine-tip pen. The underlying drawing is the same, but the lines become more defined and stand out more clearly against the background. In technical terms, sharpening algorithms detect these edges and increase the local contrast along them, making light sides slightly lighter and dark sides slightly darker. This creates the illusion of a sharper, more detailed image.</p>
-<p>Why does this matter? In today's visual world, clarity is king. A sharp image looks more professional, more engaging, and more credible. Whether you're a blogger wanting crisp featured images, a real estate agent showcasing property details, an artist presenting a portfolio, or just someone who wants their vacation photos to look their best, mastering sharpening is a non-negotiable skill. It's the final polish that can elevate a good photo to a great one.</p>
-<div class="image-placeholder">
-                [Image: A side-by-side comparison of a soft image and a professionally sharpened version, highlighting the enhanced detail in textures and edges.]
-                <br/>
-<em>Alt Text: Visual comparison showing the dramatic improvement in detail and clarity after using an online image sharpening tool.</em>
-</div>
-<h2>Why You Might Need to Sharpen an Image Online</h2>
-<p>Sharpening is not just for fixing mistakes; it's a standard part of a professional image workflow. Here are the most common scenarios where using an online sharpening tool becomes essential:</p>
-<ul>
-<li><strong>Recovering Slightly Soft Photos:</strong> The most common use. Maybe the camera's autofocus hesitated, or there was a tiny bit of motion. Sharpening can rescue images that are just slightly off.</li>
-<li><strong>Enhancing Details for Web Use:</strong> Images often lose a bit of crispness when resized for web or social media. Applying targeted sharpening after resizing (often called "output sharpening") ensures they look their best online. You can first <a href="/tools/image-resizer">resize your image</a> and then sharpen it for optimal results.</li>
-<li><strong>Improving Scanned Documents or Old Photos:</strong> Physical media can produce soft, low-contrast digital copies. Sharpening can help bring back definition to text, faces, and important details.</li>
-<li><strong>Counteracting Lens Softness:</strong> All lenses, especially cheaper ones or at certain apertures, can produce images that are softer at the edges. Sharpening helps even out the overall clarity.</li>
-<li><strong>Adding Punch to Product Photography:</strong> For e-commerce, details sell. Sharpening fabric textures, product labels, and metallic finishes makes items look more tangible and high-quality.</li>
-<li><strong>Preparing Images for Print:</strong> The printing process can slightly soften an image. Pre-sharpening an image specifically for your printer and paper type is a pro technique for stunning physical results.</li>
-<li><strong>Salvaging Screenshots or Digital Graphics:</strong> Text and UI elements in screenshots can sometimes appear fuzzy. A light sharpen can make them crisp and readable.</li>
-<li><strong>Creative Styling:</strong> A heavy, stylized sharpen can be used to create a gritty, high-contrast look for artistic projects or to make certain graphic elements stand out.</li>
-</ul>
-<div class="cta-box">
-<h3>Ready to Sharpen Your Images Instantly?</h3>
-<p>Try our free, private, and browser-based <a href="/tools/image-sharpen">Image Sharpen Tool</a>. No uploads, no sign-up, just fast results.</p>
-<a class="cta-button" href="/tools/image-sharpen">⚡ Sharpen an Image Now</a>
-</div>
-<h2>Step-by-Step: How to Sharpen an Image Online</h2>
-<p>Follow this detailed, beginner-friendly process using a tool like our <a href="/tools/image-sharpen">FastImageTool Sharpen Tool</a> to get perfect results. We'll break down each step to give you complete control.</p>
-<h3>Step 1: Choose and Access Your Tool</h3>
-<p>Navigate to a reliable online sharpening tool. For this guide, we'll use our own <a href="/tools/image-sharpen">Image Sharpen Tool</a>. The advantages are clear: it's free, processes images entirely in your browser (meaning your photos never leave your computer, ensuring privacy), requires no software installation or account creation, and works on any device. This makes it a perfect starting point before exploring more complex software.</p>
-<h3>Step 2: Upload or Drag Your Image</h3>
-<p>Click the prominent "Upload Image" button or simply drag and drop your photo file directly into the designated area on the tool's page. Most modern tools, including ours, support all common formats like JPG, PNG, WebP, and HEIC. If your image is very large, the tool may automatically create an optimized preview for faster, smoother editing without compromising the final output quality.</p>
-<h3>Step 3: Adjust the Sharpening Settings (The Key to Success)</h3>
-<p>This is the most crucial step. Don't just slide everything to maximum. Understanding the controls will separate an amateur edit from a professional one. Look for these key settings:</p>
-<ul>
-<li><strong>Sharpness/Intensity/Amount Slider:</strong> This is the master control for the overall strength of the effect. It dictates how much contrast is added to the edges. Start low (around 15-30%) and increase gradually. For most images, a value between 40% and 70% is sufficient. Going to 100% often introduces harsh, unnatural artifacts.</li>
-<li><strong>Radius:</strong> This controls the width of the edges being enhanced, measured in pixels. A lower radius (0.5-1.0 pixels) is excellent for fine details, portraits, and web images, as it creates subtle, crisp enhancements. A higher radius (1.5-2.5) can be used for print, landscapes, or very soft images, but beware—too high a value creates obvious, ugly white "halos" around objects.</li>
-<li><strong>Threshold/Detail/Noise Reduction:</strong> A more advanced but incredibly useful setting. It tells the tool to only sharpen areas above a certain contrast level (true edges) and ignore smoother, low-contrast areas like skin, sky</li></ul></article></div><div class="recommended-tools"><h3>Related Tools &amp; Resources</h3><p>📌 Tools you might find useful:</p><ul><li><a href="/tools/image-to-webp">Image To Webp</a></li><li><a href="/tools/heic-to-jpg">Heic To Jpg</a></li><li><a href="/tools/image-sharpen">Image Sharpen</a></li><li><a href="/tools/image-blur">Image Blur</a></li><li><a href="/tools/image-contrast">Image Contrast</a></li><li><a href="/tools/image-resizer">Image Resizer</a></li></ul><p>📖 Related guides:</p><ul><li><a href="/guides/how-to-sharpen-image-online.html">How To Sharpen Image Online</a></li><li><a href="/guides/sharpen-blurry-photos.html">Sharpen Blurry Photos</a></li><li><a href="/guides/how-to-blur-image-online.html">How To Blur Image Online</a></li><li><a href="/guides/tools/image-resizer-for-instagram.html">Resize Image For Instagram</a></li><li><a href="/guides/how-to-resize-image-online.html">How To Resize Image Online</a></li><li><a href="/guides/blur-image-background.html">Blur Image Background</a></li></ul><p>🛒 Recommended products:</p><ul><li><a href="https://www.amazon.in/s?k=image+editing+software&amp;tag=fastimgtool78-21" target="_blank">Amazon Image Tools</a> (affiliate link)</li></ul></div>
-<footer class="footer">
-<div class="footer-container">
-<div class="footer-col">
-<h4>Product</h4>
-<ul>
-<li><a href="/tools/">All Tools</a></li>
-<li><a href="/guides/">All Guides</a></li>
-<li><a href="/blog/">Blog</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h4>Legal</h4>
-<ul>
-<li><a href="/privacy.html">Privacy policy</a></li>
-<li><a href="/terms.html">Terms &amp; conditions</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h4>Company</h4>
-<ul>
-<li><a href="/about.html.html.html">About us</a></li>
-<li><a href="/contact.html.html.html">Contact us</a></li>
-</ul>
-</div>
-</div>
-<div class="footer-bottom">
-<p>© 2026 FastImgTool – All rights reserved.</p>
-</div>
-</footer></div></body></html>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo"><a href="/">⚡ FastImageTool</a></div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/tools/">Tools</a>
+            <a href="/guides/">Guides</a>
+            <a href="/blog/">Blog</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/community.html">Community</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>How to Sharpen an Image Online: Bring Blurry Photos Back to Life</h1>
+
+        <img src="https://placehold.co/800x400/111a30/4da3ff?text=Sharpening+Before+and+After" alt="Illustration showing a blurry image on the left and a sharp, clear image on the right" style="width:100%; border-radius:12px; margin-bottom:20px;">
+
+        <h2>Introduction</h2>
+        <p>We've all taken photos that looked perfect on the camera screen, only to find them slightly blurry when viewed on a larger display. Or maybe you've scanned an old document that needs text to be crisper. Image sharpening is the solution. In this guide, you'll learn how to sharpen an image online quickly, for free, and without any software installation – all in your browser.</p>
+
+        <h2>What is Image Sharpening?</h2>
+        <p>Sharpening increases the contrast between adjacent pixels, making edges more defined and the image appear clearer. It doesn't truly "fix" out‑of‑focus blur, but it can significantly enhance perceived detail. Most sharpening tools (including ours) use algorithms like Unsharp Mask or High‑Pass filtering.</p>
+
+        <h2>Why You Might Need to Sharpen an Image</h2>
+        <ul>
+            <li><strong>Fix slight blur:</strong> Improve photos that are a little soft due to camera shake or missed focus.</li>
+            <li><strong>Enhance text in scans:</strong> Make printed text more readable in scanned documents.</li>
+            <li><strong>Prepare images for print:</strong> Printing often softens images; a touch of sharpening compensates.</li>
+            <li><strong>Improve low‑resolution images:</strong> When you have to upscale a small image, sharpening helps recover some crispness.</li>
+            <li><strong>Make product photos pop:</strong> Sharpen edges to make products look more professional.</li>
+        </ul>
+
+        <h2>Step-by-Step Guide to Sharpen an Image Online</h2>
+        <h3>Step 1: Open the Sharpening Tool</h3>
+        <p>Go to our <a href="/tools/image-sharpen">Image Sharpener</a>. It works entirely in your browser – your images never leave your device.</p>
+        <h3>Step 2: Upload Your Image</h3>
+        <p>Click the upload area or drag and drop your image (JPG, PNG, or WebP). The tool will display the original.</p>
+        <h3>Step 3: Adjust Sharpening Strength</h3>
+        <p>Use the slider to control the amount of sharpening (usually 1‑10). Start low (2‑3) and increase gradually. Too much sharpening creates unnatural halos and noise.</p>
+        <h3>Step 4: Choose Radius (Optional)</h3>
+        <p>Radius determines how many pixels around edges are affected. A smaller radius (0.5‑1) is best for fine details; a larger radius (2‑3) is for overall contrast enhancement.</p>
+        <h3>Step 5: Apply Sharpening</h3>
+        <p>Click the "Sharpen Image" button. The tool processes the image instantly in your browser.</p>
+        <h3>Step 6: Download the Sharpened Image</h3>
+        <p>Click "Download" to save the result. The original file is never altered – you keep both versions.</p>
+
+        <h2>Alternative Methods</h2>
+        <p>You can also sharpen images using desktop software like Adobe Photoshop (Filter → Sharpen → Unsharp Mask), GIMP (Filters → Enhance → Sharpen), or even built‑in tools like Photos on Windows/Mac. However, our online tool is the fastest and most private.</p>
+
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <h3>Can sharpening fix a completely out‑of‑focus photo?</h3>
+        <p>No, sharpening only enhances edges. Severe blur cannot be corrected – only slightly improved. For that, you'd need advanced AI upscaling tools.</p>
+        <h3>Does sharpening increase file size?</h3>
+        <p>Yes, slightly. Sharpening adds contrast, which makes the image harder to compress, especially in JPG format. The increase is usually negligible (a few percent).</p>
+        <h3>What's the best sharpening amount for web images?</h3>
+        <p>For photos displayed on screens, a moderate amount (strength 2‑4, radius 1) works well. Always zoom to 100% to evaluate the effect.</p>
+        <h3>Can I sharpen a PNG with transparency?</h3>
+        <p>Yes, our tool preserves transparency when sharpening PNG files.</p>
+
+        <h2>Conclusion</h2>
+        <p>Sharpening is a powerful tool to bring life back to soft or slightly blurry images. With our free online image sharpener, you can enhance your photos in seconds – no uploads, no software, no privacy concerns. Try it now and see the difference.</p>
+
+        <!-- Affiliate & Resource Block -->
+        <div class="recommended-tools">
+            <h3>Related Tools & Resources</h3>
+            <p>🛒 Recommended product:</p>
+            <ul>
+                <li><a href="https://www.amazon.in/s?k=image+editing+software&tag=fastimgtool78-21" target="_blank" rel="nofollow sponsored">Amazon Image Tools</a> (affiliate link)</li>
+            </ul>
+            <p>📌 You might also find these tools useful:</p>
+            <ul>
+                <li><a href="/tools/image-resizer">Image Resizer</a></li>
+                <li><a href="/tools/image-compressor">Image Compressor</a></li>
+                <li><a href="/tools/crop-image">Image Cropper</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="/tools/">All Tools</a></li>
+                    <li><a href="/guides/">All Guides</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacy.html">Privacy policy</a></li>
+                    <li><a href="/terms.html">Terms & conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/about.html">About us</a></li>
+                    <li><a href="/contact.html">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 FastImgTool – All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/nav.js"></script>
+</body>
+</html>
