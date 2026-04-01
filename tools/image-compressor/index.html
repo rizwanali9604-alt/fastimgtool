@@ -13,7 +13,7 @@
   gtag('js', new Date());
   gtag('config', 'G-DHHVPY5DJK');
 </script>
-    <link rel="canonical" href="https://fastimgtool.com/tools/image-compressor/">
+    <link rel="canonical" href="https:/fastimgtool.com/tools/image-compressor/">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="icon" href="/assets/favicon.png">
     <!-- AdSense -->
@@ -32,7 +32,31 @@
         .footer-col a:hover { color: #4da3ff; }
         .footer-bottom { text-align: center; padding-top: 20px; margin-top: 20px; border-top: 1px solid #1e293b; color: #64748b; font-size: 0.85rem; }
         /* Tool page specific styles */
-        #preview img { max-width: 100%; max-height: 300px; border-radius: 8px; }
+        #preview img, .ic-preview-img { max-width: 100%; max-height: min(360px, 50vh); border-radius: 8px; object-fit: contain; }
+        .image-compressor-box { text-align: left; }
+        .ic-dropzone { position: relative; border: 2px dashed #334155; border-radius: 12px; padding: 28px 20px; margin-bottom: 16px; cursor: pointer; background: rgba(15, 23, 42, 0.5); transition: border-color 0.2s, background 0.2s; }
+        .ic-dropzone:hover, .ic-dropzone:focus-within { border-color: #4da3ff; background: rgba(30, 41, 59, 0.6); }
+        .ic-dropzone--active { border-color: #00d4ff; background: rgba(30, 58, 95, 0.45); }
+        .ic-dropzone input[type=file] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
+        .ic-dropzone-inner { pointer-events: none; text-align: center; }
+        .ic-dropzone .ic-hint { font-size: 0.85rem; color: #94a3b8; margin-top: 8px; }
+        .ic-preview { min-height: 80px; margin: 16px 0; text-align: center; }
+        .ic-controls { margin-top: 8px; }
+        .ic-row { margin-bottom: 14px; }
+        .ic-row label { display: block; margin-bottom: 6px; color: #cbd5e1; font-size: 0.95rem; }
+        .ic-row input[type=range], .ic-row select { width: 100%; max-width: 420px; padding: 8px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: #e6edf7; }
+        .ic-tech { font-size: 0.8rem; color: #94a3b8; line-height: 1.5; margin-top: 12px; }
+        .ic-stats { margin: 14px 0; padding: 12px 14px; background: rgba(30, 41, 59, 0.8); border-radius: 8px; border: 1px solid #334155; font-size: 0.95rem; }
+        .ic-stats-hint { margin: 8px 0 0; font-size: 0.85rem; color: #94a3b8; }
+        .ic-progress-wrap { margin: 12px 0; display: flex; align-items: center; gap: 12px; }
+        .ic-progress-wrap .ic-progress-bar-wrap { flex: 1; height: 10px; background: #1e293b; border-radius: 999px; overflow: hidden; }
+        .ic-progress-bar { height: 100%; width: 0%; background: linear-gradient(90deg, #4da3ff, #00d4ff); border-radius: 999px; transition: width 0.15s ease; }
+        .ic-progress-label { font-size: 0.85rem; color: #94a3b8; min-width: 3em; }
+        .ic-actions { margin-top: 16px; }
+        .ic-btn-primary { padding: 12px 24px; font-size: 1rem; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; background: linear-gradient(135deg, #2563eb, #0891b2); color: #fff; }
+        .ic-btn-primary:hover:not(:disabled) { filter: brightness(1.08); }
+        .ic-btn-primary:disabled { opacity: 0.45; cursor: not-allowed; }
+        .ic-error { color: #f87171; margin-bottom: 12px; }
         /* Screenshot styling */
         .tool-screenshot {
             max-width: 800px;
@@ -82,10 +106,49 @@
 
     <!-- Tool UI -->
     <main class="tool-container">
-        <div class="tool-box">
-            <input type="file" id="fileInput" accept="image/*">
-            <div id="preview"></div>
-            <button id="downloadBtn">Download</button>
+        <div class="tool-box image-compressor-box">
+            <div class="ic-dropzone" id="icDropzone" role="button" tabindex="0" aria-label="Drop image or click to browse">
+                <input type="file" id="fileInput" accept="image/*" aria-label="Choose image file">
+                <div class="ic-dropzone-inner">
+                    <p><strong>Drop an image here</strong> or click to browse</p>
+                    <p class="ic-hint">JPEG, PNG, WebP, BMP — processed locally in your browser (large files supported)</p>
+                </div>
+            </div>
+            <div id="preview" class="ic-preview"></div>
+            <div class="ic-controls" id="icControls" hidden>
+                <div class="ic-row">
+                    <label for="qualitySlider">Quality <span id="qualityValue">85</span>%</label>
+                    <input type="range" id="qualitySlider" min="40" max="100" value="85">
+                </div>
+                <div class="ic-row">
+                    <label for="formatSelect">Output format</label>
+                    <select id="formatSelect">
+                        <option value="image/jpeg" selected>JPEG (best compatibility)</option>
+                        <option value="image/webp">WebP (often smallest — modern browsers)</option>
+                        <option value="image/png">PNG (lossless / transparency)</option>
+                    </select>
+                </div>
+                <div class="ic-row">
+                    <label for="maxSideSelect">Max longer side (pixels)</label>
+                    <select id="maxSideSelect">
+                        <option value="8192">8192 — very large sources</option>
+                        <option value="4096">4096 — print / high-res</option>
+                        <option value="3072">3072</option>
+                        <option value="2048" selected>2048 — web &amp; email (default)</option>
+                        <option value="1600">1600</option>
+                        <option value="1280">1280</option>
+                    </select>
+                </div>
+                <p class="ic-tech">Compression runs in a <strong>Web Worker</strong> using <strong>browser-image-compression</strong> (canvas + modern codecs). Output is tuned to reach roughly <strong>50% or more</strong> smaller files when the source has room to optimize, while keeping quality visually intact.</p>
+            </div>
+            <div class="ic-stats" id="icStats" hidden></div>
+            <div class="ic-progress-wrap" id="icProgressWrap" hidden>
+                <div class="ic-progress-bar-wrap"><div class="ic-progress-bar" id="icProgressBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>
+                <span class="ic-progress-label" id="icProgressLabel">0%</span>
+            </div>
+            <div class="ic-actions">
+                <button type="button" id="compressBtn" class="ic-btn-primary" disabled>Compress &amp; download</button>
+            </div>
         </div>
     </main>
 
@@ -206,6 +269,7 @@
     <script src="/assets/js/nav.js"></script>
     <script src="/assets/js/related-tools.js"></script>
     <script src="/assets/js/related-guides.js"></script>
+    <script src="/assets/vendor/browser-image-compression.js"></script>
     <script src="/tools/image-compressor/tool.js"></script>
 </body>
 </html>

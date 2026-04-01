@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/rizwanali9604-alt/fastimgtool#readme",
   "dependencies": {
+    "browser-image-compression": "^2.0.2",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "openai": "^6.27.0",

@@ -5,40 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fast Image Tools – Free Online Image Editor & Converter</title>
     <meta name="description" content="Fast, private, browser‑based image tools: resize, compress, convert, crop, blur, sharpen, and more. No uploads, 100% free.">
-    <script src="https://unpkg.com/lunr@2.3.9/lunr.min.js"></script>
+    <script src="https:/unpkg.com/lunr@2.3.9/lunr.min.js"></script>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DHHVPY5DJK"></script>
+<script async src="https:/www.googletagmanager.com/gtag/js?id=G-DHHVPY5DJK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-DHHVPY5DJK');
 </script>
-    <link rel="canonical" href="https://fastimgtool.com/">
+    <link rel="canonical" href="https:/fastimgtool.com/">
     <link rel="stylesheet" href="/assets/css/style.css">
 
     <!-- Preconnect for AdSense -->
-    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
-    <link rel="preconnect" href="https://googleads.g.doubleclick.net">
+    <link rel="preconnect" href="https:/pagead2.googlesyndication.com">
+    <link rel="preconnect" href="https:/googleads.g.doubleclick.net">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Fast Image Tools – Free Online Image Editor & Converter">
     <meta property="og:description" content="Free, private image tools: resize, compress, convert, and edit images instantly in your browser.">
-    <meta property="og:url" content="https://fastimgtool.com/">
+    <meta property="og:url" content="https:/fastimgtool.com/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://fastimgtool.com/assets/og-image.png">
+    <meta property="og:image" content="https:/fastimgtool.com/assets/og-image.png">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Fast Image Tools">
     <meta name="twitter:description" content="Free, private image tools – no uploads, no signup.">
-    <meta name="twitter:image" content="https://fastimgtool.com/assets/og-image.png">
+    <meta name="twitter:image" content="https:/fastimgtool.com/assets/og-image.png">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/favicon.png">
 
     <!-- AdSense (Auto Ads) -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>
+    <script async src="https:/pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>
 
     <style>
         /* Global resets */
@@ -378,15 +378,15 @@
     </footer>
 
     <script>
-        // Load tools and build categories
+        / Load tools and build categories
         async function loadHomepage() {
             try {
-                // Fetch tools (required)
+                / Fetch tools (required)
                 const toolsRes = await fetch('/data/tools.json');
                 if (!toolsRes.ok) throw new Error('Failed to fetch tools');
                 const tools = await toolsRes.json();
 
-                // Group tools by category
+                / Group tools by category
                 const categories = {};
                 tools.forEach(tool => {
                     const cat = tool.category || 'uncategorized';
@@ -426,7 +426,7 @@
                 document.getElementById('categories-container').innerHTML = '<p style="color:red;">Failed to load tools. Please refresh.</p>';
             }
 
-            // Fetch guides (independent, won't break categories)
+            / Fetch guides (independent, won't break categories)
             try {
                 const guidesRes = await fetch('/data/guides.json');
                 if (!guidesRes.ok) throw new Error('Failed to fetch guides');
@@ -434,7 +434,7 @@
 
                 const guidesPreview = document.getElementById('guides-preview');
                 if (guides && guides.length > 0) {
-                    // Random guides for preview
+                    / Random guides for preview
                     const shuffled = guides.sort(() => 0.5 - Math.random());
                     const previewGuides = shuffled.slice(0, 8);
                     let guidesHtml = '';
@@ -442,14 +442,14 @@
                         guidesHtml += `<a href="${guide.url}">${guide.title}</a>`;
                     });
                     document.getElementById('guides-list').innerHTML = guidesHtml;
-                    guidesPreview.style.display = 'block'; // show section
+                    guidesPreview.style.display = 'block'; / show section
                 } else {
-                    // No guides, hide section
+                    / No guides, hide section
                     guidesPreview.style.display = 'none';
                 }
             } catch (err) {
                 console.error('Error loading guides:', err);
-                // Hide guides section if error
+                / Hide guides section if error
                 document.getElementById('guides-preview').style.display = 'none';
             }
         }
@@ -514,14 +514,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <h3>📧 Get free image tips – Subscribe now!</h3>
 <div id="mc_embed_shell">
-      <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+      <link href="/cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
   <style type="text/css">
         #mc_embed_signup{background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;}
         /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
 <div id="mc_embed_signup">
-    <form action="https://fastimgtool.us19.list-manage.com/subscribe/post?u=88d0cd80fa5ce04ab9bc4a074&amp;id=b5e1d64b6a&amp;f_id=00e782e3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+    <form action="https:/fastimgtool.us19.list-manage.com/subscribe/post?u=88d0cd80fa5ce04ab9bc4a074&amp;id=b5e1d64b6a&amp;f_id=00e782e3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
         <div id="mc_embed_signup_scroll"><h2>Subscribe</h2>
             <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
             <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
@@ -536,14 +536,14 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="optionalParent">
             <div class="clear foot">
                 <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-                <p style="margin: 0px auto;"><a href="http://eepurl.com/jCgLUU" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+                <p style="margin: 0px auto;"><a href="http:/eepurl.com/jCgLUU" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https:/digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
             </div>
         </div>
     </div>
 </form>
 </div>
-<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='COMPANY';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
-    // SMS Phone Multi-Country Functionality
+<script type="text/javascript" src="/s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='COMPANY';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+    / SMS Phone Multi-Country Functionality
     if(!window.MC) {
       window.MC = {};
     }
@@ -557,7 +557,7 @@ document.addEventListener('DOMContentLoaded', function() {
        return countryCode.toUpperCase().replace(/./g, (char) => String.fromCodePoint(char.charCodeAt(0) + 127397))
     };
 
-    // HTML sanitization function to prevent XSS
+    / HTML sanitization function to prevent XSS
     function sanitizeHtml(str) {
       if (typeof str !== 'string') return '';
       return str
@@ -566,10 +566,10 @@ document.addEventListener('DOMContentLoaded', function() {
         .replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;')
         .replace(/'/g, '&#x27;')
-        .replace(/\//g, '&#x2F;');
+        .replace(/\/g, '&#x2F;');
     }
 
-    // URL sanitization function to prevent javascript: and data: URLs
+    / URL sanitization function to prevent javascript: and data: URLs
     function sanitizeUrl(url) {
       if (typeof url !== 'string') return '';
       const trimmedUrl = url.trim().toLowerCase();
@@ -634,7 +634,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
       
-      // Remove HTML tags and clean up the text
+      / Remove HTML tags and clean up the text
       const divRegex = new RegExp('</?[div][^>]*>', 'gi');
       const fullAnchorRegex = new RegExp('<a.*?</a>', 'g');
       const anchorRegex = new RegExp('<a href="(.*?)" target="(.*?)">(.*?)</a>');
@@ -672,7 +672,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const flag = getCountryUnicodeFlag(program.countryCode);
         const countryName = getCountryName(program.countryCode);
         const callingCode = program.countryCallingCode || '';
-        // Sanitize all values to prevent XSS
+        / Sanitize all values to prevent XSS
         const sanitizedCountryCode = sanitizeHtml(program.countryCode || '');
         const sanitizedCountryName = sanitizeHtml(countryName || '');
         const sanitizedCallingCode = sanitizeHtml(callingCode || '');
@@ -693,7 +693,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function getDefaultPlaceholder(countryCode) {
       if (!countryCode || typeof countryCode !== 'string') {
-        return '+1 000 000 0000'; // Default US placeholder
+        return '+1 000 000 0000'; / Default US placeholder
       }
       
             var mockPlaceholders = [
