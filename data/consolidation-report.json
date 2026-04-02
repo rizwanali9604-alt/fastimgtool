@@ -1,0 +1,283 @@
+{
+  "generated_at": "2026-04-02T15:48:41.076697+00:00",
+  "cluster_count": 25,
+  "overrides_file": "data\\pillar-overrides.json",
+  "overrides_loaded": true,
+  "clusters": {
+    "base64-to-image": {
+      "files": [
+        "guides\\base64-to-image-guide-1.html",
+        "guides\\base64-to-image-guide-2.html",
+        "guides\\base64-to-image-guide-3.html",
+        "guides\\base64-to-image-guide-4.html",
+        "guides\\base64-to-image-guide-5.html"
+      ],
+      "pillar_slug": "how-to-use-base64-to-image",
+      "pillar_ok": false
+    },
+    "bmp-to-jpg": {
+      "files": [
+        "guides\\bmp-to-jpg-guide-1.html",
+        "guides\\bmp-to-jpg-guide-2.html",
+        "guides\\bmp-to-jpg-guide-3.html",
+        "guides\\bmp-to-jpg-guide-4.html",
+        "guides\\bmp-to-jpg-guide-5.html"
+      ],
+      "pillar_slug": "how-to-use-bmp-to-jpg",
+      "pillar_ok": false
+    },
+    "flip-image": {
+      "files": [
+        "guides\\flip-image-guide-1.html",
+        "guides\\flip-image-guide-2.html",
+        "guides\\flip-image-guide-3.html",
+        "guides\\flip-image-guide-4.html",
+        "guides\\flip-image-guide-5.html"
+      ],
+      "pillar_slug": "how-to-flip-image-online",
+      "pillar_ok": true
+    },
+    "gif-to-png": {
+      "files": [
+        "guides\\gif-to-png-guide-1.html",
+        "guides\\gif-to-png-guide-2.html",
+        "guides\\gif-to-png-guide-3.html",
+        "guides\\gif-to-png-guide-4.html",
+        "guides\\gif-to-png-guide-5.html"
+      ],
+      "pillar_slug": "how-to-use-gif-to-png",
+      "pillar_ok": false
+    },
+    "heic-to-jpg": {
+      "files": [
+        "guides\\heic-to-jpg-guide-1.html",
+        "guides\\heic-to-jpg-guide-2.html",
+        "guides\\heic-to-jpg-guide-3.html",
+        "guides\\heic-to-jpg-guide-4.html",
+        "guides\\heic-to-jpg-guide-5.html"
+      ],
+      "pillar_slug": "how-to-use-heic-to-jpg",
+      "pillar_ok": false
+    },
+    "image-blur": {
+      "files": [
+        "guides\\image-blur-guide-1.html",
+        "guides\\image-blur-guide-2.html",
+        "guides\\image-blur-guide-3.html",
+        "guides\\image-blur-guide-4.html",
+        "guides\\image-blur-guide-5.html"
+      ],
+      "pillar_slug": "how-to-blur-image-online",
+      "pillar_ok": true
+    },
+    "image-brightness": {
+      "files": [
+        "guides\\image-brightness-guide-1.html",
+        "guides\\image-brightness-guide-2.html",
+        "guides\\image-brightness-guide-3.html",
+        "guides\\image-brightness-guide-4.html",
+        "guides\\image-brightness-guide-5.html"
+      ],
+      "pillar_slug": "how-to-adjust-image-brightness-online",
+      "pillar_ok": false
+    },
+    "image-compressor": {
+      "files": [
+        "guides\\image-compressor-guide-1.html",
+        "guides\\image-compressor-guide-2.html",
+        "guides\\image-compressor-guide-3.html",
+        "guides\\image-compressor-guide-4.html",
+        "guides\\image-compressor-guide-5.html"
+      ],
+      "pillar_slug": "how-to-compress-image-online",
+      "pillar_ok": true
+    },
+    "image-contrast": {
+      "files": [
+        "guides\\image-contrast-guide-1.html",
+        "guides\\image-contrast-guide-2.html",
+        "guides\\image-contrast-guide-3.html",
+        "guides\\image-contrast-guide-4.html",
+        "guides\\image-contrast-guide-5.html"
+      ],
+      "pillar_slug": "how-to-adjust-image-contrast-online",
+      "pillar_ok": false
+    },
+    "image-crop": {
+      "files": [
+        "guides\\image-crop-guide-1.html",
+        "guides\\image-crop-guide-2.html",
+        "guides\\image-crop-guide-3.html",
+        "guides\\image-crop-guide-4.html",
+        "guides\\image-crop-guide-5.html"
+      ],
+      "pillar_slug": "how-to-crop-image-online",
+      "pillar_ok": true
+    },
+    "image-grayscale": {
+      "files": [
+        "guides\\image-grayscale-guide-1.html",
+        "guides\\image-grayscale-guide-2.html",
+        "guides\\image-grayscale-guide-3.html",
+        "guides\\image-grayscale-guide-4.html",
+        "guides\\image-grayscale-guide-5.html"
+      ],
+      "pillar_slug": "how-to-convert-image-to-grayscale",
+      "pillar_ok": true
+    },
+    "image-invert": {
+      "files": [
+        "guides\\image-invert-guide-1.html",
+        "guides\\image-invert-guide-2.html",
+        "guides\\image-invert-guide-3.html",
+        "guides\\image-invert-guide-4.html",
+        "guides\\image-invert-guide-5.html"
+      ],
+      "pillar_slug": "how-to-invert-image-colors-online",
+      "pillar_ok": false
+    },
+    "image-resizer": {
+      "files": [
+        "guides\\image-resizer-guide-1.html",
+        "guides\\image-resizer-guide-2.html",
+        "guides\\image-resizer-guide-3.html",
+        "guides\\image-resizer-guide-4.html",
+        "guides\\image-resizer-guide-5.html"
+      ],
+      "pillar_slug": "how-to-resize-image-online",
+      "pillar_ok": true
+    },
+    "image-saturation": {
+      "files": [
+        "guides\\image-saturation-guide-1.html",
+        "guides\\image-saturation-guide-2.html",
+        "guides\\image-saturation-guide-3.html",
+        "guides\\image-saturation-guide-4.html",
+        "guides\\image-saturation-guide-5.html"
+      ],
+      "pillar_slug": "how-to-adjust-image-saturation-online",
+      "pillar_ok": false
+    },
+    "image-sepia": {
+      "files": [
+        "guides\\image-sepia-guide-1.html",
+        "guides\\image-sepia-guide-2.html",
+        "guides\\image-sepia-guide-3.html",
+        "guides\\image-sepia-guide-4.html",
+        "guides\\image-sepia-guide-5.html"
+      ],
+      "pillar_slug": "how-to-apply-sepia-filter-online",
+      "pillar_ok": false
+    },
+    "image-sharpen": {
+      "files": [
+        "guides\\image-sharpen-guide-1.html",
+        "guides\\image-sharpen-guide-2.html",
+        "guides\\image-sharpen-guide-3.html",
+        "guides\\image-sharpen-guide-4.html",
+        "guides\\image-sharpen-guide-5.html"
+      ],
+      "pillar_slug": "how-to-sharpen-image-online",
+      "pillar_ok": true
+    },
+    "image-to-base64": {
+      "files": [
+        "guides\\image-to-base64-guide-1.html",
+        "guides\\image-to-base64-guide-2.html",
+        "guides\\image-to-base64-guide-3.html",
+        "guides\\image-to-base64-guide-4.html",
+        "guides\\image-to-base64-guide-5.html"
+      ],
+      "pillar_slug": "how-to-convert-image-to-base64",
+      "pillar_ok": false
+    },
+    "image-to-webp": {
+      "files": [
+        "guides\\image-to-webp-guide-1.html",
+        "guides\\image-to-webp-guide-2.html",
+        "guides\\image-to-webp-guide-3.html",
+        "guides\\image-to-webp-guide-4.html",
+        "guides\\image-to-webp-guide-5.html"
+      ],
+      "pillar_slug": "how-to-convert-image-to-webp",
+      "pillar_ok": false
+    },
+    "jpg-to-png": {
+      "files": [
+        "guides\\jpg-to-png-guide-1.html",
+        "guides\\jpg-to-png-guide-2.html",
+        "guides\\jpg-to-png-guide-3.html",
+        "guides\\jpg-to-png-guide-4.html",
+        "guides\\jpg-to-png-guide-5.html"
+      ],
+      "pillar_slug": "how-to-convert-jpg-to-png",
+      "pillar_ok": true
+    },
+    "png-to-jpg": {
+      "files": [
+        "guides\\png-to-jpg-guide-1.html",
+        "guides\\png-to-jpg-guide-2.html",
+        "guides\\png-to-jpg-guide-3.html",
+        "guides\\png-to-jpg-guide-4.html",
+        "guides\\png-to-jpg-guide-5.html"
+      ],
+      "pillar_slug": "how-to-convert-png-to-jpg",
+      "pillar_ok": true
+    },
+    "png-to-webp": {
+      "files": [
+        "guides\\png-to-webp-guide-1.html",
+        "guides\\png-to-webp-guide-2.html",
+        "guides\\png-to-webp-guide-3.html",
+        "guides\\png-to-webp-guide-4.html",
+        "guides\\png-to-webp-guide-5.html"
+      ],
+      "pillar_slug": "how-to-convert-png-to-webp",
+      "pillar_ok": false
+    },
+    "rotate-image": {
+      "files": [
+        "guides\\rotate-image-guide-1.html",
+        "guides\\rotate-image-guide-2.html",
+        "guides\\rotate-image-guide-3.html",
+        "guides\\rotate-image-guide-4.html",
+        "guides\\rotate-image-guide-5.html"
+      ],
+      "pillar_slug": "how-to-rotate-image-online",
+      "pillar_ok": true
+    },
+    "test-tool": {
+      "files": [
+        "guides\\test-tool-guide-1.html",
+        "guides\\test-tool-guide-2.html",
+        "guides\\test-tool-guide-3.html",
+        "guides\\test-tool-guide-4.html",
+        "guides\\test-tool-guide-5.html"
+      ],
+      "pillar_slug": "how-to-use-test-tool",
+      "pillar_ok": false
+    },
+    "tiff-to-jpg": {
+      "files": [
+        "guides\\tiff-to-jpg-guide-1.html",
+        "guides\\tiff-to-jpg-guide-2.html",
+        "guides\\tiff-to-jpg-guide-3.html",
+        "guides\\tiff-to-jpg-guide-4.html",
+        "guides\\tiff-to-jpg-guide-5.html"
+      ],
+      "pillar_slug": "how-to-use-tiff-to-jpg",
+      "pillar_ok": false
+    },
+    "webp-to-jpg": {
+      "files": [
+        "guides\\webp-to-jpg-guide-1.html",
+        "guides\\webp-to-jpg-guide-2.html",
+        "guides\\webp-to-jpg-guide-3.html",
+        "guides\\webp-to-jpg-guide-4.html",
+        "guides\\webp-to-jpg-guide-5.html"
+      ],
+      "pillar_slug": "how-to-convert-webp-to-jpg",
+      "pillar_ok": true
+    }
+  }
+}

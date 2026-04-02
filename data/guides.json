@@ -275,628 +275,73 @@
     "url": "/guides/crop-image-for-website.html"
   },
   {
-    "tool_slug": "image-compressor",
-    "title": "Fast Image Compressor – for Email",
-    "url": "/guides/image-compressor-guide-1.html"
-  },
-  {
-    "tool_slug": "image-compressor",
-    "title": "Fast Image Compressor – for WhatsApp",
-    "url": "/guides/image-compressor-guide-2.html"
-  },
-  {
-    "tool_slug": "image-compressor",
-    "title": "Fast Image Compressor – for Website",
-    "url": "/guides/image-compressor-guide-3.html"
-  },
-  {
-    "tool_slug": "image-compressor",
-    "title": "Fast Image Compressor – Without Losing Quality",
-    "url": "/guides/image-compressor-guide-4.html"
-  },
-  {
-    "tool_slug": "image-compressor",
-    "title": "Fast Image Compressor – Best Settings",
-    "url": "/guides/image-compressor-guide-5.html"
-  },
-  {
-    "tool_slug": "image-resizer",
-    "title": "Image Resizer Online – for Instagram",
-    "url": "/guides/image-resizer-guide-1.html"
-  },
-  {
-    "tool_slug": "image-resizer",
-    "title": "Image Resizer Online – for Facebook Cover",
-    "url": "/guides/image-resizer-guide-2.html"
-  },
-  {
-    "tool_slug": "image-resizer",
-    "title": "Image Resizer Online – for YouTube Thumbnail",
-    "url": "/guides/image-resizer-guide-3.html"
-  },
-  {
-    "tool_slug": "image-resizer",
-    "title": "Image Resizer Online – for Email",
-    "url": "/guides/image-resizer-guide-4.html"
-  },
-  {
-    "tool_slug": "image-resizer",
-    "title": "Image Resizer Online – Without Losing Quality",
-    "url": "/guides/image-resizer-guide-5.html"
-  },
-  {
-    "tool_slug": "jpg-to-png",
-    "title": "Convert JPG to PNG – JPG to PNG",
-    "url": "/guides/jpg-to-png-guide-1.html"
-  },
-  {
-    "tool_slug": "jpg-to-png",
-    "title": "Convert JPG to PNG – PNG to JPG",
-    "url": "/guides/jpg-to-png-guide-2.html"
-  },
-  {
-    "tool_slug": "jpg-to-png",
-    "title": "Convert JPG to PNG – WEBP to JPG",
-    "url": "/guides/jpg-to-png-guide-3.html"
-  },
-  {
-    "tool_slug": "jpg-to-png",
-    "title": "Convert JPG to PNG – HEIC to JPG",
-    "url": "/guides/jpg-to-png-guide-4.html"
-  },
-  {
-    "tool_slug": "jpg-to-png",
-    "title": "Convert JPG to PNG – Image to Base64",
-    "url": "/guides/jpg-to-png-guide-5.html"
-  },
-  {
-    "tool_slug": "png-to-jpg",
-    "title": "PNG to JPG Converter – JPG to PNG",
-    "url": "/guides/png-to-jpg-guide-1.html"
-  },
-  {
-    "tool_slug": "png-to-jpg",
-    "title": "PNG to JPG Converter – PNG to JPG",
-    "url": "/guides/png-to-jpg-guide-2.html"
-  },
-  {
-    "tool_slug": "png-to-jpg",
-    "title": "PNG to JPG Converter – WEBP to JPG",
-    "url": "/guides/png-to-jpg-guide-3.html"
-  },
-  {
-    "tool_slug": "png-to-jpg",
-    "title": "PNG to JPG Converter – HEIC to JPG",
-    "url": "/guides/png-to-jpg-guide-4.html"
-  },
-  {
-    "tool_slug": "png-to-jpg",
-    "title": "PNG to JPG Converter – Image to Base64",
-    "url": "/guides/png-to-jpg-guide-5.html"
-  },
-  {
-    "tool_slug": "webp-to-jpg",
-    "title": "WEBP to JPG Converter – JPG to PNG",
-    "url": "/guides/webp-to-jpg-guide-1.html"
-  },
-  {
-    "tool_slug": "webp-to-jpg",
-    "title": "WEBP to JPG Converter – PNG to JPG",
-    "url": "/guides/webp-to-jpg-guide-2.html"
-  },
-  {
-    "tool_slug": "webp-to-jpg",
-    "title": "WEBP to JPG Converter – WEBP to JPG",
-    "url": "/guides/webp-to-jpg-guide-3.html"
-  },
-  {
-    "tool_slug": "webp-to-jpg",
-    "title": "WEBP to JPG Converter – HEIC to JPG",
-    "url": "/guides/webp-to-jpg-guide-4.html"
-  },
-  {
-    "tool_slug": "webp-to-jpg",
-    "title": "WEBP to JPG Converter – Image to Base64",
-    "url": "/guides/webp-to-jpg-guide-5.html"
-  },
-  {
-    "tool_slug": "test-tool",
-    "title": "Test Tool – How to Use",
-    "url": "/guides/test-tool-guide-1.html"
-  },
-  {
-    "tool_slug": "test-tool",
-    "title": "Test Tool – Tips and Tricks",
-    "url": "/guides/test-tool-guide-2.html"
-  },
-  {
-    "tool_slug": "test-tool",
-    "title": "Test Tool – Common Mistakes",
-    "url": "/guides/test-tool-guide-3.html"
-  },
-  {
-    "tool_slug": "test-tool",
-    "title": "Test Tool – Best Practices",
-    "url": "/guides/test-tool-guide-4.html"
-  },
-  {
-    "tool_slug": "test-tool",
-    "title": "Test Tool – FAQ",
-    "url": "/guides/test-tool-guide-5.html"
-  },
-  {
-    "tool_slug": "image-blur",
-    "title": "Image Blur – Blur",
-    "url": "/guides/image-blur-guide-1.html"
-  },
-  {
-    "tool_slug": "image-blur",
-    "title": "Image Blur – Sharpen",
-    "url": "/guides/image-blur-guide-2.html"
-  },
-  {
-    "tool_slug": "image-blur",
-    "title": "Image Blur – Grayscale",
-    "url": "/guides/image-blur-guide-3.html"
-  },
-  {
-    "tool_slug": "image-blur",
-    "title": "Image Blur – Invert",
-    "url": "/guides/image-blur-guide-4.html"
-  },
-  {
-    "tool_slug": "image-blur",
-    "title": "Image Blur – Sepia",
-    "url": "/guides/image-blur-guide-5.html"
-  },
-  {
-    "tool_slug": "image-sharpen",
-    "title": "Image Sharpen – Blur",
-    "url": "/guides/image-sharpen-guide-1.html"
-  },
-  {
-    "tool_slug": "image-sharpen",
-    "title": "Image Sharpen – Sharpen",
-    "url": "/guides/image-sharpen-guide-2.html"
-  },
-  {
-    "tool_slug": "image-sharpen",
-    "title": "Image Sharpen – Grayscale",
-    "url": "/guides/image-sharpen-guide-3.html"
-  },
-  {
-    "tool_slug": "image-sharpen",
-    "title": "Image Sharpen – Invert",
-    "url": "/guides/image-sharpen-guide-4.html"
-  },
-  {
-    "tool_slug": "image-sharpen",
-    "title": "Image Sharpen – Sepia",
-    "url": "/guides/image-sharpen-guide-5.html"
-  },
-  {
-    "tool_slug": "image-grayscale",
-    "title": "Image Grayscale – Blur",
-    "url": "/guides/image-grayscale-guide-1.html"
-  },
-  {
-    "tool_slug": "image-grayscale",
-    "title": "Image Grayscale – Sharpen",
-    "url": "/guides/image-grayscale-guide-2.html"
-  },
-  {
-    "tool_slug": "image-grayscale",
-    "title": "Image Grayscale – Grayscale",
-    "url": "/guides/image-grayscale-guide-3.html"
-  },
-  {
-    "tool_slug": "image-grayscale",
-    "title": "Image Grayscale – Invert",
-    "url": "/guides/image-grayscale-guide-4.html"
-  },
-  {
-    "tool_slug": "image-grayscale",
-    "title": "Image Grayscale – Sepia",
-    "url": "/guides/image-grayscale-guide-5.html"
-  },
-  {
-    "tool_slug": "flip-image",
-    "title": "Flip Image – Blur",
-    "url": "/guides/flip-image-guide-1.html"
-  },
-  {
-    "tool_slug": "flip-image",
-    "title": "Flip Image – Sharpen",
-    "url": "/guides/flip-image-guide-2.html"
-  },
-  {
-    "tool_slug": "flip-image",
-    "title": "Flip Image – Grayscale",
-    "url": "/guides/flip-image-guide-3.html"
-  },
-  {
-    "tool_slug": "flip-image",
-    "title": "Flip Image – Invert",
-    "url": "/guides/flip-image-guide-4.html"
-  },
-  {
-    "tool_slug": "flip-image",
-    "title": "Flip Image – Sepia",
-    "url": "/guides/flip-image-guide-5.html"
-  },
-  {
-    "tool_slug": "image-crop",
-    "title": "Image Crop – Crop",
-    "url": "/guides/image-crop-guide-1.html"
-  },
-  {
-    "tool_slug": "image-crop",
-    "title": "Image Crop – Rotate",
-    "url": "/guides/image-crop-guide-2.html"
-  },
-  {
-    "tool_slug": "image-crop",
-    "title": "Image Crop – Flip Horizontal",
-    "url": "/guides/image-crop-guide-3.html"
-  },
-  {
-    "tool_slug": "image-crop",
-    "title": "Image Crop – Flip Vertical",
-    "url": "/guides/image-crop-guide-4.html"
-  },
-  {
-    "tool_slug": "image-crop",
-    "title": "Image Crop – Brightness",
-    "url": "/guides/image-crop-guide-5.html"
-  },
-  {
-    "tool_slug": "rotate-image",
-    "title": "Rotate Image – Crop",
-    "url": "/guides/rotate-image-guide-1.html"
-  },
-  {
-    "tool_slug": "rotate-image",
-    "title": "Rotate Image – Rotate",
-    "url": "/guides/rotate-image-guide-2.html"
-  },
-  {
-    "tool_slug": "rotate-image",
-    "title": "Rotate Image – Flip Horizontal",
-    "url": "/guides/rotate-image-guide-3.html"
-  },
-  {
-    "tool_slug": "rotate-image",
-    "title": "Rotate Image – Flip Vertical",
-    "url": "/guides/rotate-image-guide-4.html"
-  },
-  {
-    "tool_slug": "rotate-image",
-    "title": "Rotate Image – Brightness",
-    "url": "/guides/rotate-image-guide-5.html"
-  },
-  {
-    "tool_slug": "image-to-webp",
-    "title": "Image to WebP – JPG to PNG",
-    "url": "/guides/image-to-webp-guide-1.html"
-  },
-  {
-    "tool_slug": "image-to-webp",
-    "title": "Image to WebP – PNG to JPG",
-    "url": "/guides/image-to-webp-guide-2.html"
-  },
-  {
-    "tool_slug": "image-to-webp",
-    "title": "Image to WebP – WEBP to JPG",
-    "url": "/guides/image-to-webp-guide-3.html"
-  },
-  {
-    "tool_slug": "image-to-webp",
-    "title": "Image to WebP – HEIC to JPG",
-    "url": "/guides/image-to-webp-guide-4.html"
-  },
-  {
-    "tool_slug": "image-to-webp",
-    "title": "Image to WebP – Image to Base64",
-    "url": "/guides/image-to-webp-guide-5.html"
-  },
-  {
-    "tool_slug": "heic-to-jpg",
-    "title": "HEIC to JPG – JPG to PNG",
-    "url": "/guides/heic-to-jpg-guide-1.html"
-  },
-  {
-    "tool_slug": "heic-to-jpg",
-    "title": "HEIC to JPG – PNG to JPG",
-    "url": "/guides/heic-to-jpg-guide-2.html"
-  },
-  {
-    "tool_slug": "heic-to-jpg",
-    "title": "HEIC to JPG – WEBP to JPG",
-    "url": "/guides/heic-to-jpg-guide-3.html"
-  },
-  {
-    "tool_slug": "heic-to-jpg",
-    "title": "HEIC to JPG – HEIC to JPG",
-    "url": "/guides/heic-to-jpg-guide-4.html"
-  },
-  {
-    "tool_slug": "heic-to-jpg",
-    "title": "HEIC to JPG – Image to Base64",
-    "url": "/guides/heic-to-jpg-guide-5.html"
-  },
-  {
-    "tool_slug": "image-to-base64",
-    "title": "Image to Base64 – JPG to PNG",
-    "url": "/guides/image-to-base64-guide-1.html"
-  },
-  {
-    "tool_slug": "image-to-base64",
-    "title": "Image to Base64 – PNG to JPG",
-    "url": "/guides/image-to-base64-guide-2.html"
-  },
-  {
-    "tool_slug": "image-to-base64",
-    "title": "Image to Base64 – WEBP to JPG",
-    "url": "/guides/image-to-base64-guide-3.html"
-  },
-  {
-    "tool_slug": "image-to-base64",
-    "title": "Image to Base64 – HEIC to JPG",
-    "url": "/guides/image-to-base64-guide-4.html"
-  },
-  {
-    "tool_slug": "image-to-base64",
-    "title": "Image to Base64 – Image to Base64",
-    "url": "/guides/image-to-base64-guide-5.html"
-  },
-  {
     "tool_slug": "base64-to-image",
-    "title": "Base64 to Image – JPG to PNG",
-    "url": "/guides/base64-to-image-guide-1.html"
-  },
-  {
-    "tool_slug": "base64-to-image",
-    "title": "Base64 to Image – PNG to JPG",
-    "url": "/guides/base64-to-image-guide-2.html"
-  },
-  {
-    "tool_slug": "base64-to-image",
-    "title": "Base64 to Image – WEBP to JPG",
-    "url": "/guides/base64-to-image-guide-3.html"
-  },
-  {
-    "tool_slug": "base64-to-image",
-    "title": "Base64 to Image – HEIC to JPG",
-    "url": "/guides/base64-to-image-guide-4.html"
-  },
-  {
-    "tool_slug": "base64-to-image",
-    "title": "Base64 to Image – Image to Base64",
-    "url": "/guides/base64-to-image-guide-5.html"
-  },
-  {
-    "tool_slug": "png-to-webp",
-    "title": "PNG to WebP – JPG to PNG",
-    "url": "/guides/png-to-webp-guide-1.html"
-  },
-  {
-    "tool_slug": "png-to-webp",
-    "title": "PNG to WebP – PNG to JPG",
-    "url": "/guides/png-to-webp-guide-2.html"
-  },
-  {
-    "tool_slug": "png-to-webp",
-    "title": "PNG to WebP – WEBP to JPG",
-    "url": "/guides/png-to-webp-guide-3.html"
-  },
-  {
-    "tool_slug": "png-to-webp",
-    "title": "PNG to WebP – HEIC to JPG",
-    "url": "/guides/png-to-webp-guide-4.html"
-  },
-  {
-    "tool_slug": "png-to-webp",
-    "title": "PNG to WebP – Image to Base64",
-    "url": "/guides/png-to-webp-guide-5.html"
-  },
-  {
-    "tool_slug": "gif-to-png",
-    "title": "GIF to PNG – JPG to PNG",
-    "url": "/guides/gif-to-png-guide-1.html"
-  },
-  {
-    "tool_slug": "gif-to-png",
-    "title": "GIF to PNG – PNG to JPG",
-    "url": "/guides/gif-to-png-guide-2.html"
-  },
-  {
-    "tool_slug": "gif-to-png",
-    "title": "GIF to PNG – WEBP to JPG",
-    "url": "/guides/gif-to-png-guide-3.html"
-  },
-  {
-    "tool_slug": "gif-to-png",
-    "title": "GIF to PNG – HEIC to JPG",
-    "url": "/guides/gif-to-png-guide-4.html"
-  },
-  {
-    "tool_slug": "gif-to-png",
-    "title": "GIF to PNG – Image to Base64",
-    "url": "/guides/gif-to-png-guide-5.html"
+    "title": "How to Use Base64 to Image – Complete Guide",
+    "url": "/guides/how-to-use-base64-to-image.html"
   },
   {
     "tool_slug": "bmp-to-jpg",
-    "title": "BMP to JPG – JPG to PNG",
-    "url": "/guides/bmp-to-jpg-guide-1.html"
+    "title": "How to Use BMP to JPG – Complete Guide",
+    "url": "/guides/how-to-use-bmp-to-jpg.html"
   },
   {
-    "tool_slug": "bmp-to-jpg",
-    "title": "BMP to JPG – PNG to JPG",
-    "url": "/guides/bmp-to-jpg-guide-2.html"
+    "tool_slug": "gif-to-png",
+    "title": "How to Use GIF to PNG – Complete Guide",
+    "url": "/guides/how-to-use-gif-to-png.html"
   },
   {
-    "tool_slug": "bmp-to-jpg",
-    "title": "BMP to JPG – WEBP to JPG",
-    "url": "/guides/bmp-to-jpg-guide-3.html"
-  },
-  {
-    "tool_slug": "bmp-to-jpg",
-    "title": "BMP to JPG – HEIC to JPG",
-    "url": "/guides/bmp-to-jpg-guide-4.html"
-  },
-  {
-    "tool_slug": "bmp-to-jpg",
-    "title": "BMP to JPG – Image to Base64",
-    "url": "/guides/bmp-to-jpg-guide-5.html"
-  },
-  {
-    "tool_slug": "tiff-to-jpg",
-    "title": "TIFF to JPG – JPG to PNG",
-    "url": "/guides/tiff-to-jpg-guide-1.html"
-  },
-  {
-    "tool_slug": "tiff-to-jpg",
-    "title": "TIFF to JPG – PNG to JPG",
-    "url": "/guides/tiff-to-jpg-guide-2.html"
-  },
-  {
-    "tool_slug": "tiff-to-jpg",
-    "title": "TIFF to JPG – WEBP to JPG",
-    "url": "/guides/tiff-to-jpg-guide-3.html"
-  },
-  {
-    "tool_slug": "tiff-to-jpg",
-    "title": "TIFF to JPG – HEIC to JPG",
-    "url": "/guides/tiff-to-jpg-guide-4.html"
-  },
-  {
-    "tool_slug": "tiff-to-jpg",
-    "title": "TIFF to JPG – Image to Base64",
-    "url": "/guides/tiff-to-jpg-guide-5.html"
+    "tool_slug": "heic-to-jpg",
+    "title": "How to Use HEIC to JPG – Complete Guide",
+    "url": "/guides/how-to-use-heic-to-jpg.html"
   },
   {
     "tool_slug": "image-brightness",
-    "title": "Image Brightness – Blur",
-    "url": "/guides/image-brightness-guide-1.html"
-  },
-  {
-    "tool_slug": "image-brightness",
-    "title": "Image Brightness – Sharpen",
-    "url": "/guides/image-brightness-guide-2.html"
-  },
-  {
-    "tool_slug": "image-brightness",
-    "title": "Image Brightness – Grayscale",
-    "url": "/guides/image-brightness-guide-3.html"
-  },
-  {
-    "tool_slug": "image-brightness",
-    "title": "Image Brightness – Invert",
-    "url": "/guides/image-brightness-guide-4.html"
-  },
-  {
-    "tool_slug": "image-brightness",
-    "title": "Image Brightness – Sepia",
-    "url": "/guides/image-brightness-guide-5.html"
+    "title": "How to Use Image Brightness – Complete Guide",
+    "url": "/guides/how-to-adjust-image-brightness-online.html"
   },
   {
     "tool_slug": "image-contrast",
-    "title": "Image Contrast – Blur",
-    "url": "/guides/image-contrast-guide-1.html"
-  },
-  {
-    "tool_slug": "image-contrast",
-    "title": "Image Contrast – Sharpen",
-    "url": "/guides/image-contrast-guide-2.html"
-  },
-  {
-    "tool_slug": "image-contrast",
-    "title": "Image Contrast – Grayscale",
-    "url": "/guides/image-contrast-guide-3.html"
-  },
-  {
-    "tool_slug": "image-contrast",
-    "title": "Image Contrast – Invert",
-    "url": "/guides/image-contrast-guide-4.html"
-  },
-  {
-    "tool_slug": "image-contrast",
-    "title": "Image Contrast – Sepia",
-    "url": "/guides/image-contrast-guide-5.html"
-  },
-  {
-    "tool_slug": "image-saturation",
-    "title": "Image Saturation – Blur",
-    "url": "/guides/image-saturation-guide-1.html"
-  },
-  {
-    "tool_slug": "image-saturation",
-    "title": "Image Saturation – Sharpen",
-    "url": "/guides/image-saturation-guide-2.html"
-  },
-  {
-    "tool_slug": "image-saturation",
-    "title": "Image Saturation – Grayscale",
-    "url": "/guides/image-saturation-guide-3.html"
-  },
-  {
-    "tool_slug": "image-saturation",
-    "title": "Image Saturation – Invert",
-    "url": "/guides/image-saturation-guide-4.html"
-  },
-  {
-    "tool_slug": "image-saturation",
-    "title": "Image Saturation – Sepia",
-    "url": "/guides/image-saturation-guide-5.html"
+    "title": "How to Use Image Contrast – Complete Guide",
+    "url": "/guides/how-to-adjust-image-contrast-online.html"
   },
   {
     "tool_slug": "image-invert",
-    "title": "Image Invert – Blur",
-    "url": "/guides/image-invert-guide-1.html"
+    "title": "How to Use Image Invert – Complete Guide",
+    "url": "/guides/how-to-invert-image-colors-online.html"
   },
   {
-    "tool_slug": "image-invert",
-    "title": "Image Invert – Sharpen",
-    "url": "/guides/image-invert-guide-2.html"
-  },
-  {
-    "tool_slug": "image-invert",
-    "title": "Image Invert – Grayscale",
-    "url": "/guides/image-invert-guide-3.html"
-  },
-  {
-    "tool_slug": "image-invert",
-    "title": "Image Invert – Invert",
-    "url": "/guides/image-invert-guide-4.html"
-  },
-  {
-    "tool_slug": "image-invert",
-    "title": "Image Invert – Sepia",
-    "url": "/guides/image-invert-guide-5.html"
+    "tool_slug": "image-saturation",
+    "title": "How to Use Image Saturation – Complete Guide",
+    "url": "/guides/how-to-adjust-image-saturation-online.html"
   },
   {
     "tool_slug": "image-sepia",
-    "title": "Image Sepia – Blur",
-    "url": "/guides/image-sepia-guide-1.html"
+    "title": "How to Use Image Sepia – Complete Guide",
+    "url": "/guides/how-to-apply-sepia-filter-online.html"
   },
   {
-    "tool_slug": "image-sepia",
-    "title": "Image Sepia – Sharpen",
-    "url": "/guides/image-sepia-guide-2.html"
+    "tool_slug": "image-to-base64",
+    "title": "How to Use Image to Base64 – Complete Guide",
+    "url": "/guides/how-to-convert-image-to-base64.html"
   },
   {
-    "tool_slug": "image-sepia",
-    "title": "Image Sepia – Grayscale",
-    "url": "/guides/image-sepia-guide-3.html"
+    "tool_slug": "image-to-webp",
+    "title": "How to Use Image to WebP – Complete Guide",
+    "url": "/guides/how-to-convert-image-to-webp.html"
   },
   {
-    "tool_slug": "image-sepia",
-    "title": "Image Sepia – Invert",
-    "url": "/guides/image-sepia-guide-4.html"
+    "tool_slug": "png-to-webp",
+    "title": "How to Use PNG to WebP – Complete Guide",
+    "url": "/guides/how-to-convert-png-to-webp.html"
   },
   {
-    "tool_slug": "image-sepia",
-    "title": "Image Sepia – Sepia",
-    "url": "/guides/image-sepia-guide-5.html"
+    "tool_slug": "test-tool",
+    "title": "How to Use Test Tool – Complete Guide",
+    "url": "/guides/how-to-use-test-tool.html"
+  },
+  {
+    "tool_slug": "tiff-to-jpg",
+    "title": "How to Use TIFF to JPG – Complete Guide",
+    "url": "/guides/how-to-use-tiff-to-jpg.html"
   }
 ]

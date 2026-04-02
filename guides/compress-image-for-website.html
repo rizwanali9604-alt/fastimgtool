@@ -1,287 +1,202 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>How to Compress Images for a Website: The Complete 2026 Guide | FastImageTool</title>
-<meta content="Learn how to compress images for your website in 2026. Reduce file sizes without losing quality, improve page speed scores, and boost SEO rankings. Free tools included." name="description"/>
-<link href="https:/fastimgtool.com/guides/compress-image-for-website.html" rel="canonical"/>
-<link href="/assets/css/style.css" rel="stylesheet"/>
-<!-- Open Graph / Facebook -->
-<meta content="How to Compress Images for a Website: The Complete 2026 Guide" property="og:title"/>
-<meta content="The definitive guide to website image compression. Improve page speed, SEO, and user experience by compressing images correctly." property="og:description"/>
-<meta content="https:/fastimgtool.com/guides/compress-image-for-website.html" property="og:url"/>
-<meta content="article" property="og:type"/>
-<meta content="https:/fastimgtool.com/assets/og-image-compress-website.png" property="og:image"/>
-<!-- Twitter -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="How to Compress Images for a Website: The Complete 2026 Guide" name="twitter:title"/>
-<meta content="The definitive guide to website image compression. Improve page speed, SEO, and user experience by compressing images correctly." name="twitter:description"/>
-<meta content="https:/fastimgtool.com/assets/og-image-compress-website.png" name="twitter:image"/>
-<!-- Favicon -->
-<link href="/assets/favicon.png" rel="icon" type="image/png"/>
-<style>
-        /* Guide Article Styles */
-        .guide-article {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- DYNAMIC TITLE -->
+    <title>Compress Image for Website – Improve Page Speed – Fast Image Tools</title>
+    <!-- DYNAMIC META DESCRIPTION -->
+    <meta name="description" content="{{meta_description}}">
+    <link rel="stylesheet" href="/assets/css/style.css"> <!-- your main CSS -->
+    <style>
+        /* Additional styles specific to guides – can be moved to main CSS */
+        .guide-container {
             max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            line-height: 1.7;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1e1e2f;
         }
-        .guide-article h1 {
+        .guide-container h1 {
             font-size: 2.5rem;
+            font-weight: 700;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, #4da3ff, #00d4ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .guide-article h2 {
-            font-size: 1.8rem;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            color: #e6edf7;
-            border-bottom: 2px solid #2a3a5a;
+            border-bottom: 3px solid #f0b400;
             padding-bottom: 0.5rem;
         }
-        .guide-article h3 {
-            font-size: 1.4rem;
-            margin-top: 2rem;
+        .guide-container h2 {
+            font-size: 2rem;
+            margin: 2rem 0 1rem;
+            color: #2a2a40;
+            border-left: 5px solid #f0b400;
+            padding-left: 1rem;
+        }
+        .guide-container h3 {
+            font-size: 1.5rem;
+            margin: 1.5rem 0 0.5rem;
+            color: #2a2a40;
+        }
+        .guide-container p {
             margin-bottom: 1rem;
-            color: #cbd5e1;
         }
-        .guide-article p {
-            margin-bottom: 1.2rem;
-            color: #a0b3d9;
-        }
-        .guide-article ul, .guide-article ol {
-            margin-bottom: 1.5rem;
-            padding-left: 1.5rem;
-            color: #a0b3d9;
-        }
-        .guide-article li {
-            margin-bottom: 0.5rem;
-        }
-        .guide-article strong {
-            color: #e6edf7;
-        }
-        .guide-article a {
-            color: #4da3ff;
-            text-decoration: underline;
-            text-underline-offset: 3px;
-        }
-        .guide-article a:hover {
-            color: #00d4ff;
-        }
-        .image-placeholder {
-            background: #111a30;
-            border: 1px solid #2a3a5a;
+        .step-card {
+            background: #f9f9fc;
             border-radius: 12px;
-            padding: 40px;
-            text-align: center;
+            padding: 1.5rem;
             margin: 2rem 0;
-            color: #64748b;
-            font-style: italic;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-left: 4px solid #f0b400;
         }
-        .related-section {
-            background: #0f1a2f;
-            border-radius: 12px;
-            padding: 25px;
-            margin: 3rem 0;
-        }
-        .related-section h3 {
+        .step-card h3 {
             margin-top: 0;
-            margin-bottom: 1rem;
-            color: #e6edf7;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .step-card h3::before {
+            content: "●";
+            color: #f0b400;
+            font-size: 2rem;
+            line-height: 1;
+        }
+        .step-card img {
+            max-width: 100%;
+            border-radius: 8px;
+            border: 1px solid #eaeef2;
+            margin: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .bullet-list {
+            list-style: none;
+            padding: 0;
+        }
+        .bullet-list li {
+            margin: 0.8rem 0;
+            padding-left: 2rem;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http:/www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="%23f0b400"><circle cx="12" cy="12" r="6"/></svg>') left center no-repeat;
+            background-size: 1.2rem;
+        }
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #eaeef2;
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+        }
+        .faq-item h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #1e1e2f;
+        }
+        .faq-item p {
+            margin: 0;
+            color: #4a4a5e;
         }
         .related-links {
+            background: #f0f4f8;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        .related-links ul {
+            list-style: none;
+            padding: 0;
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 1rem;
         }
-        .related-links a {
-            background: #2a3a5a;
-            padding: 8px 16px;
+        .related-links li a {
+            display: inline-block;
+            background: white;
+            padding: 0.5rem 1.2rem;
             border-radius: 30px;
-            color: #e6edf7;
             text-decoration: none;
-            font-size: 0.9rem;
-            transition: background 0.2s;
+            color: #1e1e2f;
+            font-weight: 500;
+            border: 1px solid #d0d9e8;
+            transition: all 0.2s;
         }
-        .related-links a:hover {
-            background: #4da3ff;
+        .related-links li a:hover {
+            background: #f0b400;
+            color: white;
+            border-color: #f0b400;
         }
-        .note-box {
-            background: #1a2d4d;
-            border-left: 4px solid #4da3ff;
-            padding: 1rem 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 0 8px 8px 0;
-        }
-        .note-box strong {
-            color: #4da3ff;
+        @media (max-width: 600px) {
+            .guide-container h1 { font-size: 2rem; }
+            .guide-container h2 { font-size: 1.5rem; }
+            .step-card { padding: 1rem; }
         }
     </style>
-<script async_="True" crossorigin="anonymous" src="https:/pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196"></script><script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@graph": [
-        {
-            "@type": "Article",
-            "headline": "How to Compress Images for a Website: The Complete 2026 Guide | FastImageTool",
-            "description": "Learn how to compress images for your website in 2026. Reduce file sizes without losing quality, improve page speed scores, and boost SEO rankings. Free tools included.",
-            "author": {
-                "@type": "Organization",
-                "name": "FastImgTool",
-                "url": "https://fastimgtool.com"
-            },
-            "publisher": {
-                "@type": "Organization",
-                "name": "FastImgTool",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://fastimgtool.com/logo.png"
-                }
-            },
-            "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": "https://fastimgtool.com/guides/compress-image-for-website.html"
-            }
-        },
-        {
-            "@type": "SoftwareApplication",
-            "name": "FastImgTool Image Processing",
-            "operatingSystem": "Any",
-            "applicationCategory": "MultimediaApplication",
-            "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "USD"
-            }
-        }
-    ]
-}</script></head>
-<body><div class="content">
-<nav class="navbar">
-<div class="logo"><a href="/">⚡ FastImageTool</a></div>
-<div class="nav-links">
-<a href="/">Home</a>
-<a href="/tools/">Tools</a>
-<a href="/guides/">Guides</a>
-<a href="/blog/">Blog</a>
-<a href="/about.html">About</a>
-<a href="/contact.html">Contact</a>
-<a href="/community.html">Community</a>
-</div>
-</nav>
-<div class="guide-article">
-<h1>How to Compress Images for a Website: The Complete 2026 Guide</h1>
-<h2>Why Image Compression is Critical for Your Website</h2>
-<p>Images are the single biggest contributor to slow websites. According to HTTP Archive, images account for over 50% of the average webpage's total weight. A slow website does not just frustrate users — it actively costs you money. Google uses page speed as a direct ranking factor, meaning unoptimised images silently kill your search engine rankings every single day.</p>
-<p>The goal of image compression for websites is simple: deliver the smallest possible file size while maintaining visual quality that looks good on screen. Done correctly, your visitors will never notice the compression — but they will notice how fast your pages load.</p>
-<h2>Understanding Image Compression Types</h2>
-<p>Before you compress, it helps to understand the two types of compression:</p>
-<ul>
-<li><strong>Lossy Compression:</strong> Permanently removes some image data to achieve smaller files. JPEG compression is lossy. At moderate levels (70–85% quality) the loss is invisible to the human eye but the file size reduction is dramatic — often 60–80% smaller.</li>
-<li><strong>Lossless Compression:</strong> Reduces file size without removing any image data. The result is identical to the original but the file is smaller through smarter data encoding. PNG and WebP support lossless compression. Savings are typically 10–30%.</li>
-</ul>
-<p>For website images, lossy compression at 75–85% quality is the industry standard. It delivers the best balance of small file size and acceptable visual quality for screen display.</p>
-<h2>Which Image Format Should You Use for Websites?</h2>
-<p>Format choice is just as important as compression level:</p>
-<ul>
-<li><strong>WebP:</strong> The best format for websites in 2026. Supported by all modern browsers. Delivers 25–35% smaller files than JPEG at equivalent quality. Use this for all photographs and complex images.</li>
-<li><strong>JPEG/JPG:</strong> Best for photographs when WebP is not an option. Use 75–85% quality setting. Never use JPEG for logos or graphics with text — the compression artifacts will be visible.</li>
-<li><strong>PNG:</strong> Best for logos, icons, screenshots, and images with transparency. Use PNG-8 instead of PNG-24 where colour depth allows. Compress all PNGs before uploading.</li>
-<li><strong>SVG:</strong> Best for logos, icons, and simple illustrations. Vector format scales to any size without quality loss and file sizes are tiny. Use whenever possible for non-photographic graphics.</li>
-<li><strong>AVIF:</strong> Newer format with even better compression than WebP. Browser support is growing but not yet universal. Consider using it with a WebP fallback.</li>
-</ul>
-<h2>Step-by-Step: How to Compress Images for a Website</h2>
-<h3>Step 1: Resize Before You Compress</h3>
-<p>This is the step most people skip — and it is the most impactful one. Before compressing, resize your image to the maximum dimensions it will ever be displayed at on your website. There is absolutely no reason to upload a 4000×3000 pixel photograph if it will only ever display at 800×600 pixels on your webpage. Use our <a href="/tools/image-resizer/">Image Resizer</a> to set the correct dimensions first, then compress.</p>
-<div class="note-box">
-<strong>Rule of thumb:</strong> For full-width hero images, resize to 1920px wide maximum. For blog post images, 1200px wide is sufficient. For thumbnails, 400–600px wide is plenty. Multiply by 2 if you want to support retina screens.
-</div>
-<h3>Step 2: Open the Image Compressor</h3>
-<p>Navigate to our free <a href="/tools/image-compressor/">Image Compressor</a> in your browser. The tool processes your image entirely in your browser — nothing is uploaded to any server. This makes it safe for confidential design files and client work.</p>
-<h3>Step 3: Upload Your Image</h3>
-<p>Click Upload or drag your image file onto the tool. The compressor accepts JPG, PNG, WebP, and GIF formats. For batch compression across multiple images, process them one at a time or look for tools that support batch uploads.</p>
-<h3>Step 4: Set the Compression Level</h3>
-<p>Adjust the quality slider to find the right balance for your image:</p>
-<ul>
-<li><strong>90–100%:</strong> Minimal compression. Use for product images where fine detail matters and file size is secondary.</li>
-<li><strong>75–85%:</strong> The sweet spot for most website images. Excellent visual quality with significant file size reduction. Start here.</li>
-<li><strong>60–75%:</strong> Noticeable compression on close inspection but acceptable for thumbnails, background images, and non-critical graphics.</li>
-<li><strong>Below 60%:</strong> Heavy compression. Visible artifacts on photographs. Only use for very small thumbnail images where quality is less important than speed.</li>
-</ul>
-<h3>Step 5: Compare and Download</h3>
-<p>Use the before/after preview to check that the compressed version still looks acceptable. Pay attention to edges, text within images, and areas with fine detail. If you see blocky artifacts or blurring, increase the quality setting slightly. When satisfied, click Download to save the compressed file.</p>
-<h2>Target File Sizes for Website Images</h2>
-<p>Use these benchmarks when optimising your website images:</p>
-<ul>
-<li><strong>Hero / Banner Images:</strong> Under 200KB. Ideally under 100KB in WebP format.</li>
-<li><strong>Blog Post Featured Images:</strong> Under 100KB.</li>
-<li><strong>Product Images (e-commerce):</strong> Under 150KB at full size. Thumbnails under 30KB.</li>
-<li><strong>Background Images:</strong> Under 150KB. Consider using CSS gradients instead of images where possible.</li>
-<li><strong>Thumbnails and Icons:</strong> Under 20KB. Use SVG where possible.</li>
-</ul>
-<h2>Automating Image Compression for WordPress</h2>
-<p>If you run a WordPress website, consider installing an image optimisation plugin that automatically compresses images on upload. Popular options include Imagify, ShortPixel, and Smush. These plugins can also convert your existing image library to WebP format automatically, which can dramatically improve your Google PageSpeed score across the entire site without any manual work.</p>
-<h2>Common Mistakes to Avoid</h2>
-<ul>
-<li><strong>Uploading full camera resolution images:</strong> A modern smartphone photo can be 12 megapixels and 8MB in size. This is completely unnecessary for web display. Always resize first.</li>
-<li><strong>Using PNG for photographs:</strong> PNG files for photographs are enormous compared to JPEG or WebP with no visible quality benefit on screen. Reserve PNG for graphics with transparency.</li>
-<li><strong>Compressing the same image multiple times:</strong> Each round of lossy compression degrades quality. Always compress from the original file, not a previously compressed version.</li>
-<li><strong>Ignoring alt text:</strong> Compression is about file size. But while you are optimising images, make sure every image on your site has a descriptive alt text attribute. This improves SEO and accessibility simultaneously.</li>
-<li><strong>Not testing on mobile:</strong> After optimising, test your pages on a mobile connection. Tools like Google PageSpeed Insights and GTmetrix will show you exactly how your images score.</li>
-</ul>
-<h2>Frequently Asked Questions (FAQ)</h2>
-<h3>How much should I compress website images?</h3>
-<p>For most websites, aim to get every image under 100KB while maintaining acceptable visual quality. Start with 80% quality JPEG or WebP compression. If the result looks good and is under 100KB, you are done. If still too large, reduce to 70%. If quality suffers at 70%, reduce the image dimensions first, then compress again.</p>
-<h3>Does compressing images hurt SEO?</h3>
-<p><strong>Compressing images improves SEO.</strong> Google uses Core Web Vitals, including Largest Contentful Paint (LCP), as a ranking factor. Faster-loading images directly improve your LCP score, which improves your search rankings. The only way compression could hurt SEO is if you over-compress and make images look terrible, damaging user experience.</p>
-<h3>What is the difference between image compression and image resizing?</h3>
-<p>Resizing changes the pixel dimensions of the image (e.g., from 4000px wide to 800px wide). Compression reduces the file size of an image at its current dimensions by removing or encoding data more efficiently. Both reduce file size, but in different ways. For best results, do both: resize to the correct display dimensions first, then compress.</p>
-<h3>Should I use WebP for my entire website?</h3>
-<p><strong>Yes, in 2026.</strong> WebP is now supported by all major browsers including Chrome, Firefox, Safari, and Edge. Switching your site's images to WebP format can reduce total image weight by 25–35% with no visible quality loss. Use our <a href="/guides/how-to-compress-image-online.html">compression guide</a> alongside our WebP converter for the best results.</p>
-<h3>How do I check if my website images are slowing down my pages?</h3>
-<p>Use Google PageSpeed Insights (free, at pagespeed.web.dev). Enter your website URL and it will show you exactly which images are unoptimised, how much they should be compressed, and how much time you would save. It gives you specific file-by-file recommendations you can act on immediately.</p>
-</div><div class="recommended-tools"><h3>Related Tools &amp; Resources</h3><p>📌 Tools you might find useful:</p><ul>
-<li><a href="/tools/image-compressor">Image Compressor</a></li>
-<li><a href="/tools/image-resizer">Image Resizer</a></li>
-<li><a href="/tools/jpg-to-png">JPG To PNG</a></li>
-<li><a href="/tools/image-to-webp">Image To WebP</a></li>
-<li><a href="/tools/png-to-webp">PNG To WebP</a></li>
-</ul><p>📖 Related guides:</p><ul>
-<li><a href="/guides/how-to-compress-image-online.html">How To Compress Image Online</a></li>
-<li><a href="/guides/compress-image-without-losing-quality.html">Compress Without Losing Quality</a></li>
-<li><a href="/guides/compress-image-for-email.html">Compress Image For Email</a></li>
-<li><a href="/guides/compress-image-for-whatsapp.html">Compress Image For WhatsApp</a></li>
-</ul><p>🛒 Recommended products:</p><ul><li><a href="https:/www.amazon.in/s?k=image+editing+software&amp;tag=fastimgtool78-21" target="_blank">Amazon Image Tools</a> (affiliate link)</li></ul></div>
-<footer class="footer">
-<div class="footer-container">
-<div class="footer-col">
-<h4>Product</h4>
-<ul>
-<li><a href="/tools/">All Tools</a></li>
-<li><a href="/guides/">All Guides</a></li>
-<li><a href="/blog/">Blog</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h4>Legal</h4>
-<ul>
-<li><a href="/privacy.html">Privacy policy</a></li>
-<li><a href="/terms.html">Terms &amp; conditions</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h4>Company</h4>
-<ul>
-<li><a href="/about.html">About us</a></li>
-<li><a href="/contact.html">Contact us</a></li>
-</ul>
-</div>
-</div>
-<div class="footer-bottom">
-<p>© 2026 FastImgTool – All rights reserved.</p>
-</div>
-</footer></div></body></html>
+</head>
+<body>
+    <div id="navbar"></div> <!-- your existing navbar -->
+
+    <main class="guide-container">
+        <!-- DYNAMIC H1 -->
+        <h1>{{h1_title}}</h1>
+
+        <!-- DYNAMIC INTRODUCTION -->
+        <p>{{introduction}}</p>
+
+        <!-- MAIN STEPS SECTION -->
+        <h2>Step-by-Step Guide</h2>
+
+        <!-- REPEAT STEP CARD FOR EACH STEP -->
+        <div class="step-card">
+            <h3>Step {{step_number}}: {{step_title}}</h3>
+            <p>{{step_description}}</p>
+            <!-- if image exists -->
+            <img src="{{step_image_url}}" alt="{{step_image_alt}}">
+        </div>
+
+        <!-- OPTIONAL ADDITIONAL STEPS (you can repeat the card as needed) -->
+
+        <!-- WHY SECTION -->
+        <h2>Why {{topic}}?</h2>
+        <ul class="bullet-list">
+            <!-- REPEAT FOR EACH REASON -->
+            <li>{{reason_1}}</li>
+            <li>{{reason_2}}</li>
+            <li>{{reason_3}}</li>
+            <li>{{reason_4}}</li>
+        </ul>
+
+        <!-- FAQ SECTION -->
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>{{faq_question_1}}</h3>
+            <p>{{faq_answer_1}}</p>
+        </div>
+        <div class="faq-item">
+            <h3>{{faq_question_2}}</h3>
+            <p>{{faq_answer_2}}</p>
+        </div>
+        <div class="faq-item">
+            <h3>{{faq_question_3}}</h3>
+            <p>{{faq_answer_3}}</p>
+        </div>
+        <div class="faq-item">
+            <h3>{{faq_question_4}}</h3>
+            <p>{{faq_answer_4}}</p>
+        </div>
+
+        <!-- RELATED RESOURCES -->
+        <div class="related-links">
+            <h3>Related Tools & Guides</h3>
+            <ul>
+                <!-- REPEAT FOR EACH LINK -->
+                <li><a href="{{link_url_1}}">{{link_text_1}}</a></li>
+                <li><a href="{{link_url_2}}">{{link_text_2}}</a></li>
+                <li><a href="{{link_url_3}}">{{link_text_3}}</a></li>
+                <li><a href="{{link_url_4}}">{{link_text_4}}</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="/assets/js/nav.js"></script>
+    <script src="/assets/js/related-guides.js"></script>
+</body>
+</html>
