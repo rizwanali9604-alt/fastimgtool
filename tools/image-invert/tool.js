@@ -1,55 +1,51 @@
-// Image Invert (Negative)
-const fileInput = document.getElementById('fileInput');
-const preview = document.getElementById('preview');
-const downloadBtn = document.getElementById('downloadBtn');
+(function () {
+    'use strict';
+    var FT = window.FastImgTool;
+    var fileInput = document.getElementById('fileInput');
+    var preview = document.getElementById('preview');
+    var downloadBtn = document.getElementById('downloadBtn');
+    var originalImage = null;
+    var currentFile = null;
+    var previewEl = null;
 
-let originalImage = null;
+    var controls = document.createElement('div');
+    controls.className = 'ft-controls';
+    controls.innerHTML =
+        '<div class="ft-row"><label>Invert: <span id="invertValue">100</span>%</label>' +
+        '<input type="range" id="invertSlider" min="0" max="100" value="100"></div>';
+    FT.insertBeforeAction(controls, downloadBtn);
 
-fileInput.addEventListener('change', function(e) {
-    const file = e.target.files[0];
-    if (!file) return;
+    var slider = document.getElementById('invertSlider');
+    var label = document.getElementById('invertValue');
 
-    const reader = new FileReader();
-    reader.onload = function(event) {
-        const img = new Image();
-        img.onload = function() {
-            originalImage = img;
-            preview.innerHTML = '';
-            preview.appendChild(img.cloneNode());
-        };
-        img.src = event.target.result;
-    };
-    reader.readAsDataURL(file);
-});
-
-downloadBtn.addEventListener('click', function() {
-    if (!originalImage) {
-        alert('Please upload an image first.');
-        return;
+    function filterCss() {
+        return 'invert(' + parseInt(slider.value, 10) + '%)';
     }
 
-    const canvas = document.createElement('canvas');
-    canvas.width = originalImage.width;
-    canvas.height = originalImage.height;
-    const ctx = canvas.getContext('2d');
-    ctx.drawImage(originalImage, 0, 0);
-
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    const data = imageData.data;
-
-    for (let i = 0; i < data.length; i += 4) {
-        data[i] = 255 - data[i];
-        data[i + 1] = 255 - data[i + 1];
-        data[i + 2] = 255 - data[i + 2];
+    function updatePreview() {
+        label.textContent = slider.value;
+        FT.applyCssFilter(previewEl, filterCss());
     }
-    ctx.putImageData(imageData, 0, 0);
 
-    canvas.toBlob((blob) => {
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = 'inverted.png';
-        link.click();
-        URL.revokeObjectURL(url);
-    }, 'image/png');
-});
+    slider.addEventListener('input', updatePreview);
+
+    FT.setupImageTool({
+        fileInput: fileInput,
+        preview: preview,
+        onLoad: function (result, state) {
+            originalImage = result.image;
+            currentFile = result.file;
+            previewEl = state.previewEl;
+            updatePreview();
+        }
+    });
+
+    downloadBtn.addEventListener('click', function () {
+        if (!originalImage) {
+            alert('Please upload an image first.');
+            return;
+        }
+        var canvas = FT.drawWithFilter(originalImage, filterCss());
+        FT.downloadCanvas(canvas, FT.baseName(currentFile, 'inverted') + '.png', 'image/png');
+    });
+})();

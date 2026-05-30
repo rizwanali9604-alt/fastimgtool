@@ -1,97 +1,52 @@
-// Image Sharpen
-const fileInput = document.getElementById('fileInput');
-const preview = document.getElementById('preview');
-const downloadBtn = document.getElementById('downloadBtn');
+(function () {
+    'use strict';
+    var FT = window.FastImgTool;
+    var fileInput = document.getElementById('fileInput');
+    var preview = document.getElementById('preview');
+    var downloadBtn = document.getElementById('downloadBtn');
+    var originalImage = null;
+    var currentFile = null;
 
-let originalImage = null;
+    var controls = document.createElement('div');
+    controls.className = 'ft-controls';
+    controls.innerHTML =
+        '<div class="ft-row"><label>Sharpen: <span id="sharpenValue">1.0</span></label>' +
+        '<input type="range" id="sharpenSlider" min="0.5" max="3" step="0.1" value="1"></div>';
+    FT.insertBeforeAction(controls, downloadBtn);
 
-// Create sharpen intensity slider
-const controlsDiv = document.createElement('div');
-controlsDiv.style.marginTop = '15px';
-controlsDiv.innerHTML = `
-    <div>
-        <label>Sharpen intensity: <span id="sharpenValue">1</span></label>
-        <input type="range" id="sharpenSlider" min="0.5" max="3" step="0.1" value="1" style="width:100%;">
-    </div>
-`;
-document.querySelector('.tool-box').appendChild(controlsDiv);
+    var sharpenSlider = document.getElementById('sharpenSlider');
+    var sharpenValue = document.getElementById('sharpenValue');
 
-const sharpenSlider = document.getElementById('sharpenSlider');
-const sharpenSpan = document.getElementById('sharpenValue');
+    function renderPreview() {
+        if (!originalImage) return;
+        sharpenValue.textContent = sharpenSlider.value;
+        var canvas = FT.imageToCanvas(originalImage);
+        var ctx = canvas.getContext('2d');
+        FT.applySharpen(ctx, canvas.width, canvas.height, parseFloat(sharpenSlider.value));
+        FT.showPreviewCanvas(preview, canvas);
+    }
 
-sharpenSlider.addEventListener('input', () => {
-    sharpenSpan.textContent = sharpenSlider.value;
-});
+    sharpenSlider.addEventListener('input', FT.debounce(renderPreview, 120));
 
-fileInput.addEventListener('change', function(e) {
-    const file = e.target.files[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.onload = function(event) {
-        const img = new Image();
-        img.onload = function() {
-            originalImage = img;
-            preview.innerHTML = '';
-            preview.appendChild(img.cloneNode());
-        };
-        img.src = event.target.result;
-    };
-    reader.readAsDataURL(file);
-});
-
-function applySharpen(ctx, width, height, intensity) {
-    const imageData = ctx.getImageData(0, 0, width, height);
-    const data = imageData.data;
-    const copy = new Uint8ClampedArray(data);
-    // Simple sharpen kernel
-    const kernel = [
-        [0, -1, 0],
-        [-1, 4 + intensity, -1],
-        [0, -1, 0]
-    ];
-    for (let y = 1; y < height - 1; y++) {
-        for (let x = 1; x < width - 1; x++) {
-            let r = 0, g = 0, b = 0;
-            for (let ky = -1; ky <= 1; ky++) {
-                for (let kx = -1; kx <= 1; kx++) {
-                    const weight = kernel[ky + 1][kx + 1];
-                    const idx = ((y + ky) * width + (x + kx)) * 4;
-                    r += copy[idx] * weight;
-                    g += copy[idx + 1] * weight;
-                    b += copy[idx + 2] * weight;
-                }
-            }
-            const idx = (y * width + x) * 4;
-            data[idx] = Math.min(255, Math.max(0, r));
-            data[idx + 1] = Math.min(255, Math.max(0, g));
-            data[idx + 2] = Math.min(255, Math.max(0, b));
+    FT.setupImageTool({
+        fileInput: fileInput,
+        preview: preview,
+        showPreview: false,
+        onLoad: function (result) {
+            originalImage = result.image;
+            currentFile = result.file;
+            renderPreview();
         }
-    }
-    ctx.putImageData(imageData, 0, 0);
-}
+    });
 
-downloadBtn.addEventListener('click', function() {
-    if (!originalImage) {
-        alert('Please upload an image first.');
-        return;
-    }
-
-    const canvas = document.createElement('canvas');
-    canvas.width = originalImage.width;
-    canvas.height = originalImage.height;
-    const ctx = canvas.getContext('2d');
-    ctx.drawImage(originalImage, 0, 0);
-
-    const intensity = parseFloat(sharpenSlider.value);
-    applySharpen(ctx, canvas.width, canvas.height, intensity);
-
-    canvas.toBlob((blob) => {
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = 'sharpened.png';
-        link.click();
-        URL.revokeObjectURL(url);
-    }, 'image/png');
-});
+    downloadBtn.addEventListener('click', function () {
+        if (!originalImage) {
+            alert('Please upload an image first.');
+            return;
+        }
+        var canvas = FT.imageToCanvas(originalImage);
+        var ctx = canvas.getContext('2d');
+        FT.applySharpen(ctx, canvas.width, canvas.height, parseFloat(sharpenSlider.value));
+        FT.downloadCanvas(canvas, FT.baseName(currentFile, 'sharpened') + '.png', 'image/png');
+    });
+})();

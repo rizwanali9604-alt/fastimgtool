@@ -12,7 +12,7 @@ const a = document.createElement("a");
 
 a.href = `/tools/${tool.slug}/`;
 
-a.textContent = tool.name;
+a.textContent = tool.title || tool.name || tool.slug;
 
 a.style.marginRight = "15px";
 

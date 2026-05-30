@@ -99,3 +99,45 @@ max-width:100%;
 border-radius:8px;
 margin-top:10px;
 }
+
+#preview img.ft-preview-img,
+#preview .ft-preview-canvas,
+.ft-preview-img,
+.ft-preview-canvas{
+max-width:100%;
+max-height:min(360px,50vh);
+border-radius:8px;
+object-fit:contain;
+}
+
+.ft-tool-box.ft-drag-over{
+outline:2px dashed #4da3ff;
+outline-offset:4px;
+}
+
+.ft-controls{
+margin:16px 0;
+text-align:left;
+}
+
+.ft-controls label{
+color:#cbd5e1;
+display:block;
+margin-bottom:6px;
+}
+
+.ft-controls input[type=range],
+.ft-controls select,
+.ft-controls input[type=number]{
+width:100%;
+max-width:420px;
+padding:8px;
+border-radius:8px;
+border:1px solid #334155;
+background:#0f172a;
+color:#e6edf7;
+}
+
+.ft-controls .ft-row{
+margin-bottom:12px;
+}

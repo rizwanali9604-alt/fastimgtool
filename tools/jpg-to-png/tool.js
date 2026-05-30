@@ -1,49 +1,29 @@
-// JPG to PNG Converter
-const fileInput = document.getElementById('fileInput');
-const preview = document.getElementById('preview');
-const downloadBtn = document.getElementById('downloadBtn');
+(function () {
+    'use strict';
+    var FT = window.FastImgTool;
+    var fileInput = document.getElementById('fileInput');
+    var preview = document.getElementById('preview');
+    var downloadBtn = document.getElementById('downloadBtn');
+    var originalImage = null;
+    var currentFile = null;
 
-let originalImage = null;
+    FT.setupImageTool({
+        fileInput: fileInput,
+        preview: preview,
+        accept: { types: ['image/jpeg'], exts: ['.jpg', '.jpeg', '.jpe'] },
+        invalidMessage: 'Please select a JPG/JPEG image.',
+        onLoad: function (result) {
+            originalImage = result.image;
+            currentFile = result.file;
+        }
+    });
 
-fileInput.addEventListener('change', function(e) {
-    const file = e.target.files[0];
-    if (!file) return;
-    if (!file.type.match('image/jpeg')) {
-        alert('Please select a JPG image.');
-        return;
-    }
-
-    const reader = new FileReader();
-    reader.onload = function(event) {
-        const img = new Image();
-        img.onload = function() {
-            originalImage = img;
-            preview.innerHTML = '';
-            preview.appendChild(img.cloneNode());
-        };
-        img.src = event.target.result;
-    };
-    reader.readAsDataURL(file);
-});
-
-downloadBtn.addEventListener('click', function() {
-    if (!originalImage) {
-        alert('Please upload an image first.');
-        return;
-    }
-
-    const canvas = document.createElement('canvas');
-    canvas.width = originalImage.width;
-    canvas.height = originalImage.height;
-    const ctx = canvas.getContext('2d');
-    ctx.drawImage(originalImage, 0, 0);
-
-    canvas.toBlob((blob) => {
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = 'converted.png';
-        link.click();
-        URL.revokeObjectURL(url);
-    }, 'image/png');
-});
+    downloadBtn.addEventListener('click', function () {
+        if (!originalImage) {
+            alert('Please upload an image first.');
+            return;
+        }
+        var canvas = FT.imageToCanvas(originalImage);
+        FT.downloadCanvas(canvas, FT.baseName(currentFile, 'converted') + '.png', 'image/png');
+    });
+})();

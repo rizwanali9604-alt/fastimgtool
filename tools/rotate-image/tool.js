@@ -1,80 +1,67 @@
-// Rotate Image
-const fileInput = document.getElementById('fileInput');
-const preview = document.getElementById('preview');
-const downloadBtn = document.getElementById('downloadBtn');
+(function () {
+    'use strict';
+    var FT = window.FastImgTool;
+    var fileInput = document.getElementById('fileInput');
+    var preview = document.getElementById('preview');
+    var downloadBtn = document.getElementById('downloadBtn');
+    var originalImage = null;
+    var currentFile = null;
 
-let originalImage = null;
+    var controls = document.createElement('div');
+    controls.className = 'ft-controls';
+    controls.innerHTML =
+        '<div class="ft-row"><label for="angleSelect">Rotation</label>' +
+        '<select id="angleSelect">' +
+        '<option value="90">90° clockwise</option>' +
+        '<option value="180">180°</option>' +
+        '<option value="270">90° counter-clockwise</option>' +
+        '</select></div>';
+    FT.insertBeforeAction(controls, downloadBtn);
 
-// Create angle selector
-const controlsDiv = document.createElement('div');
-controlsDiv.style.marginTop = '15px';
-controlsDiv.innerHTML = `
-    <div>
-        <label>Angle: </label>
-        <select id="angleSelect">
-            <option value="90">90° clockwise</option>
-            <option value="180">180°</option>
-            <option value="270">90° counterclockwise</option>
-        </select>
-    </div>
-`;
-document.querySelector('.tool-box').appendChild(controlsDiv);
+    var angleSelect = document.getElementById('angleSelect');
 
-const angleSelect = document.getElementById('angleSelect');
-
-fileInput.addEventListener('change', function(e) {
-    const file = e.target.files[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.onload = function(event) {
-        const img = new Image();
-        img.onload = function() {
-            originalImage = img;
-            preview.innerHTML = '';
-            preview.appendChild(img.cloneNode());
-        };
-        img.src = event.target.result;
-    };
-    reader.readAsDataURL(file);
-});
-
-downloadBtn.addEventListener('click', function() {
-    if (!originalImage) {
-        alert('Please upload an image first.');
-        return;
+    function rotateToCanvas(img, angle) {
+        var radians = (angle * Math.PI) / 180;
+        var w = img.width;
+        var h = img.height;
+        var newW = angle === 90 || angle === 270 ? h : w;
+        var newH = angle === 90 || angle === 270 ? w : h;
+        var canvas = document.createElement('canvas');
+        canvas.width = newW;
+        canvas.height = newH;
+        var ctx = canvas.getContext('2d');
+        ctx.translate(newW / 2, newH / 2);
+        ctx.rotate(radians);
+        ctx.drawImage(img, -w / 2, -h / 2);
+        return canvas;
     }
 
-    const angle = parseInt(angleSelect.value);
-    const radians = angle * Math.PI / 180;
-
-    // Calculate new canvas size
-    let newWidth, newHeight;
-    if (angle === 90 || angle === 270) {
-        newWidth = originalImage.height;
-        newHeight = originalImage.width;
-    } else {
-        newWidth = originalImage.width;
-        newHeight = originalImage.height;
+    function renderPreview() {
+        if (!originalImage) return;
+        var angle = parseInt(angleSelect.value, 10);
+        FT.showPreviewCanvas(preview, rotateToCanvas(originalImage, angle));
     }
 
-    const canvas = document.createElement('canvas');
-    canvas.width = newWidth;
-    canvas.height = newHeight;
-    const ctx = canvas.getContext('2d');
+    angleSelect.addEventListener('change', renderPreview);
 
-    ctx.translate(newWidth/2, newHeight/2);
-    ctx.rotate(radians);
-    ctx.drawImage(originalImage, -originalImage.width/2, -originalImage.height/2);
-    ctx.rotate(-radians);
-    ctx.translate(-newWidth/2, -newHeight/2);
+    FT.setupImageTool({
+        fileInput: fileInput,
+        preview: preview,
+        showPreview: false,
+        onLoad: function (result) {
+            originalImage = result.image;
+            currentFile = result.file;
+            renderPreview();
+        }
+    });
 
-    canvas.toBlob((blob) => {
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = 'rotated.png';
-        link.click();
-        URL.revokeObjectURL(url);
-    }, 'image/png');
-});
+    downloadBtn.addEventListener('click', function () {
+        if (!originalImage) {
+            alert('Please upload an image first.');
+            return;
+        }
+        var angle = parseInt(angleSelect.value, 10);
+        var canvas = rotateToCanvas(originalImage, angle);
+        FT.downloadCanvas(canvas, FT.baseName(currentFile, 'rotated') + '.png', 'image/png');
+    });
+})();

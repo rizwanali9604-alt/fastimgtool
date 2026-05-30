@@ -256,6 +256,10 @@ const blogPosts = JSON.parse(await fs.readFile(CONFIG.BLOG_POSTS_FILE, 'utf8'));
 
     // 2. Define page generator (inside build to access toolContentMap)
     async function generatePage(tool) {
+        if (tool.slug === 'image-compressor') {
+            console.log(`⏭️  Skipped (custom page): tools/${tool.slug}/index.html`);
+            return null;
+        }
         const toolDir = path.join(CONFIG.OUTPUT_DIR, tool.slug);
         await ensureDir(toolDir);
 

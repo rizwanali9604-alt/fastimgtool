@@ -1,93 +1,77 @@
-// Image Resizer
-const fileInput = document.getElementById('fileInput');
-const preview = document.getElementById('preview');
-const downloadBtn = document.getElementById('downloadBtn');
+(function () {
+    'use strict';
+    var FT = window.FastImgTool;
+    var fileInput = document.getElementById('fileInput');
+    var preview = document.getElementById('preview');
+    var downloadBtn = document.getElementById('downloadBtn');
+    var originalImage = null;
+    var currentFile = null;
 
-let originalImage = null;
+    var controls = document.createElement('div');
+    controls.className = 'ft-controls';
+    controls.innerHTML =
+        '<div class="ft-row" style="display:flex;gap:12px;flex-wrap:wrap;">' +
+        '<div><label for="widthInput">Width (px)</label><input type="number" id="widthInput" min="1"></div>' +
+        '<div><label for="heightInput">Height (px)</label><input type="number" id="heightInput" min="1"></div>' +
+        '</div>' +
+        '<div class="ft-row"><label><input type="checkbox" id="lockAspect" checked> Lock aspect ratio</label></div>';
+    FT.insertBeforeAction(controls, downloadBtn);
 
-// Create width/height inputs and aspect ratio lock
-const controlsDiv = document.createElement('div');
-controlsDiv.style.marginTop = '15px';
-controlsDiv.innerHTML = `
-    <div style="display:flex; gap:10px; margin-bottom:10px;">
-        <div>
-            <label>Width:</label>
-            <input type="number" id="widthInput" style="width:80px;">
-        </div>
-        <div>
-            <label>Height:</label>
-            <input type="number" id="heightInput" style="width:80px;">
-        </div>
-    </div>
-    <div>
-        <label>
-            <input type="checkbox" id="lockAspect" checked> Lock aspect ratio
-        </label>
-    </div>
-`;
-document.querySelector('.tool-box').appendChild(controlsDiv);
+    var widthInput = document.getElementById('widthInput');
+    var heightInput = document.getElementById('heightInput');
+    var lockAspect = document.getElementById('lockAspect');
 
-const widthInput = document.getElementById('widthInput');
-const heightInput = document.getElementById('heightInput');
-const lockAspect = document.getElementById('lockAspect');
-
-fileInput.addEventListener('change', function(e) {
-    const file = e.target.files[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.onload = function(event) {
-        const img = new Image();
-        img.onload = function() {
-            originalImage = img;
-            widthInput.value = img.width;
-            heightInput.value = img.height;
-            preview.innerHTML = '';
-            preview.appendChild(img.cloneNode());
-        };
-        img.src = event.target.result;
-    };
-    reader.readAsDataURL(file);
-});
-
-widthInput.addEventListener('input', function() {
-    if (lockAspect.checked && originalImage) {
-        const ratio = originalImage.height / originalImage.width;
-        heightInput.value = Math.round(widthInput.value * ratio);
-    }
-});
-
-heightInput.addEventListener('input', function() {
-    if (lockAspect.checked && originalImage) {
-        const ratio = originalImage.width / originalImage.height;
-        widthInput.value = Math.round(heightInput.value * ratio);
-    }
-});
-
-downloadBtn.addEventListener('click', function() {
-    if (!originalImage) {
-        alert('Please upload an image first.');
-        return;
-    }
-    const newWidth = parseInt(widthInput.value);
-    const newHeight = parseInt(heightInput.value);
-    if (!newWidth || !newHeight) {
-        alert('Enter valid dimensions.');
-        return;
+    function updatePreviewCanvas() {
+        if (!originalImage) return;
+        var w = parseInt(widthInput.value, 10);
+        var h = parseInt(heightInput.value, 10);
+        if (!w || !h) return;
+        var canvas = FT.drawWithFilter(originalImage, 'none', w, h);
+        FT.showPreviewCanvas(preview, canvas);
     }
 
-    const canvas = document.createElement('canvas');
-    canvas.width = newWidth;
-    canvas.height = newHeight;
-    const ctx = canvas.getContext('2d');
-    ctx.drawImage(originalImage, 0, 0, newWidth, newHeight);
+    widthInput.addEventListener('input', function () {
+        if (lockAspect.checked && originalImage) {
+            var ratio = originalImage.height / originalImage.width;
+            heightInput.value = Math.max(1, Math.round(widthInput.value * ratio));
+        }
+        updatePreviewCanvas();
+    });
 
-    canvas.toBlob((blob) => {
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = 'resized.png';
-        link.click();
-        URL.revokeObjectURL(url);
-    }, 'image/png');
-});
+    heightInput.addEventListener('input', function () {
+        if (lockAspect.checked && originalImage) {
+            var ratio = originalImage.width / originalImage.height;
+            widthInput.value = Math.max(1, Math.round(heightInput.value * ratio));
+        }
+        updatePreviewCanvas();
+    });
+
+    FT.setupImageTool({
+        fileInput: fileInput,
+        preview: preview,
+        showPreview: false,
+        onLoad: function (result) {
+            originalImage = result.image;
+            currentFile = result.file;
+            widthInput.value = originalImage.width;
+            heightInput.value = originalImage.height;
+            updatePreviewCanvas();
+        }
+    });
+
+    downloadBtn.addEventListener('click', function () {
+        if (!originalImage) {
+            alert('Please upload an image first.');
+            return;
+        }
+        var w = parseInt(widthInput.value, 10);
+        var h = parseInt(heightInput.value, 10);
+        if (!w || !h || w < 1 || h < 1) {
+            alert('Enter valid dimensions.');
+            return;
+        }
+        var canvas = FT.drawWithFilter(originalImage, 'none', w, h);
+        var name = FT.baseName(currentFile, 'image') + '-' + w + 'x' + h + '.png';
+        FT.downloadCanvas(canvas, name, 'image/png');
+    });
+})();

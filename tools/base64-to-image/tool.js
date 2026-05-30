@@ -1,108 +1,89 @@
-// Base64 to Image – with persistent loading
-const fileInput = document.getElementById('fileInput');
-const preview = document.getElementById('preview');
-const downloadBtn = document.getElementById('downloadBtn');
-const toolBox = document.querySelector('.tool-box');
+(function () {
+    'use strict';
+    var FT = window.FastImgTool;
+    var fileInput = document.getElementById('fileInput');
+    var preview = document.getElementById('preview');
+    var downloadBtn = document.getElementById('downloadBtn');
+    var toolBox = document.querySelector('.tool-box');
 
-// Create loading indicator
-const loadingMsg = document.createElement('div');
-loadingMsg.id = 'loadingMessage';
-loadingMsg.innerHTML = '⏳ Processing your image...<br><small>This may take 1-2 minutes for large files.<br>Download will start automatically when ready.</small>';
-loadingMsg.style.display = 'none';
-loadingMsg.style.margin = '15px 0';
-loadingMsg.style.padding = '12px';
-loadingMsg.style.background = '#1e293b';
-loadingMsg.style.color = '#4da3ff';
-loadingMsg.style.borderRadius = '8px';
-loadingMsg.style.textAlign = 'center';
-loadingMsg.style.fontWeight = 'bold';
+    var textarea = document.createElement('textarea');
+    textarea.rows = 6;
+    textarea.placeholder = 'Paste a data URL here (data:image/png;base64,…) or raw base64';
+    textarea.style.width = '100%';
+    textarea.style.marginBottom = '12px';
+    textarea.style.padding = '12px';
+    textarea.style.background = '#1e293b';
+    textarea.style.color = '#e6edf7';
+    textarea.style.border = '1px solid #334155';
+    textarea.style.borderRadius = '8px';
+    textarea.style.fontFamily = 'monospace';
 
-// Create textarea
-const textarea = document.createElement('textarea');
-textarea.placeholder = 'Paste your base64 string here (starting with data:image/...;base64,)';
-textarea.rows = 5;
-textarea.style.width = '100%';
-textarea.style.marginBottom = '15px';
-textarea.style.padding = '12px';
-textarea.style.background = '#1e293b';
-textarea.style.color = '#e6edf7';
-textarea.style.border = '1px solid #2a3a5a';
-textarea.style.borderRadius = '8px';
-textarea.style.fontFamily = 'monospace';
+    var status = document.createElement('p');
+    status.style.color = '#94a3b8';
+    status.style.fontSize = '0.9rem';
 
-// Insert elements
-if (toolBox) {
-    toolBox.insertBefore(textarea, fileInput);
-    toolBox.appendChild(loadingMsg);
-}
-
-// Hide file input
-if (fileInput) fileInput.style.display = 'none';
-
-downloadBtn.addEventListener('click', async function() {
-    const base64 = textarea.value.trim();
-    if (!base64) {
-        alert('Please paste a base64 string.');
-        return;
-    }
-    if (!base64.startsWith('data:image/')) {
-        alert('Invalid base64. Must start with "data:image/..."');
-        return;
+    if (toolBox && fileInput) {
+        toolBox.insertBefore(textarea, fileInput);
+        toolBox.insertBefore(status, fileInput);
     }
 
-    // Show loading and disable button
-    loadingMsg.style.display = 'block';
-    downloadBtn.disabled = true;
-    preview.innerHTML = ''; // Clear previous preview
+    if (fileInput) fileInput.style.display = 'none';
 
-    try {
-        // Load the image (this may take time for large base64)
-        const img = await new Promise((resolve, reject) => {
-            const img = new Image();
-            img.onload = () => resolve(img);
-            img.onerror = reject;
-            img.src = base64;
-        });
+    downloadBtn.textContent = 'Convert & Download';
 
-        // Show preview
-        preview.innerHTML = '';
-        preview.appendChild(img);
-
-        // Extract mime and extension
-        const mimeMatch = base64.match(/data:([^;]+);/);
-        if (!mimeMatch) throw new Error('Could not determine image type');
-        const mime = mimeMatch[1];
-        const ext = mime.split('/')[1];
-
-        // Create canvas and download
-        const canvas = document.createElement('canvas');
-        canvas.width = img.width;
-        canvas.height = img.height;
-        const ctx = canvas.getContext('2d');
-        ctx.drawImage(img, 0, 0);
-
-        const blob = await new Promise(resolve => canvas.toBlob(resolve, mime));
-        if (!blob) throw new Error('Failed to create image blob');
-
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = 'image.' + ext;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url);
-
-        // Keep loading message visible for 5 seconds to indicate download started
-        // After that, hide it (download should be in progress)
-        setTimeout(() => {
-            loadingMsg.style.display = 'none';
-            downloadBtn.disabled = false;
-        }, 5000);
-    } catch (err) {
-        console.error('Error:', err);
-        alert('Failed to process image. Check console for details.');
-        loadingMsg.style.display = 'none';
-        downloadBtn.disabled = false;
+    function normalizeBase64(input) {
+        var s = input.trim();
+        if (!s) return '';
+        if (s.startsWith('data:image/')) return s;
+        return 'data:image/png;base64,' + s.replace(/^data:.*;base64,/, '');
     }
-});
+
+    textarea.addEventListener('input', FT.debounce(function () {
+        var data = normalizeBase64(textarea.value);
+        if (!data.startsWith('data:image/')) {
+            preview.innerHTML = '';
+            status.textContent = '';
+            return;
+        }
+        status.textContent = 'Preview loading…';
+        FT.loadImageFromUrl(data)
+            .then(function (img) {
+                FT.showPreviewImage(preview, img);
+                status.textContent = 'Ready to download.';
+            })
+            .catch(function () {
+                preview.innerHTML = '';
+                status.textContent = 'Invalid image data.';
+            });
+    }, 300));
+
+    downloadBtn.addEventListener('click', function () {
+        var data = normalizeBase64(textarea.value);
+        if (!data.startsWith('data:image/')) {
+            alert('Paste a valid base64 image string (data:image/…;base64,…).');
+            return;
+        }
+
+        downloadBtn.disabled = true;
+        status.textContent = 'Processing…';
+
+        FT.loadImageFromUrl(data)
+            .then(function (img) {
+                var mimeMatch = data.match(/data:([^;]+);/);
+                var mime = mimeMatch ? mimeMatch[1] : 'image/png';
+                var ext = mime.split('/')[1] || 'png';
+                var canvas = FT.imageToCanvas(img);
+                return FT.downloadCanvas(canvas, 'decoded.' + ext, mime).then(function () {
+                    status.textContent = 'Download started.';
+                });
+            })
+            .catch(function (err) {
+                console.error(err);
+                alert('Could not decode image.');
+                status.textContent = '';
+            })
+            .finally(function () {
+                downloadBtn.disabled = false;
+            });
+    });
+})();

@@ -1,51 +1,43 @@
-// WEBP to JPG Converter
-const fileInput = document.getElementById('fileInput');
-const preview = document.getElementById('preview');
-const downloadBtn = document.getElementById('downloadBtn');
+(function () {
+    'use strict';
+    var FT = window.FastImgTool;
+    var fileInput = document.getElementById('fileInput');
+    var preview = document.getElementById('preview');
+    var downloadBtn = document.getElementById('downloadBtn');
+    var originalImage = null;
+    var currentFile = null;
 
-let originalImage = null;
+    var controls = document.createElement('div');
+    controls.className = 'ft-controls';
+    controls.innerHTML =
+        '<div class="ft-row"><label>JPEG quality: <span id="qualityValue">92</span>%</label>' +
+        '<input type="range" id="qualitySlider" min="10" max="100" value="92"></div>';
+    FT.insertBeforeAction(controls, downloadBtn);
 
-fileInput.addEventListener('change', function(e) {
-    const file = e.target.files[0];
-    if (!file) return;
-    if (!file.type.match('image/webp')) {
-        alert('Please select a WEBP image.');
-        return;
-    }
+    var qualitySlider = document.getElementById('qualitySlider');
+    var qualityValue = document.getElementById('qualityValue');
+    qualitySlider.addEventListener('input', function () {
+        qualityValue.textContent = qualitySlider.value;
+    });
 
-    const reader = new FileReader();
-    reader.onload = function(event) {
-        const img = new Image();
-        img.onload = function() {
-            originalImage = img;
-            preview.innerHTML = '';
-            preview.appendChild(img.cloneNode());
-        };
-        img.src = event.target.result;
-    };
-    reader.readAsDataURL(file);
-});
+    FT.setupImageTool({
+        fileInput: fileInput,
+        preview: preview,
+        accept: { types: ['image/webp'], exts: ['.webp'] },
+        invalidMessage: 'Please select a WebP image.',
+        onLoad: function (result) {
+            originalImage = result.image;
+            currentFile = result.file;
+        }
+    });
 
-downloadBtn.addEventListener('click', function() {
-    if (!originalImage) {
-        alert('Please upload an image first.');
-        return;
-    }
-
-    const canvas = document.createElement('canvas');
-    canvas.width = originalImage.width;
-    canvas.height = originalImage.height;
-    const ctx = canvas.getContext('2d');
-    ctx.fillStyle = '#FFFFFF';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(originalImage, 0, 0);
-
-    canvas.toBlob((blob) => {
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = 'converted.jpg';
-        link.click();
-        URL.revokeObjectURL(url);
-    }, 'image/jpeg', 0.92);
-});
+    downloadBtn.addEventListener('click', function () {
+        if (!originalImage) {
+            alert('Please upload an image first.');
+            return;
+        }
+        var canvas = FT.imageToCanvas(originalImage);
+        var q = parseInt(qualitySlider.value, 10) / 100;
+        FT.downloadCanvas(canvas, FT.baseName(currentFile, 'converted') + '.jpg', 'image/jpeg', q);
+    });
+})();

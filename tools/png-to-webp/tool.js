@@ -1,68 +1,45 @@
-// PNG to WEBP Converter
-const fileInput = document.getElementById('fileInput');
-const preview = document.getElementById('preview');
-const downloadBtn = document.getElementById('downloadBtn');
+(function () {
+    'use strict';
+    var FT = window.FastImgTool;
+    var fileInput = document.getElementById('fileInput');
+    var preview = document.getElementById('preview');
+    var downloadBtn = document.getElementById('downloadBtn');
+    var originalImage = null;
+    var currentFile = null;
 
-let originalImage = null;
+    var controls = document.createElement('div');
+    controls.className = 'ft-controls';
+    controls.innerHTML =
+        '<div class="ft-row"><label>WebP quality: <span id="qualityValue">90</span>%</label>' +
+        '<input type="range" id="qualitySlider" min="10" max="100" value="90"></div>';
+    FT.insertBeforeAction(controls, downloadBtn);
 
-// Quality slider
-const controlsDiv = document.createElement('div');
-controlsDiv.style.marginTop = '15px';
-controlsDiv.innerHTML = `
-    <div>
-        <label>Quality: <span id="qualityValue">90</span>%</label>
-        <input type="range" id="qualitySlider" min="10" max="100" value="90" style="width:100%;">
-    </div>
-`;
-document.querySelector('.tool-box').appendChild(controlsDiv);
+    var qualitySlider = document.getElementById('qualitySlider');
+    var qualityValue = document.getElementById('qualityValue');
+    qualitySlider.addEventListener('input', function () {
+        qualityValue.textContent = qualitySlider.value;
+    });
 
-const qualitySlider = document.getElementById('qualitySlider');
-const qualitySpan = document.getElementById('qualityValue');
+    FT.setupImageTool({
+        fileInput: fileInput,
+        preview: preview,
+        accept: { types: ['image/png'], exts: ['.png'] },
+        invalidMessage: 'Please select a PNG image.',
+        onLoad: function (result) {
+            originalImage = result.image;
+            currentFile = result.file;
+        }
+    });
 
-qualitySlider.addEventListener('input', () => {
-    qualitySpan.textContent = qualitySlider.value;
-});
-
-fileInput.addEventListener('change', function(e) {
-    const file = e.target.files[0];
-    if (!file) return;
-    if (!file.type.match('image.*')) {
-        alert('Please select an image file.');
-        return;
-    }
-
-    const reader = new FileReader();
-    reader.onload = function(event) {
-        const img = new Image();
-        img.onload = function() {
-            originalImage = img;
-            preview.innerHTML = '';
-            preview.appendChild(img.cloneNode());
-        };
-        img.src = event.target.result;
-    };
-    reader.readAsDataURL(file);
-});
-
-downloadBtn.addEventListener('click', function() {
-    if (!originalImage) {
-        alert('Please upload an image first.');
-        return;
-    }
-
-    const canvas = document.createElement('canvas');
-    canvas.width = originalImage.width;
-    canvas.height = originalImage.height;
-    const ctx = canvas.getContext('2d');
-    ctx.drawImage(originalImage, 0, 0);
-
-    const quality = qualitySlider.value / 100;
-    canvas.toBlob((blob) => {
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = 'converted.webp';
-        link.click();
-        URL.revokeObjectURL(url);
-    }, 'image/webp', quality);
-});
+    downloadBtn.addEventListener('click', function () {
+        if (!originalImage) {
+            alert('Please upload an image first.');
+            return;
+        }
+        var canvas = FT.imageToCanvas(originalImage);
+        var q = parseInt(qualitySlider.value, 10) / 100;
+        FT.downloadCanvas(canvas, FT.baseName(currentFile, 'converted') + '.webp', 'image/webp', q).catch(function () {
+            alert('WebP export failed. Your browser may not support WebP encoding.');
+        });
+    });
+})();

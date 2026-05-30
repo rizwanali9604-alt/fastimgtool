@@ -5,7 +5,10 @@
   "main": "build.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "node scripts/copy-vendor.js",
+    "vendor": "node scripts/copy-vendor.js",
+    "patch-tools": "node scripts/inject-tool-core.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +26,7 @@
     "browser-image-compression": "^2.0.2",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
+    "heic2any": "^0.0.4",
     "openai": "^6.27.0",
     "sharp": "^0.34.5"
   }

@@ -1,73 +1,69 @@
-// Flip Image
-const fileInput = document.getElementById('fileInput');
-const preview = document.getElementById('preview');
-const downloadBtn = document.getElementById('downloadBtn');
+(function () {
+    'use strict';
+    var FT = window.FastImgTool;
+    var fileInput = document.getElementById('fileInput');
+    var preview = document.getElementById('preview');
+    var downloadBtn = document.getElementById('downloadBtn');
+    var originalImage = null;
+    var currentFile = null;
 
-let originalImage = null;
+    var controls = document.createElement('div');
+    controls.className = 'ft-controls';
+    controls.innerHTML =
+        '<div class="ft-row">' +
+        '<label><input type="radio" name="flip" value="horizontal" checked> Flip horizontal</label> ' +
+        '<label style="margin-left:12px;"><input type="radio" name="flip" value="vertical"> Flip vertical</label>' +
+        '</div>';
+    FT.insertBeforeAction(controls, downloadBtn);
 
-// Create direction radio buttons
-const controlsDiv = document.createElement('div');
-controlsDiv.style.marginTop = '15px';
-controlsDiv.innerHTML = `
-    <div>
-        <label><input type="radio" name="flip" value="horizontal" checked> Horizontal</label>
-        <label style="margin-left:15px;"><input type="radio" name="flip" value="vertical"> Vertical</label>
-    </div>
-`;
-document.querySelector('.tool-box').appendChild(controlsDiv);
+    var flipRadios = document.getElementsByName('flip');
 
-const flipRadios = document.getElementsByName('flip');
-
-fileInput.addEventListener('change', function(e) {
-    const file = e.target.files[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.onload = function(event) {
-        const img = new Image();
-        img.onload = function() {
-            originalImage = img;
-            preview.innerHTML = '';
-            preview.appendChild(img.cloneNode());
-        };
-        img.src = event.target.result;
-    };
-    reader.readAsDataURL(file);
-});
-
-downloadBtn.addEventListener('click', function() {
-    if (!originalImage) {
-        alert('Please upload an image first.');
-        return;
-    }
-
-    const canvas = document.createElement('canvas');
-    canvas.width = originalImage.width;
-    canvas.height = originalImage.height;
-    const ctx = canvas.getContext('2d');
-
-    // Get selected flip direction
-    let flipH = false, flipV = false;
-    for (const radio of flipRadios) {
-        if (radio.checked) {
-            if (radio.value === 'horizontal') flipH = true;
-            else flipV = true;
-            break;
+    function getFlipMode() {
+        for (var i = 0; i < flipRadios.length; i++) {
+            if (flipRadios[i].checked) return flipRadios[i].value;
         }
+        return 'horizontal';
     }
 
-    ctx.save();
-    ctx.translate(flipH ? canvas.width : 0, flipV ? canvas.height : 0);
-    ctx.scale(flipH ? -1 : 1, flipV ? -1 : 1);
-    ctx.drawImage(originalImage, 0, 0);
-    ctx.restore();
+    function flipToCanvas(img, mode) {
+        var canvas = document.createElement('canvas');
+        canvas.width = img.width;
+        canvas.height = img.height;
+        var ctx = canvas.getContext('2d');
+        var h = mode === 'horizontal';
+        var v = mode === 'vertical';
+        ctx.translate(h ? canvas.width : 0, v ? canvas.height : 0);
+        ctx.scale(h ? -1 : 1, v ? -1 : 1);
+        ctx.drawImage(img, 0, 0);
+        return canvas;
+    }
 
-    canvas.toBlob((blob) => {
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = 'flipped.png';
-        link.click();
-        URL.revokeObjectURL(url);
-    }, 'image/png');
-});
+    function renderPreview() {
+        if (!originalImage) return;
+        FT.showPreviewCanvas(preview, flipToCanvas(originalImage, getFlipMode()));
+    }
+
+    Array.prototype.forEach.call(flipRadios, function (radio) {
+        radio.addEventListener('change', renderPreview);
+    });
+
+    FT.setupImageTool({
+        fileInput: fileInput,
+        preview: preview,
+        showPreview: false,
+        onLoad: function (result) {
+            originalImage = result.image;
+            currentFile = result.file;
+            renderPreview();
+        }
+    });
+
+    downloadBtn.addEventListener('click', function () {
+        if (!originalImage) {
+            alert('Please upload an image first.');
+            return;
+        }
+        var canvas = flipToCanvas(originalImage, getFlipMode());
+        FT.downloadCanvas(canvas, FT.baseName(currentFile, 'flipped') + '.png', 'image/png');
+    });
+})();
