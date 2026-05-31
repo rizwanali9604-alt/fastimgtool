@@ -13,7 +13,13 @@ if (!fs.existsSync(GUIDES_OUTPUT_DIR)) {
     fs.mkdirSync(GUIDES_OUTPUT_DIR, { recursive: true });
 }
 
-const guideData = JSON.parse(fs.readFileSync(GUIDE_DATA_FILE, 'utf8'));
+const guideDataMain = JSON.parse(fs.readFileSync(GUIDE_DATA_FILE, 'utf8'));
+const extraFile = path.join(__dirname, '..', 'data', 'guide-data-extra.json');
+let guideDataExtra = [];
+if (fs.existsSync(extraFile)) {
+    guideDataExtra = JSON.parse(fs.readFileSync(extraFile, 'utf8'));
+}
+const guideData = guideDataMain.concat(guideDataExtra);
 const template = fs.readFileSync(TEMPLATE_FILE, 'utf8');
 
 const guidesJson = [];
@@ -44,54 +50,39 @@ function escapeHtml(value) {
  */
 function renderGuidePage(guide, tpl) {
     const tool_slug = guide.tool_slug ?? '';
-    const tool_name = guide.tool_name ?? '';
+    const tool_name = guide.tool_name ?? tool_slug;
     const slug = guide.slug ?? '';
     const title = guide.title ?? '';
     const description = guide.description ?? '';
     const h1 = guide.h1 ?? title;
     const content = guide.content ?? '';
-    const imagePath = `/assets/images/guides/${slug}.jpg`;
     const canonical_url = `${SITE_ORIGIN}/guides/${slug}.html`;
+    const wordCount = content.replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length;
+    const read_time = Math.max(3, Math.min(15, Math.ceil(wordCount / 200)));
+    const updated_date = guide.date || 'May 2026';
+
+    const inline_cta =
+        '<div class="inline-tool-cta">' +
+        '<div class="cta-icon">🖼️</div>' +
+        '<div class="cta-text"><strong>Try it free: ' +
+        escapeHtml(tool_name) +
+        '</strong>' +
+        '<span>Use our browser-based tool — no signup</span></div>' +
+        '<a href="/tools/' +
+        tool_slug +
+        '/" class="cta-btn">Use Tool →</a></div>';
 
     const map = new Map([
         ['{{content}}', content],
+        ['{{inline_cta}}', inline_cta],
         ['{{title}}', escapeHtml(title)],
-        ['{{description}}', escapeAttr(description)],
         ['{{meta_description}}', escapeAttr(description)],
         ['{{h1}}', escapeHtml(h1)],
-        ['{{h1_title}}', escapeHtml(h1)],
-        ['{{introduction}}', ''],
         ['{{tool_slug}}', tool_slug],
-        ['{{tool_name}}', tool_name],
-        ['{{slug}}', slug],
-        ['{{image}}', imagePath],
+        ['{{tool_name}}', escapeHtml(tool_name)],
         ['{{canonical_url}}', canonical_url],
-        ['{{step_number}}', ''],
-        ['{{step_title}}', ''],
-        ['{{step_description}}', ''],
-        ['{{step_image_url}}', ''],
-        ['{{step_image_alt}}', ''],
-        ['{{topic}}', tool_name || tool_slug],
-        ['{{reason_1}}', ''],
-        ['{{reason_2}}', ''],
-        ['{{reason_3}}', ''],
-        ['{{reason_4}}', ''],
-        ['{{faq_question_1}}', ''],
-        ['{{faq_answer_1}}', ''],
-        ['{{faq_question_2}}', ''],
-        ['{{faq_answer_2}}', ''],
-        ['{{faq_question_3}}', ''],
-        ['{{faq_answer_3}}', ''],
-        ['{{faq_question_4}}', ''],
-        ['{{faq_answer_4}}', ''],
-        ['{{link_url_1}}', '#'],
-        ['{{link_text_1}}', ''],
-        ['{{link_url_2}}', '#'],
-        ['{{link_text_2}}', ''],
-        ['{{link_url_3}}', '#'],
-        ['{{link_text_3}}', ''],
-        ['{{link_url_4}}', '#'],
-        ['{{link_text_4}}', ''],
+        ['{{read_time}}', String(read_time)],
+        ['{{updated_date}}', updated_date]
     ]);
 
     let page = tpl;

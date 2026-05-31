@@ -16,6 +16,7 @@
 </script>
     <link rel="canonical" href="https:/fastimgtool.com/">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/overhaul.css">
 
     <!-- Preconnect for AdSense -->
     <link rel="preconnect" href="https:/pagead2.googlesyndication.com">
@@ -274,22 +275,40 @@
         </div>
         <div class="nav-links">
             <a href="/">Home</a>
-            <a href="/tools/">Tools</a>
+            <a href="/#tools">Tools</a>
             <a href="/guides/">Guides</a>
+            <a href="/affiliate/">Recommended</a>
             <a href="/blog/">Blog</a>
             <a href="/about.html">About</a>
-            <a href="/contact.html">Contact</a>
-            <a href="/community.html">Community</a>
+            <a href="/tools/image-compressor/" class="nav-cta">Try Compressor →</a>
         </div>
     </nav>
 
-    <header>
-        <div class="hero">
-            <h1>⚡ Fast Image Tools</h1>
-            <p>Free, private, browser‑based image tools. No uploads, no signup, just fast editing.</p>
-            <div id="toolNav" style="margin-top: 15px;"></div>
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Free Image Tools — No signup required
+            </div>
+            <h1 class="hero-title">
+                Powerful Image Tools<br>
+                <span class="hero-highlight">for Every Seller &amp; Creator</span>
+            </h1>
+            <p class="hero-subtitle">
+                Resize, compress, convert, and optimize images in seconds.
+                Built for Meesho sellers, Amazon sellers, and content creators.
+            </p>
+            <div class="hero-cta">
+                <a href="#tools" class="btn-primary">Explore All Tools</a>
+                <a href="/tools/image-compressor/" class="btn-secondary">⚡ Start with Compressor</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><strong id="statToolCount">24</strong><span>Free Tools</span></div>
+                <div class="stat"><strong>0</strong><span>Signups Needed</span></div>
+                <div class="stat"><strong>100%</strong><span>Browser-Based</span></div>
+            </div>
         </div>
-    </header>
+    </section>
 
     <!-- Search Bar -->
 <div style="max-width:600px; margin:20px auto; padding:0 15px;">
@@ -299,45 +318,33 @@
 
     <main class="container" id="tools">
 
-        <!-- Categories will be injected here by JavaScript -->
-        <div id="categories-container"></div>
-        <!-- Popular Tools Section -->
-<div style="margin: 50px 0;">
-    <h2 style="font-size: 1.8rem; border-bottom: 2px solid #2a3a5a; padding-bottom: 8px; margin-bottom: 25px;">🔥 Popular Tools</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 15px;">
-        <a href="/tools/image-resizer/" style="background:#1e293b; color:#e6edf7; padding:8px 16px; border-radius:30px; text-decoration:none;">Image Resizer</a>
-        <a href="/tools/image-compressor/" style="background:#1e293b; color:#e6edf7; padding:8px 16px; border-radius:30px; text-decoration:none;">Image Compressor</a>
-        <a href="/tools/jpg-to-png/" style="background:#1e293b; color:#e6edf7; padding:8px 16px; border-radius:30px; text-decoration:none;">JPG to PNG</a>
-        <a href="/tools/png-to-jpg/" style="background:#1e293b; color:#e6edf7; padding:8px 16px; border-radius:30px; text-decoration:none;">PNG to JPG</a>
-        <a href="/tools/webp-to-jpg/" style="background:#1e293b; color:#e6edf7; padding:8px 16px; border-radius:30px; text-decoration:none;">WEBP to JPG</a>
-        <a href="/tools/image-grayscale/" style="background:#1e293b; color:#e6edf7; padding:8px 16px; border-radius:30px; text-decoration:none;">Grayscale</a>
-        <a href="/tools/image-blur/" style="background:#1e293b; color:#e6edf7; padding:8px 16px; border-radius:30px; text-decoration:none;">Blur</a>
-        <a href="/tools/image-sharpen/" style="background:#1e293b; color:#e6edf7; padding:8px 16px; border-radius:30px; text-decoration:none;">Sharpen</a>
-    </div>
-</div>
-
-<!-- Popular Guides Section -->
-<div style="margin: 50px 0;">
-    <h2 style="font-size: 1.8rem; border-bottom: 2px solid #2a3a5a; padding-bottom: 8px; margin-bottom: 25px;">📚 Popular Guides</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 15px;">
-        <a href="/guides/how-to-resize-image-online.html" style="background:#1e293b; color:#e6edf7; padding:8px 16px; border-radius:30px; text-decoration:none;">How to Resize an Image</a>
-        <a href="/guides/resize-image-for-instagram.html" style="background:#1e293b; color:#e6edf7; padding:8px 16px; border-radius:30px; text-decoration:none;">Resize for Instagram</a>
-        <a href="/guides/how-to-compress-image-online.html" style="background:#1e293b; color:#e6edf7; padding:8px 16px; border-radius:30px; text-decoration:none;">How to Compress an Image</a>
-        <a href="/guides/compress-image-for-email.html" style="background:#1e293b; color:#e6edf7; padding:8px 16px; border-radius:30px; text-decoration:none;">Compress for Email</a>
-        <a href="/guides/how-to-convert-jpg-to-png.html" style="background:#1e293b; color:#e6edf7; padding:8px 16px; border-radius:30px; text-decoration:none;">Convert JPG to PNG</a>
-        <a href="/guides/how-to-convert-image-to-grayscale.html" style="background:#1e293b; color:#e6edf7; padding:8px 16px; border-radius:30px; text-decoration:none;">Convert to Grayscale</a>
-        <a href="/guides/how-to-blur-image-online.html" style="background:#1e293b; color:#e6edf7; padding:8px 16px; border-radius:30px; text-decoration:none;">How to Blur an Image</a>
-        <a href="/guides/how-to-sharpen-image-online.html" style="background:#1e293b; color:#e6edf7; padding:8px 16px; border-radius:30px; text-decoration:none;">How to Sharpen an Image</a>
-    </div>
-</div>
-
-        <!-- Guides preview section (dynamic) -->
-        <div class="guides-preview" id="guides-preview" style="display: none;">
-            <h2>📚 You Might Also Like</h2>
-            <div id="guides-list" class="guides-list">
-                <!-- Will be populated with guides -->
+        <section class="tools-section" style="padding-top:40px;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>All Image Tools</h2>
+                    <p>Free tools, zero signup, processed in your browser</p>
+                </div>
+                <div class="category-tabs">
+                    <button type="button" class="cat-tab active" data-cat="all">All Tools</button>
+                    <button type="button" class="cat-tab" data-cat="convert">Converters</button>
+                    <button type="button" class="cat-tab" data-cat="optimize">Optimize</button>
+                    <button type="button" class="cat-tab" data-cat="effects">Effects</button>
+                    <button type="button" class="cat-tab" data-cat="transform">Transform</button>
+                </div>
+                <div class="tools-grid" id="toolsGrid"></div>
             </div>
-        </div>
+        </section>
+
+        <section class="related-guides-section" style="padding-top:20px;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Popular Guides</h2>
+                    <p>Step-by-step tutorials for sellers and creators</p>
+                </div>
+                <div class="guides-grid" id="guidesGridHome"></div>
+                <p style="text-align:center;margin-top:24px;"><a href="/guides/" class="btn-primary">View All Guides</a></p>
+            </div>
+        </section>
         <!-- Latest blog post -->
         <div style="margin: 40px 0; text-align:center;">
             <h2>📝 Latest from Our Blog</h2>
@@ -346,116 +353,47 @@
 
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-col">
-                <h4>Product</h4>
-                <ul>
-                    <li><a href="/tools/">All Tools</a></li>
-                    <li><a href="/guides/">All Guides</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                </ul>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">FastImageTool</div>
+                    <p>Free image tools for creators and sellers. No signup, no watermarks, 100% browser-based.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="/tools/image-compressor/">Image Compressor</a></li>
+                        <li><a href="/tools/image-resizer/">Image Resizer</a></li>
+                        <li><a href="/tools/jpg-to-png/">JPG to PNG</a></li>
+                        <li><a href="/#tools">All Tools →</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Guides</h4>
+                    <ul>
+                        <li><a href="/guides/how-to-compress-image-online.html">Compress Images</a></li>
+                        <li><a href="/guides/how-to-resize-image-online.html">Resize Images</a></li>
+                        <li><a href="/guides/">All Guides →</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>More</h4>
+                    <ul>
+                        <li><a href="/affiliate/">Recommended Products</a></li>
+                        <li><a href="/privacy.html">Privacy Policy</a></li>
+                        <li><a href="/about.html">About</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="/privacy.html">Privacy policy</a></li>
-                    <li><a href="/terms.html">Terms & conditions</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <span>© 2026 FastImageTool. All rights reserved.</span>
+                <span>Built for sellers. Free forever.</span>
             </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="/about.html">About us</a></li>
-                    <li><a href="/contact.html">Contact us</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 FastImgTool – All rights reserved.</p>
         </div>
     </footer>
 
-    <script>
-        / Load tools and build categories
-        async function loadHomepage() {
-            try {
-                / Fetch tools (required)
-                const toolsRes = await fetch('/data/tools.json');
-                if (!toolsRes.ok) throw new Error('Failed to fetch tools');
-                const tools = await toolsRes.json();
-
-                / Group tools by category
-                const categories = {};
-                tools.forEach(tool => {
-                    const cat = tool.category || 'uncategorized';
-                    if (!categories[cat]) categories[cat] = [];
-                    categories[cat].push(tool);
-                });
-
-                const categoryNames = {
-                    'resize': '📏 Resize & Scale',
-                    'compression': '🗜️ Compression',
-                    'conversion': '🔄 Format Conversion',
-                    'effects': '✨ Effects & Filters',
-                    'editing': '✂️ Editing Tools',
-                    'test': '🧪 Test Tools',
-                    'uncategorized': '📦 Other Tools'
-                };
-
-                let html = '';
-                for (const [cat, toolsList] of Object.entries(categories)) {
-                    const displayName = categoryNames[cat] || cat;
-                    html += `<div class="category-section"><h2 class="category-title">${displayName}</h2><div class="tool-grid">`;
-                    toolsList.forEach(tool => {
-                        html += `
-                            <div class="tool-card">
-                                <h3>${tool.title}</h3>
-                                <p>${tool.description}</p>
-                                <a href="/tools/${tool.slug}/" class="btn">Open Tool →</a>
-                            </div>
-                        `;
-                    });
-                    html += `</div></div>`;
-                }
-                document.getElementById('categories-container').innerHTML = html;
-
-            } catch (err) {
-                console.error('Error loading tools:', err);
-                document.getElementById('categories-container').innerHTML = '<p style="color:red;">Failed to load tools. Please refresh.</p>';
-            }
-
-            / Fetch guides (independent, won't break categories)
-            try {
-                const guidesRes = await fetch('/data/guides.json');
-                if (!guidesRes.ok) throw new Error('Failed to fetch guides');
-                const guides = await guidesRes.json();
-
-                const guidesPreview = document.getElementById('guides-preview');
-                if (guides && guides.length > 0) {
-                    / Random guides for preview
-                    const shuffled = guides.sort(() => 0.5 - Math.random());
-                    const previewGuides = shuffled.slice(0, 8);
-                    let guidesHtml = '';
-                    previewGuides.forEach(guide => {
-                        guidesHtml += `<a href="${guide.url}">${guide.title}</a>`;
-                    });
-                    document.getElementById('guides-list').innerHTML = guidesHtml;
-                    guidesPreview.style.display = 'block'; / show section
-                } else {
-                    / No guides, hide section
-                    guidesPreview.style.display = 'none';
-                }
-            } catch (err) {
-                console.error('Error loading guides:', err);
-                / Hide guides section if error
-                document.getElementById('guides-preview').style.display = 'none';
-            }
-        }
-
-        loadHomepage();
-    </script>
+    <script src="/assets/js/home-tools.js"></script>
     <script src="/assets/js/nav.js"></script>
     <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -543,7 +481,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </form>
 </div>
 <script type="text/javascript" src="/s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='COMPANY';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
-    / SMS Phone Multi-Country Functionality
+    // SMS Phone Multi-Country Functionality
     if(!window.MC) {
       window.MC = {};
     }
@@ -557,7 +495,7 @@ document.addEventListener('DOMContentLoaded', function() {
        return countryCode.toUpperCase().replace(/./g, (char) => String.fromCodePoint(char.charCodeAt(0) + 127397))
     };
 
-    / HTML sanitization function to prevent XSS
+    // HTML sanitization function to prevent XSS
     function sanitizeHtml(str) {
       if (typeof str !== 'string') return '';
       return str
@@ -569,7 +507,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .replace(/\/g, '&#x2F;');
     }
 
-    / URL sanitization function to prevent javascript: and data: URLs
+    // URL sanitization function to prevent javascript: and data: URLs
     function sanitizeUrl(url) {
       if (typeof url !== 'string') return '';
       const trimmedUrl = url.trim().toLowerCase();
@@ -634,7 +572,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
       
-      / Remove HTML tags and clean up the text
+      // Remove HTML tags and clean up the text
       const divRegex = new RegExp('</?[div][^>]*>', 'gi');
       const fullAnchorRegex = new RegExp('<a.*?</a>', 'g');
       const anchorRegex = new RegExp('<a href="(.*?)" target="(.*?)">(.*?)</a>');
@@ -672,7 +610,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const flag = getCountryUnicodeFlag(program.countryCode);
         const countryName = getCountryName(program.countryCode);
         const callingCode = program.countryCallingCode || '';
-        / Sanitize all values to prevent XSS
+        // Sanitize all values to prevent XSS
         const sanitizedCountryCode = sanitizeHtml(program.countryCode || '');
         const sanitizedCountryName = sanitizeHtml(countryName || '');
         const sanitizedCallingCode = sanitizeHtml(callingCode || '');

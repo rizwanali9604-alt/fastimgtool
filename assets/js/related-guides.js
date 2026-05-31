@@ -20,7 +20,26 @@ async function loadRelatedGuides() {
             return;
         }
 
-        // Build HTML
+        // Build HTML — horizontal guide cards when inside .guides-grid
+        const isGrid = container.classList.contains('guides-grid');
+        if (isGrid) {
+            let html = '';
+            toolGuides.slice(0, 6).forEach(function (guide) {
+                html +=
+                    '<a href="' +
+                    guide.url +
+                    '" class="guide-card">' +
+                    '<span class="guide-card-tag">Guide</span>' +
+                    '<span class="guide-card-title">' +
+                    guide.title +
+                    '</span>' +
+                    '<span class="guide-card-arrow">Read guide →</span>' +
+                    '</a>';
+            });
+            container.innerHTML = html;
+            return;
+        }
+
         let html = '<h3>Related Guides</h3><ul>';
         toolGuides.forEach(guide => {
             html += `<li><a href="${guide.url}">${guide.title}</a></li>`;
