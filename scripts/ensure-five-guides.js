@@ -23,8 +23,32 @@ function slugify(s) {
     return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
+/** Conversion-oriented tools may mention HEIC; effect/edit tools get a generic formats FAQ. */
+function isConversionTool(slug) {
+    return /heic|jpg|jpeg|png|webp|bmp|gif|tiff|base64|convert/i.test(slug);
+}
+
+function buildFifthFaq(tool, toolUrl) {
+    const name = tool.title;
+    const slug = tool.slug;
+
+    if (slug === 'heic-to-jpg') {
+        return `<h3>Why convert HEIC to JPG?</h3>
+<p>HEIC is Apple's default iPhone format; many marketplaces and editors require JPG. <a href="${toolUrl}">${name}</a> converts files privately in your browser.</p>`;
+    }
+
+    if (isConversionTool(slug)) {
+        return `<h3>Which file formats can I upload?</h3>
+<p>Check the file picker on <a href="${toolUrl}">${name}</a> for supported types. iPhone HEIC photos may need our <a href="/tools/heic-to-jpg/">HEIC to JPG</a> converter first.</p>`;
+    }
+
+    return `<h3>Which image formats work best?</h3>
+<p>For <a href="${toolUrl}">${name}</a>, use common formats such as JPG or PNG unless the tool page specifies otherwise.</p>`;
+}
+
 function buildContent(tool, topic, toolUrl) {
     const name = tool.title;
+    const fifthFaq = buildFifthFaq(tool, toolUrl);
     return `
 <h2 id="intro">Introduction</h2>
 <p>Whether you sell on Amazon, Meesho, or create content online, knowing how to use <strong>${name}</strong> saves time and improves results. This guide covers practical steps using our free browser-based tool — no signup, no uploads to our servers.</p>
@@ -62,8 +86,7 @@ function buildContent(tool, topic, toolUrl) {
 <p>JPEG is preferred for photos; PNG for graphics with transparency. Check current Seller Central image guidelines.</p>
 <h3>Can I use this on mobile?</h3>
 <p>Yes. Works in modern mobile browsers (Chrome, Safari, Edge).</p>
-<h3>What if my file is HEIC from iPhone?</h3>
-<p>Use our <a href="/tools/heic-to-jpg/">HEIC to JPG</a> converter first, then continue with ${name}.</p>
+${fifthFaq}
 
 <h2 id="cta">Try it now</h2>
 <p>Ready to optimize your images? <a href="${toolUrl}">Open ${name} →</a></p>
@@ -117,6 +140,36 @@ tools.forEach((tool) => {
         added.push(slug);
     });
 });
+
+/** Fix HEIC FAQ baked into existing extra entries (run: node scripts/ensure-five-guides.js --patch-faq) */
+function patchExistingExtraFaq() {
+    if (!fs.existsSync(EXTRA_FILE)) {
+        console.log('No guide-data-extra.json to patch.');
+        return;
+    }
+    const toolsBySlug = Object.fromEntries(tools.map((t) => [t.slug, t]));
+    let entries = JSON.parse(fs.readFileSync(EXTRA_FILE, 'utf8'));
+    const heicBlock =
+        /<h3>What if my file is HEIC from iPhone\?<\/h3>\s*<p>[\s\S]*?<\/p>\s*/gi;
+    let patched = 0;
+    entries = entries.map((entry) => {
+        if (!heicBlock.test(entry.content)) return entry;
+        heicBlock.lastIndex = 0;
+        const tool = toolsBySlug[entry.tool_slug];
+        if (!tool) return entry;
+        const toolUrl = `/tools/${tool.slug}/`;
+        entry.content = entry.content.replace(heicBlock, buildFifthFaq(tool, toolUrl) + '\n');
+        patched++;
+        return entry;
+    });
+    fs.writeFileSync(EXTRA_FILE, JSON.stringify(entries, null, 2), 'utf8');
+    console.log(`✅ Patched HEIC FAQ in ${patched} guide-data-extra entries. Run: node scripts/create-guides.js`);
+}
+
+if (process.argv.includes('--patch-faq')) {
+    patchExistingExtraFaq();
+    process.exit(0);
+}
 
 fs.writeFileSync(EXTRA_FILE, JSON.stringify(extra, null, 2), 'utf8');
 console.log(`✅ guide-data-extra.json: ${extra.length} total entries (${added.length} new)`);

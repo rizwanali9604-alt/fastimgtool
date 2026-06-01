@@ -18,7 +18,7 @@ if (!KEY) {
     process.exit(0);
 }
 
-async function enhance(title, snippet, toolUrl) {
+async function enhance(title, snippet, toolUrl, toolName) {
     const res = await fetch('https://api.deepseek.com/v1/chat/completions', {
         method: 'POST',
         headers: {
@@ -36,7 +36,7 @@ async function enhance(title, snippet, toolUrl) {
                 },
                 {
                     role: 'user',
-                    content: `Rewrite and improve guide "${title}". Tool: ${toolUrl}. Current excerpt:\n${snippet.slice(0, 1500)}`
+                    content: `Rewrite and improve guide "${title}". Primary tool: ${toolName} at ${toolUrl}. The guide must focus on that tool, not Image Compressor unless this guide is about compression. Current excerpt:\n${snippet.slice(0, 1500)}`
                 }
             ]
         })
@@ -44,6 +44,28 @@ async function enhance(title, snippet, toolUrl) {
     const data = await res.json();
     if (!data.choices || !data.choices[0]) throw new Error(JSON.stringify(data));
     return data.choices[0].message.content;
+}
+
+/** Read tool URL from guide HTML produced by create-guides.js */
+function extractToolUrl(html) {
+    const patterns = [
+        /class="cta-btn"[^>]*href="(\/tools\/[a-z0-9-]+\/)/,
+        /class="sidebar-tool-link"[^>]*href="(\/tools\/[a-z0-9-]+\/)/,
+        /class="inline-tool-cta"[\s\S]*?href="(\/tools\/[a-z0-9-]+\/)/
+    ];
+    for (const re of patterns) {
+        const m = html.match(re);
+        if (m) return m[1];
+    }
+    return null;
+}
+
+function extractToolName(html) {
+    const m = html.match(/class="inline-tool-cta"[\s\S]*?<strong>Try it free:\s*([^<]+)</);
+    if (m) return m[1].trim();
+    const m2 = html.match(/class="sidebar-tool-link"[^>]*>→\s*Open\s+([^<]+)</);
+    if (m2) return m2[1].trim();
+    return null;
 }
 
 async function main() {
@@ -55,9 +77,17 @@ async function main() {
         const title = titleM ? titleM[1] : file;
         const contentM = html.match(/<article class="guide-content">([\s\S]*?)<\/article>/);
         if (!contentM) continue;
-        console.log('Enhancing:', file);
+
+        const toolUrl = extractToolUrl(html);
+        if (!toolUrl) {
+            console.warn(`  ⚠️  Skip ${file}: could not detect tool URL in HTML`);
+            continue;
+        }
+        const toolName = extractToolName(html) || toolUrl;
+
+        console.log('Enhancing:', file, '→', toolUrl);
         try {
-            const enhanced = await enhance(title, contentM[1], '/tools/image-compressor/');
+            const enhanced = await enhance(title, contentM[1], toolUrl, toolName);
             html = html.replace(contentM[0], `<article class="guide-content">\n${enhanced}\n</article>`);
             fs.writeFileSync(fp, html, 'utf8');
             console.log('  ✅ done');
