@@ -5,7 +5,7 @@
     'use strict';
 
     function slugify(text) {
-        return text
+        return String(text || '')
             .toLowerCase()
             .replace(/[^a-z0-9]+/g, '-')
             .replace(/^-|-$/g, '');
@@ -17,16 +17,28 @@
         if (!content || !toc) return;
 
         var headings = content.querySelectorAll('h2');
+        toc.innerHTML = '';
+
         if (!headings.length) {
-            toc.innerHTML = '<li><span style="color:#64748b">No sections</span></li>';
+            var empty = document.createElement('li');
+            var span = document.createElement('span');
+            span.style.color = '#64748b';
+            span.textContent = 'No sections';
+            empty.appendChild(span);
+            toc.appendChild(empty);
             return;
         }
 
-        var html = '';
         headings.forEach(function (h, i) {
-            if (!h.id) h.id = slugify(h.textContent) || 'section-' + (i + 1);
-            html += '<li><a href="#' + h.id + '">' + h.textContent + '</a></li>';
+            if (!h.id) {
+                h.id = slugify(h.textContent) || 'section-' + (i + 1);
+            }
+            var li = document.createElement('li');
+            var a = document.createElement('a');
+            a.href = '#' + h.id;
+            a.textContent = h.textContent;
+            li.appendChild(a);
+            toc.appendChild(li);
         });
-        toc.innerHTML = html;
     });
 })();

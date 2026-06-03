@@ -44,12 +44,19 @@ function escapeHtml(value) {
         .replace(/>/g, '&gt;');
 }
 
+/** Restrict to safe URL path segments for /tools/{slug}/ */
+function safeSlug(value) {
+    if (value == null) return '';
+    const s = String(value).toLowerCase().replace(/[^a-z0-9-]/g, '');
+    return /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(s) ? s : '';
+}
+
 /**
  * Apply all known {{placeholders}} from guide-data.json.
  * Content is inserted as HTML (trusted source: your guide-data).
  */
 function renderGuidePage(guide, tpl) {
-    const tool_slug = guide.tool_slug ?? '';
+    const tool_slug = safeSlug(guide.tool_slug ?? '');
     const tool_name = guide.tool_name ?? tool_slug;
     const slug = guide.slug ?? '';
     const title = guide.title ?? '';
@@ -61,6 +68,7 @@ function renderGuidePage(guide, tpl) {
     const read_time = Math.max(3, Math.min(15, Math.ceil(wordCount / 200)));
     const updated_date = guide.date || 'May 2026';
 
+    const toolHref = tool_slug ? '/tools/' + tool_slug + '/' : '#';
     const inline_cta =
         '<div class="inline-tool-cta">' +
         '<div class="cta-icon">🖼️</div>' +
@@ -68,9 +76,9 @@ function renderGuidePage(guide, tpl) {
         escapeHtml(tool_name) +
         '</strong>' +
         '<span>Use our browser-based tool — no signup</span></div>' +
-        '<a href="/tools/' +
-        tool_slug +
-        '/" class="cta-btn">Use Tool →</a></div>';
+        '<a href="' +
+        escapeAttr(toolHref) +
+        '" class="cta-btn">Use Tool →</a></div>';
 
     const map = new Map([
         ['{{content}}', content],
@@ -78,7 +86,7 @@ function renderGuidePage(guide, tpl) {
         ['{{title}}', escapeHtml(title)],
         ['{{meta_description}}', escapeAttr(description)],
         ['{{h1}}', escapeHtml(h1)],
-        ['{{tool_slug}}', tool_slug],
+        ['{{tool_slug}}', escapeAttr(tool_slug)],
         ['{{tool_name}}', escapeHtml(tool_name)],
         ['{{canonical_url}}', canonical_url],
         ['{{read_time}}', String(read_time)],
@@ -112,11 +120,16 @@ guideData.forEach(guide => {
     fs.writeFileSync(outputPath, page, 'utf8');
     console.log(`✅ Generated: guides/${slug}.html`);
 
-    guidesJson.push({
-        tool_slug: guide.tool_slug,
-        title: guide.title,
-        url: `/guides/${slug}.html`
-    });
+    const jsonToolSlug = safeSlug(guide.tool_slug);
+    if (!jsonToolSlug) {
+        console.warn(`⚠️  Skipping guides.json entry (missing tool_slug): ${slug}`);
+    } else {
+        guidesJson.push({
+            tool_slug: jsonToolSlug,
+            title: guide.title || slug,
+            url: `/guides/${slug}.html`
+        });
+    }
 });
 
 fs.writeFileSync(GUIDES_JSON_FILE, JSON.stringify(guidesJson, null, 2), 'utf8');

@@ -4,6 +4,24 @@
 (function () {
     'use strict';
 
+    var Esc = window.FastImgEscape || {};
+
+    function escapeHtml(v) {
+        return Esc.escapeHtml ? Esc.escapeHtml(v) : String(v == null ? '' : v);
+    }
+
+    function escapeAttr(v) {
+        return Esc.escapeAttr ? Esc.escapeAttr(v) : String(v == null ? '' : v);
+    }
+
+    function safeSlug(slug) {
+        return Esc.safeSlug ? Esc.safeSlug(slug) : String(slug || '');
+    }
+
+    function safeGuideUrl(url) {
+        return Esc.safeGuideUrl ? Esc.safeGuideUrl(url) : url || '#';
+    }
+
     var CAT_MAP = {
         compression: 'optimize',
         resize: 'optimize',
@@ -56,28 +74,32 @@
 
         grid.innerHTML = toolsList
             .filter(function (t) {
-                return t.slug !== 'test-tool';
+                return t.slug !== 'test-tool' && safeSlug(t.slug);
             })
             .map(function (tool) {
+                var slug = safeSlug(tool.slug);
                 var cat = catFor(tool);
                 var icon = iconFor(tool);
-                var popular = ['image-compressor', 'image-resizer', 'jpg-to-png', 'png-to-jpg'].indexOf(tool.slug) !== -1;
+                var popular =
+                    ['image-compressor', 'image-resizer', 'jpg-to-png', 'png-to-jpg'].indexOf(slug) !== -1;
                 return (
                     '<a href="/tools/' +
-                    tool.slug +
+                    slug +
                     '/" class="tool-card-h" data-cat="' +
-                    cat +
+                    escapeHtml(cat) +
                     '">' +
                     '<div class="tool-icon-wrap">' +
                     icon +
                     '</div>' +
                     '<div class="tool-info">' +
                     '<div class="tool-name">' +
-                    tool.title +
-                    (popular ? ' <span style="font-size:10px;background:#DBEAFE;color:#1E40AF;padding:2px 6px;border-radius:99px;margin-left:4px;">Popular</span>' : '') +
+                    escapeHtml(tool.title) +
+                    (popular
+                        ? ' <span style="font-size:10px;background:#DBEAFE;color:#1E40AF;padding:2px 6px;border-radius:99px;margin-left:4px;">Popular</span>'
+                        : '') +
                     '</div>' +
                     '<div class="tool-desc">' +
-                    (tool.description || 'Free online image tool') +
+                    escapeHtml(tool.description || 'Free online image tool') +
                     '</div>' +
                     '</div>' +
                     '<div class="tool-arrow">→</div>' +
@@ -94,7 +116,8 @@
                 tab.classList.add('active');
                 var cat = tab.getAttribute('data-cat');
                 document.querySelectorAll('.tool-card-h').forEach(function (card) {
-                    card.style.display = cat === 'all' || card.getAttribute('data-cat') === cat ? 'flex' : 'none';
+                    card.style.display =
+                        cat === 'all' || card.getAttribute('data-cat') === cat ? 'flex' : 'none';
                 });
             });
         });
@@ -108,16 +131,18 @@
                 return r.json();
             })
             .then(function (guides) {
-                var picks = guides.slice(0, 6);
+                var picks = guides.filter(function (g) {
+                    return g && g.url && g.title;
+                }).slice(0, 6);
                 el.innerHTML = picks
                     .map(function (g) {
                         return (
                             '<a href="' +
-                            g.url +
+                            escapeAttr(safeGuideUrl(g.url)) +
                             '" class="guide-card">' +
                             '<span class="guide-card-tag">Guide</span>' +
                             '<span class="guide-card-title">' +
-                            g.title +
+                            escapeHtml(g.title) +
                             '</span>' +
                             '<span class="guide-card-arrow">Read guide →</span>' +
                             '</a>'
@@ -138,7 +163,13 @@
             .then(function (tools) {
                 renderTools(tools);
                 var statTools = document.getElementById('statToolCount');
-                if (statTools) statTools.textContent = String(tools.filter(function (t) { return t.slug !== 'test-tool'; }).length);
+                if (statTools) {
+                    statTools.textContent = String(
+                        tools.filter(function (t) {
+                            return t.slug !== 'test-tool';
+                        }).length
+                    );
+                }
             })
             .catch(function (err) {
                 console.error(err);
