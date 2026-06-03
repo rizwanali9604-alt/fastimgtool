@@ -3,11 +3,11 @@
  * Set DEEPSEEK_API_KEY in environment. Skips if unset.
  * Run: node scripts/enhance-guides.js [--limit=5]
  */
-require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
+const { DEEPSEEK_CONFIG, deepseekChat } = require('../lib/deepseek-config');
 
-const KEY = process.env.DEEPSEEK_API_KEY;
+const KEY = DEEPSEEK_CONFIG.apiKey;
 const GUIDES_DIR = path.join(__dirname, '../guides');
 const limitArg = process.argv.find((a) => a.startsWith('--limit='));
 const LIMIT = limitArg ? parseInt(limitArg.split('=')[1], 10) : 3;
@@ -19,31 +19,21 @@ if (!KEY) {
 }
 
 async function enhance(title, snippet, toolUrl, toolName) {
-    const res = await fetch('https://api.deepseek.com/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${KEY}`
-        },
-        body: JSON.stringify({
-            model: 'deepseek-chat',
-            max_tokens: 2500,
-            messages: [
-                {
-                    role: 'system',
-                    content:
-                        'You write SEO guides for fastimgtool.com. Output HTML fragments only (h2,h3,p,ul,ol,li). 800-1200 words. Include FAQ with 5 questions. Mention the tool link naturally once.'
-                },
-                {
-                    role: 'user',
-                    content: `Rewrite and improve guide "${title}". Primary tool: ${toolName} at ${toolUrl}. The guide must focus on that tool, not Image Compressor unless this guide is about compression. Current excerpt:\n${snippet.slice(0, 1500)}`
-                }
-            ]
-        })
+    return deepseekChat({
+        model: DEEPSEEK_CONFIG.models.content,
+        maxTokens: 2500,
+        messages: [
+            {
+                role: 'system',
+                content:
+                    'You write SEO guides for fastimgtool.com. Output HTML fragments only (h2,h3,p,ul,ol,li). 800-1200 words. Include FAQ with 5 questions. Mention the tool link naturally once.'
+            },
+            {
+                role: 'user',
+                content: `Rewrite and improve guide "${title}". Primary tool: ${toolName} at ${toolUrl}. The guide must focus on that tool, not Image Compressor unless this guide is about compression. Current excerpt:\n${snippet.slice(0, 1500)}`
+            }
+        ]
     });
-    const data = await res.json();
-    if (!data.choices || !data.choices[0]) throw new Error(JSON.stringify(data));
-    return data.choices[0].message.content;
 }
 
 /** Read tool URL from guide HTML produced by create-guides.js */

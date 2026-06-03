@@ -8,7 +8,12 @@
     "start": "node server.js",
     "postinstall": "node scripts/copy-vendor.js",
     "vendor": "node scripts/copy-vendor.js",
-    "patch-tools": "node scripts/inject-tool-core.js"
+    "patch-tools": "node scripts/inject-tool-core.js",
+    "examine": "node scripts/site-examiner.js",
+    "generate-guides": "node scripts/generate-guides.js",
+    "audit": "node scripts/site-examiner.js",
+    "guides": "node scripts/create-guides.js",
+    "build": "node build.js"
   },
   "repository": {
     "type": "git",

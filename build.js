@@ -169,10 +169,14 @@ async function generateGuidesListing() {
     const template = await fs.readFile(CONFIG.GUIDES_LISTING_TEMPLATE, 'utf8');
 
     const cards = guides.map(guide => `
-        <div class="guide-card">
-            <h3><a href="${guide.url}">${guide.title}</a></h3>
-            <p>${guide.description || 'Learn more...'}</p>
-        </div>
+        <a href="${guide.url}" class="tool-card-h">
+            <div class="tool-icon-wrap">📖</div>
+            <div class="tool-info">
+                <div class="tool-name">${guide.title}</div>
+                <div class="tool-desc">${guide.description || 'Learn more...'}</div>
+            </div>
+            <div class="tool-arrow">→</div>
+        </a>
     `).join('');
 
     const page = template.replace('{{guides}}', cards);

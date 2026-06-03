@@ -15,6 +15,7 @@
 </script>
     <link rel="canonical" href="https:/fastimgtool.com/tools/png-to-jpg/">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/overhaul.css">
     <link rel="icon" href="/assets/favicon.png">
     <!-- AdSense -->
     <script async src="https:/pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>
@@ -32,7 +33,19 @@
         .footer-col a:hover { color: #4da3ff; }
         .footer-bottom { text-align: center; padding-top: 20px; margin-top: 20px; border-top: 1px solid #1e293b; color: #64748b; font-size: 0.85rem; }
         /* Tool page specific styles */
-        #preview img { max-width: 100%; max-height: 300px; border-radius: 8px; }
+        #preview img, .ft-preview-img, .ft-preview-canvas { max-width: 100%; max-height: min(360px, 50vh); border-radius: 8px; object-fit: contain; }
+        .ft-tool-box.ft-drag-over { outline: 2px dashed #4da3ff; outline-offset: 4px; border-radius: 8px; }
+        .ft-controls { margin: 16px 0; text-align: left; }
+        .ft-controls label { color: #cbd5e1; display: block; margin-bottom: 6px; }
+        .ft-controls input[type=range], .ft-controls select, .ft-controls input[type=number] {
+            width: 100%; max-width: 420px; padding: 8px; border-radius: 8px;
+            border: 1px solid #334155; background: #0f172a; color: #e6edf7;
+        }
+        .ft-controls .ft-row { margin-bottom: 12px; }
+        #fileInput { margin-bottom: 12px; }
+        #downloadBtn { margin-top: 8px; padding: 10px 20px; cursor: pointer; border-radius: 8px; border: none;
+            background: linear-gradient(135deg, #2563eb, #0891b2); color: #fff; font-weight: 600; }
+        #downloadBtn:disabled { opacity: 0.5; cursor: not-allowed; }
         /* Screenshot styling */
         .tool-screenshot {
             max-width: 800px;
@@ -57,6 +70,7 @@
             <a href="/">Home</a>
             <a href="/tools/">Tools</a>
             <a href="/guides/">Guides</a>
+            <a href="/affiliate/">Recommended</a>
             <a href="/blog/">Blog</a>
             <a href="/about.html">About</a>
             <a href="/contact.html">Contact</a>
@@ -71,12 +85,10 @@
     </header>
 
     <!-- Top Ad -->
-    <div style="min-height:250px;">
-<div style="text-align:center; margin:20px 0;">
+    <div style="text-align:center; margin:20px 0;">
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8332278519903196" data-ad-slot="9490701260" data-ad-format="auto"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
-</div>
 
     <!-- Tool UI -->
     <main class="tool-container">
@@ -88,12 +100,10 @@
     </main>
 
     <!-- Middle Ad -->
-    <div style="min-height:250px;">
-<div style="text-align:center; margin:20px 0;">
+    <div style="text-align:center; margin:20px 0;">
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8332278519903196" data-ad-slot="8664200172" data-ad-format="auto"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
-</div>
 
     <!-- Tool Screenshot (added) -->
     <div class="tool-screenshot">
@@ -172,12 +182,10 @@ This section provides clear, practical examples while maintaining readability an
     </section>
 
     <!-- Bottom Ad -->
-    <div style="min-height:250px;">
-<div style="text-align:center; margin:20px 0;">
+    <div style="text-align:center; margin:20px 0;">
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8332278519903196" data-ad-slot="3445350863" data-ad-format="auto"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
-</div>
 
     <!-- Footer -->
     <footer class="footer">
