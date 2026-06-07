@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Resizer Online</title>
+    <title>Image Resizer Free Online — FastImageTool</title>
     <meta name="description" content="Free image resizer online. Resize to Meesho 600×600, Amazon 1000×1000, Instagram 1080×1080. No signup, instant download.">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DHHVPY5DJK"></script>
     <script>
@@ -16,19 +16,40 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/overhaul.css">
     <link rel="icon" href="/assets/favicon.png">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278513903196" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Image Resizer Online",
+  "url": "https://fastimgtool.com/tools/image-resizer/",
+  "description": "Free image resizer online. Resize to Meesho 600×600, Amazon 1000×1000, Instagram 1080×1080.",
+  "applicationCategory": "ImageEditor",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo"><a href="/">⚡ FastImageTool</a></div>
-        <div class="nav-links">
-            <a href="/#tools">All Tools</a>
-            <a href="/guides/">Guides</a>
-            <a href="/affiliate/">Recommended</a>
-            <a href="/tools/image-compressor/" class="nav-cta">Compress Now →</a>
-        </div>
-        <button type="button" class="nav-toggle" aria-label="Menu">☰</button>
-    </nav>
+    <nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">⚡ FastImageTool</a>
+    <div class="nav-links">
+      <a href="/tools/" class="nav-link">All Tools</a>
+      <a href="/guides/" class="nav-link">Guides</a>
+      <a href="/blog/" class="nav-link">Blog</a>
+      <a href="/affiliate/" class="nav-link">Recommended</a>
+      <a href="/tools/image-compressor/" class="nav-cta">
+        Compress Free →
+      </a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+  </div>
+</nav>
 
     <header class="tool-page-header" style="text-align:center;padding:24px 20px;">
         <h1>Image Resizer Online</h1>
@@ -37,29 +58,78 @@
 
     <div class="ad-slot-placeholder container">AdSense Ad — Replace with real ad code after approval</div>
 
-    <main class="tool-container">
-        <div class="tool-box ft-tool-box" id="toolBox">
-            <div class="upload-zone" id="uploadZone">
-                <div class="upload-inner">
-                    <div class="upload-icon">📁</div>
-                    <div class="upload-title">Drop image here or click to browse</div>
-                    <div class="upload-hint">Supports JPG, PNG, WebP, GIF, BMP</div>
-                </div>
-                <input type="file" id="fileInput" accept="image/*" style="display:none">
-            </div>
-            <div id="preview"></div>
-            <button type="button" id="downloadBtn" disabled>⬇️ Download</button>
+    <div class="tool-container">
+  <div class="upload-area" id="uploadArea">
+    <div class="upload-prompt">
+      <span class="upload-icon">📁</span>
+      <p>Drag and drop an image here, or click to browse</p>
+      <p class="upload-sub">JPG, PNG, WebP, GIF supported</p>
+      <button class="btn-upload" onclick="document.getElementById('fileInput').click()">
+        Choose Image
+      </button>
+    </div>
+    <input type="file" id="fileInput" accept="image/*" style="display:none">
+  </div>
 
-            <div class="affiliate-cta">
-                <div class="affiliate-icon">📦</div>
-                <div class="affiliate-text">
-                    <strong>Need professional product photography?</strong>
-                    <span>Shop lighting kits, cameras and accessories on Amazon</span>
-                </div>
-                <a href="https://www.amazon.in/s?k=product+photography+lighting+kit&amp;tag=fastimgtool78-21" target="_blank" rel="noopener sponsored" class="affiliate-btn">Shop Amazon →</a>
-            </div>
-        </div>
-    </main>
+  <div class="tool-controls" id="controls" style="display:none">
+    <div class="preview-area">
+      <img id="preview" alt="Preview">
+    </div>
+
+    <div class="control-group">
+      <label>Width (px)</label>
+      <input type="number" id="widthInput" min="1" max="8000" placeholder="Width">
+    </div>
+    <div class="control-group">
+      <label>Height (px)</label>
+      <input type="number" id="heightInput" min="1" max="8000" placeholder="Height">
+    </div>
+    <div class="control-group">
+      <label>
+        <input type="checkbox" id="lockRatio" checked> Lock aspect ratio
+      </label>
+    </div>
+
+    <div class="preset-buttons">
+      <p class="preset-label">Common sizes:</p>
+      <button type="button" onclick="setSize(600,600)">600×600 (Meesho)</button>
+      <button type="button" onclick="setSize(1000,1000)">1000×1000 (Amazon)</button>
+      <button type="button" onclick="setSize(1920,1080)">1920×1080 (HD)</button>
+      <button type="button" onclick="setSize(1080,1080)">1080×1080 (Instagram)</button>
+      <button type="button" onclick="setSize(1200,628)">1200×628 (Facebook)</button>
+    </div>
+
+    <button class="btn-primary" onclick="resizeAndDownload()">
+      Resize & Download
+    </button>
+
+    <!-- TO DO: replace href with your Amazon affiliate URL from affiliate-program.amazon.in -->
+    <div class="affiliate-cta">
+      <div class="aff-icon">📦</div>
+      <div class="aff-text">
+        <strong>Need better product photos?</strong>
+        <span>Shop lighting kits, cameras &amp; accessories on Amazon</span>
+      </div>
+      <a href="#affiliate-pending" target="_blank"
+         rel="noopener sponsored" class="aff-btn aff-amazon">
+        Shop Amazon →
+      </a>
+    </div>
+
+    <!-- TO DO: replace href with your Canva affiliate URL from canva.com/affiliates -->
+    <div class="affiliate-cta" style="margin-top:10px;">
+      <div class="aff-icon">🎨</div>
+      <div class="aff-text">
+        <strong>Want professional designs?</strong>
+        <span>Try Canva Pro — 100M+ templates for sellers</span>
+      </div>
+      <a href="#affiliate-pending" target="_blank"
+         rel="noopener sponsored" class="aff-btn aff-canva">
+        Try Canva Free →
+      </a>
+    </div>
+  </div>
+</div>
 
     <div class="ad-slot-placeholder container">AdSense Ad — Replace with real ad code after approval</div>
 
@@ -72,54 +142,23 @@
 
     <section class="seo-content container" style="max-width:800px;margin:40px auto;padding:24px;background:var(--card);border-radius:12px;line-height:1.8;border:1px solid var(--border);">
         <h2>About Image Resizer Online</h2>
-        <h3>About Image Resizer Online</h3>
-<p>Image Resizer Online is a free, easy-to-use tool that allows you to quickly resize images to any desired dimensions without losing quality. Whether you need to adjust photos for social media, websites, or documents, our tool ensures fast and precise resizing with just a few clicks.</p>
-<p>The main benefit of using our resizer is its simplicity—no software downloads or registration required, making it perfect for both beginners and professionals who need quick image adjustments on the go.</p>
+        <p>Image Resizer Online is a free, easy-to-use tool that allows you to quickly resize images to any desired dimensions without losing quality. Whether you need to adjust photos for social media, websites, or documents, our tool ensures fast and precise resizing with just a few clicks.</p>
 
         <h2>How to Use Image Resizer Online</h2>
-        <h3>How to Use Image Resizer Online</h3>
-<p>Follow these simple steps to resize your images quickly and easily:</p>
-
-<ol>
-  <li><strong>Upload Your Image:</strong> Click the "Upload" button or drag and drop your image file into the designated area.</li>
-  <li><strong>Select Resize Options:</strong> Choose between percentage scaling or entering specific width/height dimensions in pixels.</li>
-  <li><strong>Maintain Aspect Ratio (Optional):</strong> Check the "Keep Aspect Ratio" box to prevent distortion while resizing.</li>
-  <li><strong>Preview & Adjust:</strong> View the resized image preview and make adjustments if needed.</li>
-  <li><strong>Download Your Image:</strong> Click the "Download" button to save your resized image to your device.</li>
-</ol>
-
-<p>For best results, use high-quality original images and check the file size after resizing.</p>
+        <ol>
+          <li><strong>Upload Your Image:</strong> Click Choose Image or drag and drop your file.</li>
+          <li><strong>Enter Dimensions:</strong> Set width and height in pixels, or use a preset size.</li>
+          <li><strong>Lock Aspect Ratio:</strong> Keep proportions while resizing.</li>
+          <li><strong>Download:</strong> Click Resize &amp; Download to save your image.</li>
+        </ol>
 
         <h2>Why Use Image Resizer Online?</h2>
-        <h3>Why Use Image Resizer Online?</h3>
-<p>Image Resizer Online is a powerful and user-friendly tool designed to resize your images effortlessly. Whether you're optimizing photos for social media, web design, or personal projects, this tool offers several benefits:</p>
-<ul>
-  <li><strong>Quick and Easy:</strong> Resize images in just a few clicks without needing any technical expertise.</li>
-  <li><strong>Multiple Formats Supported:</strong> Works with popular image formats like JPG, PNG, GIF, and more.</li>
-  <li><strong>Preserve Quality:</strong> Maintains the integrity and sharpness of your images during resizing.</li>
-  <li><strong>Accessible Anywhere:</strong> Use the tool online without downloading software, making it convenient for all devices.</li>
-</ul>
-<p>Experience hassle-free image resizing and enhance your workflow with Image Resizer Online!</p>
-
-        <h2>Common Use Cases for Image Resizer Online</h2>
-        <h3>Common Use Cases</h3>
-<p>An online image resizer is a versatile tool that can be used in various scenarios to optimize images for different purposes. Here are some common use cases:</p>
-<ul>
-  <li><strong>Social Media Optimization:</strong> Resize images to fit the specific dimensions required by platforms like Instagram, Facebook, or Twitter, ensuring your posts look professional and visually appealing.</li>
-  <li><strong>Website Performance Improvement:</strong> Reduce the file size of images to speed up website loading times, enhancing user experience and SEO rankings.</li>
-  <li><strong>Print Media Preparation:</strong> Adjust image dimensions and resolutions to meet the requirements for brochures, posters, or business cards, ensuring high-quality prints.</li>
-  <li><strong>E-commerce Product Listings:</strong> Standardize product images to a uniform size for consistency across online stores, making your catalog look neat and professional.</li>
-</ul>
-
-        <h2>Frequently Asked Questions</h2>
-        <h3>How do I resize an image online?</h3>  
-<p>To resize an image online, simply upload your image to the Image Resizer Online tool, select your desired dimensions or percentage scaling, and click the "Resize" button. The tool will process your image and provide a downloadable link for the resized version.</p>  
-
-<h3>What image formats are supported by the Image Resizer Online tool?</h3>  
-<p>The Image Resizer Online tool supports a wide range of formats, including JPEG, PNG, BMP, GIF, and more. You can upload and resize images in any of these formats without any issues.</p>  
-
-<h3>Is there a limit to the file size I can resize?</h3>  
-<p>Yes, the Image Resizer Online tool typically has a file size limit, which is usually mentioned on the website. For most tools, the limit is around 5MB to 10MB per image. If your file exceeds this limit, consider compressing it before resizing.</p>
+        <ul>
+          <li><strong>Quick and Easy:</strong> Resize images in just a few clicks.</li>
+          <li><strong>Multiple Formats Supported:</strong> JPG, PNG, WebP, GIF, and more.</li>
+          <li><strong>Presets for Sellers:</strong> Meesho, Amazon, Instagram, and Facebook sizes.</li>
+          <li><strong>100% Browser-Based:</strong> No uploads to server, completely private.</li>
+        </ul>
     </section>
 
     <div id="related-guides-container" class="container" style="max-width:800px;margin:20px auto;"></div>
@@ -141,10 +180,80 @@
     </footer>
 
     <script src="/assets/js/calc-core.js"></script>
-    <script src="/assets/js/nav.js"></script>
     <script src="/assets/js/related-tools.js"></script>
     <script src="/assets/js/related-guides.js"></script>
-    <script src="/assets/js/tool-core.js"></script>
-    <script src="/tools/image-resizer/tool.js"></script>
+<script>
+let originalWidth = 0, originalHeight = 0, aspectRatio = 1;
+const fileInput = document.getElementById('fileInput');
+const preview = document.getElementById('preview');
+const uploadArea = document.getElementById('uploadArea');
+const controls = document.getElementById('controls');
+const widthInput = document.getElementById('widthInput');
+const heightInput = document.getElementById('heightInput');
+const lockRatio = document.getElementById('lockRatio');
+
+uploadArea.addEventListener('click', function(e) {
+  if (e.target.tagName !== 'BUTTON') fileInput.click();
+});
+fileInput.addEventListener('change', e => loadImage(e.target.files[0]));
+uploadArea.addEventListener('dragover', e => { e.preventDefault(); uploadArea.classList.add('drag-over'); });
+uploadArea.addEventListener('dragleave', () => uploadArea.classList.remove('drag-over'));
+uploadArea.addEventListener('drop', e => { e.preventDefault(); uploadArea.classList.remove('drag-over'); loadImage(e.dataTransfer.files[0]); });
+
+function loadImage(file) {
+  if (!file || !file.type.startsWith('image/')) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    const img = new Image();
+    img.onload = () => {
+      originalWidth = img.naturalWidth;
+      originalHeight = img.naturalHeight;
+      aspectRatio = originalWidth / originalHeight;
+      widthInput.value = originalWidth;
+      heightInput.value = originalHeight;
+      preview.src = ev.target.result;
+      uploadArea.style.display = 'none';
+      controls.style.display = 'block';
+    };
+    img.src = ev.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+widthInput.addEventListener('input', () => {
+  if (lockRatio.checked && widthInput.value) {
+    heightInput.value = Math.round(widthInput.value / aspectRatio);
+  }
+});
+heightInput.addEventListener('input', () => {
+  if (lockRatio.checked && heightInput.value) {
+    widthInput.value = Math.round(heightInput.value * aspectRatio);
+  }
+});
+
+function setSize(w, h) {
+  widthInput.value = w;
+  heightInput.value = h;
+}
+
+function resizeAndDownload() {
+  const w = parseInt(widthInput.value, 10);
+  const h = parseInt(heightInput.value, 10);
+  if (!w || !h) return alert('Please enter width and height');
+  const canvas = document.createElement('canvas');
+  canvas.width = w;
+  canvas.height = h;
+  const ctx = canvas.getContext('2d');
+  const img = new Image();
+  img.onload = () => {
+    ctx.drawImage(img, 0, 0, w, h);
+    const link = document.createElement('a');
+    link.download = 'resized-' + w + 'x' + h + '.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  };
+  img.src = preview.src;
+}
+</script>
 </body>
 </html>

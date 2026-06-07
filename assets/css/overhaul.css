@@ -23,6 +23,44 @@
 }
 
 /* Shared navbar (guide + affiliate pages) */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #0b1225;
+  border-bottom: 1px solid #1e293b;
+}
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.nav-logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #4da3ff, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+.nav-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.nav-link {
+  color: #a0b3d9;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+.nav-link:hover { color: #4da3ff; }
+
 .navbar {
   display: flex;
   justify-content: space-between;

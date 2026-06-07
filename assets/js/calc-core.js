@@ -41,7 +41,7 @@
 
     document.addEventListener('DOMContentLoaded', function () {
         initNavToggle();
-        initCalcTabs('.cat-tab', '.calc-card, .tool-card-h');
+        initCalcTabs('.cat-tab', '.calc-card, .tool-card-h, .tool-card');
         var y = document.getElementById('footerYear');
         if (y) y.textContent = String(new Date().getFullYear());
     });

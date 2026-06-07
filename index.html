@@ -272,18 +272,21 @@
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo">
-            <a href="/">⚡ FastImageTool</a>
-        </div>
-        <div class="nav-links">
-            <a href="/#tools">All Tools</a>
-            <a href="/guides/">Guides</a>
-            <a href="/affiliate/">Recommended</a>
-            <a href="/tools/image-compressor/" class="nav-cta">Compress Now →</a>
-        </div>
-        <button type="button" class="nav-toggle" aria-label="Menu">☰</button>
-    </nav>
+    <nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">⚡ FastImageTool</a>
+    <div class="nav-links">
+      <a href="/tools/" class="nav-link">All Tools</a>
+      <a href="/guides/" class="nav-link">Guides</a>
+      <a href="/blog/" class="nav-link">Blog</a>
+      <a href="/affiliate/" class="nav-link">Recommended</a>
+      <a href="/tools/image-compressor/" class="nav-cta">
+        Compress Free →
+      </a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+  </div>
+</nav>
 
     <section class="hero">
         <div class="hero-inner">
@@ -334,219 +337,196 @@
                 </div>
                 <div class="tools-grid">
       <a href="/tools/image-compressor/" class="tool-card" data-cat="optimize">
-        <div class="tool-icon">🗜️</div>
-        <div class="tool-info">
-          <div class="tool-name">Image Compressor</div>
-          <div class="tool-desc">Reduce file size without losing quality. Best for Meesho & Amazon sellers.</div>
+        <span class="tool-card-icon">🗜️</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Image Compressor</h3>
+          <p class="tool-card-desc">Reduce file size without losing quality</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/image-resizer/" class="tool-card" data-cat="transform">
-        <div class="tool-icon">↔️</div>
-        <div class="tool-info">
-          <div class="tool-name">Image Resizer</div>
-          <div class="tool-desc">Resize to exact pixels. Presets for Meesho 600×600, Amazon, Instagram.</div>
+        <span class="tool-card-icon">↔️</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Image Resizer</h3>
+          <p class="tool-card-desc">Resize to exact pixel dimensions</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/jpg-to-png/" class="tool-card" data-cat="convert">
-        <div class="tool-icon">🔄</div>
-        <div class="tool-info">
-          <div class="tool-name">JPG to PNG</div>
-          <div class="tool-desc">Convert JPG images to PNG format instantly. Preserves transparency.</div>
+        <span class="tool-card-icon">🔄</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">JPG to PNG</h3>
+          <p class="tool-card-desc">Convert JPG images to PNG format</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/png-to-jpg/" class="tool-card" data-cat="convert">
-        <div class="tool-icon">🔄</div>
-        <div class="tool-info">
-          <div class="tool-name">PNG to JPG</div>
-          <div class="tool-desc">Convert PNG to JPG with white background. Reduces file size.</div>
+        <span class="tool-card-icon">🔄</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">PNG to JPG</h3>
+          <p class="tool-card-desc">Convert PNG images to JPG format</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/image-to-webp/" class="tool-card" data-cat="convert">
-        <div class="tool-icon">⚡</div>
-        <div class="tool-info">
-          <div class="tool-name">Image to WebP</div>
-          <div class="tool-desc">Convert to WebP for smaller files. Faster website loading.</div>
+        <span class="tool-card-icon">⚡</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Image to WebP</h3>
+          <p class="tool-card-desc">Convert images to fast-loading WebP</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/webp-to-jpg/" class="tool-card" data-cat="convert">
-        <div class="tool-icon">🔄</div>
-        <div class="tool-info">
-          <div class="tool-name">WebP to JPG</div>
-          <div class="tool-desc">Convert WebP images back to JPG format. Free and instant.</div>
+        <span class="tool-card-icon">🔄</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">WebP to JPG</h3>
+          <p class="tool-card-desc">Convert WebP back to JPG format</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/image-blur/" class="tool-card" data-cat="effects">
-        <div class="tool-icon">🌫️</div>
-        <div class="tool-info">
-          <div class="tool-name">Blur Image</div>
-          <div class="tool-desc">Apply Gaussian blur effect. Blur backgrounds or entire images.</div>
+        <span class="tool-card-icon">🌫️</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Blur Image</h3>
+          <p class="tool-card-desc">Add blur effect to any image</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/image-sharpen/" class="tool-card" data-cat="effects">
-        <div class="tool-icon">💎</div>
-        <div class="tool-info">
-          <div class="tool-name">Sharpen Image</div>
-          <div class="tool-desc">Make blurry photos crisp and clear. Enhance product photos.</div>
+        <span class="tool-card-icon">🔍</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Sharpen Image</h3>
+          <p class="tool-card-desc">Make blurry images crisp and sharp</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/image-brightness/" class="tool-card" data-cat="effects">
-        <div class="tool-icon">☀️</div>
-        <div class="tool-info">
-          <div class="tool-name">Brightness</div>
-          <div class="tool-desc">Adjust image brightness with live preview sliders.</div>
+        <span class="tool-card-icon">☀️</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Brightness</h3>
+          <p class="tool-card-desc">Fix dark or washed-out photos</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/image-contrast/" class="tool-card" data-cat="effects">
-        <div class="tool-icon">◑</div>
-        <div class="tool-info">
-          <div class="tool-name">Contrast</div>
-          <div class="tool-desc">Adjust image contrast for sharper product photos.</div>
+        <span class="tool-card-icon">◑</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Contrast</h3>
+          <p class="tool-card-desc">Adjust contrast for sharper product photos</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/image-grayscale/" class="tool-card" data-cat="effects">
-        <div class="tool-icon">⬛</div>
-        <div class="tool-info">
-          <div class="tool-name">Grayscale</div>
-          <div class="tool-desc">Convert color images to black and white instantly.</div>
+        <span class="tool-card-icon">⚫</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Grayscale</h3>
+          <p class="tool-card-desc">Convert image to black and white</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/image-sepia/" class="tool-card" data-cat="effects">
-        <div class="tool-icon">🟤</div>
-        <div class="tool-info">
-          <div class="tool-name">Sepia Effect</div>
-          <div class="tool-desc">Apply warm vintage sepia tone to any image.</div>
+        <span class="tool-card-icon">🟤</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Sepia Effect</h3>
+          <p class="tool-card-desc">Add vintage warm sepia tone</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/image-invert/" class="tool-card" data-cat="effects">
-        <div class="tool-icon">🔲</div>
-        <div class="tool-info">
-          <div class="tool-name">Invert Colors</div>
-          <div class="tool-desc">Create negative effect by inverting all image colors.</div>
+        <span class="tool-card-icon">🔃</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Invert Colors</h3>
+          <p class="tool-card-desc">Create negative image effect</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/image-saturation/" class="tool-card" data-cat="effects">
-        <div class="tool-icon">🎨</div>
-        <div class="tool-info">
-          <div class="tool-name">Saturation</div>
-          <div class="tool-desc">Boost or reduce color saturation. Make colors pop.</div>
+        <span class="tool-card-icon">🎨</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Saturation</h3>
+          <p class="tool-card-desc">Boost or reduce color intensity</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/image-crop/" class="tool-card" data-cat="transform">
-        <div class="tool-icon">✂️</div>
-        <div class="tool-info">
-          <div class="tool-name">Crop Image</div>
-          <div class="tool-desc">Crop to exact dimensions. Presets for 1:1, 16:9, 4:3.</div>
+        <span class="tool-card-icon">✂️</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Crop Image</h3>
+          <p class="tool-card-desc">Crop to any size or ratio</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/rotate-image/" class="tool-card" data-cat="transform">
-        <div class="tool-icon">🔄</div>
-        <div class="tool-info">
-          <div class="tool-name">Rotate Image</div>
-          <div class="tool-desc">Rotate 90°, 180°, 270° or any custom angle.</div>
+        <span class="tool-card-icon">🔁</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Rotate Image</h3>
+          <p class="tool-card-desc">Rotate images any angle</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/flip-image/" class="tool-card" data-cat="transform">
-        <div class="tool-icon">🔃</div>
-        <div class="tool-info">
-          <div class="tool-name">Flip Image</div>
-          <div class="tool-desc">Flip horizontally or vertically. Create mirror images.</div>
+        <span class="tool-card-icon">🪞</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Flip Image</h3>
+          <p class="tool-card-desc">Mirror image horizontally or vertically</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/image-to-base64/" class="tool-card" data-cat="convert">
-        <div class="tool-icon">📝</div>
-        <div class="tool-info">
-          <div class="tool-name">Image to Base64</div>
-          <div class="tool-desc">Convert image to Base64 string for web developers.</div>
+        <span class="tool-card-icon">💻</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Image to Base64</h3>
+          <p class="tool-card-desc">Encode images for web developers</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/base64-to-image/" class="tool-card" data-cat="convert">
-        <div class="tool-icon">🖼️</div>
-        <div class="tool-info">
-          <div class="tool-name">Base64 to Image</div>
-          <div class="tool-desc">Decode Base64 string back to downloadable image.</div>
+        <span class="tool-card-icon">🖼️</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Base64 to Image</h3>
+          <p class="tool-card-desc">Decode Base64 back to image</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/heic-to-jpg/" class="tool-card" data-cat="convert">
-        <div class="tool-icon">📱</div>
-        <div class="tool-info">
-          <div class="tool-name">HEIC to JPG</div>
-          <div class="tool-desc">Convert iPhone HEIC photos to JPG in your browser.</div>
+        <span class="tool-card-icon">📱</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">HEIC to JPG</h3>
+          <p class="tool-card-desc">Convert iPhone HEIC photos to JPG</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/bmp-to-jpg/" class="tool-card" data-cat="convert">
-        <div class="tool-icon">🔄</div>
-        <div class="tool-info">
-          <div class="tool-name">BMP to JPG</div>
-          <div class="tool-desc">Convert BMP images to JPG format instantly.</div>
+        <span class="tool-card-icon">🗂️</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">BMP to JPG</h3>
+          <p class="tool-card-desc">Convert bitmap images to JPG format</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/gif-to-png/" class="tool-card" data-cat="convert">
-        <div class="tool-icon">🎞️</div>
-        <div class="tool-info">
-          <div class="tool-name">GIF to PNG</div>
-          <div class="tool-desc">Convert GIF (first frame) to PNG format.</div>
+        <span class="tool-card-icon">🎞️</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">GIF to PNG</h3>
+          <p class="tool-card-desc">Convert image to PNG format</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/png-to-webp/" class="tool-card" data-cat="convert">
-        <div class="tool-icon">⚡</div>
-        <div class="tool-info">
-          <div class="tool-name">PNG to WebP</div>
-          <div class="tool-desc">Convert PNG to WebP for faster web loading.</div>
+        <span class="tool-card-icon">⚡</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">PNG to WebP</h3>
+          <p class="tool-card-desc">Convert PNG to fast-loading WebP</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
-
       <a href="/tools/tiff-to-jpg/" class="tool-card" data-cat="convert">
-        <div class="tool-icon">🔄</div>
-        <div class="tool-info">
-          <div class="tool-name">TIFF to JPG</div>
-          <div class="tool-desc">Convert TIFF images to JPG for web and email.</div>
+        <span class="tool-card-icon">🖨️</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">TIFF to JPG</h3>
+          <p class="tool-card-desc">Convert to JPG for print quality</p>
         </div>
-        <div class="tool-arrow">→</div>
+        <span class="tool-card-arrow">→</span>
       </a>
                 </div>
             </div>
@@ -639,7 +619,6 @@
 
     <script src="/assets/js/dom-safe.js"></script>
     <script src="/assets/js/calc-core.js"></script>
-    <script src="/assets/js/home-tools.js"></script>
     <script src="/assets/js/nav.js"></script>
     <script>
 document.addEventListener('DOMContentLoaded', function() {
