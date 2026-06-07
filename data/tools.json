@@ -2,31 +2,31 @@
   {
     "slug": "image-compressor",
     "title": "Fast Image Compressor",
-    "description": "Compress JPG PNG WEBP images instantly. Free online image compressor.",
+    "description": "Free image compressor online. Reduce JPG PNG WebP file size for Meesho, Amazon, Shopify. No signup, browser-based.",
     "category": "compression"
   },
   {
     "slug": "image-resizer",
     "title": "Image Resizer Online",
-    "description": "Resize JPG PNG WEBP images instantly with this free browser-based tool.",
+    "description": "Free image resizer online. Resize to Meesho 600×600, Amazon 1000×1000, Instagram 1080×1080. No signup, instant download.",
     "category": "resize"
   },
   {
     "slug": "jpg-to-png",
     "title": "Convert JPG to PNG",
-    "description": "Convert JPG images to PNG instantly. Private browser-based conversion.",
+    "description": "Convert JPG to PNG online free. Preserves transparency, instant conversion, browser-based. No upload to server.",
     "category": "conversion"
   },
   {
     "slug": "png-to-jpg",
     "title": "PNG to JPG Converter",
-    "description": "Convert PNG images to JPG instantly online.",
+    "description": "Convert PNG to JPG online free. White background fill, smaller files for web and email. Private browser tool.",
     "category": "conversion"
   },
   {
     "slug": "webp-to-jpg",
     "title": "WEBP to JPG Converter",
-    "description": "Convert WEBP images to JPG instantly online.",
+    "description": "Convert WebP to JPG online free. Open WebP images on any device. Instant browser conversion.",
     "category": "conversion"
   },
   {
@@ -38,115 +38,115 @@
   {
     "slug": "image-blur",
     "title": "Image Blur",
-    "description": "Free online image blur tool. Fast, private, browser‑based.",
+    "description": "Blur images online free. Gaussian blur with adjustable strength. Works with JPG, PNG, WebP. Instant results.",
     "category": "effects"
   },
   {
     "slug": "image-sharpen",
     "title": "Image Sharpen",
-    "description": "Free online image sharpen tool. Fast, private, browser‑based.",
+    "description": "Sharpen blurry photos online free. Enhance product images for Amazon and Meesho listings.",
     "category": "effects"
   },
   {
     "slug": "image-grayscale",
     "title": "Image Grayscale",
-    "description": "Free online image grayscale tool. Fast, private, browser‑based.",
+    "description": "Convert images to grayscale online free. Black and white effect in your browser.",
     "category": "effects"
   },
   {
     "slug": "flip-image",
     "title": "Flip Image",
-    "description": "Flip images horizontally or vertically instantly. Free online tool.",
+    "description": "Flip images online free. Horizontal or vertical mirror. No signup required.",
     "category": "effects"
   },
   {
     "slug": "image-crop",
     "title": "Image Crop",
-    "description": "Crop images to any size instantly. Free online tool.",
+    "description": "Crop images online free. Custom dimensions and aspect ratios for social media and sellers.",
     "category": "editing"
   },
   {
     "slug": "rotate-image",
     "title": "Rotate Image",
-    "description": "Rotate images 90°, 180°, or 270° instantly. Free online tool.",
+    "description": "Rotate images online free. 90°, 180°, 270° rotation. Browser-based, private.",
     "category": "editing"
   },
   {
     "slug": "image-to-webp",
     "title": "Image to WebP",
-    "description": "Convert images to WebP format instantly. Free online tool.",
+    "description": "Convert images to WebP online free. Smaller files for faster Shopify and website loading.",
     "category": "conversion"
   },
   {
     "slug": "heic-to-jpg",
     "title": "HEIC to JPG",
-    "description": "Convert HEIC images to JPG instantly. Free online tool.",
+    "description": "Convert HEIC to JPG online free. iPhone photos to JPG for Amazon, Meesho, and email.",
     "category": "conversion"
   },
   {
     "slug": "image-to-base64",
     "title": "Image to Base64",
-    "description": "Convert images to Base64 strings. Free online developer tool.",
+    "description": "Image to Base64 encoder online free. For web developers. Private, in-browser.",
     "category": "conversion"
   },
   {
     "slug": "base64-to-image",
     "title": "Base64 to Image",
-    "description": "Convert Base64 strings back to images. Free online tool.",
+    "description": "Base64 to image decoder online free. Paste a string, download the image instantly.",
     "category": "conversion"
   },
   {
     "slug": "png-to-webp",
     "title": "PNG to WebP",
-    "description": "Convert PNG images to WebP format instantly. Free online tool.",
+    "description": "Convert PNG to WebP online free. Reduce file size for faster product pages.",
     "category": "conversion"
   },
   {
     "slug": "gif-to-png",
     "title": "GIF to PNG",
-    "description": "Convert GIF images to PNG (first frame). Free online tool.",
+    "description": "Convert GIF to PNG online free. Extract first frame as PNG image.",
     "category": "conversion"
   },
   {
     "slug": "bmp-to-jpg",
     "title": "BMP to JPG",
-    "description": "Convert BMP images to JPG format instantly. Free online tool.",
+    "description": "Convert BMP to JPG online free. Smaller files for web upload and email.",
     "category": "conversion"
   },
   {
     "slug": "tiff-to-jpg",
     "title": "TIFF to JPG",
-    "description": "Convert TIFF images to JPG format. Free online tool.",
+    "description": "Convert TIFF to JPG online free. Compress large scans for web and listings.",
     "category": "conversion"
   },
   {
     "slug": "image-brightness",
     "title": "Image Brightness",
-    "description": "Adjust image brightness instantly. Free online tool.",
+    "description": "Adjust image brightness online free. Live preview sliders. Browser-based.",
     "category": "effects"
   },
   {
     "slug": "image-contrast",
     "title": "Image Contrast",
-    "description": "Adjust image contrast instantly. Free online tool.",
+    "description": "Adjust image contrast online free. Make product photos pop on marketplaces.",
     "category": "effects"
   },
   {
     "slug": "image-saturation",
     "title": "Image Saturation",
-    "description": "Adjust image saturation instantly. Free online tool.",
+    "description": "Adjust image saturation online free. Boost or mute colors instantly.",
     "category": "effects"
   },
   {
     "slug": "image-invert",
     "title": "Image Invert",
-    "description": "Invert image colors (negative). Free online tool.",
+    "description": "Invert image colors online free. Create negative effect in your browser.",
     "category": "effects"
   },
   {
     "slug": "image-sepia",
     "title": "Image Sepia",
-    "description": "Apply a warm sepia tone to your images. Free online tool.",
+    "description": "Apply sepia effect online free. Vintage warm tone for photos and social posts.",
     "category": "effects"
   }
 ]

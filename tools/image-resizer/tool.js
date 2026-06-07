@@ -10,7 +10,15 @@
     var controls = document.createElement('div');
     controls.className = 'ft-controls';
     controls.innerHTML =
-        '<div class="ft-row" style="display:flex;gap:12px;flex-wrap:wrap;">' +
+        '<div class="ft-row"><label style="font-weight:600;font-size:14px;display:block;margin-bottom:8px;">Quick Presets</label>' +
+        '<div class="preset-row" style="display:flex;gap:8px;flex-wrap:wrap;">' +
+        '<button type="button" class="preset-btn" data-w="600" data-h="600">Meesho 600×600</button>' +
+        '<button type="button" class="preset-btn" data-w="1000" data-h="1000">Amazon 1000×1000</button>' +
+        '<button type="button" class="preset-btn" data-w="1080" data-h="1080">Instagram 1080×1080</button>' +
+        '<button type="button" class="preset-btn" data-w="1280" data-h="720">HD 1280×720</button>' +
+        '<button type="button" class="preset-btn" data-w="1920" data-h="1080">Full HD 1920×1080</button>' +
+        '</div></div>' +
+        '<div class="ft-row" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;">' +
         '<div><label for="widthInput">Width (px)</label><input type="number" id="widthInput" min="1"></div>' +
         '<div><label for="heightInput">Height (px)</label><input type="number" id="heightInput" min="1"></div>' +
         '</div>' +
@@ -46,6 +54,15 @@
         updatePreviewCanvas();
     });
 
+    document.querySelectorAll('.preset-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            widthInput.value = btn.getAttribute('data-w');
+            heightInput.value = btn.getAttribute('data-h');
+            lockAspect.checked = false;
+            updatePreviewCanvas();
+        });
+    });
+
     FT.setupImageTool({
         fileInput: fileInput,
         preview: preview,
@@ -71,7 +88,7 @@
             return;
         }
         var canvas = FT.drawWithFilter(originalImage, 'none', w, h);
-        var name = FT.baseName(currentFile, 'image') + '-' + w + 'x' + h + '.png';
-        FT.downloadCanvas(canvas, name, 'image/png');
+        var name = FT.baseName(currentFile, 'image') + '-' + w + 'x' + h + '.jpg';
+        FT.downloadCanvas(canvas, name, 'image/jpeg', 0.92);
     });
 })();

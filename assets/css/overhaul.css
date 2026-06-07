@@ -747,3 +747,168 @@
 .seller-card { text-align: center; padding: 20px; }
 .seller-card h3 { color: #fff; margin-bottom: 8px; }
 .seller-card p { font-size: 14px; color: #94A3B8; }
+
+/* Homepage + tool listing cards */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+@media (max-width: 768px) {
+  .tools-grid { grid-template-columns: 1fr; }
+}
+
+.tool-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px 20px;
+  text-decoration: none;
+  transition: all 0.2s;
+  color: inherit;
+}
+.tool-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.tool-icon {
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-light);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.tool-card .tool-info { flex: 1; min-width: 0; }
+.tool-card .tool-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+}
+.tool-card .tool-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+.tool-card .tool-arrow {
+  font-size: 18px;
+  color: var(--primary);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.tool-card:hover .tool-arrow { transform: translateX(4px); }
+
+.cat-tabs, .category-tabs {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.cat-tab {
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 1.5px solid var(--border);
+  background: var(--card);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.cat-tab.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+/* Tool page upload zone */
+.upload-zone {
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  padding: 32px 20px;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 16px;
+  transition: border-color 0.2s;
+}
+.upload-zone:hover, .ft-tool-box.ft-drag-over .upload-zone {
+  border-color: var(--primary);
+}
+.upload-icon { font-size: 48px; }
+.upload-title { font-size: 16px; font-weight: 600; margin: 12px 0 6px; }
+.upload-hint { font-size: 13px; color: var(--text-muted); }
+#downloadBtn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+#downloadBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+.preset-btn {
+  padding: 8px 14px;
+  border: 1.5px solid var(--primary);
+  border-radius: 8px;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.15s;
+}
+.preset-btn:hover { background: var(--primary); color: #fff; }
+.ad-slot-placeholder {
+  text-align: center;
+  margin: 16px auto;
+  max-width: 728px;
+  background: rgba(241, 245, 249, 0.06);
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  color: var(--text-muted);
+  font-size: 12px;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.affiliate-cta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 247, 237, 0.08);
+  border: 1.5px solid rgba(254, 215, 170, 0.4);
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+.affiliate-icon { font-size: 28px; flex-shrink: 0; }
+.affiliate-text { flex: 1; min-width: 180px; }
+.affiliate-text strong { display: block; font-size: 14px; color: #FED7AA; }
+.affiliate-text span { font-size: 12px; color: var(--text-muted); }
+.affiliate-btn {
+  background: #F59E0B;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  white-space: nowrap;
+  text-decoration: none;
+  flex-shrink: 0;
+}

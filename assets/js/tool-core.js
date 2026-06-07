@@ -276,11 +276,20 @@
                             state.previewEl = showPreviewImage(preview, result.image);
                         }
                     }
+                    var dlBtn = document.getElementById('downloadBtn');
+                    if (dlBtn) dlBtn.disabled = false;
                     if (options.onLoad) options.onLoad(result, state);
                 })
                 .catch(function () {
                     rejectFile('Could not load file. It may be corrupted or unsupported.');
                 });
+        }
+
+        var uploadZone = document.getElementById('uploadZone');
+        if (uploadZone && fileInput) {
+            uploadZone.addEventListener('click', function () {
+                fileInput.click();
+            });
         }
 
         if (fileInput) {

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fast Image Tools – Free Online Image Editor & Converter</title>
     <meta name="description" content="Fast, private, browser‑based image tools: resize, compress, convert, crop, blur, sharpen, and more. No uploads, 100% free.">
-    <script src="https:/unpkg.com/lunr@2.3.9/lunr.min.js"></script>
+    <script src="https://unpkg.com/lunr@2.3.9/lunr.min.js"></script>
     <!-- Google tag (gtag.js) -->
-<script async src="https:/www.googletagmanager.com/gtag/js?id=G-DHHVPY5DJK"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DHHVPY5DJK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -22,27 +22,27 @@
     <link rel="stylesheet" href="/assets/css/overhaul.css">
 
     <!-- Preconnect for AdSense -->
-    <link rel="preconnect" href="https:/pagead2.googlesyndication.com">
-    <link rel="preconnect" href="https:/googleads.g.doubleclick.net">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <link rel="preconnect" href="https://googleads.g.doubleclick.net">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Fast Image Tools – Free Online Image Editor & Converter">
     <meta property="og:description" content="Free, private image tools: resize, compress, convert, and edit images instantly in your browser.">
-    <meta property="og:url" content="https:/fastimgtool.com/">
+    <meta property="og:url" content="https://fastimgtool.com/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https:/fastimgtool.com/assets/og-image.png">
+    <meta property="og:image" content="https://fastimgtool.com/assets/og-image.png">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Fast Image Tools">
     <meta name="twitter:description" content="Free, private image tools – no uploads, no signup.">
-    <meta name="twitter:image" content="https:/fastimgtool.com/assets/og-image.png">
+    <meta name="twitter:image" content="https://fastimgtool.com/assets/og-image.png">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/favicon.png">
 
     <!-- AdSense (Auto Ads) -->
-    <script async src="https:/pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>
 
     <style>
         /* Global resets */
@@ -277,13 +277,9 @@
             <a href="/">⚡ FastImageTool</a>
         </div>
         <div class="nav-links">
-            <a href="/">Home</a>
-            <a href="/#tools">Tools</a>
+            <a href="/#tools">All Tools</a>
             <a href="/guides/">Guides</a>
-            <a href="/#sellers">For Sellers</a>
             <a href="/affiliate/">Recommended</a>
-            <a href="/blog/">Blog</a>
-            <a href="/about.html">About</a>
             <a href="/tools/image-compressor/" class="nav-cta">Compress Now →</a>
         </div>
         <button type="button" class="nav-toggle" aria-label="Menu">☰</button>
@@ -323,20 +319,236 @@
 
     <main class="container" id="tools">
 
-        <section class="tools-section" style="padding-top:40px;">
+                <section id="tools" class="section tools-section" style="padding-top:40px;">
             <div class="container">
                 <div class="section-header">
                     <h2>All Image Tools</h2>
-                    <p>Free tools, zero signup, processed in your browser</p>
+                    <p>24 free tools, works in browser, zero signup needed</p>
                 </div>
-                <div class="category-tabs">
+                <div class="cat-tabs category-tabs">
                     <button type="button" class="cat-tab active" data-cat="all">All Tools</button>
                     <button type="button" class="cat-tab" data-cat="convert">Converters</button>
                     <button type="button" class="cat-tab" data-cat="optimize">Optimize</button>
                     <button type="button" class="cat-tab" data-cat="effects">Effects</button>
                     <button type="button" class="cat-tab" data-cat="transform">Transform</button>
                 </div>
-                <div class="tools-grid" id="toolsGrid"></div>
+                <div class="tools-grid">
+      <a href="/tools/image-compressor/" class="tool-card" data-cat="optimize">
+        <div class="tool-icon">🗜️</div>
+        <div class="tool-info">
+          <div class="tool-name">Image Compressor</div>
+          <div class="tool-desc">Reduce file size without losing quality. Best for Meesho & Amazon sellers.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/image-resizer/" class="tool-card" data-cat="transform">
+        <div class="tool-icon">↔️</div>
+        <div class="tool-info">
+          <div class="tool-name">Image Resizer</div>
+          <div class="tool-desc">Resize to exact pixels. Presets for Meesho 600×600, Amazon, Instagram.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/jpg-to-png/" class="tool-card" data-cat="convert">
+        <div class="tool-icon">🔄</div>
+        <div class="tool-info">
+          <div class="tool-name">JPG to PNG</div>
+          <div class="tool-desc">Convert JPG images to PNG format instantly. Preserves transparency.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/png-to-jpg/" class="tool-card" data-cat="convert">
+        <div class="tool-icon">🔄</div>
+        <div class="tool-info">
+          <div class="tool-name">PNG to JPG</div>
+          <div class="tool-desc">Convert PNG to JPG with white background. Reduces file size.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/image-to-webp/" class="tool-card" data-cat="convert">
+        <div class="tool-icon">⚡</div>
+        <div class="tool-info">
+          <div class="tool-name">Image to WebP</div>
+          <div class="tool-desc">Convert to WebP for smaller files. Faster website loading.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/webp-to-jpg/" class="tool-card" data-cat="convert">
+        <div class="tool-icon">🔄</div>
+        <div class="tool-info">
+          <div class="tool-name">WebP to JPG</div>
+          <div class="tool-desc">Convert WebP images back to JPG format. Free and instant.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/image-blur/" class="tool-card" data-cat="effects">
+        <div class="tool-icon">🌫️</div>
+        <div class="tool-info">
+          <div class="tool-name">Blur Image</div>
+          <div class="tool-desc">Apply Gaussian blur effect. Blur backgrounds or entire images.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/image-sharpen/" class="tool-card" data-cat="effects">
+        <div class="tool-icon">💎</div>
+        <div class="tool-info">
+          <div class="tool-name">Sharpen Image</div>
+          <div class="tool-desc">Make blurry photos crisp and clear. Enhance product photos.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/image-brightness/" class="tool-card" data-cat="effects">
+        <div class="tool-icon">☀️</div>
+        <div class="tool-info">
+          <div class="tool-name">Brightness</div>
+          <div class="tool-desc">Adjust image brightness with live preview sliders.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/image-contrast/" class="tool-card" data-cat="effects">
+        <div class="tool-icon">◑</div>
+        <div class="tool-info">
+          <div class="tool-name">Contrast</div>
+          <div class="tool-desc">Adjust image contrast for sharper product photos.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/image-grayscale/" class="tool-card" data-cat="effects">
+        <div class="tool-icon">⬛</div>
+        <div class="tool-info">
+          <div class="tool-name">Grayscale</div>
+          <div class="tool-desc">Convert color images to black and white instantly.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/image-sepia/" class="tool-card" data-cat="effects">
+        <div class="tool-icon">🟤</div>
+        <div class="tool-info">
+          <div class="tool-name">Sepia Effect</div>
+          <div class="tool-desc">Apply warm vintage sepia tone to any image.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/image-invert/" class="tool-card" data-cat="effects">
+        <div class="tool-icon">🔲</div>
+        <div class="tool-info">
+          <div class="tool-name">Invert Colors</div>
+          <div class="tool-desc">Create negative effect by inverting all image colors.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/image-saturation/" class="tool-card" data-cat="effects">
+        <div class="tool-icon">🎨</div>
+        <div class="tool-info">
+          <div class="tool-name">Saturation</div>
+          <div class="tool-desc">Boost or reduce color saturation. Make colors pop.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/image-crop/" class="tool-card" data-cat="transform">
+        <div class="tool-icon">✂️</div>
+        <div class="tool-info">
+          <div class="tool-name">Crop Image</div>
+          <div class="tool-desc">Crop to exact dimensions. Presets for 1:1, 16:9, 4:3.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/rotate-image/" class="tool-card" data-cat="transform">
+        <div class="tool-icon">🔄</div>
+        <div class="tool-info">
+          <div class="tool-name">Rotate Image</div>
+          <div class="tool-desc">Rotate 90°, 180°, 270° or any custom angle.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/flip-image/" class="tool-card" data-cat="transform">
+        <div class="tool-icon">🔃</div>
+        <div class="tool-info">
+          <div class="tool-name">Flip Image</div>
+          <div class="tool-desc">Flip horizontally or vertically. Create mirror images.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/image-to-base64/" class="tool-card" data-cat="convert">
+        <div class="tool-icon">📝</div>
+        <div class="tool-info">
+          <div class="tool-name">Image to Base64</div>
+          <div class="tool-desc">Convert image to Base64 string for web developers.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/base64-to-image/" class="tool-card" data-cat="convert">
+        <div class="tool-icon">🖼️</div>
+        <div class="tool-info">
+          <div class="tool-name">Base64 to Image</div>
+          <div class="tool-desc">Decode Base64 string back to downloadable image.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/heic-to-jpg/" class="tool-card" data-cat="convert">
+        <div class="tool-icon">📱</div>
+        <div class="tool-info">
+          <div class="tool-name">HEIC to JPG</div>
+          <div class="tool-desc">Convert iPhone HEIC photos to JPG in your browser.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/bmp-to-jpg/" class="tool-card" data-cat="convert">
+        <div class="tool-icon">🔄</div>
+        <div class="tool-info">
+          <div class="tool-name">BMP to JPG</div>
+          <div class="tool-desc">Convert BMP images to JPG format instantly.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/gif-to-png/" class="tool-card" data-cat="convert">
+        <div class="tool-icon">🎞️</div>
+        <div class="tool-info">
+          <div class="tool-name">GIF to PNG</div>
+          <div class="tool-desc">Convert GIF (first frame) to PNG format.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/png-to-webp/" class="tool-card" data-cat="convert">
+        <div class="tool-icon">⚡</div>
+        <div class="tool-info">
+          <div class="tool-name">PNG to WebP</div>
+          <div class="tool-desc">Convert PNG to WebP for faster web loading.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+
+      <a href="/tools/tiff-to-jpg/" class="tool-card" data-cat="convert">
+        <div class="tool-icon">🔄</div>
+        <div class="tool-info">
+          <div class="tool-name">TIFF to JPG</div>
+          <div class="tool-desc">Convert TIFF images to JPG for web and email.</div>
+        </div>
+        <div class="tool-arrow">→</div>
+      </a>
+                </div>
             </div>
         </section>
 
@@ -484,5 +696,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+    <script src="/assets/js/home-tool-tabs.js"></script>
 </body>
 </html>

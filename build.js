@@ -51,6 +51,11 @@ async function loadTools() {
     return validated;
 }
 
+function cleanToolContent(html) {
+    if (!html || typeof html !== 'string') return '';
+    return html.replace(/```html?\s*/gi, '').replace(/```\s*/g, '').trim();
+}
+
 async function loadTemplate() {
     let template;
     try {
@@ -273,11 +278,11 @@ const blogPosts = JSON.parse(await fs.readFile(CONFIG.BLOG_POSTS_FILE, 'utf8'));
             .replace(/\{\{title\}\}/g, tool.title)
             .replace(/\{\{description\}\}/g, tool.description)
             .replace(/\{\{slug\}\}/g, tool.slug)
-            .replace(/\{\{about\}\}/g, toolContent.about || '')
-            .replace(/\{\{howTo\}\}/g, toolContent.howTo || '')
-            .replace(/\{\{whyUse\}\}/g, toolContent.whyUse || '')
-            .replace(/\{\{useCases\}\}/g, toolContent.useCases || '')
-            .replace(/\{\{faq\}\}/g, toolContent.faq || '')
+            .replace(/\{\{about\}\}/g, cleanToolContent(toolContent.about || ''))
+            .replace(/\{\{howTo\}\}/g, cleanToolContent(toolContent.howTo || ''))
+            .replace(/\{\{whyUse\}\}/g, cleanToolContent(toolContent.whyUse || ''))
+            .replace(/\{\{useCases\}\}/g, cleanToolContent(toolContent.useCases || ''))
+            .replace(/\{\{faq\}\}/g, cleanToolContent(toolContent.faq || ''))
                     .replace(/\{\{screenshot_jpg\}\}/g, `/assets/images/tools/${tool.slug}-screenshot.jpg`)
         .replace(/\{\{screenshot_webp\}\}/g, `/assets/images/tools/${tool.slug}-screenshot.webp`);
 
