@@ -323,3 +323,46 @@ margin-bottom:12px;
 .guides-index-section ul { list-style: none; padding: 0; margin: 0; }
 .guides-index-section li { margin-bottom: 8px; }
 .guides-index-section a { font-size: 14px; color: var(--text-primary, #111); }
+
+/* Affiliate index page */
+.affiliate-category {
+  background: var(--bg-primary, #fff);
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+.affiliate-category h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--text-primary, #111);
+}
+.affiliate-category p {
+  font-size: 14px;
+  color: var(--text-secondary, #6b7280);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+.affiliate-amazon-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ff9900;
+  color: #000;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+.affiliate-amazon-btn:hover {
+  background: #e68a00;
+}
+.affiliate-disclaimer {
+  margin-top: 32px;
+  padding: 16px;
+  background: var(--bg-secondary, #f9fafb);
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--text-secondary, #6b7280);
+  text-align: center;
+}
