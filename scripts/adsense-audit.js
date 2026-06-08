@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const CLIENT = 'ca-pub-8332278519903196';
+const CLIENT = 'ca-pub-8332278513903196';
 const SCRIPT =
     `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${CLIENT}" crossorigin="anonymous"></script>`;
 const AD_UNIT = `

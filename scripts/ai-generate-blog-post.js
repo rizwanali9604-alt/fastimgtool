@@ -150,7 +150,7 @@ const html = `<!DOCTYPE html>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="icon" href="/assets/favicon.png">
     <!-- AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278513903196" crossorigin="anonymous"></script>
     <style>
         .blog-screenshot {
             max-width: 800px;

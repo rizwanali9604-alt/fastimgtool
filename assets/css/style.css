@@ -272,3 +272,54 @@ margin-bottom:12px;
   cursor: pointer;
 }
 .preset-label { font-size: 13px; color: #94a3b8; margin-bottom: 8px; }
+
+/* Part 5 guide pages */
+.guide-layout {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 40px;
+  padding: 32px 20px;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .guide-layout { grid-template-columns: 1fr; }
+}
+.guide-header { background: var(--bg-secondary, #f9fafb); padding: 32px 20px 20px; }
+.guide-header h1 { font-size: 28px; margin: 8px 0; }
+.guide-subtitle { font-size: 17px; color: var(--text-secondary, #6b7280); }
+.breadcrumb { font-size: 13px; color: var(--text-secondary, #6b7280); }
+.breadcrumb a { color: var(--text-secondary, #6b7280); }
+.guide-content h2 { font-size: 20px; margin: 32px 0 12px; }
+.guide-content h3 { font-size: 17px; margin: 24px 0 8px; }
+.guide-content p { line-height: 1.7; margin-bottom: 14px; }
+.tool-cta-inline {
+  background: #f0f0ff;
+  border: 1px solid #c4b5fd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 28px 0;
+  text-align: center;
+}
+.faq-section { margin-top: 36px; }
+.faq-item { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border, #e5e7eb); }
+.faq-item:last-child { border-bottom: none; }
+.faq-item h3 { font-size: 16px; margin-bottom: 8px; }
+.guide-cta-bottom {
+  background: var(--bg-secondary, #f9fafb);
+  border-radius: 10px;
+  padding: 24px;
+  margin-top: 32px;
+  text-align: center;
+}
+.sidebar-tool-cta {
+  background: #f0f0ff;
+  border: 1px solid #c4b5fd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+.guides-index-section { margin-bottom: 36px; }
+.guides-index-section h2 { font-size: 20px; margin-bottom: 12px; }
+.guides-index-section ul { list-style: none; padding: 0; margin: 0; }
+.guides-index-section li { margin-bottom: 8px; }
+.guides-index-section a { font-size: 14px; color: var(--text-primary, #111); }

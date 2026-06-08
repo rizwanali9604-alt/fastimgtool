@@ -10,7 +10,7 @@ content = '''<!DOCTYPE html>
     <link rel="canonical" href="https://fastimgtool.com/guides/how-to-convert-jpg-to-png.html">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="icon" href="/assets/favicon.png">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278513903196" crossorigin="anonymous"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DHHVPY5DJK"></script>
     <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-DHHVPY5DJK');</script>
     <style>.content { max-width: 800px; margin: 40px auto; padding: 20px; background: #111a30; border-radius: 12px; line-height: 1.8; } .content h1 { color: #4da3ff; } .content p { color: #a0b3d9; } .recommended-tools { margin-top: 40px; padding: 20px; background: #0f1a2f; border-radius: 12px; } .recommended-tools h3 { color: #4da3ff; } .recommended-tools a { color: #4da3ff; }</style>

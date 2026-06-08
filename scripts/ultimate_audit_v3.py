@@ -13,7 +13,7 @@ GUIDES_DIR = r"E:\Projects\fastimgtool\guides"
 TOOLS_DIR = r"E:\Projects\fastimgtool\tools"
 BASE_URL = "https://fastimgtool.com"
 AFFILIATE_TAG = "fastimgtool78-21"
-ADSENSE_CLIENT = "ca-pub-8332278519903196"  # your AdSense client ID
+ADSENSE_CLIENT = "ca-pub-8332278513903196"  # your AdSense client ID
 MAX_LINKS_TO_CHECK = 3  # reduce to speed up
 
 # Required H2 sections (in lowercase)

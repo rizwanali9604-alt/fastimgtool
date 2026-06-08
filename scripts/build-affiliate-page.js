@@ -56,7 +56,7 @@ const html = `<!DOCTYPE html>
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/overhaul.css">
   <link rel="icon" href="/assets/favicon.png">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278513903196" crossorigin="anonymous"></script>
 </head>
 <body>
   <nav class="navbar">
@@ -79,7 +79,7 @@ const html = `<!DOCTYPE html>
   </header>
 
   <div class="ad-container">
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8332278519903196" data-ad-slot="9490701260" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8332278513903196" data-ad-slot="9490701260" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
 
@@ -88,7 +88,7 @@ const html = `<!DOCTYPE html>
   </main>
 
   <div class="ad-container">
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8332278519903196" data-ad-slot="3445350863" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8332278513903196" data-ad-slot="3445350863" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
 

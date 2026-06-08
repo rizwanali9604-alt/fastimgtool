@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 GUIDES_DIR = r"E:\Projects\fastimgtool\guides"
 BASE_URL = "https://fastimgtool.com"
-ADSENSE_CLIENT = "ca-pub-8332278519903196"
+ADSENSE_CLIENT = "ca-pub-8332278513903196"
 AFFILIATE_TAG = "fastimgtool78-21"
 
 def hard_reset(filepath):

@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 GUIDES_DIR = r"E:\Projects\fastimgtool\guides"
 TOOLS_DIR = r"E:\Projects\fastimgtool\tools"
-ADSENSE_CLIENT = "ca-pub-8332278519903196"  # your AdSense client ID
+ADSENSE_CLIENT = "ca-pub-8332278513903196"  # your AdSense client ID
 
 def add_adsense(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
