@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# Block non-content / build artifacts from indexing
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /config/
+
 Sitemap: https://fastimgtool.com/sitemap.xml

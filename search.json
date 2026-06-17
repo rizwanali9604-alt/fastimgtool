@@ -35,13 +35,6 @@
     "category": "conversion"
   },
   {
-    "title": "Test Tool",
-    "description": "Free online test tool. Fast, private, browser‑based.",
-    "url": "/tools/test-tool/",
-    "type": "tool",
-    "category": "test"
-  },
-  {
     "title": "Image Blur",
     "description": "Free online image blur tool. Fast, private, browser‑based.",
     "url": "/tools/image-blur/",
@@ -733,41 +726,6 @@
     "url": "/guides/webp-to-jpg-guide-5.html",
     "type": "guide",
     "tool_slug": "webp-to-jpg"
-  },
-  {
-    "title": "Test Tool – How to Use",
-    "description": "Learn how to how to use with our free online tool. Fast, private, browser‑based.",
-    "url": "/guides/test-tool-guide-1.html",
-    "type": "guide",
-    "tool_slug": "test-tool"
-  },
-  {
-    "title": "Test Tool – Tips and Tricks",
-    "description": "Learn how to tips and tricks with our free online tool. Fast, private, browser‑based.",
-    "url": "/guides/test-tool-guide-2.html",
-    "type": "guide",
-    "tool_slug": "test-tool"
-  },
-  {
-    "title": "Test Tool – Common Mistakes",
-    "description": "Learn how to common mistakes with our free online tool. Fast, private, browser‑based.",
-    "url": "/guides/test-tool-guide-3.html",
-    "type": "guide",
-    "tool_slug": "test-tool"
-  },
-  {
-    "title": "Test Tool – Best Practices",
-    "description": "Learn how to best practices with our free online tool. Fast, private, browser‑based.",
-    "url": "/guides/test-tool-guide-4.html",
-    "type": "guide",
-    "tool_slug": "test-tool"
-  },
-  {
-    "title": "Test Tool – FAQ",
-    "description": "Learn how to frequently asked questions with our free online tool. Fast, private, browser‑based.",
-    "url": "/guides/test-tool-guide-5.html",
-    "type": "guide",
-    "tool_slug": "test-tool"
   },
   {
     "title": "Image Blur – Blur",

@@ -30,12 +30,6 @@
     "category": "conversion"
   },
   {
-    "slug": "test-tool",
-    "title": "Test Tool",
-    "description": "Free online test tool. Fast, private, browser‑based.",
-    "category": "test"
-  },
-  {
     "slug": "image-blur",
     "title": "Image Blur",
     "description": "Blur images online free. Gaussian blur with adjustable strength. Works with JPG, PNG, WebP. Instant results.",
