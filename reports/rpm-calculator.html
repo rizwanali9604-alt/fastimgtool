@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdSense RPM Calculator — FastImageTool Internal</title>
+    <meta name="robots" content="noindex">
+    <style>
+        body { font-family: system-ui, sans-serif; max-width: 640px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+        label { display: block; margin-top: 1rem; font-weight: 600; }
+        input { width: 100%; padding: 0.5rem; font-size: 1rem; box-sizing: border-box; }
+        .result { margin-top: 1.5rem; padding: 1rem; background: #f0f9ff; border-radius: 8px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        .note { font-size: 0.9rem; color: #555; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+    <h1>AdSense earnings calculator</h1>
+    <p><strong>Formula:</strong> Monthly earnings ≈ (pageviews ÷ 1,000) × RPM</p>
+    <p>After 30 days of AdSense data, enter your actual figures from AdSense → Reports → Overview.</p>
+
+    <label for="pageviews">Monthly pageviews (from GA4)</label>
+    <input type="number" id="pageviews" value="250" min="0">
+
+    <label for="rpm">RPM — USD per 1,000 pageviews (from AdSense)</label>
+    <input type="number" id="rpm" value="2.00" min="0" step="0.01">
+
+    <div class="result" id="result"></div>
+
+    <h2>Milestone targets (update RPM when you have real data)</h2>
+    <table id="milestones">
+        <thead><tr><th>Goal /mo</th><th>Pageviews needed</th></tr></thead>
+        <tbody></tbody>
+    </table>
+
+    <p class="note">Baseline (week 0): ~250 pageviews/mo, $0 earnings, RPM unknown. See <code>reports/growth-baseline-week0.json</code> and <code>reports/growth-tracking-weekly.md</code>.</p>
+
+    <script>
+        const pv = document.getElementById('pageviews');
+        const rpm = document.getElementById('rpm');
+        const result = document.getElementById('result');
+        const tbody = document.querySelector('#milestones tbody');
+        const goals = [50, 100, 200, 500];
+
+        function calc() {
+            const p = Number(pv.value) || 0;
+            const r = Number(rpm.value) || 0;
+            const earnings = (p / 1000) * r;
+            result.innerHTML = '<strong>Estimated monthly earnings:</strong> $' + earnings.toFixed(2);
+            tbody.innerHTML = goals.map(g => {
+                const need = r > 0 ? Math.ceil((g / r) * 1000) : '—';
+                return '<tr><td>$' + g + '</td><td>' + (typeof need === 'number' ? need.toLocaleString() : need) + ' pageviews/mo</td></tr>';
+            }).join('');
+        }
+        pv.addEventListener('input', calc);
+        rpm.addEventListener('input', calc);
+        calc();
+    </script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+#!/usr/bin/env node
+/**
+ * Rewrite high-impression guides to flagship standard (800–1500 words + FAQ schema).
+ * Usage: node scripts/write_flagship_guides.js
+ */
+const fs = require('fs');
+const path = require('path');
+
+const OUT = path.join(__dirname, '..', 'guides');
+
+function faqJson(faqs) {
+  return JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(([q, a]) => ({
+      '@type': 'Question',
+      name: q,
+      acceptedAnswer: { '@type': 'Answer', text: a },
+    })),
+  });
+}
+
+function articleJson(headline, description, slug) {
+  return JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline,
+    description,
+    author: { '@type': 'Organization', name: 'FastImageTool' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'FastImageTool',
+      logo: { '@type': 'ImageObject', url: 'https://fastimgtool.com/assets/favicon.png' },
+    },
+    datePublished: '2026-01-10',
+    dateModified: '2026-06-17',
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://fastimgtool.com/guides/${slug}` },
+  });
+}
+
+function faqHtml(faqs) {
+  return faqs
+    .map(
+      ([q, a]) =>
+        `<div class="faq"><h3>${q}</h3><p>${a}</p></div>`
+    )
+    .join('\n            ');
+}
+
+function render(g) {
+  const canonical = `https://fastimgtool.com/guides/${g.slug}`;
+  const sidebarLinks = (g.sidebar || [])
+    .map(([href, label]) => `<a href="${href}" class="sidebar-tool-link">→ ${label}</a>`)
+    .join('\n                ');
+  const related = (g.related || [])
+    .map(([href, label]) => `<li><a href="${href}">${label}</a></li>`)
+    .join('\n                ');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${g.title}</title>
+    <meta name="description" content="${g.description}">
+    <link rel="canonical" href="${canonical}">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/overhaul.css">
+    <link rel="icon" href="/assets/favicon.png">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278513903196" crossorigin="anonymous"></script>
+    <script type="application/ld+json">${articleJson(g.headline, g.description, g.slug)}</script>
+    <script type="application/ld+json">${faqJson(g.faqs)}</script>
+</head>
+<body data-tool-slug="${g.toolSlug}">
+    <nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">⚡ FastImageTool</a>
+    <div class="nav-links">
+      <a href="/tools/" class="nav-link">All Tools</a>
+      <a href="/guides/" class="nav-link">Guides</a>
+      <a href="/blog/" class="nav-link">Blog</a>
+      <a href="/affiliate/" class="nav-link">Recommended</a>
+      <a href="${g.ctaHref}" class="nav-cta">${g.ctaLabel} →</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+  </div>
+</nav>
+
+    <header class="guide-header">
+        <div class="container">
+            <div class="guide-breadcrumb">
+                <a href="/">Home</a> → <a href="/guides/">Guides</a> → ${g.breadcrumb}
+            </div>
+            <h1 class="guide-title">${g.h1}</h1>
+            <p class="guide-subtitle">${g.subtitle}</p>
+            <div class="guide-meta">
+                <span>📖 ${g.readMin} min read</span>
+                <span>🕐 Updated June 2026</span>
+                <span>${g.metaTag}</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="ad-container">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8332278513903196" data-ad-slot="9490701260" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="guide-layout">
+        <article class="guide-content">
+            ${g.body}
+            <h2 id="faq">Frequently asked questions</h2>
+            ${faqHtml(g.faqs)}
+            <h2 id="related">Related guides</h2>
+            <ul>
+                ${related}
+            </ul>
+            <div class="inline-tool-cta"><div class="cta-icon">🖼️</div><div class="cta-text"><strong>${g.footerCtaTitle}</strong><span>${g.footerCtaSub}</span></div><a href="${g.ctaHref}" class="cta-btn">Use Tool →</a></div>
+        </article>
+        <aside class="guide-sidebar">
+            <div class="sidebar-card toc-card">
+                <h3>Table of Contents</h3>
+                <ol class="toc-list" id="tocList"></ol>
+            </div>
+            <div class="sidebar-card">
+                <h3>Try the Tool</h3>
+                ${sidebarLinks}
+            </div>
+            <div class="sidebar-card ad-sidebar">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8332278513903196" data-ad-slot="8664200172" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </aside>
+    </main>
+
+    <section class="related-guides-section">
+        <div class="container">
+            <h2 style="font-size:1.75rem;color:var(--text-primary);">Related Guides</h2>
+            <div id="related-guides-container" class="guides-grid"></div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">FastImageTool</div>
+                    <p>Free image tools for creators and sellers. No signup, no watermarks, 100% browser-based.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="/tools/image-compressor/">Image Compressor</a></li>
+                        <li><a href="/tools/image-resizer/">Image Resizer</a></li>
+                        <li><a href="/#tools">All Tools →</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Guides</h4>
+                    <ul>
+                        <li><a href="/guides/">All Guides →</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>More</h4>
+                    <ul>
+                        <li><a href="/privacy.html">Privacy Policy</a></li>
+                        <li><a href="/about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 FastImageTool. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/dom-safe.js"></script>
+    <script src="/assets/js/related-guides.js"></script>
+    <script src="/assets/js/guide-toc.js"></script>
+</body>
+</html>`;
+}
+
+const guides = require('./flagship-guides-content.js');
+
+for (const g of guides) {
+  const file = path.join(OUT, g.slug);
+  fs.writeFileSync(file, render(g), 'utf8');
+  console.log('Wrote', g.slug);
+}
+
+console.log(`Done — ${guides.length} guides.`);

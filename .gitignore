@@ -7,7 +7,7 @@ package-lock.json
 .env.*
 !.env.example
 config/deepseek.local.js
-reports/*.md
+reports/audit-*.md
 !reports/.gitkeep
 .envpython_marketing/service_account.json 
 guides_backup/ 

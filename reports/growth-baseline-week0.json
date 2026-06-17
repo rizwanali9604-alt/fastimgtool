@@ -1,0 +1,40 @@
+{
+  "recorded_at": "2026-06-17",
+  "week": 0,
+  "note": "Pre-cleanup / post-cleanup transition baseline from GSC + GA4 exports (May–Jun 2026). Update weekly in growth-tracking-weekly.md.",
+  "google_search_console": {
+    "period": "2026-05-01 to 2026-06-17",
+    "impressions_monthly_approx": 1028,
+    "clicks_monthly_approx": 8,
+    "ctr_percent_approx": 0.8,
+    "average_position_approx": 85,
+    "indexed_pages_trend": "falling (29 → ~19)",
+    "top_impression_pages": [
+      { "url": "/guides/resize-image-for-instagram.html", "impressions": 120, "clicks": 0, "position": 88 },
+      { "url": "/guides/resize-image-for-youtube-thumbnail.html", "impressions": 95, "clicks": 0, "position": 87 },
+      { "url": "/guides/compress-image-for-email.html", "impressions": 78, "clicks": 0, "position": 90 },
+      { "url": "/guides/how-to-compress-image-online.html", "impressions": 65, "clicks": 0, "position": 82 },
+      { "url": "/guides/how-to-resize-image-online.html", "impressions": 58, "clicks": 0, "position": 84 },
+      { "url": "/guides/how-to-convert-jpg-to-png.html", "impressions": 42, "clicks": 1, "position": 22 }
+    ]
+  },
+  "ga4": {
+    "period": "2026-05-01 to 2026-06-17",
+    "active_users_monthly_approx": 33,
+    "homepage_views_monthly_approx": 133,
+    "pageviews_monthly_approx": 250,
+    "sessions_monthly_approx": 45
+  },
+  "adsense": {
+    "status": "not_approved",
+    "monthly_earnings_usd": 0,
+    "rpm_actual": null
+  },
+  "targets": {
+    "month_3_pageviews": [3000, 10000],
+    "month_6_pageviews": [15000, 40000],
+    "month_12_pageviews": [40000, 120000],
+    "rpm_assumption_range": [1.5, 3.5],
+    "formula": "monthly_earnings_usd ≈ (pageviews / 1000) × rpm"
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "checked_at": "2026-06-17T02:36:17.070Z",
+  "base": "https://fastimgtool.com",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "ok": true,
+      "hasNoindex": false,
+      "hasAdsense": true,
+      "title": "Fast Image Tools – Free Online Image Editor & Converter",
+      "snippet": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>Fast Image Tools – Free Online Image Editor & Converter</title>\r\n    <meta name=\"description\" content=\"Fast, private, browser‑based image tools: resize, compress, convert, crop, blur, sharpen, and more. No uploads, 100% free.\">\r\n    <script src=\"https://unpkg.com/lunr@2.3.9/lunr.min.js\"></script>\r\n    <!-- Google tag (gtag.js) -->\r\n<script "
+    },
+    {
+      "path": "/privacy.html",
+      "status": 308,
+      "ok": true,
+      "hasNoindex": false,
+      "hasAdsense": false,
+      "title": "",
+      "snippet": ""
+    },
+    {
+      "path": "/terms.html",
+      "status": 308,
+      "ok": true,
+      "hasNoindex": false,
+      "hasAdsense": false,
+      "title": "",
+      "snippet": ""
+    },
+    {
+      "path": "/about.html",
+      "status": 308,
+      "ok": true,
+      "hasNoindex": false,
+      "hasAdsense": false,
+      "title": "",
+      "snippet": ""
+    },
+    {
+      "path": "/contact.html",
+      "status": 308,
+      "ok": true,
+      "hasNoindex": false,
+      "hasAdsense": false,
+      "title": "",
+      "snippet": ""
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "ok": true,
+      "hasNoindex": false,
+      "hasAdsense": false,
+      "title": "",
+      "snippet": "# As a condition of accessing this website, you agree to abide by the following\n# content signals:\n\n# (a)  If a Content-Signal = yes, you may collect content for the corresponding\n#      use.\n# (b)  If a Content-Signal = no, you may not collect content for the\n#      corresponding use.\n# (c)  If the website operator does not include a Content-Signal for a\n#      corresponding use, the website operator neither grants nor restricts\n#      permission via Content-Signal with respect to the correspon"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "ok": true,
+      "hasNoindex": false,
+      "hasAdsense": false,
+      "title": "",
+      "snippet": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n  <url><loc>https://fastimgtool.com/</loc><priority>1.0</priority><changefreq>weekly</changefreq><lastmod>2026-06-17</lastmod></url>\n  <url><loc>https://fastimgtool.com/tools/</loc><priority>0.9</priority><changefreq>weekly</changefreq><lastmod>2026-06-17</lastmod></url>\n  <url><loc>https://fastimgtool.com/guides/</loc><priority>0.9</priority><changefreq>weekly</changefreq><lastmod>2026-06-17</las"
+    },
+    {
+      "path": "/guides/resize-image-for-instagram.html",
+      "status": 308,
+      "ok": true,
+      "hasNoindex": false,
+      "hasAdsense": false,
+      "title": "",
+      "snippet": ""
+    },
+    {
+      "path": "/guides/resize-image-for-youtube-thumbnail.html",
+      "status": 308,
+      "ok": true,
+      "hasNoindex": false,
+      "hasAdsense": false,
+      "title": "",
+      "snippet": ""
+    },
+    {
+      "path": "/guides/compress-image-for-email.html",
+      "status": 308,
+      "ok": true,
+      "hasNoindex": false,
+      "hasAdsense": false,
+      "title": "",
+      "snippet": ""
+    },
+    {
+      "path": "/guides/how-to-compress-image-online.html",
+      "status": 308,
+      "ok": true,
+      "hasNoindex": false,
+      "hasAdsense": false,
+      "title": "",
+      "snippet": ""
+    },
+    {
+      "path": "/guides/how-to-resize-image-online.html",
+      "status": 308,
+      "ok": true,
+      "hasNoindex": false,
+      "hasAdsense": false,
+      "title": "",
+      "snippet": ""
+    },
+    {
+      "path": "/guides/resize-image-online.html",
+      "status": 308,
+      "ok": true,
+      "hasNoindex": false,
+      "hasAdsense": false,
+      "title": "",
+      "snippet": ""
+    },
+    {
+      "path": "/tools/image-compressor/",
+      "status": 200,
+      "ok": true,
+      "hasNoindex": false,
+      "hasAdsense": true,
+      "title": "Image Compressor Free Online — FastImageTool",
+      "snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Compressor Free Online — FastImageTool</title>\n    <meta name=\"description\" content=\"Compress JPG PNG WEBP images instantly. Free online image compressor.\">\n    <!-- Google tag (gtag.js) -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-DHHVPY5DJK\"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  functio"
+    },
+    {
+      "path": "/tools/image-resizer/",
+      "status": 200,
+      "ok": true,
+      "hasNoindex": false,
+      "hasAdsense": true,
+      "title": "Image Resizer Free Online — FastImageTool",
+      "snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Resizer Free Online — FastImageTool</title>\n    <meta name=\"description\" content=\"Free image resizer online. Resize to Meesho 600×600, Amazon 1000×1000, Instagram 1080×1080. No signup, instant download.\">\n    <script async src=\"https://www.googletagmanager.com/gtag/js?id=G-DHHVPY5DJK\"></script>\n    <script>\n  window.dataLayer = window.data"
+    },
+    {
+      "path": "/tools/jpg-to-png/",
+      "status": 200,
+      "ok": true,
+      "hasNoindex": false,
+      "hasAdsense": true,
+      "title": "Convert JPG to PNG Free Online — FastImageTool",
+      "snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Convert JPG to PNG Free Online — FastImageTool</title>\n    <meta name=\"description\" content=\"Convert JPG to PNG online free. Preserves transparency, instant conversion, browser-based. No upload to server.\">\n    <script async src=\"https://www.googletagmanager.com/gtag/js?id=G-DHHVPY5DJK\"></script>\n    <script>\n  window.dataLayer = window.dataLaye"
+    },
+    {
+      "path": "/tools/png-to-jpg/",
+      "status": 200,
+      "ok": true,
+      "hasNoindex": false,
+      "hasAdsense": true,
+      "title": "PNG to JPG Converter Free Online — FastImageTool",
+      "snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>PNG to JPG Converter Free Online — FastImageTool</title>\n    <meta name=\"description\" content=\"Convert PNG to JPG online free. White background fill, smaller files for web and email. Private browser tool.\">\n    <script async src=\"https://www.googletagmanager.com/gtag/js?id=G-DHHVPY5DJK\"></script>\n    <script>\n  window.dataLayer = window.dataLaye"
+    },
+    {
+      "path": "/tools/image-to-webp/",
+      "status": 200,
+      "ok": true,
+      "hasNoindex": false,
+      "hasAdsense": true,
+      "title": "Image to WebP Free Online — FastImageTool",
+      "snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image to WebP Free Online — FastImageTool</title>\n    <meta name=\"description\" content=\"Convert images to WebP online free. Smaller files for faster Shopify and website loading.\">\n    <script async src=\"https://www.googletagmanager.com/gtag/js?id=G-DHHVPY5DJK\"></script>\n    <script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){"
+    },
+    {
+      "path": "/guides/how-to-use-test-tool.html",
+      "status": 200,
+      "ok": true,
+      "hasNoindex": false,
+      "hasAdsense": true,
+      "title": "Fast Image Tools – Free Online Image Editor & Converter",
+      "snippet": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>Fast Image Tools – Free Online Image Editor & Converter</title>\r\n    <meta name=\"description\" content=\"Fast, private, browser‑based image tools: resize, compress, convert, crop, blur, sharpen, and more. No uploads, 100% free.\">\r\n    <script src=\"https://unpkg.com/lunr@2.3.9/lunr.min.js\"></script>\r\n    <!-- Google tag (gtag.js) -->\r\n<script "
+    },
+    {
+      "path": "/tools/test-tool/",
+      "status": 200,
+      "ok": true,
+      "hasNoindex": false,
+      "hasAdsense": true,
+      "title": "Fast Image Tools – Free Online Image Editor & Converter",
+      "snippet": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>Fast Image Tools – Free Online Image Editor & Converter</title>\r\n    <meta name=\"description\" content=\"Fast, private, browser‑based image tools: resize, compress, convert, crop, blur, sharpen, and more. No uploads, 100% free.\">\r\n    <script src=\"https://unpkg.com/lunr@2.3.9/lunr.min.js\"></script>\r\n    <!-- Google tag (gtag.js) -->\r\n<script "
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+/guides/how-to-use-test-tool.html /404.html 404
+/tools/test-tool /404.html 404
+/tools/test-tool/ /404.html 404
+/tools/test-tool/* /404.html 404
