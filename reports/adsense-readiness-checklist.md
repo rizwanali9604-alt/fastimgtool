@@ -14,7 +14,11 @@
 - [ ] `/guides/how-to-use-test-tool.html` returns **404** (deploy `_redirects` + `404.html` — currently may SPA-fallback to homepage)
 - [ ] `/tools/test-tool/` returns **404** (same)
 - [x] `robots.txt` blocks `/templates/`, `/scripts/`, `/config/`
-- [x] `sitemap.xml` loads
+- [x] Privacy mentions cookies, ads, and Google Analytics (GA4)
+- [x] Terms updated with contact email (hello@fastimgtool.com)
+- [x] Thin/clone guides noindexed; sitemap lists ~33 curated guides only
+- [x] Tool pages use real AdSense units (not placeholders)
+- [x] Brand consistency: FastImageTool in titles and policy pages
 
 ### Manual (5 minutes)
 
