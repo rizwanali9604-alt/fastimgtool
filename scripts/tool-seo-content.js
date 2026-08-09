@@ -1,5 +1,16 @@
 /** Accurate How-to / About copy per tool slug for AdSense review. */
 module.exports = {
+  'image-compressor': {
+    name: 'Fast Image Compressor',
+    howTo: [
+      'Upload JPG, PNG, WebP, or BMP via the drop zone — files stay on your device.',
+      'Choose output format (JPEG for Meesho/Amazon, WebP for websites, PNG for transparency).',
+      'Optionally set a maximum longer-side pixel size (e.g. 2048 for listings).',
+      'Click Compress, check the new file size, then Download.',
+    ],
+    about:
+      'Reduce listing photo file size for Meesho and Amazon India without uploading to a server.',
+  },
   'image-sharpen': {
     name: 'Image Sharpen',
     howTo: [
