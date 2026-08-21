@@ -125,7 +125,7 @@
 
     function loadGuidesPreview() {
         var el = document.getElementById('guidesGridHome');
-        if (!el) return;
+        if (!el || el.children.length) return;
         fetch('/data/guides.json')
             .then(function (r) {
                 return r.json();

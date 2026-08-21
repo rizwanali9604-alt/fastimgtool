@@ -2,3 +2,5 @@
 /tools/test-tool /404.html 404
 /tools/test-tool/ /404.html 404
 /tools/test-tool/* /404.html 404
+/guides/convert-webp-to-jpg.html /guides/how-to-convert-webp-to-jpg.html 301
+/guides/convert-webp-to-jpg /guides/how-to-convert-webp-to-jpg.html 301

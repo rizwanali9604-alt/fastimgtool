@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="FastImageTool">
+  <rect width="64" height="64" rx="14" fill="#0b1225"/>
+  <rect x="2.5" y="2.5" width="59" height="59" rx="12" fill="none" stroke="#4da3ff" stroke-width="2.5"/>
+  <path d="M37 8L18 34h14L26 56l22-28H34z" fill="#00d4ff"/>
+</svg>

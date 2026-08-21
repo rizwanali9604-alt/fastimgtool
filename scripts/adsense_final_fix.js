@@ -47,7 +47,6 @@ const INDEXABLE_GUIDES = new Set([
   'how-to-convert-jpg-to-png.html',
   'how-to-convert-png-to-jpg.html',
   'how-to-convert-webp-to-jpg.html',
-  'convert-webp-to-jpg.html',
   'how-to-blur-image-online.html',
   'how-to-sharpen-image-online.html',
   'how-to-convert-image-to-grayscale.html',
@@ -73,7 +72,6 @@ const GUIDE_META = {
   'meesho-product-image-size-600x600-under-50kb.html': { tool_slug: 'image-compressor', title: 'Meesho Product Image 600×600 Under 2MB — Seller Guide' },
   'amazon-india-product-image-requirements.html': { tool_slug: 'image-compressor', title: 'Amazon India Product Image Requirements 2026' },
   'shopify-product-images-webp-compression.html': { tool_slug: 'image-to-webp', title: 'Shopify Product Images — WebP & Compression' },
-  'convert-webp-to-jpg.html': { tool_slug: 'webp-to-jpg', title: 'How to Convert WebP to JPG Online' },
 };
 
 function buildSeoSection(slug, data) {
@@ -120,8 +118,8 @@ function fixToolPage(file) {
   if (parts.length >= 2) {
     html = parts[0] + '\n' + AD_TOP + '\n' + parts.slice(1).join('\n' + AD_MID + '\n');
   }
-  html = html.replace(/___AD_PLACEHOLDER___/g, AD_BOTTOM);
-  html = html.replace(/<div class="ad-slot-placeholder[^>]*>[\s\S]*?<\/div>/g, AD_BOTTOM);
+  html = html.replace(/___AD_PLACEHOLDER___/g, '');
+  html = html.replace(/<div class="ad-slot-placeholder[^>]*>[\s\S]*?<\/div>/g, '');
 
   html = html.replace(/<section class="seo-content[\s\S]*?<\/section>/, buildSeoSection(slug, data));
 

@@ -181,13 +181,13 @@ module.exports = [
   },
   {
     slug: 'meesho-product-image-size-600x600-under-50kb.html',
-    title: 'Meesho Product Image 600×600 Under 50KB — Seller Guide 2026 — FastImageTool',
-    headline: 'Meesho Product Image 600×600 Under 50KB',
+    title: 'Meesho Product Image 600×600 Under 2MB — Seller Guide 2026 — FastImageTool',
+    headline: 'Meesho Product Image 600×600 Under 2MB',
     description:
-      'Meesho listing photos: resize to 600×600 px and compress under 50KB. Step-by-step for Indian sellers using free browser tools.',
+      'Meesho listing photos: square 600×600 px, JPEG, under 2MB. What Meesho publishes vs seller rumors, plus a browser workflow.',
     breadcrumb: 'Meesho Image Size',
-    h1: 'Meesho Product Image: 600×600 px Under 50KB',
-    subtitle: 'Prepare catalog photos that upload fast and look sharp on mobile.',
+    h1: 'Meesho Product Image: 600×600 px Under 2MB',
+    subtitle: 'Square catalog photos, JPEG, and a file-size target you can actually defend — plus why 50KB is not a Meesho rule.',
     readMin: 6,
     metaTag: '🇮🇳 Meesho sellers',
     toolSlug: 'image-compressor',
@@ -208,11 +208,11 @@ module.exports = [
     faqs: [
       [
         'What size should Meesho product images be?',
-        'A square 600×600 px image is the practical target many Meesho sellers use for consistent catalog display and fast uploads. Always confirm the latest specs in your Meesho seller app.',
+        'Meesho catalog cards are square. A practical working size is 600×600 px. Confirm the live minimum in the Meesho Supplier Panel — Meesho’s public how-it-works page says detailed image guidelines appear there.',
       ],
       [
-        'Why keep Meesho images under 50KB?',
-        'Smaller files upload faster on mobile networks, reduce failed uploads, and keep your catalog snappy when buyers scroll on budget phones.',
+        'Is 50KB a Meesho requirement?',
+        'No. That figure is a seller-blog rumor, not a published Meesho rule. Forcing 50KB often destroys fabric texture. Keep files under 2MB so mobile uploads succeed, and only compress further if the panel rejects the file.',
       ],
       [
         'JPG or PNG for Meesho?',
@@ -220,7 +220,7 @@ module.exports = [
       ],
       [
         'My photo looks blurry after compressing — what went wrong?',
-        'You may have started from a soft image or compressed below 65% quality. Shoot in good light, resize to 600×600 first, then compress gradually.',
+        'You may have started from a soft image or compressed far below 70% quality. Shoot in good light, resize to a square first, then compress until the file is under 2MB.',
       ],
       [
         'Can I batch process many SKUs?',
@@ -233,7 +233,7 @@ module.exports = [
                 <a href="/tools/image-resizer/" class="cta-btn">Open Resizer →</a>
                 <a href="/tools/image-compressor/" class="cta-btn">Open Compressor →</a>
             </div>
-            <p>Meesho sellers often work from phone photos taken on the shop floor. Those originals can be 3–8 MB — too large for smooth catalog uploads. The workflow that works: <strong>crop to square → resize to 600×600 → compress under ~50KB</strong> while keeping the product sharp.</p>
+            <p>Meesho sellers usually start from phone photos taken on the shop floor. Those originals are often 3–8&nbsp;MB. The workflow: <strong>crop to square → resize to 600×600 → compress until the file is under 2MB</strong>. Confirm live caps in the Meesho Supplier Panel. 50KB is not a Meesho rule.</p>
 
             <h2 id="specs">Target specs (practical workflow)</h2>
             <div style="overflow-x:auto;">
@@ -242,8 +242,8 @@ module.exports = [
                 <tbody>
                     <tr style="border-bottom:1px solid #2a3550;"><td style="padding:8px;">Dimensions</td><td style="padding:8px;">600 × 600 px (square)</td></tr>
                     <tr style="border-bottom:1px solid #2a3550;"><td style="padding:8px;">Format</td><td style="padding:8px;">JPG</td></tr>
-                    <tr style="border-bottom:1px solid #2a3550;"><td style="padding:8px;">File size goal</td><td style="padding:8px;">Under 50 KB</td></tr>
-                    <tr><td style="padding:8px;">Quality</td><td style="padding:8px;">Typically 70–85% after resize</td></tr>
+                    <tr style="border-bottom:1px solid #2a3550;"><td style="padding:8px;">File size goal</td><td style="padding:8px;">Under 2MB</td></tr>
+                    <tr><td style="padding:8px;">Quality</td><td style="padding:8px;">Typically 75–90% after resize</td></tr>
                 </tbody>
             </table>
             </div>
@@ -256,11 +256,11 @@ module.exports = [
                 <li>Download the resized JPG.</li>
             </ol>
 
-            <h2 id="step2">Step 2 — Compress under 50KB</h2>
+            <h2 id="step2">Step 2 — Compress under 2MB</h2>
             <ol>
                 <li>Open <a href="/tools/image-compressor/">Image Compressor</a>.</li>
                 <li>Upload the 600×600 file.</li>
-                <li>Lower quality until under 50 KB — usually 70–85% for well-lit product shots.</li>
+                <li>Lower quality only if the file is still over 2MB — usually 75–90% for well-lit product shots.</li>
                 <li>Upload to your Meesho catalog.</li>
             </ol>
 
@@ -268,7 +268,7 @@ module.exports = [
             <ul>
                 <li>Uploading full-resolution phone photos without resize.</li>
                 <li>Using PNG for simple product-on-white shots (wastes KB).</li>
-                <li>Over-compressing until fabric texture disappears — hurts conversions.</li>
+                <li>Crushing files to 50KB — that was never a Meesho requirement.</li>
             </ul>`,
   },
   {
