@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="/assets/js/consent-boot.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ — FastImageTool</title>
@@ -57,17 +58,22 @@
 
         <div class="faq-item">
             <div class="faq-question">What image formats are supported?</div>
-            <div class="faq-answer">We currently support JPG, PNG, and WEBP. More formats will be added soon.</div>
+            <div class="faq-answer">Most tools accept JPG, PNG, and WebP. Some converters also accept HEIC, GIF, BMP, or TIFF — the upload hint on each tool page is the source of truth. We do not claim formats that tool does not list.</div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">Is there a file size limit?</div>
-            <div class="faq-answer">No, but very large images may be slow depending on your device's memory. We recommend images under 50 MB for best performance.</div>
+            <div class="faq-answer">No. FastImageTool processes one image per visit. There is no folder upload or zip download. Repeat the same steps for each SKU, or use desktop software for true bulk jobs.</div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">How do I contact support?</div>
             <div class="faq-answer">Visit our <a href="/contact.html" style="color:#4da3ff;">Contact page</a> to send us an email. We aim to respond within 48 hours.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Can I rotate by any angle or crop with drag handles?</div>
+            <div class="faq-answer">No. Rotate is 90°, 180°, or 270°. Crop is center crop to the width and height you type. Sharpen cannot recover a fully blurry photo. We do not remove backgrounds.</div>
         </div>
 
         <div class="faq-item">
@@ -107,5 +113,6 @@
     </footer>
 
     <script src="/assets/js/nav.js"></script>
+    <script src="/assets/js/consent-ui.js" defer></script>
 </body>
 </html>

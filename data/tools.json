@@ -14,7 +14,7 @@
   {
     "slug": "jpg-to-png",
     "title": "Convert JPG to PNG",
-    "description": "Convert JPG to PNG online free. Preserves transparency, instant conversion, browser-based. No upload to server.",
+    "description": "Convert JPG to PNG online free. Note: this does not add transparency — JPEG has no alpha channel.",
     "category": "conversion"
   },
   {
@@ -38,7 +38,7 @@
   {
     "slug": "image-sharpen",
     "title": "Image Sharpen",
-    "description": "Sharpen blurry photos online free. Enhance product images for Amazon and Meesho listings.",
+    "description": "Add edge contrast to slightly soft photos. Cannot recover a fully out-of-focus shot.",
     "category": "effects"
   },
   {
@@ -110,7 +110,7 @@
   {
     "slug": "tiff-to-jpg",
     "title": "TIFF to JPG",
-    "description": "Convert TIFF to JPG online free. Compress large scans for web and listings.",
+    "description": "Convert TIFF scans to JPG for web and marketplace listings.",
     "category": "conversion"
   },
   {

@@ -1,11 +1,5 @@
 [
   {
-    "title": "How to Optimize Images for Web",
-    "url": "/blog/first-post.html",
-    "date": "March 13, 2026",
-    "description": "Learn the best practices for image optimization to speed up your website."
-  },
-  {
     "title": "Image File Formats Explained: JPG, PNG, WEBP, and More",
     "url": "/blog/image-file-formats-explained.html",
     "date": "March 13, 2026",
@@ -18,10 +12,10 @@
     "description": "Perfect image sizes for Instagram, Facebook, Twitter, and LinkedIn – updated for 2026."
   },
   {
-    "title": "Batch Image Processing: Save Time with These Tips",
+    "title": "Catalog photos one by one: a repeatable workflow (no batch uploader)",
     "url": "/blog/batch-image-processing-tips.html",
-    "date": "March 13, 2026",
-    "description": "Learn how to resize, compress, and convert multiple images at once efficiently."
+    "date": "August 21, 2026",
+    "description": "FastImageTool processes one image per visit. Here is an honest catalog workflow for Meesho and Amazon sellers."
   },
   {
     "title": "The Ultimate Guide to Image SEO for Higher Rankings",
@@ -54,9 +48,9 @@
     "description": "Maintain visual quality while reducing file size. Tips for photographers and webmasters."
   },
   {
-    "title": "How to Remove Background from an Image (Free Methods)",
+    "title": "We do not remove image backgrounds — what sellers should do instead",
     "url": "/blog/remove-background-from-image.html",
-    "date": "March 13, 2026",
-    "description": "Simple techniques to remove image backgrounds without expensive software."
+    "date": "August 21, 2026",
+    "description": "FastImageTool has no background-remover. How to shoot white-background listing photos and when to use crop or blur."
   }
 ]

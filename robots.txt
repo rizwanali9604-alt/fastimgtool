@@ -1,9 +1,29 @@
 User-agent: *
 Allow: /
 
-# Block non-content / build artifacts from indexing
+# Block non-content / build artifacts
 Disallow: /templates/
 Disallow: /scripts/
 Disallow: /config/
+Disallow: /reports/
+Disallow: /data/guide-data
+Disallow: /data/guide-data-backup.json
+Disallow: /data/guide-data-extra.json
+Disallow: /data/consolidation-report.json
+
+# Doorway / leftover URLs (also 301 in _redirects)
+Disallow: /compress-image-online-free.html
+Disallow: /resize-image-online-free.html
+Disallow: /image-resizer.html
+Disallow: /png-to-jpg-converter.html
+Disallow: /webp-to-jpg-converter.html
+Disallow: /convert-jpg-to-png-online-free.html
+Disallow: /how-to-convert-jpg-to-png-online-free.html
+Disallow: /community.html
+Disallow: /newsletter.html
+Disallow: /blog/first-post.html
+Disallow: /guides_backup/
+Disallow: /nav-tools.html
+Disallow: /assets/generate-og.html
 
 Sitemap: https://fastimgtool.com/sitemap.xml

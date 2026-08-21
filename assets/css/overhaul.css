@@ -1,8 +1,8 @@
 /* FastImgTool — Site Overhaul Design System */
 :root {
-  --primary: #7C3AED;
-  --primary-dark: #6D28D9;
-  --primary-light: #EDE9FE;
+  --primary: #4da3ff;
+  --primary-dark: #2b7fd4;
+  --primary-light: #dbeafe;
   --accent: #10B981;
   --accent-light: rgba(16, 185, 129, 0.15);
   --surface: #0b1220;

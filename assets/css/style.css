@@ -162,7 +162,7 @@ margin-bottom:12px;
   transition: border-color 0.15s, transform 0.15s;
 }
 .tool-card:hover {
-  border-color: #7C3AED;
+  border-color: #4da3ff;
   transform: translateY(-1px);
 }
 .tool-card-icon { font-size: 22px; flex-shrink: 0; }
@@ -183,7 +183,7 @@ margin-bottom:12px;
 }
 .tool-card-arrow {
   font-size: 16px;
-  color: #7C3AED;
+  color: #4da3ff;
   flex-shrink: 0;
 }
 
@@ -233,7 +233,7 @@ margin-bottom:12px;
   background: rgba(15, 23, 42, 0.5);
   margin-bottom: 20px;
 }
-.upload-area.drag-over { border-color: #7C3AED; background: rgba(124, 58, 237, 0.1); }
+.upload-area.drag-over { border-color: #4da3ff; background: rgba(77, 163, 255, 0.1); }
 .upload-prompt .upload-icon { font-size: 48px; display: block; margin-bottom: 12px; }
 .upload-sub { font-size: 13px; color: var(--text-secondary, #94a3b8); margin-top: 8px; }
 .btn-upload, .btn-primary {
@@ -241,7 +241,7 @@ margin-bottom:12px;
   padding: 10px 20px;
   border-radius: 8px;
   border: none;
-  background: #7C3AED;
+  background: #4da3ff;
   color: #fff;
   font-weight: 600;
   cursor: pointer;

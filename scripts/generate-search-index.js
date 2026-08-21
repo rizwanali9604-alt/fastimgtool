@@ -16,11 +16,11 @@ async function loadTools() {
 }
 
 async function loadGuides() {
-    const raw = await fs.readFile(path.join(__dirname, '..', 'data', 'guide-data.json'), 'utf8');
+    const raw = await fs.readFile(path.join(__dirname, '..', 'data', 'guides.json'), 'utf8');
     return JSON.parse(raw).map(g => ({
         title: g.title,
-        description: g.description,
-        url: `/guides/${g.slug}.html`,
+        description: g.title,
+        url: g.url,
         type: 'guide',
         tool_slug: g.tool_slug
     }));
