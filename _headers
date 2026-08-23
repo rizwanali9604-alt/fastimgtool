@@ -2,23 +2,14 @@
   Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=600
 
-/assets/favicon.png
-  Content-Type: image/png
-  Cache-Control: public, max-age=86400
-
-/assets/favicon.svg
-  Content-Type: image/svg+xml
-  Cache-Control: public, max-age=86400
-
-/assets/favicon-32.png
-  Content-Type: image/png
-  Cache-Control: public, max-age=86400
-
 /guides_backup/*
   X-Robots-Tag: noindex, nofollow
 
-/nav-tools.html
+/templates/*
   X-Robots-Tag: noindex, nofollow
 
-/templates/*
+/data/guide-data*
+  X-Robots-Tag: noindex, nofollow
+
+/scripts/*
   X-Robots-Tag: noindex, nofollow

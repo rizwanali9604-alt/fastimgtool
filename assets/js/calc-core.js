@@ -4,21 +4,6 @@
 (function () {
     'use strict';
 
-    function initNavToggle() {
-        var nav = document.querySelector('.nav, .navbar');
-        if (!nav) return;
-        var toggle = nav.querySelector('.nav-toggle');
-        var links = nav.querySelector('.nav-links');
-        if (!toggle || !links) return;
-        toggle.addEventListener('click', function () {
-            links.classList.toggle('nav-open');
-            toggle.setAttribute(
-                'aria-expanded',
-                links.classList.contains('nav-open') ? 'true' : 'false'
-            );
-        });
-    }
-
     function initCalcTabs(selector, cardSelector) {
         document.querySelectorAll(selector).forEach(function (tab) {
             tab.addEventListener('click', function () {
@@ -40,7 +25,6 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
-        initNavToggle();
         initCalcTabs('.cat-tab', '.calc-card, .tool-card-h, .tool-card');
         var y = document.getElementById('footerYear');
         if (y) y.textContent = String(new Date().getFullYear());

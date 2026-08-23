@@ -1,17 +1,17 @@
 User-agent: *
 Allow: /
 
-# Block non-content / build artifacts
+Allow: /data/tools.json
+Allow: /data/guides.json
+Allow: /data/blog-posts.json
+Allow: /data/affiliate-products.json
+Disallow: /data/
+
 Disallow: /templates/
 Disallow: /scripts/
 Disallow: /config/
 Disallow: /reports/
-Disallow: /data/guide-data
-Disallow: /data/guide-data-backup.json
-Disallow: /data/guide-data-extra.json
-Disallow: /data/consolidation-report.json
 
-# Doorway / leftover URLs (also 301 in _redirects)
 Disallow: /compress-image-online-free.html
 Disallow: /resize-image-online-free.html
 Disallow: /image-resizer.html

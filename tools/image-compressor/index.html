@@ -157,7 +157,7 @@
                         <option value="1280">1280</option>
                     </select>
                 </div>
-                <p class="ic-tech">Compression runs in a <strong>Web Worker</strong> using <strong>browser-image-compression</strong> (canvas + modern codecs). Output is tuned to reach roughly <strong>50% or more</strong> smaller files when the source has room to optimize, while keeping quality visually intact.</p>
+                <p class="ic-tech">Compression runs in a <strong>Web Worker</strong> using <strong>browser-image-compression</strong>. JPEG/WebP output is <strong>lossy</strong>: smaller files, some detail gone. How much you save depends on the source. Keep a master original.</p>
             </div>
             <div class="ic-stats" id="icStats" hidden></div>
             <div class="ic-progress-wrap" id="icProgressWrap" hidden>

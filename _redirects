@@ -14,7 +14,6 @@
 /blog/first-post.html /blog/image-compression-best-practices.html 301
 /guides/convert-webp-to-jpg.html /tools/webp-to-jpg/ 301
 /guides/convert-webp-to-jpg /tools/webp-to-jpg/ 301
-/favicon.ico /assets/favicon.png 301
 /guides/how-to-convert-jpg-to-png.html /tools/jpg-to-png/ 301
 /guides/how-to-convert-png-to-jpg.html /tools/png-to-jpg/ 301
 /guides/how-to-convert-webp-to-jpg.html /tools/webp-to-jpg/ 301
@@ -41,3 +40,15 @@
 /guides_backup/* /404.html 404
 /nav-tools.html /404.html 404
 /assets/generate-og.html /404.html 404
+/blog/how-to-compress-images-for-email.html /guides/compress-image-for-email.html 301
+/blog/how-to-resize-images-for-social-media.html /guides/resize-image-for-instagram.html 301
+/blog/webp-vs-jpg-vs-png.html /guides/webp-vs-jpg-which-is-better.html 301
+/data/guide-data-backup.json /404.html 404
+/data/guide-data-extra.json /404.html 404
+/data/guide-data.json /404.html 404
+/data/blog-topics.json /404.html 404
+/data/tool-content.json /404.html 404
+/data/consolidation-report.json /404.html 404
+/data/pillar-overrides.json /404.html 404
+/data/site-config.json /404.html 404
+/data/guide-data.backup-20260402-155644.json /404.html 404

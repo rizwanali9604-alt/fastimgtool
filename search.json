@@ -238,60 +238,39 @@
     "tool_slug": "webp-to-jpg"
   },
   {
-    "title": "Image File Formats Explained: JPG, PNG, WEBP, and More",
-    "description": "Understand the differences between common image formats and when to use each.",
-    "url": "/blog/image-file-formats-explained.html",
+    "title": "JPEG compression settings we actually use",
+    "description": "One file, JPEG quality slider, optional max pixel side. No AVIF, no batch, no AI.",
+    "url": "/blog/image-compression-best-practices.html",
     "type": "blog",
-    "date": "March 13, 2026"
+    "date": "August 23, 2026"
   },
   {
-    "title": "How to Resize Images for Social Media (2026 Guide)",
-    "description": "Perfect image sizes for Instagram, Facebook, Twitter, and LinkedIn – updated for 2026.",
-    "url": "/blog/how-to-resize-images-for-social-media.html",
+    "title": "JPG, PNG, WebP, HEIC — formats we convert",
+    "description": "What FastImageTool actually converts. JPEG has no transparency.",
+    "url": "/blog/image-file-formats-explained.html",
     "type": "blog",
-    "date": "March 13, 2026"
+    "date": "August 23, 2026"
+  },
+  {
+    "title": "Image filenames and alt text",
+    "description": "Smaller files and readable names. We do not rank your store.",
+    "url": "/blog/image-seo-guide.html",
+    "type": "blog",
+    "date": "August 23, 2026"
+  },
+  {
+    "title": "Make a simple favicon PNG (32×32)",
+    "description": "Resize a square logo to 32×32. We do not generate multi-size ICO files.",
+    "url": "/blog/how-to-create-a-favicon.html",
+    "type": "blog",
+    "date": "August 23, 2026"
   },
   {
     "title": "Catalog photos one by one: a repeatable workflow (no batch uploader)",
-    "description": "FastImageTool processes one image per visit. Here is an honest catalog workflow for Meesho and Amazon sellers.",
+    "description": "FastImageTool processes one image per visit. Honest catalog workflow for Meesho and Amazon sellers.",
     "url": "/blog/batch-image-processing-tips.html",
     "type": "blog",
     "date": "August 21, 2026"
-  },
-  {
-    "title": "The Ultimate Guide to Image SEO for Higher Rankings",
-    "description": "Optimize your images to improve page speed, user experience, and search rankings.",
-    "url": "/blog/image-seo-guide.html",
-    "type": "blog",
-    "date": "March 13, 2026"
-  },
-  {
-    "title": "How to Compress Images for Email (Stay Under Attachment Limits)",
-    "description": "Reduce image file size for email without losing quality. Practical tips and tools.",
-    "url": "/blog/how-to-compress-images-for-email.html",
-    "type": "blog",
-    "date": "March 13, 2026"
-  },
-  {
-    "title": "WEBP vs JPG vs PNG: Which Format Should You Use?",
-    "description": "A detailed comparison of modern image formats and when to choose each.",
-    "url": "/blog/webp-vs-jpg-vs-png.html",
-    "type": "blog",
-    "date": "March 13, 2026"
-  },
-  {
-    "title": "How to Create a Favicon for Your Website (Easy Steps)",
-    "description": "Generate a favicon from any image and add it to your site for better branding.",
-    "url": "/blog/how-to-create-a-favicon.html",
-    "type": "blog",
-    "date": "March 13, 2026"
-  },
-  {
-    "title": "Image Compression Best Practices for 2026",
-    "description": "Maintain visual quality while reducing file size. Tips for photographers and webmasters.",
-    "url": "/blog/image-compression-best-practices.html",
-    "type": "blog",
-    "date": "March 13, 2026"
   },
   {
     "title": "We do not remove image backgrounds — what sellers should do instead",

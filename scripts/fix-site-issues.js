@@ -133,7 +133,7 @@ function fixAllHtml() {
 }
 
 function fixToolContentJson() {
-    const p = path.join(ROOT, 'data', 'tool-content.json');
+    const p = path.join(ROOT, 'scripts', 'legacy-data', 'tool-content.json');
     if (!fs.existsSync(p)) return;
     const data = JSON.parse(fs.readFileSync(p, 'utf8'));
     let changed = false;

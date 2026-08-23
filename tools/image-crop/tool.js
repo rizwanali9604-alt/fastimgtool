@@ -57,14 +57,22 @@
     });
 
     downloadBtn.addEventListener('click', function () {
+        var err = document.getElementById('cropError');
+        if (!err) {
+            err = document.createElement('p');
+            err.id = 'cropError';
+            err.style.cssText = 'color:#f87171;font-size:0.9rem;margin:8px 0 0;';
+            downloadBtn.parentNode.insertBefore(err, downloadBtn.nextSibling);
+        }
+        err.textContent = '';
         if (!originalImage) {
-            alert('Please upload an image first.');
+            err.textContent = 'Upload an image first.';
             return;
         }
         var cw = parseInt(cropWidth.value, 10);
         var ch = parseInt(cropHeight.value, 10);
         if (!cw || !ch || cw < 1 || ch < 1) {
-            alert('Enter valid crop dimensions.');
+            err.textContent = 'Enter width and height in pixels.';
             return;
         }
         var canvas = cropToCanvas(originalImage, cw, ch);

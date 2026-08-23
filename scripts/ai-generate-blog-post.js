@@ -30,7 +30,7 @@ const CONFIG = {
     rateLimitDelay: 3000,          // Longer delay for longer generations
     temperature: 0.8,
     maxTokensPerPost: 3000,
-    topicsFile: path.join(__dirname, '..', 'data', 'blog-topics.json'),
+    topicsFile: path.join(__dirname, '..', 'scripts', 'legacy-data', 'blog-topics.json'),
     blogDir: path.join(__dirname, '..', 'blog'),
     blogPostsFile: path.join(__dirname, '..', 'data', 'blog-posts.json'),
 };

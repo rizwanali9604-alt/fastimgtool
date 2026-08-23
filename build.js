@@ -13,7 +13,7 @@ const CONFIG = {
     TOOLS_LISTING_TEMPLATE: path.join(__dirname, "templates", "tools-listing-template.html"),
     GUIDES_LISTING_TEMPLATE: path.join(__dirname, "templates", "guides-listing-template.html"),
     BLOG_TEMPLATE: path.join(__dirname, "templates", "blog-template.html"),
-    TOOL_CONTENT_FILE: path.join(__dirname, "data", "tool-content.json"),
+    TOOL_CONTENT_FILE: path.join(__dirname, "scripts", "legacy-data", "tool-content.json"),
 };
 
 async function ensureDir(dir) {

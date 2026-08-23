@@ -33,7 +33,7 @@ const CONFIG = {
     temperature: 0.8,                  // Creativity vs predictability
     maxTokensPerSection: 600,          // Max tokens per generated section
     toolsFile: path.join(__dirname, '..', 'data', 'tools.json'),
-    contentFile: path.join(__dirname, '..', 'data', 'tool-content.json'),
+    contentFile: path.join(__dirname, '..', 'scripts', 'legacy-data', 'tool-content.json'),
 };
 
 // ==================== Initialize OpenAI Client ====================
