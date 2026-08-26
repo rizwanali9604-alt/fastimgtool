@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "include": [
+    "/scripts",
+    "/scripts/*",
+    "/templates",
+    "/templates/*",
+    "/reports",
+    "/reports/*",
+    "/config",
+    "/config/*"
+  ],
+  "exclude": []
+}
