@@ -40,7 +40,10 @@
 /guides_backup/* /404.html 404
 /nav-tools.html /404.html 404
 /assets/generate-og.html /404.html 404
-/scripts/pin_helper.html /404.html 404
+/scripts/* /404.html 404
+/templates/* /404.html 404
+/reports/* /404.html 404
+/config/* /404.html 404
 /og-image.png /assets/og-image.png 200
 /blog/how-to-compress-images-for-email.html /guides/compress-image-for-email.html 301
 /blog/how-to-resize-images-for-social-media.html /guides/resize-image-for-instagram.html 301
