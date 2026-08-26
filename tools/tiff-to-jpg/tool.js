@@ -22,7 +22,7 @@
 
     function loadUTIF() {
         if (typeof UTIF !== 'undefined') return Promise.resolve();
-        return FT.loadScript('https://cdn.jsdelivr.net/npm/utif@3.1.0/UTIF.min.js');
+        return FT.loadScript('/assets/vendor/utif.min.js');
     }
 
     fileInput.addEventListener('change', function (e) {

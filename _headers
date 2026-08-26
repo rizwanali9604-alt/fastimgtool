@@ -13,3 +13,28 @@
 
 /scripts/*
   X-Robots-Tag: noindex, nofollow
+
+/tools/image-blur/*
+  X-Robots-Tag: noindex, follow
+
+/tools/image-sharpen/*
+  X-Robots-Tag: noindex, follow
+
+/tools/image-grayscale/*
+  X-Robots-Tag: noindex, follow
+
+/tools/image-brightness/*
+  X-Robots-Tag: noindex, follow
+
+/tools/image-contrast/*
+  X-Robots-Tag: noindex, follow
+
+/tools/image-saturation/*
+  X-Robots-Tag: noindex, follow
+
+/tools/image-invert/*
+  X-Robots-Tag: noindex, follow
+
+/tools/image-sepia/*
+  X-Robots-Tag: noindex, follow
+
