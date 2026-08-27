@@ -33,7 +33,7 @@
 
 1. [Google AdSense](https://www.google.com/adsense/) → **Get started**
 2. Site URL: `https://fastimgtool.com`
-3. Publisher ID on site: `ca-pub-8332278513903196`
+3. Publisher ID on site: `ca-pub-8332278519903196`
 4. Wait 1–14 days after submit
 
 ### Record after you apply

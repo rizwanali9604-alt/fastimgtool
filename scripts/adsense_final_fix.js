@@ -9,17 +9,17 @@ const ROOT = path.join(__dirname, '..');
 const TOOL_SEO = require('./tool-seo-content.js');
 
 const AD_TOP = `    <div style="min-height:90px;text-align:center;margin:16px 0;">
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8332278513903196" data-ad-slot="9490701260" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8332278519903196" data-ad-slot="9490701260" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>`;
 
 const AD_MID = `    <div style="min-height:90px;text-align:center;margin:24px 0;">
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8332278513903196" data-ad-slot="8664200172" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8332278519903196" data-ad-slot="8664200172" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>`;
 
 const AD_BOTTOM = `    <div style="min-height:90px;text-align:center;margin:24px 0 32px;">
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8332278513903196" data-ad-slot="3445350863" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8332278519903196" data-ad-slot="3445350863" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>`;
 

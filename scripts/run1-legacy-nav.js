@@ -19,7 +19,7 @@ const NAV = `<nav class="nav">
 </nav>`;
 
 const ADSENSE =
-  '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278513903196" crossorigin="anonymous"></script>';
+  '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>';
 
 const legacyPages = [
   'compress-image-online-free.html',

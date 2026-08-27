@@ -67,7 +67,7 @@ function render(g) {
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/overhaul.css">
     <link rel="icon" href="/assets/favicon.png">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278513903196" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>
     <script type="application/ld+json">${articleJson(g.headline, g.description, g.slug)}</script>
     <script type="application/ld+json">${faqJson(g.faqs)}</script>
 </head>
@@ -102,7 +102,7 @@ function render(g) {
     </header>
 
     <div class="ad-container">
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8332278513903196" data-ad-slot="9490701260" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8332278519903196" data-ad-slot="9490701260" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
@@ -127,7 +127,7 @@ function render(g) {
                 ${sidebarLinks}
             </div>
             <div class="sidebar-card ad-sidebar">
-                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8332278513903196" data-ad-slot="8664200172" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8332278519903196" data-ad-slot="8664200172" data-ad-format="auto" data-full-width-responsive="true"></ins>
                 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
             </div>
         </aside>

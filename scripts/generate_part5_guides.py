@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parent.parent
 GUIDES_DIR = ROOT / "guides"
 TEMPLATE_FILE = ROOT / "templates" / "guide-template.html"
 SITEMAP_PART5 = ROOT / "sitemap-part5-guides.xml"
-ADSENSE_CLIENT = "ca-pub-8332278513903196"
+ADSENSE_CLIENT = "ca-pub-8332278519903196"
 SITE_ORIGIN = "https://fastimgtool.com"
 
 # Guide prefix / group -> tool folder for links

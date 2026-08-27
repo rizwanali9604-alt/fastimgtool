@@ -253,7 +253,7 @@ NAV = """  <nav class="nav">
     </div>
   </nav>"""
 
-ADSENSE = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278513903196" crossorigin="anonymous"></script>'
+ADSENSE = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>'
 
 
 def all_guide_slugs():

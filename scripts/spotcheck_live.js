@@ -42,7 +42,7 @@ function fetch(path) {
           status: res.statusCode,
           ok: res.statusCode >= 200 && res.statusCode < 400,
           hasNoindex: /noindex/i.test(body),
-          hasAdsense: /adsbygoogle|ca-pub-8332278513903196/.test(body),
+          hasAdsense: /adsbygoogle|ca-pub-8332278519903196/.test(body),
           title: (body.match(/<title[^>]*>([^<]+)<\/title>/i) || [])[1]?.trim() || '',
           snippet: body.slice(0, 500),
         });

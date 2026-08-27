@@ -31,16 +31,4 @@ files.forEach((f) => {
   console.log('nav.js →', path.relative(ROOT, f));
 });
 
-['privacy.html', 'terms.html', 'faq.html', 'about.html'].forEach((name) => {
-  const p = path.join(ROOT, name);
-  if (!fs.existsSync(p)) return;
-  let html = fs.readFileSync(p, 'utf8');
-  html = html.replace(
-    /\s*<script async src="https:\/\/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js\?client=ca-pub-8332278513903196" crossorigin="anonymous"><\/script>/g,
-    ''
-  );
-  fs.writeFileSync(p, html);
-  console.log('removed adsense loader', name);
-});
-
 console.log('nav/legal pass done');

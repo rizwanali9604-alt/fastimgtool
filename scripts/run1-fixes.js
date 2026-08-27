@@ -6,7 +6,7 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const ADSENSE =
-  '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278513903196" crossorigin="anonymous"></script>';
+  '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8332278519903196" crossorigin="anonymous"></script>';
 
 const STANDARD_NAV = `<nav class="nav">
   <div class="nav-inner">
