@@ -70,9 +70,9 @@
                 <div class="upload-inner">
                     <div class="upload-icon">📁</div>
                     <div class="upload-title">Drop image here or click to browse</div>
-                    <div class="upload-hint">Supports JPG, PNG, WebP, GIF, BMP</div>
+                    <div class="upload-hint">GIF only. Animated GIFs: first frame only.</div>
                 </div>
-                <input type="file" id="fileInput" accept="image/*" style="display:none">
+                <input type="file" id="fileInput" accept=".gif,image/gif" aria-label="Choose image file" style="display:none">
             </div>
             <div id="preview"></div>
             <button type="button" id="downloadBtn" disabled>⬇️ Download</button>
@@ -107,26 +107,22 @@
         <p>Sometimes you only need a still from a GIF — a logo frame or reaction image — for a listing infographic. GIF to PNG exports the first frame as PNG in the browser so you can sharpen, resize, or compress next.</p>
         <h2>How to Use GIF to PNG</h2>
         <ol>
-          <li><strong>Step:</strong> Upload a GIF (first frame is used).</li>
-          <li><strong>Step:</strong> Download the PNG output.</li>
+          <li>Choose a <strong>.gif</strong>. Animated GIFs: only the <strong>first frame</strong> is drawn.</li>
+          <li>Download PNG. Animation is discarded.</li>
         </ol>
-        <p><em>Privacy:</em> Processing is designed to run in your browser. Your images are not uploaded to a FastImageTool account.</p>
+        <p><em>Privacy:</em> No upload to our origin.</p>
         <h2>Frequently Asked Questions</h2>
-        <h3>What is GIF to PNG?</h3>
-        <p>GIF to PNG converts the first frame of a GIF into a PNG file online, free and private.</p>
-        <h3>Does it keep animation?</h3>
-        <p>No. Animation is flattened to the first frame. Use video tools if you need motion.</p>
-        <h3>Free?</h3>
-        <p>Yes.</p>
-        <h3>Next steps?</h3>
-        <p>Resize or compress the PNG/JPG for the destination platform.</p>
+        <h3>Can I export every frame?</h3>
+        <p>No. The HTML image decoder shows one frame. Use a dedicated GIF splitter if you need a frame sequence.</p>
+        <h3>Why PNG not MP4?</h3>
+        <p>This site does not encode video. First-frame PNG is for a still preview or a marketplace thumbnail, not a sticker pack.</p>
     </section>
 
     <div id="related-guides-container" class="container" style="max-width:800px;margin:20px auto;"></div>
 
     <section class="related-tools container">
         <h2>Related Tools</h2>
-        <div id="related-tools-container"></div>
+        <div id="related-tools-container"><ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;"><li style="margin:5px;"><a href="/tools/png-to-jpg/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">PNG to JPG</a></li><li style="margin:5px;"><a href="/tools/image-compressor/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Image Compressor</a></li><li style="margin:5px;"><a href="/tools/jpg-to-png/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">JPG to PNG</a></li></ul></div>
     </section>
 
     <footer class="site-footer">

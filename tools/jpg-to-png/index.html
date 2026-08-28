@@ -70,9 +70,9 @@
                 <div class="upload-inner">
                     <div class="upload-icon">📁</div>
                     <div class="upload-title">Drop image here or click to browse</div>
-                    <div class="upload-hint">Supports JPG, PNG, WebP, GIF, BMP</div>
+                    <div class="upload-hint">JPEG only (.jpg / .jpeg). Output PNG. Does not add transparency.</div>
                 </div>
-                <input type="file" id="fileInput" accept="image/*" style="display:none">
+                <input type="file" id="fileInput" accept=".jpg,.jpeg,image/jpeg" aria-label="Choose image file" style="display:none">
             </div>
             <div id="preview"></div>
             <button type="button" id="downloadBtn" disabled>⬇️ Download</button>
@@ -107,27 +107,23 @@
         <p>Some design workflows and printers ask for PNG. JPG to PNG converts in the browser without uploading to a third-party converter. Note: converting JPG to PNG does not magically add transparency — the jpeg already discarded alpha. Use PNG when a workflow requires it; use JPG/WebP when you need smaller files for Meesho uploads.</p>
         <h2>How to Use JPG to PNG</h2>
         <ol>
-          <li><strong>Step:</strong> Upload a JPEG file.</li>
-          <li><strong>Step:</strong> The tool converts it to PNG in your browser.</li>
-          <li><strong>Step:</strong> Click Download to save the PNG file.</li>
+          <li>Choose a <strong>.jpg / .jpeg</strong> file. Other formats are rejected.</li>
+          <li>Download PNG. Pixel dimensions stay the same.</li>
         </ol>
-        <p><em>Privacy:</em> Processing is designed to run in your browser. Your images are not uploaded to a FastImageTool account.</p>
+        <p><em>Limitation:</em> JPEG has no alpha channel. The PNG will be fully opaque. This is not a background remover.</p>
+        <p><em>Privacy:</em> Conversion uses the canvas in your browser. The file is not uploaded to our servers.</p>
         <h2>Frequently Asked Questions</h2>
-        <h3>What is JPG to PNG?</h3>
-        <p>JPG to PNG is a free format converter that runs in your browser. Upload JPEG, download PNG. Private and free.</p>
-        <h3>Will PNG be smaller than JPG?</h3>
-        <p>Usually larger. Convert for format compatibility, not for compression. Compress or use WebP when size is the goal.</p>
-        <h3>Free?</h3>
-        <p>Yes.</p>
-        <h3>Transparency?</h3>
-        <p>Source JPG has no transparency to preserve. Start from PNG/WebP with alpha if you need see-through backgrounds.</p>
+        <h3>Will the PNG be smaller?</h3>
+        <p>Usually larger. Use this when a workflow demands PNG, not when you need a smaller Meesho file — use the compressor or WebP for size.</p>
+        <h3>Can I get a transparent logo from a JPEG?</h3>
+        <p>No. Start from a PNG/WebP that already has transparency, or cut the background in a photo editor. This tool only changes the container.</p>
     </section>
 
     <div id="related-guides-container" class="container" style="max-width:800px;margin:20px auto;"></div>
 
     <section class="related-tools container">
         <h2>Related Tools</h2>
-        <div id="related-tools-container"></div>
+        <div id="related-tools-container"><ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;"><li style="margin:5px;"><a href="/tools/png-to-jpg/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">PNG to JPG</a></li><li style="margin:5px;"><a href="/tools/image-compressor/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Image Compressor</a></li><li style="margin:5px;"><a href="/tools/image-to-webp/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Image to WebP</a></li></ul></div>
     </section>
 
     <footer class="site-footer">

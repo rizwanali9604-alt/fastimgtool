@@ -70,9 +70,9 @@
                 <div class="upload-inner">
                     <div class="upload-icon">📁</div>
                     <div class="upload-title">Drop image here or click to browse</div>
-                    <div class="upload-hint">Supports JPG, PNG, WebP, GIF, BMP</div>
+                    <div class="upload-hint">Center-crop to the pixel size you type. Does not free-form drag a box.</div>
                 </div>
-                <input type="file" id="fileInput" accept="image/*" style="display:none">
+                <input type="file" id="fileInput" accept="image/*" aria-label="Choose image file" style="display:none">
             </div>
             <div id="preview"></div>
             <button type="button" id="downloadBtn" disabled>⬇️ Download</button>
@@ -107,27 +107,20 @@
         <p>Square Meesho cards, passport photos, and banner crops all need precise pixels. Image Crop takes width and height and crops from the center — simple on purpose, for sellers who already framed the subject roughly. For freestyle brush crop, use a phone editor; for exact listing ratios, this page is faster than installing desktop software.</p>
         <h2>How to Use Image Crop</h2>
         <ol>
-          <li><strong>Step:</strong> Upload your image.</li>
-          <li><strong>Step:</strong> Enter crop width and height in pixels (crops from the center).</li>
-          <li><strong>Step:</strong> Preview the crop, then click Download.</li>
+          <li>Upload a photo. Width/height default to the full image.</li>
+          <li>Type a smaller width and height. The crop is always <strong>centered</strong> — there is no drag handle.</li>
+          <li>Download PNG. Values larger than the image are clamped down.</li>
         </ol>
-        <p><em>Privacy:</em> Processing is designed to run in your browser. Your images are not uploaded to a FastImageTool account.</p>
         <h2>Frequently Asked Questions</h2>
-        <h3>What is Image Crop?</h3>
-        <p>Image Crop is a free browser cropper for exact pixel dimensions from the center of an image. Upload, enter size, preview, download. No signup.</p>
-        <h3>Does it support freehand crop handles?</h3>
-        <p>The current UI uses numeric width/height from center. Plan composition accordingly or pre-crop on your phone then finalize size here.</p>
-        <h3>Free?</h3>
-        <p>Yes.</p>
-        <h3>Best for sellers?</h3>
-        <p>Yes when you need consistent square or custom sizes across a catalog batch.</p>
+        <h3>Can I crop from the top-left?</h3>
+        <p>Not on this page. Center crop is what marketplace squares usually need. For free-form crop, use a desktop editor.</p>
     </section>
 
     <div id="related-guides-container" class="container" style="max-width:800px;margin:20px auto;"></div>
 
     <section class="related-tools container">
         <h2>Related Tools</h2>
-        <div id="related-tools-container"></div>
+        <div id="related-tools-container"><ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;"><li style="margin:5px;"><a href="/tools/image-resizer/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Image Resizer</a></li><li style="margin:5px;"><a href="/tools/image-compressor/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Image Compressor</a></li><li style="margin:5px;"><a href="/tools/flip-image/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Flip Image</a></li></ul></div>
     </section>
 
     <footer class="site-footer">

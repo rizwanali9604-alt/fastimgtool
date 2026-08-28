@@ -70,9 +70,9 @@
                 <div class="upload-inner">
                     <div class="upload-icon">📁</div>
                     <div class="upload-title">Drop image here or click to browse</div>
-                    <div class="upload-hint">Supports JPG, PNG, WebP, GIF, BMP</div>
+                    <div class="upload-hint">JPG, PNG, WebP, or GIF. Not a PNG-only converter — that is PNG to WebP.</div>
                 </div>
-                <input type="file" id="fileInput" accept="image/*" style="display:none">
+                <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp,image/gif,.jpg,.jpeg,.png,.webp,.gif" aria-label="Choose image file" style="display:none">
             </div>
             <div id="preview"></div>
             <button type="button" id="downloadBtn" disabled>⬇️ Download</button>
@@ -107,27 +107,21 @@
         <p>Shopify and modern sites load faster with WebP. Image to WebP converts JPG/PNG with a quality slider in the browser so store owners shrink assets without a CLI. Pair with compressor workflows when you also need exact pixel sizes for banners.</p>
         <h2>How to Use Image to WebP</h2>
         <ol>
-          <li><strong>Step:</strong> Upload JPG or PNG.</li>
-          <li><strong>Step:</strong> Set WebP quality (10–100%).</li>
-          <li><strong>Step:</strong> Download the smaller WebP file for your website or Shopify store.</li>
+          <li>Upload JPEG, PNG, GIF, or WebP (not HEIC/TIFF on this page).</li>
+          <li>Set quality (default 90%) and download <code>.webp</code>.</li>
+          <li>PNG-only workflow with a hard accept filter: <a href="/tools/png-to-webp/">PNG to WebP</a>.</li>
         </ol>
-        <p><em>Privacy:</em> Processing is designed to run in your browser. Your images are not uploaded to a FastImageTool account.</p>
+        <p><em>Privacy:</em> Canvas encode. Encoding can fail in older Safari.</p>
         <h2>Frequently Asked Questions</h2>
-        <h3>What is Image to WebP?</h3>
-        <p>Image to WebP is a free browser converter that outputs the WebP format for faster page loads. Upload JPG or PNG, set quality, download.</p>
-        <h3>Do all marketplaces accept WebP?</h3>
-        <p>Many Indian marketplaces still prefer JPG for listing images. Use WebP primarily for your own storefront or blog.</p>
-        <h3>Free?</h3>
-        <p>Yes.</p>
-        <h3>Quality tip?</h3>
-        <p>70–85 is often a good web tradeoff; check visual edges on text overlays.</p>
+        <h3>Shopify vs Meesho</h3>
+        <p>Shopify storefronts often benefit from WebP. Some Indian marketplaces still prefer JPEG. Convert here, then keep a JPEG copy via WebP to JPG if a portal rejects WebP.</p>
     </section>
 
     <div id="related-guides-container" class="container" style="max-width:800px;margin:20px auto;"></div>
 
     <section class="related-tools container">
         <h2>Related Tools</h2>
-        <div id="related-tools-container"></div>
+        <div id="related-tools-container"><ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;"><li style="margin:5px;"><a href="/tools/png-to-webp/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">PNG to WebP</a></li><li style="margin:5px;"><a href="/tools/image-compressor/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Image Compressor</a></li><li style="margin:5px;"><a href="/tools/webp-to-jpg/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">WebP to JPG</a></li></ul></div>
     </section>
 
     <footer class="site-footer">

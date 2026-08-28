@@ -277,7 +277,7 @@
                         }
                     }
                     var dlBtn = document.getElementById('downloadBtn');
-                    if (dlBtn) dlBtn.disabled = false;
+                    if (dlBtn && options.unlockDownload !== false) dlBtn.disabled = false;
                     if (options.onLoad) options.onLoad(result, state);
                 })
                 .catch(function () {
@@ -287,8 +287,22 @@
 
         var uploadZone = document.getElementById('uploadZone');
         if (uploadZone && fileInput) {
+            if (!fileInput.getAttribute('aria-label')) {
+                fileInput.setAttribute('aria-label', 'Choose image file');
+            }
+            uploadZone.setAttribute('role', 'button');
+            uploadZone.setAttribute('tabindex', '0');
+            if (!uploadZone.getAttribute('aria-label')) {
+                uploadZone.setAttribute('aria-label', 'Drop image or press Enter to browse');
+            }
             uploadZone.addEventListener('click', function () {
                 fileInput.click();
+            });
+            uploadZone.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    fileInput.click();
+                }
             });
         }
 

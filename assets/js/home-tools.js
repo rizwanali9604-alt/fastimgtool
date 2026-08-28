@@ -156,6 +156,16 @@
     window.FastImgHome = { renderTools: renderTools, loadGuidesPreview: loadGuidesPreview };
 
     document.addEventListener('DOMContentLoaded', function () {
+        const NOINDEX = {
+            'image-blur': 1,
+            'image-sharpen': 1,
+            'image-grayscale': 1,
+            'image-brightness': 1,
+            'image-contrast': 1,
+            'image-saturation': 1,
+            'image-invert': 1,
+            'image-sepia': 1
+        };
         fetch('/data/tools.json')
             .then(function (r) {
                 return r.json();
@@ -166,7 +176,7 @@
                 if (statTools) {
                     statTools.textContent = String(
                         tools.filter(function (t) {
-                            return t.slug !== 'test-tool';
+                            return t.slug !== 'test-tool' && !NOINDEX[t.slug];
                         }).length
                     );
                 }

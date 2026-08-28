@@ -17,12 +17,17 @@ async function loadRelatedTools() {
         if (!currentTool || !currentTool.category) return;
 
         // Find related tools (same category, exclude current)
-        const related = tools.filter(t => 
-            t.category === currentTool.category && t.slug !== slug
+        const NOINDEX = new Set([
+            'image-blur', 'image-sharpen', 'image-grayscale', 'image-brightness',
+            'image-contrast', 'image-saturation', 'image-invert', 'image-sepia'
+        ]);
+        const related = tools.filter(t =>
+            t.category === currentTool.category && t.slug !== slug && !NOINDEX.has(t.slug)
         );
 
-        // If no related, show up to 3 random other tools
-        let displayTools = related.length > 0 ? related : tools.filter(t => t.slug !== slug).slice(0, 3);
+        let displayTools = related.length > 0
+            ? related.slice(0, 4)
+            : tools.filter(t => t.slug !== slug && !NOINDEX.has(t.slug)).slice(0, 4);
 
         if (displayTools.length === 0) {
             container.innerHTML = '<p>No related tools found.</p>';
@@ -44,6 +49,7 @@ async function loadRelatedTools() {
         container.innerHTML = html;
     } catch (err) {
         console.error('Related tools error:', err);
+        // Keep any static HTML already in the container.
     }
 }
 

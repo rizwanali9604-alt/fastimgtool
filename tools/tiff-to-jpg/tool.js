@@ -10,7 +10,7 @@
     var controls = document.createElement('div');
     controls.className = 'ft-controls';
     controls.innerHTML =
-        '<div class="ft-row"><label>JPEG quality: <span id="qualityValue">90</span>%</label>' +
+        '<div class="ft-row"><label for="qualitySlider">JPEG quality: <span id="qualityValue">90</span>%</label>' +
         '<input type="range" id="qualitySlider" min="10" max="100" value="90"></div>';
     FT.insertBeforeAction(controls, downloadBtn);
 
@@ -25,15 +25,7 @@
         return FT.loadScript('/assets/vendor/utif.min.js');
     }
 
-    fileInput.addEventListener('change', function (e) {
-        var file = e.target.files && e.target.files[0];
-        if (!file) return;
-
-        if (!FT.matchesFile(file, { exts: ['.tif', '.tiff'] })) {
-            alert('Please select a TIFF file (.tif or .tiff).');
-            return;
-        }
-
+    function decodeTiff(file, arrayBuffer) {
         currentFile = file;
         sourceCanvas = null;
         preview.innerHTML = '<p style="color:#94a3b8;">Decoding TIFF…</p>';
@@ -41,12 +33,10 @@
 
         loadUTIF()
             .then(function () {
-                return file.arrayBuffer();
-            })
-            .then(function (arrayBuffer) {
-                var ifds = UTIF.decode(arrayBuffer);
+                var buf = arrayBuffer;
+                var ifds = UTIF.decode(buf);
                 if (!ifds || !ifds.length) throw new Error('No image data in TIFF');
-                UTIF.decodeImage(arrayBuffer, ifds[0]);
+                UTIF.decodeImage(buf, ifds[0]);
                 var rgba = UTIF.toRGBA8(ifds[0]);
                 var canvas = document.createElement('canvas');
                 canvas.width = ifds[0].width;
@@ -62,7 +52,21 @@
             .catch(function (err) {
                 console.error(err);
                 preview.innerHTML = '<p style="color:#f87171;">Failed to decode TIFF.</p>';
+                downloadBtn.disabled = true;
             });
+    }
+
+    FT.setupImageTool({
+        fileInput: fileInput,
+        preview: preview,
+        showPreview: false,
+        loadAs: 'arrayBuffer',
+        accept: { exts: ['.tif', '.tiff'], types: ['image/tiff', 'image/tif'] },
+        invalidMessage: 'Please select a TIFF file (.tif or .tiff).',
+        unlockDownload: false,
+        onLoad: function (result) {
+            decodeTiff(result.file, result.buffer);
+        }
     });
 
     downloadBtn.addEventListener('click', function () {

@@ -70,9 +70,9 @@
                 <div class="upload-inner">
                     <div class="upload-icon">📁</div>
                     <div class="upload-title">Drop image here or click to browse</div>
-                    <div class="upload-hint">Supports JPG, PNG, WebP, GIF, BMP</div>
+                    <div class="upload-hint">90°, 180°, or 270° only. Not arbitrary degrees. Download PNG.</div>
                 </div>
-                <input type="file" id="fileInput" accept="image/*" style="display:none">
+                <input type="file" id="fileInput" accept="image/*" aria-label="Choose image file" style="display:none">
             </div>
             <div id="preview"></div>
             <button type="button" id="downloadBtn" disabled>⬇️ Download</button>
@@ -107,27 +107,20 @@
         <p>Phones still save sideways photos when sensors disagree. Marketplaces reject or display tall products poorly when orientation is wrong. Rotate Image applies 90° / 180° / 270° turns in the browser so warehouse staff can fix folders of shots without Photoshop.</p>
         <h2>How to Use Rotate Image</h2>
         <ol>
-          <li><strong>Step:</strong> Upload your image.</li>
-          <li><strong>Step:</strong> Select rotation: 90° clockwise, 180°, or 90° counter-clockwise.</li>
-          <li><strong>Step:</strong> Click Download to save the rotated image.</li>
+          <li>Upload a photo.</li>
+          <li>Choose 90° clockwise, 180°, or 90° counter-clockwise. No 3° “horizon straighten.”</li>
+          <li>Download PNG. Canvas size swaps on 90/270 so pixels are not squashed.</li>
         </ol>
-        <p><em>Privacy:</em> Processing is designed to run in your browser. Your images are not uploaded to a FastImageTool account.</p>
         <h2>Frequently Asked Questions</h2>
-        <h3>What is Rotate Image?</h3>
-        <p>Rotate Image is a free browser tool for quarter-turn and 180° rotation. Upload, pick an angle, download. No account.</p>
-        <h3>Can I rotate by arbitrary degrees like 15°?</h3>
-        <p>Not on this page. Use 90° steps here; for free angles use a fuller editor.</p>
-        <h3>Free?</h3>
-        <p>Yes.</p>
-        <h3>Quality loss?</h3>
-        <p>PNG/canvas export keeps fidelity for typical listing needs. Recompress with Image Compressor only if file size must drop further.</p>
+        <h3>EXIF orientation?</h3>
+        <p>The browser may already apply EXIF when decoding. If a phone photo looks already rotated, you may not need this tool.</p>
     </section>
 
     <div id="related-guides-container" class="container" style="max-width:800px;margin:20px auto;"></div>
 
     <section class="related-tools container">
         <h2>Related Tools</h2>
-        <div id="related-tools-container"></div>
+        <div id="related-tools-container"><ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;"><li style="margin:5px;"><a href="/tools/flip-image/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Flip Image</a></li><li style="margin:5px;"><a href="/tools/image-crop/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Image Crop</a></li><li style="margin:5px;"><a href="/tools/image-resizer/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Image Resizer</a></li></ul></div>
     </section>
 
     <footer class="site-footer">

@@ -182,6 +182,42 @@
 </div>
     </div>
 
+    <div class="tool-screenshot">
+        <picture>
+            <source srcset="/assets/images/tools/image-compressor-screenshot.webp" type="image/webp">
+            <img src="/assets/images/tools/image-compressor-screenshot.jpg" alt="Fast Image Compressor with quality slider, output format, and before/after file size" loading="lazy" width="800" height="450">
+        </picture>
+    </div>
+
+    <section class="seo-content container" style="max-width:800px;margin:40px auto;padding:24px;background:#111a30;border-radius:12px;line-height:1.8;border:1px solid #334155;">
+        <h2>About this compressor</h2>
+        <p>This page shrinks one image at a time in the browser using the <code>browser-image-compression</code> library in a Web Worker. It is not a lossless archive tool. JPEG and WebP output throw away detail on purpose so the file gets smaller. PNG output is lossless and often <em>grows</em> a photograph.</p>
+        <p>The script aims for about half the original byte size (<code>maxSizeMB</code> ≈ 49% of the source) and also caps the longer side (default 2048px). If the source is already small or already compressed, the “Saved %” can be well under 50%. That is expected, not a broken download.</p>
+        <h2>How to compress</h2>
+        <ol>
+            <li>Drop a JPEG, PNG, WebP, GIF, or BMP. Decoding happens locally; the file is not posted to FastImageTool.</li>
+            <li>Set quality (default 85%). Lower quality usually means a smaller JPEG/WebP.</li>
+            <li>Pick output format. JPEG for Meesho/Amazon photos. WebP for modern sites. PNG only if you must keep transparency or sharp UI text.</li>
+            <li>Optionally lower the max longer side if the photo is a 12MP phone shot destined for a 600px catalog card.</li>
+            <li>Press Compress &amp; download. The page shows before/after bytes, then starts a download named <code>*-compressed.jpg|webp|png</code>.</li>
+        </ol>
+        <p><em>Ads and analytics scripts still load on this page.</em> Image bytes stay in the tab.</p>
+        <h2>Frequently asked questions</h2>
+        <h3>Why didn’t the file get 50% smaller?</h3>
+        <p>The worker stops when it cannot reduce further without wrecking the image, or when the source is already near the target. Screenshots and tiny logos barely shrink. Try JPEG or WebP, quality 75–85%, and a smaller max side.</p>
+        <h3>Does PNG compression keep transparency?</h3>
+        <p>PNG output can keep alpha. JPEG cannot; transparent pixels become opaque (typically white-ish after encode). The format hint on the JPEG option mentions this when the source is a PNG.</p>
+        <h3>Is this the same as WhatsApp compression?</h3>
+        <p>No. WhatsApp applies its own resize after you send. Compress here first if you need a file under an email or panel limit before the chat app touches it. See the <a href="/guides/compress-image-for-whatsapp.html">WhatsApp guide</a>.</p>
+        <h3>Can I compress HEIC?</h3>
+        <p>Not on this page. Convert with <a href="/tools/heic-to-jpg/">HEIC to JPG</a> first, then compress the JPEG.</p>
+    </section>
+
+    <section class="related-tools container">
+        <h2>Related Tools</h2>
+        <div id="related-tools-container"><ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;"><li style="margin:5px;"><a href="/tools/image-resizer/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Image Resizer</a></li><li style="margin:5px;"><a href="/tools/png-to-jpg/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">PNG to JPG</a></li><li style="margin:5px;"><a href="/tools/image-to-webp/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Image to WebP</a></li></ul></div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">

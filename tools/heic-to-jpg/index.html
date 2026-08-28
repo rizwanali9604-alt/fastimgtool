@@ -70,9 +70,9 @@
                 <div class="upload-inner">
                     <div class="upload-icon">📁</div>
                     <div class="upload-title">Drop image here or click to browse</div>
-                    <div class="upload-hint">Supports JPG, PNG, WebP, GIF, BMP</div>
+                    <div class="upload-hint">HEIC/HEIF from iPhone. Chrome or Edge recommended. Output JPEG.</div>
                 </div>
-                <input type="file" id="fileInput" accept="image/*" style="display:none">
+                <input type="file" id="fileInput" accept=".heic,.heif,image/heic,image/heif" aria-label="Choose image file" style="display:none">
             </div>
             <div id="preview"></div>
             <button type="button" id="downloadBtn" disabled>⬇️ Download</button>
@@ -107,27 +107,21 @@
         <p>iPhone default HEIC breaks many Windows uploaders and Seller Central forms. HEIC to JPG converts in the browser so sellers can move from Camera Roll to Meesho/Amazon without a Mac. Set JPEG quality, download, then resize to marketplace pixels.</p>
         <h2>How to Use HEIC to JPG</h2>
         <ol>
-          <li><strong>Step:</strong> Upload an iPhone HEIC photo.</li>
-          <li><strong>Step:</strong> Set JPEG quality (50–100%).</li>
-          <li><strong>Step:</strong> Download JPG when conversion completes in your browser.</li>
+          <li>Choose an iPhone <strong>.heic / .heif</strong>.</li>
+          <li>Wait for in-browser conversion (heic2any, loaded from this site).</li>
+          <li>Set JPEG quality (default 90%) and download.</li>
         </ol>
-        <p><em>Privacy:</em> Processing is designed to run in your browser. Your images are not uploaded to a FastImageTool account.</p>
+        <p><em>Limitation:</em> Firefox support is weaker than Chrome/Edge. Live Photos extras are not kept.</p>
         <h2>Frequently Asked Questions</h2>
-        <h3>What is HEIC to JPG?</h3>
-        <p>HEIC to JPG is a free browser converter for Apple HEIC/HEIF photos into widely accepted JPEG files.</p>
-        <h3>My browser fails to read HEIC — why?</h3>
-        <p>Some browsers need adequate HEIC decoding support. Update the browser or try Chrome/Edge current versions. As a fallback, share from iPhone as Most Compatible before transfer.</p>
-        <h3>Free?</h3>
-        <p>Yes.</p>
-        <h3>After convert?</h3>
-        <p>Use Image Resizer for 600×600 or Amazon sizes, then Image Compressor if still large.</p>
+        <h3>Does the HEIC leave my phone via your server?</h3>
+        <p>No. The library runs in the page. A failed convert usually means the browser cannot decode that HEIC variant.</p>
     </section>
 
     <div id="related-guides-container" class="container" style="max-width:800px;margin:20px auto;"></div>
 
     <section class="related-tools container">
         <h2>Related Tools</h2>
-        <div id="related-tools-container"></div>
+        <div id="related-tools-container"><ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;"><li style="margin:5px;"><a href="/tools/image-compressor/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Image Compressor</a></li><li style="margin:5px;"><a href="/tools/image-resizer/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Image Resizer</a></li><li style="margin:5px;"><a href="/tools/png-to-jpg/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">PNG to JPG</a></li></ul></div>
     </section>
 
     <footer class="site-footer">

@@ -39,7 +39,7 @@ function stripMarkdownFences(text) {
 const TOOL_CARDS = [
     ['image-compressor', 'optimize', '🗜️', 'Image Compressor', 'Reduce file size without losing quality. Best for Meesho & Amazon sellers.'],
     ['image-resizer', 'transform', '↔️', 'Image Resizer', 'Resize to exact pixels. Presets for Meesho 600×600, Amazon, Instagram.'],
-    ['jpg-to-png', 'convert', '🔄', 'JPG to PNG', 'Convert JPG images to PNG format instantly. Preserves transparency.'],
+    ['jpg-to-png', 'convert', '🔄', 'JPG to PNG', 'Convert JPG to PNG. Does not add transparency.'],
     ['png-to-jpg', 'convert', '🔄', 'PNG to JPG', 'Convert PNG to JPG with white background. Reduces file size.'],
     ['image-to-webp', 'convert', '⚡', 'Image to WebP', 'Convert to WebP for smaller files. Faster website loading.'],
     ['webp-to-jpg', 'convert', '🔄', 'WebP to JPG', 'Convert WebP images back to JPG format. Free and instant.'],

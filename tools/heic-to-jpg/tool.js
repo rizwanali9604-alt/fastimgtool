@@ -6,11 +6,12 @@
     var downloadBtn = document.getElementById('downloadBtn');
     var convertedBlob = null;
     var currentFile = null;
+    var previewUrl = null;
 
     var controls = document.createElement('div');
     controls.className = 'ft-controls';
     controls.innerHTML =
-        '<div class="ft-row"><label>JPEG quality: <span id="qualityValue">90</span>%</label>' +
+        '<div class="ft-row"><label for="qualitySlider">JPEG quality: <span id="qualityValue">90</span>%</label>' +
         '<input type="range" id="qualitySlider" min="50" max="100" value="90"></div>';
     FT.insertBeforeAction(controls, downloadBtn);
 
@@ -28,6 +29,10 @@
     function convertHeic(file) {
         currentFile = file;
         convertedBlob = null;
+        if (previewUrl) {
+            URL.revokeObjectURL(previewUrl);
+            previewUrl = null;
+        }
         preview.innerHTML = '<p style="color:#94a3b8;">Converting HEIC…</p>';
         downloadBtn.disabled = true;
 
@@ -39,7 +44,8 @@
             })
             .then(function (result) {
                 convertedBlob = Array.isArray(result) ? result[0] : result;
-                return FT.loadImageFromUrl(URL.createObjectURL(convertedBlob));
+                previewUrl = URL.createObjectURL(convertedBlob);
+                return FT.loadImageFromUrl(previewUrl);
             })
             .then(function (img) {
                 FT.showPreviewImage(preview, img);
@@ -52,16 +58,17 @@
             });
     }
 
-    fileInput.addEventListener('change', function (e) {
-        var file = e.target.files && e.target.files[0];
-        if (!file) return;
-
-        if (!FT.matchesFile(file, { exts: ['.heic', '.heif'], types: ['image/heic', 'image/heif'] })) {
-            alert('Please select a HEIC/HEIF file (.heic).');
-            return;
+    FT.setupImageTool({
+        fileInput: fileInput,
+        preview: preview,
+        showPreview: false,
+        loadAs: 'arrayBuffer',
+        accept: { types: ['image/heic', 'image/heif'], exts: ['.heic', '.heif'] },
+        invalidMessage: 'Please select a HEIC/HEIF file (.heic).',
+        unlockDownload: false,
+        onLoad: function (result) {
+            convertHeic(result.file);
         }
-
-        convertHeic(file);
     });
 
     qualitySlider.addEventListener('change', function () {

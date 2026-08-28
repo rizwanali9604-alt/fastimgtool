@@ -70,9 +70,9 @@
                 <div class="upload-inner">
                     <div class="upload-icon">📁</div>
                     <div class="upload-title">Drop image here or click to browse</div>
-                    <div class="upload-hint">Supports JPG, PNG, WebP, GIF, BMP</div>
+                    <div class="upload-hint">PNG only. Transparent pixels become white in the JPEG.</div>
                 </div>
-                <input type="file" id="fileInput" accept="image/*" style="display:none">
+                <input type="file" id="fileInput" accept=".png,image/png" aria-label="Choose image file" style="display:none">
             </div>
             <div id="preview"></div>
             <button type="button" id="downloadBtn" disabled>⬇️ Download</button>
@@ -107,27 +107,23 @@
         <p>PNG product exports from Canva or remove-bg tools are often too large for Meesho. PNG to JPG reduces size; transparent pixels become white — perfect for white-background Amazon mains. Quality slider helps balance sharpness vs upload limits. Faster than re-exporting from a design suite on a slow PC.</p>
         <h2>How to Use PNG to JPG</h2>
         <ol>
-          <li><strong>Step:</strong> Upload a PNG file.</li>
-          <li><strong>Step:</strong> Adjust JPEG quality (10–100%) if the slider is shown.</li>
-          <li><strong>Step:</strong> Click Download to save a smaller JPG.</li>
+          <li>Choose a <strong>.png</strong> file.</li>
+          <li>Set JPEG quality (default 92%).</li>
+          <li>Download. Transparent areas are painted <strong>white</strong> before encoding.</li>
         </ol>
-        <p><em>Privacy:</em> Processing is designed to run in your browser. Your images are not uploaded to a FastImageTool account.</p>
+        <p><em>Privacy:</em> Runs in the browser. JPEG output is lossy.</p>
         <h2>Frequently Asked Questions</h2>
-        <h3>What is PNG to JPG?</h3>
-        <p>PNG to JPG is a free browser converter that turns PNG files into JPEG. Sellers use it before marketplace upload when PNG is rejected or too heavy.</p>
-        <h3>What happens to transparency?</h3>
-        <p>Transparent areas become white in the JPG. Put products on white first if you need a pure white main image.</p>
-        <h3>Free?</h3>
-        <p>Yes.</p>
-        <h3>Quality setting?</h3>
-        <p>Higher keeps more detail and a bigger file. Start high for Amazon zoom; lower if Meesho upload fails on size.</p>
+        <h3>Why did my transparent edges turn white?</h3>
+        <p>JPEG cannot store transparency. This page fills the canvas with #FFFFFF, then draws the PNG. Checkerboard or colored backgrounds are not offered.</p>
+        <h3>When should I use PNG to WebP instead?</h3>
+        <p>When you want a smaller file and the destination supports WebP (Shopify, many sites). Use JPG when a marketplace or email client is picky.</p>
     </section>
 
     <div id="related-guides-container" class="container" style="max-width:800px;margin:20px auto;"></div>
 
     <section class="related-tools container">
         <h2>Related Tools</h2>
-        <div id="related-tools-container"></div>
+        <div id="related-tools-container"><ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;"><li style="margin:5px;"><a href="/tools/jpg-to-png/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">JPG to PNG</a></li><li style="margin:5px;"><a href="/tools/image-compressor/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Image Compressor</a></li><li style="margin:5px;"><a href="/tools/png-to-webp/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">PNG to WebP</a></li></ul></div>
     </section>
 
     <footer class="site-footer">

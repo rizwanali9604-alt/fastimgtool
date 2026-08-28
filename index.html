@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FastImageTool — Browser image compressor, resizer &amp; converters</title>
     <meta name="description" content="Browser image tools for Meesho and Amazon sellers: compress, resize, convert. One file at a time. No uploads, no signup.">
-    <script src="https://unpkg.com/lunr@2.3.9/lunr.min.js"></script>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DHHVPY5DJK"></script>
 <script>
@@ -310,7 +309,7 @@
                 <a href="/tools/image-compressor/" class="btn-secondary">⚡ Start with Compressor</a>
             </div>
             <div class="hero-stats">
-                <div class="stat"><strong id="statToolCount">24</strong><span>Free Tools</span></div>
+                <div class="stat"><strong id="statToolCount">16</strong><span>Catalog tools</span></div>
                 <div class="stat"><strong>0</strong><span>Signups Needed</span></div>
                 <div class="stat"><strong>100%</strong><span>Browser-Based</span></div>
             </div>
@@ -325,17 +324,17 @@
 
     <main class="container" id="tools">
 
-                <section id="tools" class="section tools-section" style="padding-top:40px;">
+                <section class="section tools-section" style="padding-top:40px;">
             <div class="container">
                 <div class="section-header">
-                    <h2>All Image Tools</h2>
-                    <p>24 free tools, works in browser, zero signup needed</p>
+                    <h2>Image tools</h2>
+                    <p>16 catalog tools (compress, resize, convert). Effects are one-slider filters and are not in the sitemap.</p>
                 </div>
                 <div class="cat-tabs category-tabs">
                     <button type="button" class="cat-tab active" data-cat="all">All Tools</button>
                     <button type="button" class="cat-tab" data-cat="convert">Converters</button>
                     <button type="button" class="cat-tab" data-cat="optimize">Optimize</button>
-                    <button type="button" class="cat-tab" data-cat="effects">Effects</button>
+                    <button type="button" class="cat-tab" data-cat="effects">Simple filters</button>
                     <button type="button" class="cat-tab" data-cat="transform">Transform</button>
                 </div>
                 <div class="tools-grid">
@@ -672,32 +671,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const resultsDiv = document.getElementById('searchResults');
     if (!searchInput || !resultsDiv) return;
 
-    let idx = null;
+    function esc(s) {
+        return String(s || '').replace(/[&<>"']/g, function (ch) {
+            return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[ch];
+        });
+    }
+
     let documents = [];
 
     fetch('/search.json')
-        .then(res => res.json())
-        .then(data => {
-            documents = data;
-            idx = lunr(function() {
-                this.ref('url');
-                this.field('title', { boost: 10 });
-                this.field('description');
-                data.forEach(doc => this.add(doc));
-            });
-        });
+        .then(function (res) { return res.json(); })
+        .then(function (data) { documents = data; });
 
     searchInput.addEventListener('input', function() {
-        const query = this.value.trim();
+        const query = this.value.trim().toLowerCase();
         if (query.length < 2) {
             resultsDiv.innerHTML = '';
             return;
         }
+        if (!documents.length) return;
 
-        if (!idx) return;
-
-        const results = idx.search(query).map(res => {
-            return documents.find(d => d.url === res.ref);
+        const results = documents.filter(function (d) {
+            return ((d.title || '') + ' ' + (d.description || '') + ' ' + (d.url || '')).toLowerCase().indexOf(query) !== -1;
         });
 
         if (results.length === 0) {
@@ -706,14 +701,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         let html = '<ul style="list-style:none; padding:0;">';
-        results.slice(0, 5).forEach(item => {
-            html += `
-                <li style="margin:10px 0; padding:10px; background:#111a30; border-radius:8px;">
-                    <a href="${item.url}" style="color:#4da3ff; text-decoration:none; font-weight:bold;">${item.title}</a>
-                    <span style="color:#a0b3d9; font-size:0.8rem; margin-left:8px;">(${item.type})</span>
-                    <p style="color:#a0b3d9; font-size:0.9rem; margin:2px 0 0 0;">${item.description}</p>
-                </li>
-            `;
+        results.slice(0, 5).forEach(function (item) {
+            html +=
+                '<li style="margin:10px 0; padding:10px; background:#111a30; border-radius:8px;">' +
+                '<a href="' + esc(item.url) + '" style="color:#4da3ff; text-decoration:none; font-weight:bold;">' + esc(item.title) + '</a>' +
+                '<span style="color:#a0b3d9; font-size:0.8rem; margin-left:8px;">(' + esc(item.type) + ')</span>' +
+                '<p style="color:#a0b3d9; font-size:0.9rem; margin:2px 0 0 0;">' + esc(item.description) + '</p>' +
+                '</li>';
         });
         html += '</ul>';
         resultsDiv.innerHTML = html;

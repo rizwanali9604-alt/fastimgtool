@@ -64,54 +64,28 @@
     </div>
 
 
-    <div class="tool-container">
-  <div class="upload-area" id="uploadArea">
-    <div class="upload-prompt">
-      <span class="upload-icon">📁</span>
-      <p>Drag and drop an image here, or click to browse</p>
-      <p class="upload-sub">JPG, PNG, WebP, GIF supported</p>
-      <button class="btn-upload" onclick="document.getElementById('fileInput').click()">
-        Choose Image
-      </button>
-    </div>
-    <input type="file" id="fileInput" accept="image/*" style="display:none">
-  </div>
-
-  <div class="tool-controls" id="controls" style="display:none">
-    <div class="preview-area">
-      <img id="preview" alt="Preview">
-    </div>
-
-    <div class="control-group">
-      <label>Width (px)</label>
-      <input type="number" id="widthInput" min="1" max="8000" placeholder="Width">
-    </div>
-    <div class="control-group">
-      <label>Height (px)</label>
-      <input type="number" id="heightInput" min="1" max="8000" placeholder="Height">
-    </div>
-    <div class="control-group">
-      <label>
-        <input type="checkbox" id="lockRatio" checked> Lock aspect ratio
-      </label>
-    </div>
-
-    <div class="preset-buttons">
-      <p class="preset-label">Common sizes:</p>
-      <button type="button" onclick="setSize(600,600)">600×600 (Meesho)</button>
-      <button type="button" onclick="setSize(1000,1000)">1000×1000 (Amazon)</button>
-      <button type="button" onclick="setSize(1920,1080)">1920×1080 (HD)</button>
-      <button type="button" onclick="setSize(1080,1080)">1080×1080 (Instagram)</button>
-      <button type="button" onclick="setSize(1200,628)">1200×628 (Facebook)</button>
-    </div>
-
-    <button class="btn-primary" onclick="resizeAndDownload()">
-      Resize & Download
-    </button>
-
-    <!-- AFFILIATE: replace href with your Amazon affiliate URL from affiliate-program.amazon.in -->
-    </div>
-</div>
+    <main class="tool-container">
+        <div class="tool-box ft-tool-box" id="toolBox">
+            <div class="upload-zone" id="uploadZone">
+                <div class="upload-inner">
+                    <div class="upload-icon">📁</div>
+                    <div class="upload-title">Drop image here or click to browse</div>
+                    <div class="upload-hint">JPG, PNG, WebP, GIF, or BMP. Marketplace presets center-crop; unlocked custom size can stretch. Download JPEG.</div>
+                </div>
+                <input type="file" id="fileInput" accept="image/*" aria-label="Choose image file" style="display:none">
+            </div>
+            <div id="preview"></div>
+            <button type="button" id="downloadBtn" disabled>Download JPEG</button>
+            <div class="affiliate-cta">
+              <div class="aff-icon">📦</div>
+              <div class="aff-text">
+                <strong>Need better product photos?</strong>
+                <span>Shop lighting kits and accessories on Amazon</span>
+              </div>
+              <a href="https://www.amazon.in/s?k=photography+lighting+kit&tag=fastimgtool78-21" target="_blank" rel="noopener sponsored" class="aff-btn aff-amazon">Shop Amazon →</a>
+            </div>
+        </div>
+    </main>
 
     
     <div style="min-height:90px;text-align:center;margin:24px 0;">
@@ -129,30 +103,31 @@
 
         <section class="seo-content container" style="max-width:800px;margin:40px auto;padding:24px;background:var(--card,#111a30);border-radius:12px;line-height:1.8;border:1px solid var(--border,#334155);">
         <h2>About Image Resizer</h2>
-        <p>Marketplace cards crop aggressively. Meesho sellers commonly target 600×600 square images; Amazon India favors large, sharp files with the product filling most of the frame; Instagram and YouTube each want different pixels. Phone gallery crop tools rarely offer exact pixel presets for every channel. The Image Resizer lets you dial exact width and height (with optional aspect lock) or use seller/social presets, then download in the browser. No Photoshop install, no uploading product shots to a random converter site — useful when you prepare one master photo into Meesho, Amazon, and social sizes in the same session.</p>
+        <p>Marketplace cards crop aggressively. Meesho sellers commonly target 600×600 square images; Amazon India favors large, sharp files with the product filling most of the frame. Phone gallery tools rarely offer exact pixel presets. This resizer can (1) lock aspect and scale, (2) unlock aspect and stretch to exact pixels, or (3) use a marketplace/social preset, which <strong>center-crops to fill</strong> the size so a 4:3 photo is not stretched into a square. Download is JPEG at quality 0.92. One file at a time. Processing stays in the browser.</p>
         <h2>How to Use Image Resizer</h2>
         <ol>
-          <li><strong>Step:</strong> Upload your image, or click a preset (Meesho 600×600, Amazon 1000×1000, Instagram 1080×1080, etc.).</li>
-          <li><strong>Step:</strong> Enter custom width and height in pixels. Optionally lock aspect ratio.</li>
-          <li><strong>Step:</strong> Click Download to save the resized image.</li>
+          <li>Upload one image (JPG, PNG, WebP, GIF, or BMP that the browser can decode).</li>
+          <li>For Meesho/Amazon/Instagram squares, click a preset — the preview shows a center crop, not a stretch.</li>
+          <li>For a custom size that must keep proportions, leave “Lock aspect ratio” on and change one side.</li>
+          <li>Download. The file name includes the output width and height.</li>
         </ol>
-        <p><em>Privacy:</em> Processing is designed to run in your browser. Your images are not uploaded to a FastImageTool account.</p>
+        <p><em>Privacy:</em> The image is not posted to FastImageTool servers. Analytics and ads scripts still load on the page.</p>
         <h2>Frequently Asked Questions</h2>
-        <h3>What is Image Resizer?</h3>
-        <p>Image Resizer is a free online tool that changes an image’s pixel width and height to exact values you choose. Catalog managers and content creators use it when platforms reject the wrong dimensions, when thumbnails look stretched, or when a square listing image must be cut from a wider studio shot. It works in the browser: upload, set size or pick a preset, download. Files stay on your device during processing whenever the browser supports local canvas processing.</p>
+        <h3>Why did my product look squashed before?</h3>
+        <p>Older versions of this page stretched presets with unlocked aspect. Presets now crop from the center to fill 600×600 / 1000×1000 / 1080×1080. Edges of a wide photo are cut, not distorted.</p>
         <h3>What sizes should Meesho and Amazon sellers use?</h3>
-        <p>Meesho listings commonly use at least 600×600px. Amazon India typically needs 1000px or more on the longest side for zoom; many sellers export around 2000×2000 for main images. Always confirm current rules in Seller Central or your Meesho seller panel because categories can differ.</p>
+        <p>Meesho listings commonly use at least 600×600px. Amazon India typically needs 1000px or more on the longest side for zoom. Confirm current rules in Seller Central or your Meesho panel.</p>
         <h3>Is Image Resizer free?</h3>
-        <p>Yes — no signup and no watermark on the downloaded file. Use it for as many product photos as you need while preparing catalogs.</p>
+        <p>Yes. No signup and no watermark. One image per visit.</p>
         <h3>Do you store my images?</h3>
-        <p>No. Processing is designed to run locally in your browser. We do not ask you to create an account to resize files, and we do not build a cloud album of your catalog.</p>
+        <p>No image upload to our origin. Keep a master original on disk; JPEG download is lossy.</p>
     </section>
 
     <div id="related-guides-container" class="container" style="max-width:800px;margin:20px auto;"></div>
 
     <section class="related-tools container">
         <h2>Related Tools</h2>
-        <div id="related-tools-container"></div>
+        <div id="related-tools-container"><ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;"><li style="margin:5px;"><a href="/tools/image-compressor/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Image Compressor</a></li><li style="margin:5px;"><a href="/tools/image-crop/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Image Crop</a></li><li style="margin:5px;"><a href="/tools/jpg-to-png/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">JPG to PNG</a></li></ul></div>
     </section>
 
     <footer class="site-footer">
@@ -165,81 +140,11 @@
     </footer>
 
     <script src="/assets/js/calc-core.js"></script>
+    <script src="/assets/js/nav.js"></script>
     <script src="/assets/js/related-tools.js"></script>
     <script src="/assets/js/related-guides.js"></script>
-<script>
-let originalWidth = 0, originalHeight = 0, aspectRatio = 1;
-const fileInput = document.getElementById('fileInput');
-const preview = document.getElementById('preview');
-const uploadArea = document.getElementById('uploadArea');
-const controls = document.getElementById('controls');
-const widthInput = document.getElementById('widthInput');
-const heightInput = document.getElementById('heightInput');
-const lockRatio = document.getElementById('lockRatio');
-
-uploadArea.addEventListener('click', function(e) {
-  if (e.target.tagName !== 'BUTTON') fileInput.click();
-});
-fileInput.addEventListener('change', e => loadImage(e.target.files[0]));
-uploadArea.addEventListener('dragover', e => { e.preventDefault(); uploadArea.classList.add('drag-over'); });
-uploadArea.addEventListener('dragleave', () => uploadArea.classList.remove('drag-over'));
-uploadArea.addEventListener('drop', e => { e.preventDefault(); uploadArea.classList.remove('drag-over'); loadImage(e.dataTransfer.files[0]); });
-
-function loadImage(file) {
-  if (!file || !file.type.startsWith('image/')) return;
-  const reader = new FileReader();
-  reader.onload = ev => {
-    const img = new Image();
-    img.onload = () => {
-      originalWidth = img.naturalWidth;
-      originalHeight = img.naturalHeight;
-      aspectRatio = originalWidth / originalHeight;
-      widthInput.value = originalWidth;
-      heightInput.value = originalHeight;
-      preview.src = ev.target.result;
-      uploadArea.style.display = 'none';
-      controls.style.display = 'block';
-    };
-    img.src = ev.target.result;
-  };
-  reader.readAsDataURL(file);
-}
-
-widthInput.addEventListener('input', () => {
-  if (lockRatio.checked && widthInput.value) {
-    heightInput.value = Math.round(widthInput.value / aspectRatio);
-  }
-});
-heightInput.addEventListener('input', () => {
-  if (lockRatio.checked && heightInput.value) {
-    widthInput.value = Math.round(heightInput.value * aspectRatio);
-  }
-});
-
-function setSize(w, h) {
-  widthInput.value = w;
-  heightInput.value = h;
-}
-
-function resizeAndDownload() {
-  const w = parseInt(widthInput.value, 10);
-  const h = parseInt(heightInput.value, 10);
-  if (!w || !h) return alert('Please enter width and height');
-  const canvas = document.createElement('canvas');
-  canvas.width = w;
-  canvas.height = h;
-  const ctx = canvas.getContext('2d');
-  const img = new Image();
-  img.onload = () => {
-    ctx.drawImage(img, 0, 0, w, h);
-    const link = document.createElement('a');
-    link.download = 'resized-' + w + 'x' + h + '.png';
-    link.href = canvas.toDataURL('image/png');
-    link.click();
-  };
-  img.src = preview.src;
-}
-</script>
+    <script src="/assets/js/tool-core.js"></script>
+    <script src="/tools/image-resizer/tool.js"></script>
     <script src="/assets/js/consent-ui.js" defer></script>
 </body>
 </html>

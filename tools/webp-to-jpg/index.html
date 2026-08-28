@@ -70,9 +70,9 @@
                 <div class="upload-inner">
                     <div class="upload-icon">📁</div>
                     <div class="upload-title">Drop image here or click to browse</div>
-                    <div class="upload-hint">Supports JPG, PNG, WebP, GIF, BMP</div>
+                    <div class="upload-hint">WebP only. Output JPEG (lossy).</div>
                 </div>
-                <input type="file" id="fileInput" accept="image/*" style="display:none">
+                <input type="file" id="fileInput" accept=".webp,image/webp" aria-label="Choose image file" style="display:none">
             </div>
             <div id="preview"></div>
             <button type="button" id="downloadBtn" disabled>⬇️ Download</button>
@@ -107,27 +107,23 @@
         <p>Browsers love WebP; many email clients and older seller apps still prefer JPG. WebP to JPG converts locally so you can pull a WebP from a CDN or Chrome save-as and still upload to marketplaces. Quality defaults stay high enough for catalog use.</p>
         <h2>How to Use WebP to JPG</h2>
         <ol>
-          <li><strong>Step:</strong> Upload a WebP image.</li>
-          <li><strong>Step:</strong> Set JPEG quality (default ~92%).</li>
-          <li><strong>Step:</strong> Download the JPG for email, marketplaces, or older apps.</li>
+          <li>Choose a <strong>.webp</strong> file.</li>
+          <li>Adjust JPEG quality if needed (default 92%).</li>
+          <li>Download a .jpg you can attach in Outlook or upload where WebP is blocked.</li>
         </ol>
-        <p><em>Privacy:</em> Processing is designed to run in your browser. Your images are not uploaded to a FastImageTool account.</p>
+        <p><em>Privacy:</em> Decode and encode happen in the browser.</p>
         <h2>Frequently Asked Questions</h2>
-        <h3>What is WebP to JPG?</h3>
-        <p>WebP to JPG is a free online converter for making WebP files widely compatible as JPEG. Browser-based, no signup.</p>
-        <h3>Why not keep WebP?</h3>
-        <p>Keep WebP for your website. Convert to JPG when the destination cannot accept WebP.</p>
-        <h3>Free?</h3>
-        <p>Yes.</p>
-        <h3>Private?</h3>
-        <p>Conversion is designed to run in your browser without an account upload gallery.</p>
+        <h3>Does this keep animation?</h3>
+        <p>No. The browser draws the first (or only) frame onto a canvas. Animated WebP becomes a still JPEG.</p>
+        <h3>Why convert at all?</h3>
+        <p>Some printers, CRMs, and older Android share sheets still reject WebP. Size usually increases versus the WebP original.</p>
     </section>
 
     <div id="related-guides-container" class="container" style="max-width:800px;margin:20px auto;"></div>
 
     <section class="related-tools container">
         <h2>Related Tools</h2>
-        <div id="related-tools-container"></div>
+        <div id="related-tools-container"><ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;"><li style="margin:5px;"><a href="/tools/image-to-webp/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Image to WebP</a></li><li style="margin:5px;"><a href="/tools/image-compressor/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Image Compressor</a></li><li style="margin:5px;"><a href="/tools/png-to-jpg/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">PNG to JPG</a></li></ul></div>
     </section>
 
     <footer class="site-footer">

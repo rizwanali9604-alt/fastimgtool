@@ -86,8 +86,12 @@
     }
 
     function onFileChosen(file) {
-        if (!file || !/^image\//.test(file.type)) {
-            alert('Please choose a valid image file.');
+        var type = (file && file.type) || '';
+        var name = (file && file.name) || '';
+        var looksImage =
+            /^image\//.test(type) || /\.(jpe?g|png|webp|gif|bmp)$/i.test(name);
+        if (!file || !looksImage) {
+            alert('Please choose a JPEG, PNG, WebP, GIF, or BMP file.');
             return;
         }
         var maxWarn = 80 * 1024 * 1024;
@@ -125,6 +129,12 @@
 
     function wireDropzone() {
         if (!dropzone) return;
+        dropzone.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                if (fileInput) fileInput.click();
+            }
+        });
         ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(function (ev) {
             dropzone.addEventListener(ev, function (e) {
                 e.preventDefault();

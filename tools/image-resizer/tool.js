@@ -22,23 +22,45 @@
         '<div><label for="widthInput">Width (px)</label><input type="number" id="widthInput" min="1"></div>' +
         '<div><label for="heightInput">Height (px)</label><input type="number" id="heightInput" min="1"></div>' +
         '</div>' +
-        '<div class="ft-row"><label><input type="checkbox" id="lockAspect" checked> Lock aspect ratio</label></div>';
+        '<div class="ft-row"><label><input type="checkbox" id="lockAspect" checked> Lock aspect ratio</label></div>' +
+        '<p style="font-size:0.85rem;color:#94a3b8;margin:8px 0 0;">Marketplace presets crop from the center to fill the size without stretching. Custom width/height with lock off will stretch.</p>';
     FT.insertBeforeAction(controls, downloadBtn);
 
     var widthInput = document.getElementById('widthInput');
     var heightInput = document.getElementById('heightInput');
     var lockAspect = document.getElementById('lockAspect');
 
-    function updatePreviewCanvas() {
-        if (!originalImage) return;
+    var coverMode = false;
+
+    function drawCover(img, tw, th) {
+        var canvas = document.createElement('canvas');
+        canvas.width = tw;
+        canvas.height = th;
+        var scale = Math.max(tw / img.width, th / img.height);
+        var sw = tw / scale;
+        var sh = th / scale;
+        var sx = (img.width - sw) / 2;
+        var sy = (img.height - sh) / 2;
+        canvas.getContext('2d').drawImage(img, sx, sy, sw, sh, 0, 0, tw, th);
+        return canvas;
+    }
+
+    function resizeCanvas() {
+        if (!originalImage) return null;
         var w = parseInt(widthInput.value, 10);
         var h = parseInt(heightInput.value, 10);
-        if (!w || !h) return;
-        var canvas = FT.drawWithFilter(originalImage, 'none', w, h);
-        FT.showPreviewCanvas(preview, canvas);
+        if (!w || !h) return null;
+        if (coverMode) return drawCover(originalImage, w, h);
+        return FT.drawWithFilter(originalImage, 'none', w, h);
+    }
+
+    function updatePreviewCanvas() {
+        var canvas = resizeCanvas();
+        if (canvas) FT.showPreviewCanvas(preview, canvas);
     }
 
     widthInput.addEventListener('input', function () {
+        coverMode = false;
         if (lockAspect.checked && originalImage) {
             var ratio = originalImage.height / originalImage.width;
             heightInput.value = Math.max(1, Math.round(widthInput.value * ratio));
@@ -47,10 +69,16 @@
     });
 
     heightInput.addEventListener('input', function () {
+        coverMode = false;
         if (lockAspect.checked && originalImage) {
             var ratio = originalImage.width / originalImage.height;
             widthInput.value = Math.max(1, Math.round(heightInput.value * ratio));
         }
+        updatePreviewCanvas();
+    });
+
+    lockAspect.addEventListener('change', function () {
+        coverMode = false;
         updatePreviewCanvas();
     });
 
@@ -59,6 +87,7 @@
             widthInput.value = btn.getAttribute('data-w');
             heightInput.value = btn.getAttribute('data-h');
             lockAspect.checked = false;
+            coverMode = true;
             updatePreviewCanvas();
         });
     });
@@ -87,7 +116,11 @@
             alert('Enter valid dimensions.');
             return;
         }
-        var canvas = FT.drawWithFilter(originalImage, 'none', w, h);
+        var canvas = resizeCanvas();
+        if (!canvas) {
+            alert('Enter valid dimensions.');
+            return;
+        }
         var name = FT.baseName(currentFile, 'image') + '-' + w + 'x' + h + '.jpg';
         FT.downloadCanvas(canvas, name, 'image/jpeg', 0.92);
     });

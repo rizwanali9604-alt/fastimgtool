@@ -70,9 +70,9 @@
                 <div class="upload-inner">
                     <div class="upload-icon">📁</div>
                     <div class="upload-title">Drop image here or click to browse</div>
-                    <div class="upload-hint">Supports JPG, PNG, WebP, GIF, BMP</div>
+                    <div class="upload-hint">Any image the browser can decode. Output is a data URL in a .txt file.</div>
                 </div>
-                <input type="file" id="fileInput" accept="image/*" style="display:none">
+                <input type="file" id="fileInput" accept="image/*" aria-label="Choose image file" style="display:none">
             </div>
             <div id="preview"></div>
             <button type="button" id="downloadBtn" disabled>⬇️ Download</button>
@@ -107,27 +107,20 @@
         <p>Developers embedding tiny icons in CSS/HTML or posting payloads to APIs need Base64 without sending assets to a random paste site. Image to Base64 encodes locally and shows the string to copy — aligned with FastImageTool’s no-upload promise for sensitive brand assets.</p>
         <h2>How to Use Image to Base64</h2>
         <ol>
-          <li><strong>Step:</strong> Upload an image.</li>
-          <li><strong>Step:</strong> Copy the Base64 string generated in the output area.</li>
-          <li><strong>Step:</strong> Paste into HTML, CSS, or your development workflow.</li>
+          <li>Upload an image. The data URL is filled with FileReader (still in the browser).</li>
+          <li>Download <code>base64.txt</code> — a text file, not a new image format.</li>
         </ol>
-        <p><em>Privacy:</em> Processing is designed to run in your browser. Your images are not uploaded to a FastImageTool account.</p>
+        <p><em>Limitation:</em> Huge photos make huge strings and can freeze the tab. Compress first if the string is for HTML embedding.</p>
         <h2>Frequently Asked Questions</h2>
-        <h3>What is Image to Base64?</h3>
-        <p>Image to Base64 is a free browser encoder that turns an image file into a Base64 string or data URI for development workflows.</p>
-        <h3>Should I Base64 large photos?</h3>
-        <p>No. Large Base64 inflates HTML. Use for small icons; host large photos as normal files.</p>
-        <h3>Free?</h3>
-        <p>Yes.</p>
-        <h3>Private?</h3>
-        <p>Encoding runs in your browser; we do not need an account.</p>
+        <h3>Is this encryption?</h3>
+        <p>No. Base64 is encoding, not hiding. Anyone with the string can decode it with <a href="/tools/base64-to-image/">Base64 to Image</a>.</p>
     </section>
 
     <div id="related-guides-container" class="container" style="max-width:800px;margin:20px auto;"></div>
 
     <section class="related-tools container">
         <h2>Related Tools</h2>
-        <div id="related-tools-container"></div>
+        <div id="related-tools-container"><ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;"><li style="margin:5px;"><a href="/tools/base64-to-image/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Base64 to Image</a></li><li style="margin:5px;"><a href="/tools/png-to-jpg/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">PNG to JPG</a></li><li style="margin:5px;"><a href="/tools/image-compressor/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Image Compressor</a></li></ul></div>
     </section>
 
     <footer class="site-footer">

@@ -70,9 +70,9 @@
                 <div class="upload-inner">
                     <div class="upload-icon">📁</div>
                     <div class="upload-title">Drop image here or click to browse</div>
-                    <div class="upload-hint">Supports JPG, PNG, WebP, GIF, BMP</div>
+                    <div class="upload-hint">TIFF only (.tif / .tiff). First image in the file. Output JPEG.</div>
                 </div>
-                <input type="file" id="fileInput" accept="image/*" style="display:none">
+                <input type="file" id="fileInput" accept=".tif,.tiff" aria-label="Choose image file" style="display:none">
             </div>
             <div id="preview"></div>
             <button type="button" id="downloadBtn" disabled>⬇️ Download</button>
@@ -107,26 +107,21 @@
         <p>Print shops and cameras export TIFF that websites and marketplaces reject. TIFF to JPG produces a web/listing JPEG in the browser so you do not need Photoshop just to open a scan for ecommerce.</p>
         <h2>How to Use TIFF to JPG</h2>
         <ol>
-          <li><strong>Step:</strong> Upload a TIFF file.</li>
-          <li><strong>Step:</strong> Set JPEG quality, then download.</li>
+          <li>Choose a <strong>.tif / .tiff</strong>. Multi-page TIFFs: <strong>first image only</strong>.</li>
+          <li>Decoding uses a local copy of UTIF in this site’s <code>/assets/vendor/</code> folder (not a CDN).</li>
+          <li>Set JPEG quality and download.</li>
         </ol>
-        <p><em>Privacy:</em> Processing is designed to run in your browser. Your images are not uploaded to a FastImageTool account.</p>
+        <p><em>Privacy:</em> The TIFF bytes stay in the tab. Very large scientific TIFFs can freeze the page.</p>
         <h2>Frequently Asked Questions</h2>
-        <h3>What is TIFF to JPG?</h3>
-        <p>TIFF to JPG is a free online converter from TIFF scans/exports to JPEG for upload and sharing.</p>
-        <h3>Multi-page TIFF?</h3>
-        <p>Typical browser tools handle the primary raster page. Split multi-page documents in a desktop app first if needed.</p>
-        <h3>Free?</h3>
-        <p>Yes.</p>
-        <h3>Quality?</h3>
-        <p>Start high for text scans; lower only if file size blocks upload.</p>
+        <h3>CMYK or 16-bit TIFF?</h3>
+        <p>UTIF may not render every TIFF flavor. If preview fails, convert with a desktop tool. This page is for common 8-bit RGB scans.</p>
     </section>
 
     <div id="related-guides-container" class="container" style="max-width:800px;margin:20px auto;"></div>
 
     <section class="related-tools container">
         <h2>Related Tools</h2>
-        <div id="related-tools-container"></div>
+        <div id="related-tools-container"><ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;"><li style="margin:5px;"><a href="/tools/image-compressor/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Image Compressor</a></li><li style="margin:5px;"><a href="/tools/image-resizer/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Image Resizer</a></li><li style="margin:5px;"><a href="/tools/heic-to-jpg/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">HEIC to JPG</a></li></ul></div>
     </section>
 
     <footer class="site-footer">

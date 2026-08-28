@@ -70,9 +70,9 @@
                 <div class="upload-inner">
                     <div class="upload-icon">📁</div>
                     <div class="upload-title">Drop image here or click to browse</div>
-                    <div class="upload-hint">Supports JPG, PNG, WebP, GIF, BMP</div>
+                    <div class="upload-hint">PNG only. Encodes WebP in this browser. JPEG photos: use Image to WebP.</div>
                 </div>
-                <input type="file" id="fileInput" accept="image/*" style="display:none">
+                <input type="file" id="fileInput" accept=".png,image/png" aria-label="Choose image file" style="display:none">
             </div>
             <div id="preview"></div>
             <button type="button" id="downloadBtn" disabled>⬇️ Download</button>
@@ -107,26 +107,23 @@
         <p>UI screenshots and graphic PNGs can dominate page weight. PNG to WebP creates smaller files for documentation sites and Shopify theme assets while you keep a PNG master locally.</p>
         <h2>How to Use PNG to WebP</h2>
         <ol>
-          <li><strong>Step:</strong> Upload a PNG file.</li>
-          <li><strong>Step:</strong> Choose WebP quality, then download.</li>
+          <li>This page accepts <strong>PNG only</strong>. For a JPEG catalog photo, use <a href="/tools/image-to-webp/">Image to WebP</a>.</li>
+          <li>Set WebP quality (default 90%).</li>
+          <li>Download. If encoding fails, your browser cannot write WebP — try Chrome or Edge.</li>
         </ol>
-        <p><em>Privacy:</em> Processing is designed to run in your browser. Your images are not uploaded to a FastImageTool account.</p>
+        <p><em>Privacy:</em> Canvas encode in the browser. Not a batch zipper.</p>
         <h2>Frequently Asked Questions</h2>
-        <h3>What is PNG to WebP?</h3>
-        <p>PNG to WebP is a free browser tool dedicated to PNG→WebP conversion with quality control.</p>
-        <h3>Lossy or lossless?</h3>
-        <p>Use the quality control on the page for typically lossy-leaning web exports. Keep original PNG for edits.</p>
-        <h3>Free?</h3>
-        <p>Yes.</p>
-        <h3>Seller listings?</h3>
-        <p>Prefer JPG for Meesho/Amazon unless the platform documents WebP support.</p>
+        <h3>How is this different from Image to WebP?</h3>
+        <p>This tool refuses non-PNG files so a JPEG is not silently re-encoded. Image to WebP accepts JPEG/PNG/GIF/WebP. Keep both pages: different input contracts.</p>
+        <h3>Is alpha preserved?</h3>
+        <p>Chrome’s canvas WebP encoder typically keeps transparency. Confirm the download in a viewer that shows alpha. Safari support varies.</p>
     </section>
 
     <div id="related-guides-container" class="container" style="max-width:800px;margin:20px auto;"></div>
 
     <section class="related-tools container">
         <h2>Related Tools</h2>
-        <div id="related-tools-container"></div>
+        <div id="related-tools-container"><ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;"><li style="margin:5px;"><a href="/tools/image-to-webp/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Image to WebP</a></li><li style="margin:5px;"><a href="/tools/png-to-jpg/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">PNG to JPG</a></li><li style="margin:5px;"><a href="/tools/image-compressor/" style="display:inline-block;padding:8px 12px;background:#1e293b;color:#e6edf7;text-decoration:none;border-radius:4px;">Image Compressor</a></li></ul></div>
     </section>
 
     <footer class="site-footer">

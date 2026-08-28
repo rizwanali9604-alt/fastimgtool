@@ -1,4 +1,4 @@
-const BLOCK_PREFIXES = ['/scripts', '/templates', '/reports', '/config'];
+const BLOCK_PREFIXES = ['/scripts', '/templates', '/reports', '/config', '/guides_backup'];
 
 export async function onRequest(context) {
   const path = new URL(context.request.url).pathname.replace(/\/+$/, '') || '/';
