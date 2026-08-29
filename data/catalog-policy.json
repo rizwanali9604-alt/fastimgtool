@@ -1,0 +1,77 @@
+{
+  "decision": "accept-as-is",
+  "decided": "2026-08-29",
+  "indexable_count": 16,
+  "noindex_filter_count": 8,
+  "rationale": "The eight one-slider filters were the thin cluster; they stay on URLs but are noindex and off the sitemap. The remaining 16 each have a distinct input contract, output, or decoder. Pairwise SEO-body Jaccard is below 0.45. Merging them into a mega-converter would hide search intent (jpg to png, heic to jpg) and would silently accept the wrong file type. Differentiating further would be padding. This is the final catalog shape.",
+  "rejected_options": {
+    "differentiate": "Already unique About/How-to/FAQ and accept/output contracts. Extra copy would be filler.",
+    "consolidate": "Would collapse inverse jobs (jpg↔png), PNG-only vs multi WebP, mirror vs 90° rotate, encode vs paste-decode Base64, and vendor decoders (HEIC/TIFF) onto one widget. That is worse UX and a weaker AdSense story than honest one-job pages."
+  },
+  "tools": [
+    {
+      "slug": "image-compressor",
+      "keep_because": "Web Worker + maxSizeMB≈49% + max side; not a format converter"
+    },
+    {
+      "slug": "image-resizer",
+      "keep_because": "Marketplace presets are center-cover-crop JPEG 0.92; not crop-only"
+    },
+    {
+      "slug": "jpg-to-png",
+      "keep_because": "JPEG only in; PNG out; does not invent alpha"
+    },
+    {
+      "slug": "png-to-jpg",
+      "keep_because": "PNG only in; white flatten; JPEG out"
+    },
+    {
+      "slug": "webp-to-jpg",
+      "keep_because": "WebP only in; JPEG out for portals that reject WebP"
+    },
+    {
+      "slug": "png-to-webp",
+      "keep_because": "PNG only in; refuses JPEG so photos are not silently re-encoded"
+    },
+    {
+      "slug": "image-to-webp",
+      "keep_because": "JPEG/PNG/GIF/WebP in; quality slider; not PNG-only"
+    },
+    {
+      "slug": "gif-to-png",
+      "keep_because": "GIF only; first frame; not animation export"
+    },
+    {
+      "slug": "bmp-to-jpg",
+      "keep_because": "BMP only; JPEG out"
+    },
+    {
+      "slug": "tiff-to-jpg",
+      "keep_because": "Local UTIF; first IFD; JPEG out"
+    },
+    {
+      "slug": "heic-to-jpg",
+      "keep_because": "Local heic2any; iPhone HEIC/HEIF to JPEG"
+    },
+    {
+      "slug": "image-to-base64",
+      "keep_because": "FileReader encode; not a decoder"
+    },
+    {
+      "slug": "base64-to-image",
+      "keep_because": "Paste textarea decode; no file upload"
+    },
+    {
+      "slug": "image-crop",
+      "keep_because": "Center-crop to exact pixels; no drag box"
+    },
+    {
+      "slug": "rotate-image",
+      "keep_because": "90/180/270 only; canvas size swaps; not a mirror"
+    },
+    {
+      "slug": "flip-image",
+      "keep_because": "Horizontal/vertical mirror; not rotation"
+    }
+  ]
+}

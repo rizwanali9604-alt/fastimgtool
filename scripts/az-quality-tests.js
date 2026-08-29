@@ -180,6 +180,61 @@ ok('cover crop is centered on x', Math.abs(box.sx - 100) < 0.01);
   const faq = fs.readFileSync(path.join(ROOT, 'faq.html'), 'utf8');
   ok('faq does not overclaim never leave device', !/never leave your device/i.test(faq));
 
+  const policy = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/catalog-policy.json'), 'utf8'));
+  ok('catalog decision is accept-as-is', policy.decision === 'accept-as-is');
+  ok('catalog policy has 16 tools', Array.isArray(policy.tools) && policy.tools.length === 16);
+  const policySlugs = policy.tools.map((t) => t.slug).sort();
+  ok('catalog policy slugs match indexable list', policySlugs.join(',') === [...indexable].sort().join(','));
+  for (const slug of policySlugs) {
+    ok('sitemap has ' + slug, sitemap.includes('/tools/' + slug + '/'));
+  }
+  ok(
+    'tools index states separate-URL policy',
+    toolsIndex.includes('not merged into one upload widget')
+  );
+
+  function seoTokens(html) {
+    const m = html.match(/<section class="seo-content[\s\S]*?<\/section>/);
+    const text = (m ? m[0] : html)
+      .toLowerCase()
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/[^a-z0-9]+/g, ' ');
+    return new Set(text.split(/\s+/).filter((w) => w.length > 3));
+  }
+  function jaccard(a, b) {
+    let inter = 0;
+    for (const x of a) if (b.has(x)) inter++;
+    const u = a.size + b.size - inter;
+    return u ? inter / u : 1;
+  }
+  const seoSets = {};
+  for (const slug of indexable) {
+    seoSets[slug] = seoTokens(fs.readFileSync(path.join(ROOT, 'tools', slug, 'index.html'), 'utf8'));
+  }
+  let maxJ = 0;
+  let maxPair = '';
+  for (let i = 0; i < indexable.length; i++) {
+    for (let j = i + 1; j < indexable.length; j++) {
+      const ja = jaccard(seoSets[indexable[i]], seoSets[indexable[j]]);
+      if (ja > maxJ) {
+        maxJ = ja;
+        maxPair = indexable[i] + ' vs ' + indexable[j];
+      }
+    }
+  }
+  ok('catalog SEO bodies pairwise Jaccard < 0.45', maxJ < 0.45, maxPair + ' ' + maxJ.toFixed(3));
+
+  const pngWebpAcc = fs.readFileSync(path.join(ROOT, 'tools/png-to-webp/index.html'), 'utf8');
+  const imgWebpAcc = fs.readFileSync(path.join(ROOT, 'tools/image-to-webp/index.html'), 'utf8');
+  ok('png-to-webp PNG-only accept', pngWebpAcc.includes('accept=".png,image/png"'));
+  ok(
+    'image-to-webp multi accept',
+    imgWebpAcc.includes('image/jpeg') && imgWebpAcc.includes('image/gif')
+  );
+
+  ok('manual HEIC/TIFF/compressor QA script exists', fs.existsSync(path.join(ROOT, 'scripts/manual-browser-qa.md')));
+  ok('QA TIFF fixture exists', fs.existsSync(path.join(ROOT, 'fixtures/qa-scan.tiff')));
+
   const og = await sharp(path.join(ROOT, 'assets/og-image.png')).metadata();
   ok('og image 1200x630', og.width === 1200 && og.height === 630);
 
