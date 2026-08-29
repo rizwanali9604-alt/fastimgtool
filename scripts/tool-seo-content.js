@@ -3,13 +3,13 @@ module.exports = {
   'image-compressor': {
     name: 'Fast Image Compressor',
     howTo: [
-      'Upload JPG, PNG, WebP, or BMP via the drop zone — files stay on your device.',
+      'Upload JPG, PNG, WebP, or BMP via the drop zone. Processing runs in the tab; ads and analytics scripts still load.',
       'Choose output format (JPEG for Meesho/Amazon, WebP for websites, PNG for transparency).',
       'Optionally set a maximum longer-side pixel size (e.g. 2048 for listings).',
       'Click Compress, check the new file size, then Download.',
     ],
     about:
-      'Reduce listing photo file size for Meesho and Amazon India without uploading to a server.',
+      'Reduce listing photo file size for Meesho and Amazon India in the browser. Photos are not posted to FastImageTool; ads and analytics still load.',
   },
   'image-sharpen': {
     name: 'Image Sharpen',

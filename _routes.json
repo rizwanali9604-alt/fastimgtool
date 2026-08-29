@@ -1,16 +1,5 @@
 {
   "version": 1,
-  "include": [
-    "/scripts",
-    "/scripts/*",
-    "/templates",
-    "/templates/*",
-    "/reports",
-    "/reports/*",
-    "/config",
-    "/config/*",
-    "/guides_backup",
-    "/guides_backup/*"
-  ],
-  "exclude": []
+  "include": ["/*"],
+  "exclude": ["/assets/*"]
 }

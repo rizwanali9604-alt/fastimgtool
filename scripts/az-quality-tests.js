@@ -274,6 +274,53 @@ ok('cover crop is centered on x', Math.abs(box.sx - 100) < 0.01);
   ok('public HTML has no third ad slot 3445350863', !slot3, slot3);
   ok('public HTML has no stale pub-390', !pub390, pub390);
 
+  let foreverHit = '';
+  let stayHit = '';
+  for (const f of publicHtml) {
+    const t = fs.readFileSync(f, 'utf8');
+    if (/Free forever/i.test(t)) foreverHit = f;
+    if (/stay on your device/i.test(t)) stayHit = f;
+  }
+  ok('public HTML has no Free forever claim', !foreverHit, foreverHit);
+  ok('public HTML has no stay-on-your-device overclaim', !stayHit, stayHit);
+
+  const about = fs.readFileSync(path.join(ROOT, 'about.html'), 'utf8');
+  ok('about does not say never touch our servers', !/never touch our servers/i.test(about));
+  ok('about does not use Free, private, fast', !/Free, private, fast/i.test(about));
+  ok('about free-to-use mentions ads', /supported by ads/i.test(about));
+
+  const privacy = fs.readFileSync(path.join(ROOT, 'privacy.html'), 'utf8');
+  ok('privacy qualifies ads with image processing', /Ads and analytics scripts still load/i.test(privacy));
+
+  const mw = fs.readFileSync(path.join(ROOT, 'functions/_middleware.js'), 'utf8');
+  ok(
+    'middleware redirects www to apex',
+    mw.includes('www.fastimgtool.com') && mw.includes("hostname = 'fastimgtool.com'") && mw.includes('Response.redirect')
+  );
+  const routes = JSON.parse(fs.readFileSync(path.join(ROOT, '_routes.json'), 'utf8'));
+  ok('routes include all HTML paths', Array.isArray(routes.include) && routes.include.includes('/*'));
+  ok('routes exclude assets', Array.isArray(routes.exclude) && routes.exclude.includes('/assets/*'));
+
+  const adsenseFix = fs.readFileSync(path.join(ROOT, 'scripts/adsense_final_fix.js'), 'utf8');
+  ok('adsense_final_fix requires ALLOW_ADSENSE_FINAL_FIX', adsenseFix.includes("ALLOW_ADSENSE_FINAL_FIX !== '1'"));
+
+  const toolTpl = fs.readFileSync(path.join(ROOT, 'templates/tool-template.html'), 'utf8');
+  ok('tool-template has no placeholder ad copy', !/Replace with real ad code/i.test(toolTpl));
+  ok('tool-template uses live slot 9490701260', toolTpl.includes('9490701260'));
+  ok('tool-template uses live slot 8664200172', toolTpl.includes('8664200172'));
+  ok('tool-template has no slot 3445350863', !toolTpl.includes('3445350863'));
+
+  const guideTpl = fs.readFileSync(path.join(ROOT, 'templates/guide-template.html'), 'utf8');
+  ok('guide-template has no slot 3445350863', !guideTpl.includes('3445350863'));
+  ok('guide-template footer has no Free forever', !/Free forever/i.test(guideTpl));
+
+  const seoSrc = fs.readFileSync(path.join(ROOT, 'scripts/tool-seo-content.js'), 'utf8');
+  ok('tool-seo-content has no stay-on-your-device', !/stay on your device/i.test(seoSrc));
+  const part5 = fs.readFileSync(path.join(ROOT, 'scripts/generate_part5_guides.py'), 'utf8');
+  ok('part5 generator refuses without ALLOW_PART5_GUIDES', part5.includes('ALLOW_PART5_GUIDES'));
+  const tier12 = fs.readFileSync(path.join(ROOT, 'scripts/adsense_tier12_fix.js'), 'utf8');
+  ok('tier12 fixer requires ALLOW_ADSENSE_TIER12_FIX', tier12.includes("ALLOW_ADSENSE_TIER12_FIX !== '1'"));
+
   const compressGuide = fs.readFileSync(path.join(ROOT, 'guides/how-to-compress-image-online.html'), 'utf8');
   ok(
     'compress guide does not claim images stay private from ads',

@@ -5,7 +5,14 @@
  * - Delete noindexed clone guides
  * - Fix blog/community dead links
  * - Regen guides/index.html + keep sitemap tool/guide lists consistent
+ * Do not run unless you intend to rewrite live HTML.
  */
+if (process.env.ALLOW_ADSENSE_TIER12_FIX !== '1') {
+  console.error(
+    'Refusing to run adsense_tier12_fix.js (rewrites guides and tool SEO). Set ALLOW_ADSENSE_TIER12_FIX=1 only if you intend that.'
+  );
+  process.exit(1);
+}
 const fs = require('fs');
 const path = require('path');
 const ROOT = path.join(__dirname, '..');
@@ -201,7 +208,7 @@ function buildToolCopy(slug) {
     },
     'image-resizer': {
       about: `Marketplace cards crop aggressively. Meesho sellers commonly target 600×600 square images; Amazon India favors large, sharp files with the product filling most of the frame; Instagram and YouTube each want different pixels. Phone gallery crop tools rarely offer exact pixel presets for every channel. The Image Resizer lets you dial exact width and height (with optional aspect lock) or use seller/social presets, then download in the browser. No Photoshop install, no uploading product shots to a random converter site — useful when you prepare one master photo into Meesho, Amazon, and social sizes in the same session.`,
-      whatIs: `Image Resizer is a free online tool that changes an image’s pixel width and height to exact values you choose. Catalog managers and content creators use it when platforms reject the wrong dimensions, when thumbnails look stretched, or when a square listing image must be cut from a wider studio shot. It works in the browser: upload, set size or pick a preset, download. Files stay on your device during processing whenever the browser supports local canvas processing.`,
+      whatIs: `Image Resizer is a free online tool that changes an image’s pixel width and height to exact values you choose. Catalog managers and content creators use it when platforms reject the wrong dimensions, when thumbnails look stretched, or when a square listing image must be cut from a wider studio shot. It works in the browser: upload, set size or pick a preset, download. Image bytes are not posted to FastImageTool; ads and analytics scripts still load.`,
       faqs: [
         ['What sizes should Meesho and Amazon sellers use?', 'Meesho listings commonly use at least 600×600px. Amazon India typically needs 1000px or more on the longest side for zoom; many sellers export around 2000×2000 for main images. Always confirm current rules in Seller Central or your Meesho seller panel because categories can differ.'],
         ['Is Image Resizer free?', 'Yes — no signup and no watermark on the downloaded file. Use it for as many product photos as you need while preparing catalogs.'],

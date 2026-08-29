@@ -1,7 +1,13 @@
 const BLOCK_PREFIXES = ['/scripts', '/templates', '/reports', '/config', '/guides_backup'];
 
 export async function onRequest(context) {
-  const path = new URL(context.request.url).pathname.replace(/\/+$/, '') || '/';
+  const url = new URL(context.request.url);
+  if (url.hostname === 'www.fastimgtool.com') {
+    url.hostname = 'fastimgtool.com';
+    url.protocol = 'https:';
+    return Response.redirect(url.toString(), 301);
+  }
+  const path = url.pathname.replace(/\/+$/, '') || '/';
   const blocked = BLOCK_PREFIXES.some((prefix) => path === prefix || path.startsWith(prefix + '/'));
   if (blocked) {
     return new Response('Not Found', {

@@ -1,7 +1,14 @@
 #!/usr/bin/env node
 /**
  * AdSense final polish: tool ads, SEO sections, guides noindex/sitemap, policy pages.
+ * Injects a third ad slot (3445350863). Do not run unless you intend that.
  */
+if (process.env.ALLOW_ADSENSE_FINAL_FIX !== '1') {
+  console.error(
+    'Refusing to run adsense_final_fix.js (injects slot 3445350863). Set ALLOW_ADSENSE_FINAL_FIX=1 only if you intend that.'
+  );
+  process.exit(1);
+}
 const fs = require('fs');
 const path = require('path');
 

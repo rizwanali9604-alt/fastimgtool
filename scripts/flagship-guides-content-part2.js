@@ -282,7 +282,7 @@ module.exports = [
     ctaHref: '/tools/image-resizer/',
     ctaLabel: 'Resize Free',
     footerCtaTitle: 'Open the free resizer',
-    footerCtaSub: 'Exact pixels — your files stay on your device',
+    footerCtaSub: 'Exact pixels in the browser — photos are not posted to FastImageTool',
     sidebar: [
       ['/tools/image-resizer/', 'Image Resizer'],
       ['/tools/image-compressor/', 'Image Compressor'],

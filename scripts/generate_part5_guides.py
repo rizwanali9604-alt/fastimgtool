@@ -14,6 +14,10 @@ from html import escape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+if os.environ.get("ALLOW_PART5_GUIDES") != "1":
+    raise SystemExit(
+        "Refusing to generate Part 5 clone-farm guides. Set ALLOW_PART5_GUIDES=1 only if you intend that."
+    )
 GUIDES_DIR = ROOT / "guides"
 TEMPLATE_FILE = ROOT / "templates" / "guide-template.html"
 SITEMAP_PART5 = ROOT / "sitemap-part5-guides.xml"
