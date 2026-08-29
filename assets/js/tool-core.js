@@ -241,7 +241,25 @@
         var toolBox = (fileInput && fileInput.closest('.tool-box')) || document.querySelector('.tool-box');
         var state = { file: null, image: null, previewEl: null };
 
+        function announce(message) {
+            var el = document.getElementById('ft-live');
+            if (!el) {
+                el = document.createElement('div');
+                el.id = 'ft-live';
+                el.setAttribute('role', 'status');
+                el.setAttribute('aria-live', 'polite');
+                el.style.cssText =
+                    'position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);';
+                document.body.appendChild(el);
+            }
+            el.textContent = '';
+            setTimeout(function () {
+                el.textContent = message;
+            }, 50);
+        }
+
         function rejectFile(message) {
+            announce(message);
             if (options.onReject) options.onReject(message);
             else alert(message);
         }

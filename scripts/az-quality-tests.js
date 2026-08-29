@@ -170,6 +170,15 @@ ok('cover crop is centered on x', Math.abs(box.sx - 100) < 0.01);
 
   const home = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
   ok('homepage no lunr cdn', !home.includes('unpkg.com/lunr') && !home.includes('lunr.min.js'));
+  ok('homepage search has label', home.includes('for="searchInput"'));
+
+  ok('compressor has no 24-tool strip', !comp.includes('id="toolNav"'));
+  const navJs = fs.readFileSync(path.join(ROOT, 'assets/js/nav.js'), 'utf8');
+  ok('nav.js skips noindex slugs', navJs.includes('NOINDEX') && navJs.includes("getElementById('toolNav')"));
+  ok('tool-core live region', core.includes("aria-live', 'polite'") || core.includes('aria-live'));
+
+  const faq = fs.readFileSync(path.join(ROOT, 'faq.html'), 'utf8');
+  ok('faq does not overclaim never leave device', !/never leave your device/i.test(faq));
 
   const og = await sharp(path.join(ROOT, 'assets/og-image.png')).metadata();
   ok('og image 1200x630', og.width === 1200 && og.height === 630);

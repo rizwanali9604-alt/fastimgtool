@@ -318,7 +318,8 @@
 
     <!-- Search Bar -->
 <div style="max-width:600px; margin:20px auto; padding:0 15px;">
-    <input type="text" id="searchInput" placeholder="Search tools, guides, blog..." style="width:100%; padding:12px; border-radius:30px; border:1px solid #2a3a5a; background:#0b1225; color:#e6edf7; font-size:1rem;">
+    <label for="searchInput" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Search tools, guides, and blog</label>
+    <input type="search" id="searchInput" placeholder="Search tools, guides, blog..." autocomplete="off" style="width:100%; padding:12px; border-radius:30px; border:1px solid #2a3a5a; background:#0b1225; color:#e6edf7; font-size:1rem;">
     <div id="searchResults" style="margin-top:10px;"></div>
 </div>
 

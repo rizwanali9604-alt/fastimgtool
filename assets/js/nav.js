@@ -1,26 +1,32 @@
-fetch("/data/tools.json")
-.then(res => res.json())
-.then(tools => {
-
-const nav = document.getElementById("toolNav");
-
-if(!nav) return;
-
-tools.forEach(tool => {
-
-const a = document.createElement("a");
-
-a.href = `/tools/${tool.slug}/`;
-
-a.textContent = tool.title || tool.name || tool.slug;
-
-a.style.marginRight = "15px";
-
-nav.appendChild(a);
-
-});
-
-});
+(function () {
+    var toolNav = document.getElementById('toolNav');
+    if (!toolNav) return;
+    var NOINDEX = {
+        'image-blur': 1,
+        'image-sharpen': 1,
+        'image-grayscale': 1,
+        'image-brightness': 1,
+        'image-contrast': 1,
+        'image-saturation': 1,
+        'image-invert': 1,
+        'image-sepia': 1
+    };
+    fetch('/data/tools.json')
+        .then(function (res) {
+            return res.json();
+        })
+        .then(function (tools) {
+            tools.forEach(function (tool) {
+                if (!tool || !tool.slug || NOINDEX[tool.slug]) return;
+                var a = document.createElement('a');
+                a.href = '/tools/' + tool.slug + '/';
+                a.textContent = tool.title || tool.name || tool.slug;
+                a.style.marginRight = '15px';
+                toolNav.appendChild(a);
+            });
+        })
+        .catch(function () {});
+})();
 
 (function () {
     function initNavToggle() {
@@ -31,6 +37,8 @@ nav.appendChild(a);
         if (!toggle || !links) return;
         if (toggle.getAttribute('data-ft-bound') === '1') return;
         toggle.setAttribute('data-ft-bound', '1');
+        if (!toggle.getAttribute('type')) toggle.setAttribute('type', 'button');
+        if (!toggle.hasAttribute('aria-expanded')) toggle.setAttribute('aria-expanded', 'false');
         toggle.addEventListener('click', function () {
             links.classList.toggle('nav-open');
             toggle.setAttribute(
