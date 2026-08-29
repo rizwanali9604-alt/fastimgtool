@@ -291,6 +291,7 @@ ok('cover crop is centered on x', Math.abs(box.sx - 100) < 0.01);
 
   const privacy = fs.readFileSync(path.join(ROOT, 'privacy.html'), 'utf8');
   ok('privacy qualifies ads with image processing', /Ads and analytics scripts still load/i.test(privacy));
+  ok('privacy is visitor-facing not operator runbook', !/your AdSense account/i.test(privacy));
 
   const mw = fs.readFileSync(path.join(ROOT, 'functions/_middleware.js'), 'utf8');
   ok(
