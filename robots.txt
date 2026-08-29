@@ -11,6 +11,11 @@ Disallow: /templates/
 Disallow: /scripts/
 Disallow: /config/
 Disallow: /reports/
+Disallow: /lib/
+Disallow: /package.json
+Disallow: /build.js
+Disallow: /server.js
+Disallow: /.env.example
 
 Disallow: /compress-image-online-free.html
 Disallow: /resize-image-online-free.html

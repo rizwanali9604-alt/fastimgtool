@@ -1,7 +1,14 @@
 /**
  * Build affiliate/index.html from data/affiliate-products.json
- * Run: node scripts/build-affiliate-page.js
+ * Overwrites the honest affiliate page with generated cards (including star ratings).
+ * Run: ALLOW_BUILD_AFFILIATE=1 node scripts/build-affiliate-page.js
  */
+if (process.env.ALLOW_BUILD_AFFILIATE !== '1') {
+    console.error(
+        'Refusing to run build-affiliate-page.js (overwrites /affiliate with generated cards). Set ALLOW_BUILD_AFFILIATE=1 only if you intend that.'
+    );
+    process.exit(1);
+}
 const fs = require('fs');
 const path = require('path');
 

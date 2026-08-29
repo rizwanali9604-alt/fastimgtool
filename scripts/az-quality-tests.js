@@ -231,6 +231,11 @@ ok('cover crop is centered on x', Math.abs(box.sx - 100) < 0.01);
     'image-to-webp multi accept',
     imgWebpAcc.includes('image/jpeg') && imgWebpAcc.includes('image/gif')
   );
+  const imgWebpJs = fs.readFileSync(path.join(ROOT, 'tools/image-to-webp/tool.js'), 'utf8');
+  ok(
+    'image-to-webp tool.js enforces accept list',
+    imgWebpJs.includes("image/gif") && imgWebpJs.includes("'.webp'")
+  );
 
   ok('manual HEIC/TIFF/compressor QA script exists', fs.existsSync(path.join(ROOT, 'scripts/manual-browser-qa.md')));
   ok('QA TIFF fixture exists', fs.existsSync(path.join(ROOT, 'fixtures/qa-scan.tiff')));
@@ -321,6 +326,14 @@ ok('cover crop is centered on x', Math.abs(box.sx - 100) < 0.01);
   ok('part5 generator refuses without ALLOW_PART5_GUIDES', part5.includes('ALLOW_PART5_GUIDES'));
   const tier12 = fs.readFileSync(path.join(ROOT, 'scripts/adsense_tier12_fix.js'), 'utf8');
   ok('tier12 fixer requires ALLOW_ADSENSE_TIER12_FIX', tier12.includes("ALLOW_ADSENSE_TIER12_FIX !== '1'"));
+  ok('create-guides refuses without ALLOW_CREATE_GUIDES', fs.readFileSync(path.join(ROOT, 'scripts/create-guides.js'), 'utf8').includes("ALLOW_CREATE_GUIDES !== '1'"));
+  ok('generate-guides refuses without ALLOW_GENERATE_GUIDES', fs.readFileSync(path.join(ROOT, 'scripts/generate-guides.js'), 'utf8').includes("ALLOW_GENERATE_GUIDES !== '1'"));
+  ok('expand_short_faqs refuses without ALLOW_EXPAND_SHORT_FAQS', fs.readFileSync(path.join(ROOT, 'scripts/expand_short_faqs.js'), 'utf8').includes('ALLOW_EXPAND_SHORT_FAQS'));
+  ok('build-affiliate refuses without ALLOW_BUILD_AFFILIATE', fs.readFileSync(path.join(ROOT, 'scripts/build-affiliate-page.js'), 'utf8').includes("ALLOW_BUILD_AFFILIATE !== '1'"));
+  ok('middleware blocks /lib and package.json', mw.includes("'/lib'") && mw.includes('/package.json'));
+  const robotsTxt = fs.readFileSync(path.join(ROOT, 'robots.txt'), 'utf8');
+  ok('robots disallows /lib/', robotsTxt.includes('Disallow: /lib/'));
+  ok('generate-og.html removed from assets', !fs.existsSync(path.join(ROOT, 'assets/generate-og.html')));
 
   const compressGuide = fs.readFileSync(path.join(ROOT, 'guides/how-to-compress-image-online.html'), 'utf8');
   ok(

@@ -23,6 +23,11 @@
     FT.setupImageTool({
         fileInput: fileInput,
         preview: preview,
+        accept: {
+            types: ['image/jpeg', 'image/png', 'image/webp', 'image/gif'],
+            exts: ['.jpg', '.jpeg', '.png', '.webp', '.gif'],
+        },
+        invalidMessage: 'Please select a JPEG, PNG, WebP, or GIF image.',
         onLoad: function (result) {
             originalImage = result.image;
             currentFile = result.file;

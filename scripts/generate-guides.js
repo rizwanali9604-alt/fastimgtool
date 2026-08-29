@@ -2,9 +2,14 @@
  * DeepSeek V4-Flash guide generator — adds entries to guide-data-extra.json,
  * then rebuilds HTML via create-guides.js (existing flat URL: /guides/{slug}.html).
  *
- * Run: npm run generate-guides
- *      npm run generate-guides -- --tool=image-compressor --limit=1
+ * Run: ALLOW_GENERATE_GUIDES=1 ALLOW_CREATE_GUIDES=1 npm run generate-guides
  */
+if (process.env.ALLOW_GENERATE_GUIDES !== '1') {
+    console.error(
+        'Refusing to run generate-guides.js (AI thin-guide farm). Set ALLOW_GENERATE_GUIDES=1 only if you intend that.'
+    );
+    process.exit(1);
+}
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -170,7 +175,11 @@ async function main() {
         fs.writeFileSync(EXTRA_FILE, JSON.stringify(extra, null, 2));
         console.log(`\nWrote ${ok} entries to guide-data-extra.json`);
         console.log('Rebuilding guide HTML...');
-        execSync('node scripts/create-guides.js', { cwd: ROOT, stdio: 'inherit' });
+        execSync('node scripts/create-guides.js', {
+            cwd: ROOT,
+            stdio: 'inherit',
+            env: { ...process.env, ALLOW_CREATE_GUIDES: '1' },
+        });
     }
 
     console.log(`\nDone. Generated: ${ok}, Failed: ${fail}`);

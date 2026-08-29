@@ -1,3 +1,9 @@
+if (process.env.ALLOW_CREATE_GUIDES !== '1') {
+    console.error(
+        'Refusing to run create-guides.js (overwrites guide HTML from template). Set ALLOW_CREATE_GUIDES=1 only if you intend that.'
+    );
+    process.exit(1);
+}
 const fs = require('fs');
 const path = require('path');
 

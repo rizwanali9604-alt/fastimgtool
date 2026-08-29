@@ -40,6 +40,12 @@
 /guides_backup/* /404.html 404
 /nav-tools.html /404.html 404
 /assets/generate-og.html /404.html 404
+/package.json /404.html 404
+/build.js /404.html 404
+/server.js /404.html 404
+/lib/* /404.html 404
+/.env.example /404.html 404
+/data/catalog-policy.json /404.html 404
 /scripts/* /404.html 404
 /templates/* /404.html 404
 /reports/* /404.html 404

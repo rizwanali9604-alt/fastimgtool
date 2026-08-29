@@ -1,4 +1,10 @@
 // Expand short FAQ answers under 60 words inside tool index.html files
+if (process.env.ALLOW_EXPAND_SHORT_FAQS !== '1') {
+  console.error(
+    'Refusing to run expand_short_faqs.js (pads FAQs with filler). Set ALLOW_EXPAND_SHORT_FAQS=1 only if you intend that.'
+  );
+  process.exit(1);
+}
 const fs = require('fs');
 const path = require('path');
 const ROOT = path.join(__dirname, '..');
