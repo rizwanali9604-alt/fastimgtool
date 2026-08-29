@@ -16,6 +16,11 @@ const CONFIG = {
     TOOL_CONTENT_FILE: path.join(__dirname, "scripts", "legacy-data", "tool-content.json"),
 };
 
+const NOINDEX = new Set([
+    'image-blur', 'image-sharpen', 'image-grayscale', 'image-brightness',
+    'image-contrast', 'image-saturation', 'image-invert', 'image-sepia'
+]);
+
 async function ensureDir(dir) {
     await fs.mkdir(dir, { recursive: true });
 }
@@ -88,8 +93,9 @@ async function generateSitemap(tools, guides, blogPosts) {
     <priority>1.0</priority>
   </url>`);
 
-    // Tool pages
+    // Tool pages (catalog only — eight one-slider filters stay noindex / off sitemap)
     tools.forEach(tool => {
+        if (NOINDEX.has(tool.slug)) return;
         urls.push(`
   <url>
     <loc>${CONFIG.DOMAIN}/tools/${tool.slug}/</loc>
@@ -128,7 +134,6 @@ async function generateSitemap(tools, guides, blogPosts) {
         '/privacy.html',
         '/terms.html',
         '/faq.html',
-        '/community.html',
         '/tools/',
         '/guides/',
         '/blog/'
@@ -239,6 +244,12 @@ async function generateBlogIndex() {
 
 // ------------------- Main Build -------------------
 async function build() {
+    if (process.env.ALLOW_FULL_BUILD !== '1') {
+        console.error(
+            'Refusing to run build.js. It overwrites unique catalog tool HTML. Set ALLOW_FULL_BUILD=1 only if you intend that.'
+        );
+        process.exit(1);
+    }
     console.log('\n🚀 ToolForge Builder Starting\n');
     const start = Date.now();
 
@@ -267,6 +278,10 @@ const blogPosts = JSON.parse(await fs.readFile(CONFIG.BLOG_POSTS_FILE, 'utf8'));
     async function generatePage(tool) {
         if (tool.slug === 'image-compressor') {
             console.log(`⏭️  Skipped (custom page): tools/${tool.slug}/index.html`);
+            return null;
+        }
+        if (NOINDEX.has(tool.slug)) {
+            console.log(`⏭️  Skipped (noindex filter): tools/${tool.slug}/index.html`);
             return null;
         }
         const toolDir = path.join(CONFIG.OUTPUT_DIR, tool.slug);

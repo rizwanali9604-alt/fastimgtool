@@ -33,7 +33,7 @@ module.exports = [
       ],
       [
         'Is online image compression safe?',
-        'With FastImageTool, images are processed in your browser and are not uploaded to a server. That keeps product photos and personal images private.',
+        'With FastImageTool, image bytes are processed in the browser and are not posted to our origin. Ads and analytics still load.',
       ],
       [
         'What is a good file size for a website image?',

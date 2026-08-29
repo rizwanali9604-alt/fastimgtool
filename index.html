@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FastImageTool — Browser image compressor, resizer &amp; converters</title>
-    <meta name="description" content="Browser image tools for Meesho and Amazon sellers: compress, resize, convert. One file at a time. No uploads, no signup.">
+    <meta name="description" content="Browser image tools for Meesho and Amazon sellers: compress, resize, convert. One file at a time. Images are not posted to our servers. Ads and analytics still load.">
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DHHVPY5DJK"></script>
 <script>
@@ -27,7 +27,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="FastImageTool — Browser image compressor, resizer &amp; converters">
-    <meta property="og:description" content="Compress, resize, and convert images in your browser. Built for Meesho and Amazon sellers. No uploads.">
+    <meta property="og:description" content="Compress, resize, and convert images in your browser. Built for Meesho and Amazon sellers. Images are not posted to our servers.">
     <meta property="og:url" content="https://fastimgtool.com/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://fastimgtool.com/assets/og-image.png">
@@ -35,7 +35,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="FastImageTool">
-    <meta name="twitter:description" content="Free, private image tools – no uploads, no signup.">
+    <meta name="twitter:description" content="Browser image tools. Images stay in the tab. Ads and analytics still load.">
     <meta name="twitter:image" content="https://fastimgtool.com/assets/og-image.png">
 
     <!-- Favicon -->
@@ -329,16 +329,16 @@
             <div class="container">
                 <div class="section-header">
                     <h2>Image tools</h2>
-                    <p>16 catalog tools, each a separate job (not one mega-converter). Effects are one-slider filters and are not in the sitemap.</p>
+                    <p>16 catalog tools, each a separate job (not one mega-converter). The All tab lists those 16. Simple filters are eight one-slider effects, omitted from the sitemap.</p>
                 </div>
                 <div class="cat-tabs category-tabs">
-                    <button type="button" class="cat-tab active" data-cat="all">All Tools</button>
+                    <button type="button" class="cat-tab active" data-cat="all">All catalog</button>
                     <button type="button" class="cat-tab" data-cat="convert">Converters</button>
                     <button type="button" class="cat-tab" data-cat="optimize">Optimize</button>
-                    <button type="button" class="cat-tab" data-cat="effects">Simple filters</button>
                     <button type="button" class="cat-tab" data-cat="transform">Transform</button>
+                    <a href="#simple-filters" class="cat-tab" style="text-decoration:none;">Simple filters</a>
                 </div>
-                <div class="tools-grid">
+                <div class="tools-grid" data-grid="catalog">
       <a href="/tools/image-compressor/" class="tool-card" data-cat="optimize">
         <span class="tool-card-icon">🗜️</span>
         <div class="tool-card-body">
@@ -384,70 +384,6 @@
         <div class="tool-card-body">
           <h3 class="tool-card-name">WebP to JPG</h3>
           <p class="tool-card-desc">Convert WebP back to JPG format</p>
-        </div>
-        <span class="tool-card-arrow">→</span>
-      </a>
-      <a href="/tools/image-blur/" class="tool-card" data-cat="effects">
-        <span class="tool-card-icon">🌫️</span>
-        <div class="tool-card-body">
-          <h3 class="tool-card-name">Blur Image</h3>
-          <p class="tool-card-desc">Add blur effect to any image</p>
-        </div>
-        <span class="tool-card-arrow">→</span>
-      </a>
-      <a href="/tools/image-sharpen/" class="tool-card" data-cat="effects">
-        <span class="tool-card-icon">🔍</span>
-        <div class="tool-card-body">
-          <h3 class="tool-card-name">Sharpen Image</h3>
-          <p class="tool-card-desc">Add edge contrast to slightly soft photos</p>
-        </div>
-        <span class="tool-card-arrow">→</span>
-      </a>
-      <a href="/tools/image-brightness/" class="tool-card" data-cat="effects">
-        <span class="tool-card-icon">☀️</span>
-        <div class="tool-card-body">
-          <h3 class="tool-card-name">Brightness</h3>
-          <p class="tool-card-desc">Fix dark or washed-out photos</p>
-        </div>
-        <span class="tool-card-arrow">→</span>
-      </a>
-      <a href="/tools/image-contrast/" class="tool-card" data-cat="effects">
-        <span class="tool-card-icon">◑</span>
-        <div class="tool-card-body">
-          <h3 class="tool-card-name">Contrast</h3>
-          <p class="tool-card-desc">Adjust contrast for sharper product photos</p>
-        </div>
-        <span class="tool-card-arrow">→</span>
-      </a>
-      <a href="/tools/image-grayscale/" class="tool-card" data-cat="effects">
-        <span class="tool-card-icon">⚫</span>
-        <div class="tool-card-body">
-          <h3 class="tool-card-name">Grayscale</h3>
-          <p class="tool-card-desc">Convert image to black and white</p>
-        </div>
-        <span class="tool-card-arrow">→</span>
-      </a>
-      <a href="/tools/image-sepia/" class="tool-card" data-cat="effects">
-        <span class="tool-card-icon">🟤</span>
-        <div class="tool-card-body">
-          <h3 class="tool-card-name">Sepia Effect</h3>
-          <p class="tool-card-desc">Add vintage warm sepia tone</p>
-        </div>
-        <span class="tool-card-arrow">→</span>
-      </a>
-      <a href="/tools/image-invert/" class="tool-card" data-cat="effects">
-        <span class="tool-card-icon">🔃</span>
-        <div class="tool-card-body">
-          <h3 class="tool-card-name">Invert Colors</h3>
-          <p class="tool-card-desc">Create negative image effect</p>
-        </div>
-        <span class="tool-card-arrow">→</span>
-      </a>
-      <a href="/tools/image-saturation/" class="tool-card" data-cat="effects">
-        <span class="tool-card-icon">🎨</span>
-        <div class="tool-card-body">
-          <h3 class="tool-card-name">Saturation</h3>
-          <p class="tool-card-desc">Boost or reduce color intensity</p>
         </div>
         <span class="tool-card-arrow">→</span>
       </a>
@@ -528,6 +464,74 @@
         <div class="tool-card-body">
           <h3 class="tool-card-name">TIFF to JPG</h3>
           <p class="tool-card-desc">Convert TIFF scans to JPG for listings</p>
+        </div>
+        <span class="tool-card-arrow">→</span>
+      </a>
+                </div>
+                <h2 id="simple-filters" style="font-size:1.25rem;margin:36px 0 8px;">Simple canvas filters</h2>
+                <p style="color:#a0b3d9;max-width:720px;margin:0 0 16px;line-height:1.6;">One CSS/canvas slider each. They stay on their URLs but are omitted from sitemap.xml so they are not extra landing pages.</p>
+                <div class="tools-grid" data-grid="filters">
+      <a href="/tools/image-blur/" class="tool-card" data-cat="effects">
+        <span class="tool-card-icon">🌫️</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Blur Image</h3>
+          <p class="tool-card-desc">Add blur effect to any image</p>
+        </div>
+        <span class="tool-card-arrow">→</span>
+      </a>
+      <a href="/tools/image-sharpen/" class="tool-card" data-cat="effects">
+        <span class="tool-card-icon">🔍</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Sharpen Image</h3>
+          <p class="tool-card-desc">Add edge contrast to slightly soft photos</p>
+        </div>
+        <span class="tool-card-arrow">→</span>
+      </a>
+      <a href="/tools/image-brightness/" class="tool-card" data-cat="effects">
+        <span class="tool-card-icon">☀️</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Brightness</h3>
+          <p class="tool-card-desc">Fix dark or washed-out photos</p>
+        </div>
+        <span class="tool-card-arrow">→</span>
+      </a>
+      <a href="/tools/image-contrast/" class="tool-card" data-cat="effects">
+        <span class="tool-card-icon">◑</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Contrast</h3>
+          <p class="tool-card-desc">Adjust contrast for sharper product photos</p>
+        </div>
+        <span class="tool-card-arrow">→</span>
+      </a>
+      <a href="/tools/image-grayscale/" class="tool-card" data-cat="effects">
+        <span class="tool-card-icon">⚫</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Grayscale</h3>
+          <p class="tool-card-desc">Convert image to black and white</p>
+        </div>
+        <span class="tool-card-arrow">→</span>
+      </a>
+      <a href="/tools/image-sepia/" class="tool-card" data-cat="effects">
+        <span class="tool-card-icon">🟤</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Sepia Effect</h3>
+          <p class="tool-card-desc">Add vintage warm sepia tone</p>
+        </div>
+        <span class="tool-card-arrow">→</span>
+      </a>
+      <a href="/tools/image-invert/" class="tool-card" data-cat="effects">
+        <span class="tool-card-icon">🔃</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Invert Colors</h3>
+          <p class="tool-card-desc">Create negative image effect</p>
+        </div>
+        <span class="tool-card-arrow">→</span>
+      </a>
+      <a href="/tools/image-saturation/" class="tool-card" data-cat="effects">
+        <span class="tool-card-icon">🎨</span>
+        <div class="tool-card-body">
+          <h3 class="tool-card-name">Saturation</h3>
+          <p class="tool-card-desc">Boost or reduce color intensity</p>
         </div>
         <span class="tool-card-arrow">→</span>
       </a>

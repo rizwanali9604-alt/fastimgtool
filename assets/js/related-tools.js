@@ -36,11 +36,24 @@ async function loadRelatedTools() {
 
         // Build HTML
         let html = '<ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px;">';
+        function escapeHtml(value) {
+            return String(value == null ? '' : value)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+        function safeSlug(value) {
+            var s = String(value || '').toLowerCase().replace(/[^a-z0-9-]/g, '');
+            return /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(s) ? s : '';
+        }
         displayTools.forEach(tool => {
+            var slug = safeSlug(tool.slug);
+            if (!slug) return;
             html += `
                 <li style="margin: 5px;">
-                    <a href="/tools/${tool.slug}/" style="display: inline-block; padding: 8px 12px; background: #1e293b; color: #e6edf7; text-decoration: none; border-radius: 4px;">
-                        ${tool.title}
+                    <a href="/tools/${slug}/" style="display: inline-block; padding: 8px 12px; background: #1e293b; color: #e6edf7; text-decoration: none; border-radius: 4px;">
+                        ${escapeHtml(tool.title)}
                     </a>
                 </li>
             `;

@@ -235,6 +235,51 @@ ok('cover crop is centered on x', Math.abs(box.sx - 100) < 0.01);
   ok('manual HEIC/TIFF/compressor QA script exists', fs.existsSync(path.join(ROOT, 'scripts/manual-browser-qa.md')));
   ok('QA TIFF fixture exists', fs.existsSync(path.join(ROOT, 'fixtures/qa-scan.tiff')));
 
+  ok('homepage splits catalog vs simple-filters', home.includes('id="simple-filters"') && home.includes('data-grid="catalog"'));
+  const tabsJs = fs.readFileSync(path.join(ROOT, 'assets/js/home-tool-tabs.js'), 'utf8');
+  ok('home tabs filter catalog grid only', tabsJs.includes('data-grid="catalog"'));
+  ok('related-tools escapes titles', related.includes('function escapeHtml') && related.includes('safeSlug'));
+  const buildJs = fs.readFileSync(path.join(ROOT, 'build.js'), 'utf8');
+  ok('build.js refuses without ALLOW_FULL_BUILD', buildJs.includes("ALLOW_FULL_BUILD !== '1'"));
+  ok('build.js sitemap skips noindex filters', buildJs.includes('NOINDEX.has(tool.slug)'));
+
+  const publicRoots = ['index.html', 'faq.html', 'about.html', 'contact.html', 'privacy.html', 'terms.html'];
+  function walkHtml(dir, acc) {
+    if (!fs.existsSync(dir)) return;
+    for (const name of fs.readdirSync(dir)) {
+      const p = path.join(dir, name);
+      const st = fs.statSync(p);
+      if (st.isDirectory()) walkHtml(p, acc);
+      else if (name.endsWith('.html')) acc.push(p);
+    }
+  }
+  const publicHtml = publicRoots.map((f) => path.join(ROOT, f));
+  walkHtml(path.join(ROOT, 'tools'), publicHtml);
+  walkHtml(path.join(ROOT, 'guides'), publicHtml);
+  walkHtml(path.join(ROOT, 'blog'), publicHtml);
+  walkHtml(path.join(ROOT, 'affiliate'), publicHtml);
+  let privateHit = '';
+  let leaveHit = '';
+  let slot3 = '';
+  let pub390 = '';
+  for (const f of publicHtml) {
+    const t = fs.readFileSync(f, 'utf8');
+    if (/100%\s*private/i.test(t)) privateHit = f;
+    if (/never leave your device/i.test(t)) leaveHit = f;
+    if (t.includes('3445350863')) slot3 = f;
+    if (t.includes('ca-pub-8332278513903196')) pub390 = f;
+  }
+  ok('indexable HTML has no 100% private overclaim', !privateHit, privateHit);
+  ok('indexable HTML has no never-leave-device overclaim', !leaveHit, leaveHit);
+  ok('public HTML has no third ad slot 3445350863', !slot3, slot3);
+  ok('public HTML has no stale pub-390', !pub390, pub390);
+
+  const compressGuide = fs.readFileSync(path.join(ROOT, 'guides/how-to-compress-image-online.html'), 'utf8');
+  ok(
+    'compress guide does not claim images stay private from ads',
+    !/keeps product photos and personal images private/i.test(compressGuide)
+  );
+
   const og = await sharp(path.join(ROOT, 'assets/og-image.png')).metadata();
   ok('og image 1200x630', og.width === 1200 && og.height === 630);
 
