@@ -129,11 +129,11 @@ async function generateSitemap(tools, guides, blogPosts) {
 
     // Static pages
     const staticPages = [
-        '/about.html',
-        '/contact.html',
-        '/privacy.html',
-        '/terms.html',
-        '/faq.html',
+        '/about',
+        '/contact',
+        '/privacy',
+        '/terms',
+        '/faq',
         '/tools/',
         '/guides/',
         '/blog/'

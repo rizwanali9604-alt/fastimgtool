@@ -149,6 +149,7 @@ ok('cover crop is centered on x', Math.abs(box.sx - 100) < 0.01);
   const sitemap = fs.readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8');
   ok('sitemap omits blur', !sitemap.includes('/tools/image-blur/'));
   ok('sitemap has compressor', sitemap.includes('/tools/image-compressor/'));
+  ok('sitemap has no .html locs', !/<loc>[^<]*\.html<\/loc>/.test(sitemap));
   ok('no leftover part5 sitemap file', !fs.existsSync(path.join(ROOT, 'sitemap-part5-guides.xml')));
   ok('no leftover image-sitemap file', !fs.existsSync(path.join(ROOT, 'image-sitemap.xml')));
   ok('no guides_backup directory in tree', !fs.existsSync(path.join(ROOT, 'guides_backup')));
@@ -250,6 +251,7 @@ ok('cover crop is centered on x', Math.abs(box.sx - 100) < 0.01);
   ok('related-tools escapes titles', related.includes('function escapeHtml') && related.includes('safeSlug'));
   const buildJs = fs.readFileSync(path.join(ROOT, 'build.js'), 'utf8');
   ok('build.js refuses without ALLOW_FULL_BUILD', buildJs.includes("ALLOW_FULL_BUILD !== '1'"));
+  ok('build.js sitemap static pages are pretty URLs', buildJs.includes("'/about'") && !buildJs.includes("'/about.html'"));
   ok('build.js sitemap skips noindex filters', buildJs.includes('NOINDEX.has(tool.slug)'));
 
   const publicRoots = ['index.html', 'faq.html', 'about.html', 'contact.html', 'privacy.html', 'terms.html'];
@@ -321,6 +323,10 @@ ok('cover crop is centered on x', Math.abs(box.sx - 100) < 0.01);
   ok('about does not say never touch our servers', !/never touch our servers/i.test(about));
   ok('about does not use Free, private, fast', !/Free, private, fast/i.test(about));
   ok('about free-to-use mentions ads', /supported by ads/i.test(about));
+  ok(
+    'about canonical is CF pretty URL',
+    about.includes('href="https://fastimgtool.com/about"') && !about.includes('href="https://fastimgtool.com/about.html"')
+  );
 
   const privacy = fs.readFileSync(path.join(ROOT, 'privacy.html'), 'utf8');
   ok('privacy qualifies ads with image processing', /Ads and analytics scripts still load/i.test(privacy));
@@ -370,6 +376,11 @@ ok('cover crop is centered on x', Math.abs(box.sx - 100) < 0.01);
   );
   ok('compress guide meta does not say private browser tool', !/private browser tool/i.test(compressGuide));
   ok('compress guide CTA is not private-in-browser', !/private,\s*in-browser/i.test(compressGuide));
+  ok(
+    'compress guide canonical is CF pretty URL',
+    compressGuide.includes('href="https://fastimgtool.com/guides/how-to-compress-image-online"') &&
+      !compressGuide.includes('href="https://fastimgtool.com/guides/how-to-compress-image-online.html"')
+  );
   ok(
     'jpg-to-png privacy mentions ads',
     /Ads and analytics still load/i.test(fs.readFileSync(path.join(ROOT, 'tools/jpg-to-png/index.html'), 'utf8'))

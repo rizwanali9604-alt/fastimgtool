@@ -170,112 +170,112 @@
   {
     "title": "How to Resize an Image Online",
     "description": "Resize images to exact pixels for Instagram, YouTube, email, and marketplaces.",
-    "url": "/guides/how-to-resize-image-online.html",
+    "url": "/guides/how-to-resize-image-online",
     "type": "guide",
     "tool_slug": "image-resizer"
   },
   {
     "title": "Resize Image for Instagram – Perfect Post & Story Dimensions",
     "description": "Resize Image for Instagram – Perfect Post & Story Dimensions",
-    "url": "/guides/resize-image-for-instagram.html",
+    "url": "/guides/resize-image-for-instagram",
     "type": "guide",
     "tool_slug": "image-resizer"
   },
   {
     "title": "Resize Image for YouTube Thumbnail – Best Size (1280x720)",
     "description": "Resize Image for YouTube Thumbnail – Best Size (1280x720)",
-    "url": "/guides/resize-image-for-youtube-thumbnail.html",
+    "url": "/guides/resize-image-for-youtube-thumbnail",
     "type": "guide",
     "tool_slug": "image-resizer"
   },
   {
     "title": "Compress Image for Email – Stay Under Attachment Limits",
     "description": "Compress Image for Email – Stay Under Attachment Limits",
-    "url": "/guides/compress-image-for-email.html",
+    "url": "/guides/compress-image-for-email",
     "type": "guide",
     "tool_slug": "image-compressor"
   },
   {
     "title": "How to Compress an Image Online – Reduce File Size Free",
     "description": "How to Compress an Image Online – Reduce File Size Free",
-    "url": "/guides/how-to-compress-image-online.html",
+    "url": "/guides/how-to-compress-image-online",
     "type": "guide",
     "tool_slug": "image-compressor"
   },
   {
     "title": "Compress Image for WhatsApp – Send Photos Faster",
     "description": "Compress Image for WhatsApp – Send Photos Faster",
-    "url": "/guides/compress-image-for-whatsapp.html",
+    "url": "/guides/compress-image-for-whatsapp",
     "type": "guide",
     "tool_slug": "image-compressor"
   },
   {
     "title": "Meesho Product Image 600×600 Under 2MB — Seller Guide",
     "description": "Meesho Product Image 600×600 Under 2MB — Seller Guide",
-    "url": "/guides/meesho-product-image-size-600x600-under-50kb.html",
+    "url": "/guides/meesho-product-image-size-600x600-under-50kb",
     "type": "guide",
     "tool_slug": "image-compressor"
   },
   {
     "title": "Amazon India Product Image Requirements 2026",
     "description": "Amazon India Product Image Requirements 2026",
-    "url": "/guides/amazon-india-product-image-requirements.html",
+    "url": "/guides/amazon-india-product-image-requirements",
     "type": "guide",
     "tool_slug": "image-compressor"
   },
   {
     "title": "Shopify Product Images — WebP & Compression",
     "description": "Shopify Product Images — WebP & Compression",
-    "url": "/guides/shopify-product-images-webp-compression.html",
+    "url": "/guides/shopify-product-images-webp-compression",
     "type": "guide",
     "tool_slug": "image-to-webp"
   },
   {
     "title": "WEBP vs JPG: Which Format Is Better?",
     "description": "WEBP vs JPG: Which Format Is Better?",
-    "url": "/guides/webp-vs-jpg-which-is-better.html",
+    "url": "/guides/webp-vs-jpg-which-is-better",
     "type": "guide",
     "tool_slug": "webp-to-jpg"
   },
   {
     "title": "JPEG compression settings we actually use",
     "description": "One file, JPEG quality slider, optional max pixel side. No AVIF, no batch, no AI.",
-    "url": "/blog/image-compression-best-practices.html",
+    "url": "/blog/image-compression-best-practices",
     "type": "blog",
     "date": "August 23, 2026"
   },
   {
     "title": "JPG, PNG, WebP, HEIC — formats we convert",
     "description": "What FastImageTool actually converts. JPEG has no transparency.",
-    "url": "/blog/image-file-formats-explained.html",
+    "url": "/blog/image-file-formats-explained",
     "type": "blog",
     "date": "August 23, 2026"
   },
   {
     "title": "Image filenames and alt text",
     "description": "Smaller files and readable names. We do not rank your store.",
-    "url": "/blog/image-seo-guide.html",
+    "url": "/blog/image-seo-guide",
     "type": "blog",
     "date": "August 23, 2026"
   },
   {
     "title": "Make a simple favicon PNG (32×32)",
     "description": "Resize a square logo to 32×32. We do not generate multi-size ICO files.",
-    "url": "/blog/how-to-create-a-favicon.html",
+    "url": "/blog/how-to-create-a-favicon",
     "type": "blog",
     "date": "August 23, 2026"
   },
   {
     "title": "Catalog photos one by one: a repeatable workflow (no batch uploader)",
     "description": "FastImageTool processes one image per visit. Honest catalog workflow for Meesho and Amazon sellers.",
-    "url": "/blog/batch-image-processing-tips.html",
+    "url": "/blog/batch-image-processing-tips",
     "type": "blog",
     "date": "August 21, 2026"
   },
   {
     "title": "We do not remove image backgrounds — what sellers should do instead",
     "description": "FastImageTool has no background-remover. How to shoot white-background listing photos and when to use crop or blur.",
-    "url": "/blog/remove-background-from-image.html",
+    "url": "/blog/remove-background-from-image",
     "type": "blog",
     "date": "August 21, 2026"
   }

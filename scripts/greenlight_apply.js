@@ -12,52 +12,52 @@ const KEEP_GUIDES = [
   {
     tool_slug: 'image-resizer',
     title: 'How to Resize an Image Online',
-    url: '/guides/how-to-resize-image-online.html',
+    url: '/guides/how-to-resize-image-online',
   },
   {
     tool_slug: 'image-resizer',
     title: 'Resize Image for Instagram – Perfect Post & Story Dimensions',
-    url: '/guides/resize-image-for-instagram.html',
+    url: '/guides/resize-image-for-instagram',
   },
   {
     tool_slug: 'image-resizer',
     title: 'Resize Image for YouTube Thumbnail – Best Size (1280x720)',
-    url: '/guides/resize-image-for-youtube-thumbnail.html',
+    url: '/guides/resize-image-for-youtube-thumbnail',
   },
   {
     tool_slug: 'image-compressor',
     title: 'Compress Image for Email – Stay Under Attachment Limits',
-    url: '/guides/compress-image-for-email.html',
+    url: '/guides/compress-image-for-email',
   },
   {
     tool_slug: 'image-compressor',
     title: 'How to Compress an Image Online – Reduce File Size Free',
-    url: '/guides/how-to-compress-image-online.html',
+    url: '/guides/how-to-compress-image-online',
   },
   {
     tool_slug: 'image-compressor',
     title: 'Compress Image for WhatsApp – Send Photos Faster',
-    url: '/guides/compress-image-for-whatsapp.html',
+    url: '/guides/compress-image-for-whatsapp',
   },
   {
     tool_slug: 'image-compressor',
     title: 'Meesho Product Image 600×600 Under 2MB — Seller Guide',
-    url: '/guides/meesho-product-image-size-600x600-under-50kb.html',
+    url: '/guides/meesho-product-image-size-600x600-under-50kb',
   },
   {
     tool_slug: 'image-compressor',
     title: 'Amazon India Product Image Requirements 2026',
-    url: '/guides/amazon-india-product-image-requirements.html',
+    url: '/guides/amazon-india-product-image-requirements',
   },
   {
     tool_slug: 'image-to-webp',
     title: 'Shopify Product Images — WebP & Compression',
-    url: '/guides/shopify-product-images-webp-compression.html',
+    url: '/guides/shopify-product-images-webp-compression',
   },
   {
     tool_slug: 'webp-to-jpg',
     title: 'WEBP vs JPG: Which Format Is Better?',
-    url: '/guides/webp-vs-jpg-which-is-better.html',
+    url: '/guides/webp-vs-jpg-which-is-better',
   },
 ];
 

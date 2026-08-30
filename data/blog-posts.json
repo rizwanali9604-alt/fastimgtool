@@ -1,37 +1,37 @@
 [
   {
     "title": "JPEG compression settings we actually use",
-    "url": "/blog/image-compression-best-practices.html",
+    "url": "/blog/image-compression-best-practices",
     "date": "August 23, 2026",
     "description": "One file, JPEG quality slider, optional max pixel side. No AVIF, no batch, no AI."
   },
   {
     "title": "JPG, PNG, WebP, HEIC — formats we convert",
-    "url": "/blog/image-file-formats-explained.html",
+    "url": "/blog/image-file-formats-explained",
     "date": "August 23, 2026",
     "description": "What FastImageTool actually converts. JPEG has no transparency."
   },
   {
     "title": "Image filenames and alt text",
-    "url": "/blog/image-seo-guide.html",
+    "url": "/blog/image-seo-guide",
     "date": "August 23, 2026",
     "description": "Smaller files and readable names. We do not rank your store."
   },
   {
     "title": "Make a simple favicon PNG (32×32)",
-    "url": "/blog/how-to-create-a-favicon.html",
+    "url": "/blog/how-to-create-a-favicon",
     "date": "August 23, 2026",
     "description": "Resize a square logo to 32×32. We do not generate multi-size ICO files."
   },
   {
     "title": "Catalog photos one by one: a repeatable workflow (no batch uploader)",
-    "url": "/blog/batch-image-processing-tips.html",
+    "url": "/blog/batch-image-processing-tips",
     "date": "August 21, 2026",
     "description": "FastImageTool processes one image per visit. Honest catalog workflow for Meesho and Amazon sellers."
   },
   {
     "title": "We do not remove image backgrounds — what sellers should do instead",
-    "url": "/blog/remove-background-from-image.html",
+    "url": "/blog/remove-background-from-image",
     "date": "August 21, 2026",
     "description": "FastImageTool has no background-remover. How to shoot white-background listing photos and when to use crop or blur."
   }
