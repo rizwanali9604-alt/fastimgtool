@@ -22,7 +22,7 @@
   },
   {
     "title": "PNG to JPG Converter",
-    "description": "Convert PNG to JPG online free. White background fill, smaller files for web and email. Private browser tool.",
+    "description": "Convert PNG to JPG online free. White background fill, smaller files for web and email. Runs in the tab.",
     "url": "/tools/png-to-jpg/",
     "type": "tool",
     "category": "conversion"
@@ -71,7 +71,7 @@
   },
   {
     "title": "Rotate Image",
-    "description": "Rotate images online free. 90°, 180°, 270° rotation. Browser-based, private.",
+    "description": "Rotate images online free. 90°, 180°, 270° rotation. Canvas size swaps in the tab.",
     "url": "/tools/rotate-image/",
     "type": "tool",
     "category": "editing"
@@ -92,7 +92,7 @@
   },
   {
     "title": "Image to Base64",
-    "description": "Image to Base64 encoder online free. For web developers. Private, in-browser.",
+    "description": "Image to Base64 encoder online free. For web developers. FileReader in the tab; ads still load.",
     "url": "/tools/image-to-base64/",
     "type": "tool",
     "category": "conversion"
@@ -168,8 +168,8 @@
     "category": "effects"
   },
   {
-    "title": "How to Resize an Image Online – Free & Private Tool",
-    "description": "How to Resize an Image Online – Free & Private Tool",
+    "title": "How to Resize an Image Online",
+    "description": "Resize images to exact pixels for Instagram, YouTube, email, and marketplaces.",
     "url": "/guides/how-to-resize-image-online.html",
     "type": "guide",
     "tool_slug": "image-resizer"

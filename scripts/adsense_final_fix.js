@@ -67,7 +67,7 @@ function buildSeoSection(slug, data) {
         <ol>
 ${steps}
         </ol>
-        <p><em>Privacy:</em> Your files are processed in your browser and are not uploaded to our servers.</p>
+        <p><em>Privacy:</em> Your files are processed in the browser tab and are not posted to FastImageTool. Ads and analytics still load.</p>
         <h2>Frequently Asked Questions</h2>
         <h3>Is ${data.name} free?</h3>
         <p>Yes — completely free with no signup or watermarks.</p>

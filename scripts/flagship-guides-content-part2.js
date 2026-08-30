@@ -15,7 +15,7 @@ module.exports = [
     ctaHref: '/tools/image-compressor/',
     ctaLabel: 'Compress Free',
     footerCtaTitle: 'Ready to compress?',
-    footerCtaSub: 'Free Image Compressor — private, in-browser',
+    footerCtaSub: 'Open the Image Compressor — processing stays in the tab',
     sidebar: [
       ['/tools/image-compressor/', 'Image Compressor'],
       ['/tools/image-resizer/', 'Image Resizer'],
@@ -96,8 +96,8 @@ module.exports = [
   },
   {
     slug: 'how-to-resize-image-online.html',
-    title: 'How to Resize an Image Online — Free & Private (2026) — FastImageTool',
-    headline: 'How to Resize an Image Online — Free and Private',
+    title: 'How to Resize an Image Online (2026) — FastImageTool',
+    headline: 'How to Resize an Image Online',
     description:
       'Resize images to exact pixels for Instagram, YouTube, email, and marketplaces. Free online resizer — runs in your browser, no signup.',
     breadcrumb: 'Resize Images Online',
@@ -139,7 +139,7 @@ module.exports = [
       ],
       [
         'Is the online resizer private?',
-        'Yes. Processing happens in your browser; files are not uploaded to our servers.',
+        'Image processing runs in the tab. Photos are not posted to FastImageTool. Ads and analytics still load — see the privacy policy.',
       ],
     ],
     body: `
@@ -182,10 +182,10 @@ module.exports = [
   },
   {
     slug: 'how-to-convert-jpg-to-png.html',
-    title: 'How to Convert JPG to PNG Online — Free & Private (2026) — FastImageTool',
+    title: 'How to Convert JPG to PNG Online (2026) — FastImageTool',
     headline: 'How to Convert JPG to PNG Online',
     description:
-      'Convert JPG to PNG for transparency-ready graphics, lossless archives, and design workflows. Free browser converter — no upload to server.',
+      'Convert JPG to PNG for transparency-ready graphics, lossless archives, and design workflows. Free browser converter — image is not posted to FastImageTool.',
     breadcrumb: 'JPG to PNG',
     h1: 'How to Convert JPG to PNG',
     subtitle: 'When you need PNG format — and how to convert without installing software.',
@@ -195,7 +195,7 @@ module.exports = [
     ctaHref: '/tools/jpg-to-png/',
     ctaLabel: 'Convert Free',
     footerCtaTitle: 'Convert JPG to PNG now',
-    footerCtaSub: 'Instant, private, in your browser',
+    footerCtaSub: 'Convert in the browser — photos are not posted to FastImageTool',
     sidebar: [
       ['/tools/jpg-to-png/', 'JPG to PNG'],
       ['/tools/png-to-jpg/', 'PNG to JPG'],

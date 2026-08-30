@@ -20,7 +20,7 @@
   {
     "slug": "png-to-jpg",
     "title": "PNG to JPG Converter",
-    "description": "Convert PNG to JPG online free. White background fill, smaller files for web and email. Private browser tool.",
+    "description": "Convert PNG to JPG online free. White background fill, smaller files for web and email. Runs in the tab.",
     "category": "conversion"
   },
   {
@@ -62,7 +62,7 @@
   {
     "slug": "rotate-image",
     "title": "Rotate Image",
-    "description": "Rotate images online free. 90°, 180°, 270° rotation. Browser-based, private.",
+    "description": "Rotate images online free. 90°, 180°, 270° rotation. Canvas size swaps in the tab.",
     "category": "editing"
   },
   {
@@ -80,7 +80,7 @@
   {
     "slug": "image-to-base64",
     "title": "Image to Base64",
-    "description": "Image to Base64 encoder online free. For web developers. Private, in-browser.",
+    "description": "Image to Base64 encoder online free. For web developers. FileReader in the tab; ads still load.",
     "category": "conversion"
   },
   {

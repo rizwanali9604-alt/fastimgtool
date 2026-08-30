@@ -15,14 +15,14 @@ module.exports = [
     ctaHref: '/tools/webp-to-jpg/',
     ctaLabel: 'Convert WebP',
     footerCtaTitle: 'Need JPG instead of WebP?',
-    footerCtaSub: 'Convert in your browser — no upload to server',
+    footerCtaSub: 'Convert in your browser — image is not posted to FastImageTool',
     sidebar: [
       ['/tools/webp-to-jpg/', 'WebP to JPG'],
       ['/tools/image-to-webp/', 'Image to WebP'],
       ['/tools/image-compressor/', 'Image Compressor'],
     ],
     related: [
-      ['/guides/how-to-convert-image-to-webp.html', 'How to Convert Images to WebP'],
+      ['/tools/image-to-webp/', 'Image to WebP converter'],
       ['/guides/compress-image-for-email.html', 'Compress Image for Email'],
       ['/guides/shopify-product-images-webp-compression.html', 'Shopify WebP Compression'],
     ],
@@ -45,7 +45,7 @@ module.exports = [
       ],
       [
         'How do I convert WebP to JPG for free?',
-        'Open FastImageTool WebP to JPG Converter, upload the file, and download JPEG. Processing runs in your browser; nothing is sent to a server.',
+        'Open FastImageTool WebP to JPG Converter, upload the file, and download JPEG. The image is processed in the browser and is not posted to FastImageTool. Ads and analytics still load.',
       ],
     ],
     body: `
@@ -82,7 +82,7 @@ module.exports = [
             </ul>
 
             <h2 id="convert">How to convert between formats</h2>
-            <p>Use browser-based tools so files stay private on your device:</p>
+            <p>Use browser-based tools. Image bytes are processed in the tab and are not posted to FastImageTool. Ads and analytics still load:</p>
             <ol>
                 <li><strong>WebP → JPG:</strong> <a href="/tools/webp-to-jpg/">WebP to JPG Converter</a> — one click download.</li>
                 <li><strong>Any image → WebP:</strong> <a href="/tools/image-to-webp/">Image to WebP</a> — ideal before uploading to your site.</li>
@@ -141,7 +141,7 @@ module.exports = [
       ],
       [
         'Is the compressor private?',
-        'Yes. FastImageTool runs in your browser. Your WhatsApp photos are not uploaded to our servers.',
+        'Image processing runs in the tab. Photos are not posted to FastImageTool. Ads and analytics still load — see the privacy policy.',
       ],
     ],
     body: `

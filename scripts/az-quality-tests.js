@@ -285,13 +285,37 @@ ok('cover crop is centered on x', Math.abs(box.sx - 100) < 0.01);
 
   let foreverHit = '';
   let stayHit = '';
+  let privCtaHit = '';
+  let nothingSentHit = '';
+  let stayPrivHit = '';
+  let notUploadedHit = '';
   for (const f of publicHtml) {
     const t = fs.readFileSync(f, 'utf8');
     if (/Free forever/i.test(t)) foreverHit = f;
     if (/stay on your device/i.test(t)) stayHit = f;
+    if (/private,\s*in-browser/i.test(t)) privCtaHit = f;
+    if (/Private browser tool/i.test(t)) privCtaHit = privCtaHit || f;
+    if (/Browser-based, private/i.test(t)) privCtaHit = privCtaHit || f;
+    if (/nothing is sent to a server/i.test(t)) nothingSentHit = f;
+    if (/stay private on your device/i.test(t)) stayPrivHit = f;
+    if (/not uploaded to our servers/i.test(t)) notUploadedHit = f;
   }
   ok('public HTML has no Free forever claim', !foreverHit, foreverHit);
   ok('public HTML has no stay-on-your-device overclaim', !stayHit, stayHit);
+  ok('public HTML has no private-in-browser CTA', !privCtaHit, privCtaHit);
+  ok('public HTML has no nothing-is-sent-to-a-server', !nothingSentHit, nothingSentHit);
+  ok('public HTML has no stay-private-on-your-device', !stayPrivHit, stayPrivHit);
+  ok('public HTML has no not-uploaded-to-our-servers', !notUploadedHit, notUploadedHit);
+
+  const guidesJson = fs.readFileSync(path.join(ROOT, 'data/guides.json'), 'utf8');
+  const searchJson = fs.readFileSync(path.join(ROOT, 'search.json'), 'utf8');
+  ok('guides.json has no Free & Private title', !/Free\s*&\s*Private/i.test(guidesJson));
+  ok('search.json has no Free & Private title', !/Free\s*&\s*Private/i.test(searchJson));
+  const toolsJson = fs.readFileSync(path.join(ROOT, 'data/tools.json'), 'utf8');
+  ok('tools.json has no private-in-browser', !/private,\s*in-browser/i.test(toolsJson) && !/Private browser tool/i.test(toolsJson));
+  ok('search.json has no private-in-browser', !/private,\s*in-browser/i.test(searchJson) && !/Private browser tool/i.test(searchJson));
+  const metaJs = fs.readFileSync(path.join(ROOT, 'scripts/update-tool-meta.js'), 'utf8');
+  ok('update-tool-meta has no Private browser tool', !/Private browser tool/i.test(metaJs));
 
   const about = fs.readFileSync(path.join(ROOT, 'about.html'), 'utf8');
   ok('about does not say never touch our servers', !/never touch our servers/i.test(about));
@@ -345,6 +369,11 @@ ok('cover crop is centered on x', Math.abs(box.sx - 100) < 0.01);
     !/keeps product photos and personal images private/i.test(compressGuide)
   );
   ok('compress guide meta does not say private browser tool', !/private browser tool/i.test(compressGuide));
+  ok('compress guide CTA is not private-in-browser', !/private,\s*in-browser/i.test(compressGuide));
+  ok(
+    'jpg-to-png privacy mentions ads',
+    /Ads and analytics still load/i.test(fs.readFileSync(path.join(ROOT, 'tools/jpg-to-png/index.html'), 'utf8'))
+  );
 
   const og = await sharp(path.join(ROOT, 'assets/og-image.png')).metadata();
   ok('og image 1200x630', og.width === 1200 && og.height === 630);

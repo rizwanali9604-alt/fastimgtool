@@ -11,7 +11,7 @@ const ROOT = path.join(__dirname, '..');
 const KEEP_GUIDES = [
   {
     tool_slug: 'image-resizer',
-    title: 'How to Resize an Image Online – Free & Private Tool',
+    title: 'How to Resize an Image Online',
     url: '/guides/how-to-resize-image-online.html',
   },
   {
