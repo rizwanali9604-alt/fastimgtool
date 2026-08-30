@@ -238,6 +238,10 @@ ok('cover crop is centered on x', Math.abs(box.sx - 100) < 0.01);
   );
 
   ok('manual HEIC/TIFF/compressor QA script exists', fs.existsSync(path.join(ROOT, 'scripts/manual-browser-qa.md')));
+  const qaMd = fs.readFileSync(path.join(ROOT, 'scripts/manual-browser-qa.md'), 'utf8');
+  for (const slug of indexable) {
+    ok('manual QA names ' + slug, qaMd.includes(slug));
+  }
   ok('QA TIFF fixture exists', fs.existsSync(path.join(ROOT, 'fixtures/qa-scan.tiff')));
 
   ok('homepage splits catalog vs simple-filters', home.includes('id="simple-filters"') && home.includes('data-grid="catalog"'));
@@ -340,6 +344,7 @@ ok('cover crop is centered on x', Math.abs(box.sx - 100) < 0.01);
     'compress guide does not claim images stay private from ads',
     !/keeps product photos and personal images private/i.test(compressGuide)
   );
+  ok('compress guide meta does not say private browser tool', !/private browser tool/i.test(compressGuide));
 
   const og = await sharp(path.join(ROOT, 'assets/og-image.png')).metadata();
   ok('og image 1200x630', og.width === 1200 && og.height === 630);

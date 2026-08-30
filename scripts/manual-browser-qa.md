@@ -1,46 +1,83 @@
-# Manual browser QA — HEIC, TIFF, compressor (≈10 minutes)
+# Manual browser QA — catalog tools (Chrome, production)
 
-This is the **permanent** close for real-browser HEIC / TIFF / Web Worker checks. This environment has Chrome installed and does **not** have Playwright, Puppeteer, or a browser MCP. Do not re-open that as an engineering ticket.
+This environment has no Playwright, Puppeteer, or browser MCP. Chrome is installed on the operator’s machine. **Do not reopen “add automation” as an engineering ticket.** Record date, Chrome version, pass/fail. Once recorded, tool-function verification for AdSense prep is closed.
 
-Use **Chrome**. Stay on https://fastimgtool.com (production).
+Stay on **https://fastimgtool.com**. Use one image at a time (the tools do not batch).
 
-## Files
+## Fixtures
 
-| Step | File | Where to get it |
+| ID | File | Source |
 | --- | --- | --- |
-| HEIC | One iPhone photo (`.heic` / `.heif`) | Camera Roll → share to this PC. If you have no iPhone, skip HEIC and write N/A. |
-| TIFF | `fixtures/qa-scan.tiff` | In this repo (tiny red 64×48 sample). |
-| Compressor | Any photo **larger than ~400 KB** | Phone gallery or a marketplace product shot. `assets/og-image.png` is too small to prove the worker. |
+| JPEG | any `.jpg` catalog photo | phone/gallery |
+| PNG | PNG with transparency (logo) | export from Canva or similar |
+| WebP | `.webp` | Chrome save-as or compressor output |
+| GIF | `.gif` | any short GIF |
+| BMP | `.bmp` | Paint → Save as BMP |
+| TIFF | `fixtures/qa-scan.tiff` | this repo (64×48 red) |
+| HEIC | iPhone `.heic` | Camera Roll; skip and mark N/A if none |
+| BIG | photo **>400 KB** | not `assets/og-image.png` |
+| TXT | `notes.txt` | prove reject |
 
-## 1. HEIC → JPG (2 min)
+Shared fail: upload zone dead, download stays disabled after a valid file, output won’t open, or the wrong format is accepted.
 
-1. Open https://fastimgtool.com/tools/heic-to-jpg/
-2. Drop the `.heic` on the upload zone (not only the hidden file input).
-3. Preview must appear. Download must enable.
-4. Save the file. It must be a `.jpg` you can open in Photos.
-5. Drop a `.png` instead: it must be **rejected**.
+---
 
-Fail if: zone does nothing, download stays disabled, or output is still HEIC.
+## Catalog (16 indexable tools)
 
-## 2. TIFF → JPG (2 min)
+### image-compressor
+INPUT: BIG JPEG. ACTION: Compress. EXPECTED: progress moves; stats show smaller output; download opens as a photo. Network: `/assets/vendor/browser-image-compression.js` is 200 from this origin. INPUT TXT: no compress.
 
-1. Open https://fastimgtool.com/tools/tiff-to-jpg/
-2. Drop `fixtures/qa-scan.tiff`.
-3. Preview must appear. Download a `.jpg`.
-4. Open it: solid red (or near-red) rectangle, not a broken image.
+### image-resizer
+INPUT: JPEG wider than tall. ACTION: Meesho 600×600 (or typed 600×600). EXPECTED: square JPEG, product centered (cover-crop, not stretched). Not the same as Image Crop (no marketplace presets there).
 
-Fail if: upload zone is dead or the page never enables download.
+### jpg-to-png
+INPUT: JPEG. EXPECTED: `.png`, same pixel size, **opaque** (no invented alpha). INPUT PNG: rejected.
 
-## 3. Compressor Web Worker (4 min)
+### png-to-jpg
+INPUT: transparent PNG. EXPECTED: `.jpg`, transparent pixels **white**. Quality slider changes file size.
 
-1. Open DevTools → Network. Confirm `/assets/vendor/browser-image-compression.js` is **200** from `fastimgtool.com` (not a CDN).
-2. Open https://fastimgtool.com/tools/image-compressor/
-3. Drop the >400 KB photo.
-4. Click compress. Progress must move. Stats must show a **smaller** output than the original.
-5. Download. Open the file. It must look like the photo, not empty/corrupt.
+### webp-to-jpg
+INPUT: WebP. EXPECTED: still `.jpg` (animation not kept). INPUT JPEG: rejected.
 
-Fail if: progress never moves, output is larger with default settings, or the page throws in the console about the worker/`importScripts`.
+### png-to-webp
+INPUT: PNG. EXPECTED: `.webp`. INPUT JPEG: **rejected** (use Image to WebP).
 
-## 4. Record (1 min)
+### image-to-webp
+INPUT: JPEG (and optionally PNG/GIF). EXPECTED: `.webp`. Quality slider present. INPUT BMP if tested: rejected.
 
-Date, Chrome version, pass/fail per step. Email yourself or note in AdSense prep. **Once recorded, this item is closed.**
+### gif-to-png
+INPUT: GIF. EXPECTED: `.png` of **first frame** only, not an animated PNG. INPUT JPEG: rejected.
+
+### bmp-to-jpg
+INPUT: BMP. EXPECTED: `.jpg`. INPUT JPEG: rejected.
+
+### tiff-to-jpg
+INPUT: `fixtures/qa-scan.tiff`. EXPECTED: `.jpg` that opens as a red (or near-red) rectangle.
+
+### heic-to-jpg
+INPUT: HEIC. EXPECTED: preview then `.jpg`. INPUT PNG: rejected. N/A if no HEIC file.
+
+### image-to-base64
+INPUT: JPEG. EXPECTED: textarea/output with `data:image` or base64 text you can copy. Not a decoder.
+
+### base64-to-image
+INPUT: paste that string into the textarea (no file upload). EXPECTED: preview + download. INPUT `hello`: “Invalid image data” or download stays disabled.
+
+### image-crop
+INPUT: JPEG. ACTION: width/height smaller than source. EXPECTED: center crop, not a drag box. Empty width: error, no download.
+
+### rotate-image
+INPUT: JPEG. ACTION: 90°. EXPECTED: width/height swap. This is not Flip.
+
+### flip-image
+INPUT: JPEG with text. ACTION: horizontal. EXPECTED: text reversed. Vertical is a mirror, not 90° rotate.
+
+---
+
+## Noindex filters (optional, 2 min)
+
+Open `/tools/image-blur/`. Confirm it still works as a slider preview. These eight URLs are **noindex** on purpose; they are not the AdSense catalog.
+
+## Record
+
+Date / Chrome / pass-fail per slug above. Email yourself. **Closed after one recorded pass.**
