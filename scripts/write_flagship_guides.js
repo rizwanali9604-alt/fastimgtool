@@ -1,12 +1,23 @@
 #!/usr/bin/env node
 /**
  * Rewrite high-impression guides to flagship standard (800–1500 words + FAQ schema).
- * Usage: node scripts/write_flagship_guides.js
+ * Usage: ALLOW_WRITE_FLAGSHIP_GUIDES=1 node scripts/write_flagship_guides.js
  */
 const fs = require('fs');
 const path = require('path');
 
+if (process.env.ALLOW_WRITE_FLAGSHIP_GUIDES !== '1') {
+  console.error(
+    'Refusing to run write_flagship_guides.js (overwrites guide HTML). Set ALLOW_WRITE_FLAGSHIP_GUIDES=1 only if you intend that.'
+  );
+  process.exit(1);
+}
+
 const OUT = path.join(__dirname, '..', 'guides');
+
+function prettySlug(slug) {
+  return String(slug).replace(/\.html$/i, '');
+}
 
 function faqJson(faqs) {
   return JSON.stringify({
@@ -34,7 +45,7 @@ function articleJson(headline, description, slug) {
     },
     datePublished: '2026-01-10',
     dateModified: '2026-06-17',
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://fastimgtool.com/guides/${slug}` },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://fastimgtool.com/guides/${prettySlug(slug)}` },
   });
 }
 
@@ -48,7 +59,7 @@ function faqHtml(faqs) {
 }
 
 function render(g) {
-  const canonical = `https://fastimgtool.com/guides/${g.slug}`;
+  const canonical = `https://fastimgtool.com/guides/${prettySlug(g.slug)}`;
   const sidebarLinks = (g.sidebar || [])
     .map(([href, label]) => `<a href="${href}" class="sidebar-tool-link">→ ${label}</a>`)
     .join('\n                ');

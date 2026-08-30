@@ -9,9 +9,9 @@
 /webp-to-jpg-converter.html /tools/webp-to-jpg/ 301
 /convert-jpg-to-png-online-free.html /tools/jpg-to-png/ 301
 /how-to-convert-jpg-to-png-online-free.html /tools/jpg-to-png/ 301
-/community.html /contact.html 301
-/newsletter.html /contact.html 301
-/blog/first-post.html /blog/image-compression-best-practices.html 301
+/community.html /contact 301
+/newsletter.html /contact 301
+/blog/first-post.html /blog/image-compression-best-practices 301
 /guides/convert-webp-to-jpg.html /tools/webp-to-jpg/ 301
 /guides/convert-webp-to-jpg /tools/webp-to-jpg/ 301
 /guides/how-to-convert-jpg-to-png.html /tools/jpg-to-png/ 301
@@ -36,7 +36,7 @@
 /guides/how-to-convert-image-to-webp.html /tools/image-to-webp/ 301
 /guides/how-to-convert-png-to-webp.html /tools/png-to-webp/ 301
 /guides/how-to-use-tiff-to-jpg.html /tools/tiff-to-jpg/ 301
-/guides/resize-image-online.html /guides/how-to-resize-image-online.html 301
+/guides/resize-image-online.html /guides/how-to-resize-image-online 301
 /guides_backup/* /404.html 404
 /nav-tools.html /404.html 404
 /assets/generate-og.html /404.html 404
@@ -51,9 +51,9 @@
 /reports/* /404.html 404
 /config/* /404.html 404
 /og-image.png /assets/og-image.png 200
-/blog/how-to-compress-images-for-email.html /guides/compress-image-for-email.html 301
-/blog/how-to-resize-images-for-social-media.html /guides/resize-image-for-instagram.html 301
-/blog/webp-vs-jpg-vs-png.html /guides/webp-vs-jpg-which-is-better.html 301
+/blog/how-to-compress-images-for-email.html /guides/compress-image-for-email 301
+/blog/how-to-resize-images-for-social-media.html /guides/resize-image-for-instagram 301
+/blog/webp-vs-jpg-vs-png.html /guides/webp-vs-jpg-which-is-better 301
 /data/guide-data-backup.json /404.html 404
 /data/guide-data-extra.json /404.html 404
 /data/guide-data.json /404.html 404

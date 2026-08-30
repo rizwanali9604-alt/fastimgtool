@@ -2,9 +2,17 @@
 /**
  * Greenlight pass: 301 doorways + clone how-tos, rebuild sitemap/guides/search,
  * inject consent scripts, unify leftover indexables.
+ * Usage: ALLOW_GREENLIGHT=1 node scripts/greenlight_apply.js
  */
 const fs = require('fs');
 const path = require('path');
+
+if (process.env.ALLOW_GREENLIGHT !== '1') {
+  console.error(
+    'Refusing to run greenlight_apply.js (rewrites _redirects, sitemap, and HTML). Set ALLOW_GREENLIGHT=1 only if you intend that.'
+  );
+  process.exit(1);
+}
 
 const ROOT = path.join(__dirname, '..');
 
@@ -84,7 +92,7 @@ const GUIDE_REDIRECTS = {
   'how-to-convert-image-to-webp.html': '/tools/image-to-webp/',
   'how-to-convert-png-to-webp.html': '/tools/png-to-webp/',
   'how-to-use-tiff-to-jpg.html': '/tools/tiff-to-jpg/',
-  'resize-image-online.html': '/guides/how-to-resize-image-online.html',
+  'resize-image-online.html': '/guides/how-to-resize-image-online',
 };
 
 const ROOT_REDIRECTS = {
@@ -95,11 +103,11 @@ const ROOT_REDIRECTS = {
   '/webp-to-jpg-converter.html': '/tools/webp-to-jpg/',
   '/convert-jpg-to-png-online-free.html': '/tools/jpg-to-png/',
   '/how-to-convert-jpg-to-png-online-free.html': '/tools/jpg-to-png/',
-  '/community.html': '/contact.html',
-  '/newsletter.html': '/contact.html',
-  '/blog/first-post.html': '/blog/image-compression-best-practices.html',
-    '/guides/convert-webp-to-jpg.html': '/guides/how-to-convert-webp-to-jpg.html',
-    '/guides/convert-webp-to-jpg': '/guides/how-to-convert-webp-to-jpg.html',
+  '/community.html': '/contact',
+  '/newsletter.html': '/contact',
+  '/blog/first-post.html': '/blog/image-compression-best-practices',
+    '/guides/convert-webp-to-jpg.html': '/tools/webp-to-jpg/',
+    '/guides/convert-webp-to-jpg': '/tools/webp-to-jpg/',
     '/favicon.ico': '/assets/favicon.png',
 };
 
@@ -177,11 +185,11 @@ function writeSitemap() {
     ['https://fastimgtool.com/guides/', '0.9', 'weekly'],
     ['https://fastimgtool.com/blog/', '0.8', 'weekly'],
     ['https://fastimgtool.com/affiliate/', '0.5', 'monthly'],
-    ['https://fastimgtool.com/about.html', '0.5', 'monthly'],
-    ['https://fastimgtool.com/contact.html', '0.5', 'monthly'],
-    ['https://fastimgtool.com/privacy.html', '0.5', 'monthly'],
-    ['https://fastimgtool.com/terms.html', '0.5', 'monthly'],
-    ['https://fastimgtool.com/faq.html', '0.5', 'monthly'],
+    ['https://fastimgtool.com/about', '0.5', 'monthly'],
+    ['https://fastimgtool.com/contact', '0.5', 'monthly'],
+    ['https://fastimgtool.com/privacy', '0.5', 'monthly'],
+    ['https://fastimgtool.com/terms', '0.5', 'monthly'],
+    ['https://fastimgtool.com/faq', '0.5', 'monthly'],
   ];
   const tools = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'tools.json'), 'utf8'));
   tools.forEach((t) => {

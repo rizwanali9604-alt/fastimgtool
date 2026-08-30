@@ -1,6 +1,14 @@
 /**
  * RUN 1 bulk fixes — FastImageTool (excludes guides_backup/)
+ * Usage: ALLOW_RUN1_FIXES=1 node scripts/run1-fixes.js
  */
+if (process.env.ALLOW_RUN1_FIXES !== '1') {
+  console.error(
+    'Refusing to run run1-fixes.js (bulk-rewrites public HTML). Set ALLOW_RUN1_FIXES=1 only if you intend that.'
+  );
+  process.exit(1);
+}
+
 const fs = require('fs');
 const path = require('path');
 

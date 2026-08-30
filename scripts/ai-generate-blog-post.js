@@ -9,6 +9,13 @@
  * - Includes retry logic, rate limiting, and error handling
  */
 
+if (process.env.ALLOW_AI_BLOG !== '1') {
+  console.error(
+    'Refusing to run ai-generate-blog-post.js (writes AI blog HTML). Set ALLOW_AI_BLOG=1 only if you intend that.'
+  );
+  process.exit(1);
+}
+
 require('dotenv').config();
 const fs = require('fs').promises;
 const path = require('path');
