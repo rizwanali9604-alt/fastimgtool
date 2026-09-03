@@ -740,6 +740,24 @@
   .navbar, .nav { position: relative; flex-wrap: wrap; }
 }
 
+/* MOBILE-001 fix: prevent horizontal overflow on narrow viewports.
+   body is flex-column; main.container must not exceed the viewport.
+   #tools beats the inline-style .container{max-width:1200px} that
+   loads after this sheet. */
+#tools {
+  width: 100%;
+  max-width: 1200px;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .tool-card-desc {
+    white-space: normal;   /* override nowrap from style.css */
+  }
+}
+
 .guide-layout {
   display: grid;
   grid-template-columns: 1fr 300px;
